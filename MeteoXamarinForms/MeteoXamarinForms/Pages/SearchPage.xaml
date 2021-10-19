@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoXamarinForms.Pages.SearchPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <Grid RowDefinitions="auto, auto, *">
+            <SearchBar x:Name="searchBar"
+                       Placeholder="Search" HorizontalOptions="FillAndExpand" 
+                       FontSize="20" PlaceholderColor="GhostWhite"
+                       TextColor="White" HorizontalTextAlignment="Start"
+                       CancelButtonColor="White" Margin="10"
+                       SearchCommand="{Binding PerformSearch}"
+                       SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
+
+            <Frame Grid.Row="1" Grid.RowSpan="2" IsVisible="false"
+                   CornerRadius="30" Margin="5" >
+                <CollectionView ItemsSource="{Binding CityResult}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding City}"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding State}"/>
+                                    <Label Text="{Binding Country}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Frame>
+
+            <Button Text="Add current location"
+                    TextTransform="None"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="20,0" MinimumWidthRequest="250"                    
+                    Grid.Row ="1"
+                    FontSize="18"
+                    TextColor="{StaticResource MainTextColor}"
+                    BackgroundColor="{StaticResource MainFrameColor}"
+                    BorderColor="Transparent"
+                    CornerRadius="35"                    
+                    BorderWidth="1.5"
+                    IsEnabled="{Binding SearchInProgress}"
+                    Command="{Binding GoToWeatherCommand}">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding SearchInProgress}"
+                                 Value="True">
+                        <Setter Property="IsEnabled" Value="False"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding SearchInProgress}"
+                                 Value="False">
+                        <Setter Property="IsEnabled" Value="True"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding IsModalView}"
+                                 Value="True">
+                        <Setter Property="IsVisible" Value="false"/>
+                    </DataTrigger>
+                    <DataTrigger TargetType="Button"
+                                 Binding="{Binding IsModalView}"
+                                 Value="False">
+                        <Setter Property="IsVisible" Value="true"/>
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <StackLayout Grid.RowSpan="3" Grid.Row="0"
+                         VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Enter a location name" FontSize="18">
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label" Value="true" Binding="{Binding IsActivatedSearch}">
+                            <Setter Property="IsVisible" Value="false"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Label" Value="false" Binding="{Binding IsActivatedSearch}">
+                            <Setter Property="IsVisible" Value="true"/>
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Label Text="Location is not found" IsVisible="{Binding IsNotFoundLocation}"/>
+                <ActivityIndicator Color="CornflowerBlue" IsVisible="true" IsRunning="{Binding IsActivatedSearch}"/>
+            </StackLayout>              
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

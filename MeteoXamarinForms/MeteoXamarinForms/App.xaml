@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoXamarinForms.App">
+    <Application.Resources>
+
+
+        <Color x:Key="MainBackgroundColor">#010101</Color>
+        <Color x:Key="MainFrameColor">#d9171717</Color>
+        <Color x:Key="MainTextColor">#fafafa</Color>
+        <Color x:Key="SecondaryTextColor">#999999</Color>
+
+        <OnPlatform x:Key="Material" x:TypeArguments="x:String">
+            <On Platform="iOS" Value="Material Design Icons" />
+            <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+        </OnPlatform>
+
+        <Style TargetType="{x:Type Label}" x:Key="MaterialIcons">
+            <Setter Property="FontFamily" Value="{StaticResource Material}"/>
+            <Setter Property="FontSize" Value="100"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="EndAndExpand"/>
+            <Setter Property="VerticalTextAlignment" Value="End"/>
+            <Setter Property="TextColor" Value="LightBlue"/>
+            <Setter Property="FontSize" Value="Large"/>
+        </Style>
+
+        <Style TargetType="{x:Type Button}" x:Key="MaterialBtn">
+            <Setter Property="FontFamily" Value="{StaticResource Material}"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="TextColor" Value="LightSkyBlue"/>
+            <Setter Property="BackgroundColor" Value="Red"/>
+            <Setter Property="FontSize" Value="30"/>
+        </Style>
+
+        <Style TargetType="Frame">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState x:Name="Selected">
+                            <VisualState.StateTriggers>
+                                
+                            </VisualState.StateTriggers>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

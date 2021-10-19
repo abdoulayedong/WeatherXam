@@ -1,0 +1,239 @@
+﻿using MeteoXamarinForms.Models;
+using MeteoXamarinForms.ViewModels.Base;
+using System;
+using System.Collections.Generic;
+using System.Windows.Input;
+using Xamarin.Forms;
+using FreshMvvm.Popups;
+using MeteoXamarinForms.PageModels;
+using System.Linq;
+using MeteoXamarinForms.Extensions;
+
+namespace MeteoXamarinForms.ViewModels
+{
+    public class WeatherPageModel : PageModelBase
+    {
+        public WeatherPageModel()
+        {
+            DailyDetailCommand = new Command<DayPrevision>(
+            async (DayPrevision dayPrevision) =>
+            {
+                var selectedDay = Weather.Daily.Where(day => ToolExtension.UnixTimeStampToDateTime(day.Dt) == dayPrevision.DaysOfWeek).FirstOrDefault();
+                await CoreMethods.PushPopupPageModel<DayPopupPageModel>(data:selectedDay);
+            });
+
+            AddWeatherInformationCommand = new Command(
+                async () =>
+                {
+                    await CoreMethods.PushPageModel<SearchPageModel>();
+                });
+        }
+
+        #region Properties
+        public Root Weather { get; set; }
+        
+        private string _cityName;
+        public string CityName
+        {
+            get { return _cityName; }
+            set { _cityName = value; }
+        }
+
+        private string _description;
+        public string Description
+        {
+            get { return _description; }
+            set => SetProperty(ref _description, value);
+        }
+
+        private int _currentTemperature;
+        public int CurrentTemperature
+        {
+            get { return _currentTemperature; }
+            set => SetProperty(ref _currentTemperature, value);
+        }
+
+        private string _currentIcon;
+        public string CurrentIcon
+        {
+            get { return _currentIcon; }
+            set => SetProperty(ref _currentIcon, value);
+        }
+
+        private int _minTemperature;
+        public int MinTemperature
+        {
+            get { return _minTemperature; }
+            set => SetProperty(ref _minTemperature, value);
+        }
+
+        private int _maxTemperature;
+        public int MaxTemperature
+        {
+            get { return _maxTemperature; }
+            set => SetProperty(ref _maxTemperature, value);
+        }
+
+        private int _feelsLike;
+        public int FeelsLike
+        {
+            get { return _feelsLike; }
+            set => SetProperty(ref _feelsLike, value);
+        }
+
+        private string _uvIndex;
+        public string UvIndex
+        {
+            get { return _uvIndex; }
+            set => SetProperty(ref _uvIndex, value);
+        }
+
+        private DateTime _sunrise;
+        public DateTime Sunrise
+        {
+            get { return _sunrise; }
+            set => SetProperty(ref _sunrise, value);
+        }
+
+        private DateTime _sunset;
+        public DateTime Sunset
+        {
+            get { return _sunset; }
+            set => SetProperty(ref _sunset, value);
+        }
+
+        private int _humidity;
+        public int Humidity
+        {
+            get { return _humidity; }
+            set => SetProperty(ref _humidity, value);
+        }
+
+        private int _windSpeed;
+        public int WindSpeed
+        {
+            get { return _windSpeed; }
+            set => SetProperty(ref _windSpeed, value);
+        }
+
+        private int _windDeg;
+        public int WindDeg
+        {
+            get { return _windDeg; }
+            set => SetProperty(ref _windDeg, value);
+        }
+
+        private int _clouds;
+        public int Clouds
+        {
+            get { return _clouds; }
+            set => SetProperty(ref _clouds, value);
+        }
+
+        private List<HourPrevision> _hourPrevisions;
+
+        public List<HourPrevision> HourPrevisions
+        {
+            get => _hourPrevisions;
+            set => SetProperty(ref _hourPrevisions, value);
+        }
+
+        private List<DayPrevision> _dayPrevisions;
+
+        public List<DayPrevision> DayPrevisions
+        {
+            get => _dayPrevisions;
+            set => SetProperty(ref _dayPrevisions, value);
+        }
+        #endregion
+
+        #region Methods
+        private void Initialize()
+        {
+            var city = Weather.Timezone.Split('/');
+            CityName = city[city.Length - 1];
+
+            // Current day weather
+            var current = Weather.Current;
+            var currentDay = Weather.Daily[0];
+            var hourlyForecast = Weather.Hourly;
+            var dailyForecast = Weather.Daily;
+
+            CurrentTemperature = ToolExtension.roundedTemperature(current.Temp);
+            Description = current.Weather[0].Description;
+            MaxTemperature = ToolExtension.roundedTemperature(currentDay.Temp.Max);
+            MinTemperature = ToolExtension.roundedTemperature(currentDay.Temp.Min);
+            CurrentIcon = ToolExtension.getIcon(current.Weather[0].Icon);
+            FeelsLike = ToolExtension.roundedTemperature(current.Feels_Like);
+
+            // Hourly weather
+            HourPrevisions = new List<HourPrevision>();
+            for (int i = 0; i < 24; i++)
+            {
+                HourPrevision hourPrevision = new HourPrevision();
+                hourPrevision.Hour = ToolExtension.UnixTimeStampToDateTime(hourlyForecast[i].Dt);
+                hourPrevision.Icon = ToolExtension.getIcon(hourlyForecast[i].Weather[0].Icon);
+                hourPrevision.Temperature = ToolExtension.roundedTemperature(hourlyForecast[i].Temp);
+                hourPrevision.ProbalilityOfPrecipitation = (int)(hourlyForecast[i].Pop * 100);
+                if (hourPrevision.ProbalilityOfPrecipitation >= 0 && hourPrevision.ProbalilityOfPrecipitation <= 20)
+                {
+                    hourPrevision.ProbabilityIcon = "waterdrop1.png";
+                }else if(hourPrevision.ProbalilityOfPrecipitation > 20 && hourPrevision.ProbalilityOfPrecipitation <= 60)
+                {
+                    hourPrevision.ProbabilityIcon = "waterdrop2.png";
+                }
+                else if (hourPrevision.ProbalilityOfPrecipitation > 60 && hourPrevision.ProbalilityOfPrecipitation <= 100)
+                {
+                    hourPrevision.ProbabilityIcon = "waterdrop3.png";
+                }
+                HourPrevisions.Add(hourPrevision);
+            }
+
+            // Daily weather
+            DayPrevisions = new List<DayPrevision>();
+            for (int i = 0; i < 7; i++)
+            {
+                DayPrevision dayPrevision = new DayPrevision();
+                dayPrevision.ProbalilityOfPrecipitation = (int)(dailyForecast[i].Pop * 100);
+                if (dayPrevision.ProbalilityOfPrecipitation >= 0 && dayPrevision.ProbalilityOfPrecipitation <= 20)
+                {
+                    dayPrevision.ProbabilityIcon = "waterdrop1.png";
+                }
+                else if (dayPrevision.ProbalilityOfPrecipitation > 20 && dayPrevision.ProbalilityOfPrecipitation <= 60)
+                {
+                    dayPrevision.ProbabilityIcon = "waterdrop2.png";
+                }
+                else if (dayPrevision.ProbalilityOfPrecipitation > 60 && dayPrevision.ProbalilityOfPrecipitation <= 100)
+                {
+                    dayPrevision.ProbabilityIcon = "waterdrop3.png";
+                }
+                dayPrevision.MaxTemperature = ToolExtension.roundedTemperature(dailyForecast[i].Temp.Max);
+                dayPrevision.MinTemperature = ToolExtension.roundedTemperature(dailyForecast[i].Temp.Min);
+                dayPrevision.DayIcon = ToolExtension.getIcon(dailyForecast[i].Weather[0].Icon);
+                dayPrevision.DaysOfWeek = ToolExtension.UnixTimeStampToDateTime(dailyForecast[i].Dt);
+                DayPrevisions.Add(dayPrevision);
+            }
+
+            // More daily information
+            UvIndex = ToolExtension.getUviValue(current.Uvi);
+            Sunrise = ToolExtension.UnixTimeStampToDateTime(current.Sunrise);
+            Sunset = ToolExtension.UnixTimeStampToDateTime(current.Sunset);
+            WindSpeed = ToolExtension.MetreSecToKilometerHour(current.Wind_Speed);
+            WindDeg = current.Wind_Deg;
+            Clouds = current.Clouds;
+            Humidity = current.Humidity;
+        }
+
+        public override void Init(object initData)
+        {
+            Weather = initData as Root;
+            Initialize();
+        }
+        #endregion
+
+        #region Command
+        public ICommand DailyDetailCommand { private set; get; }
+        public ICommand AddWeatherInformationCommand { private set; get; }
+        #endregion
+    }
+}

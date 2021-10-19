@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
+                 x:Class="MeteoXamarinForms.Pages.DayPopupPage"
+                 CloseWhenBackgroundIsClicked="True">
+    <popup:PopupPage.Content>
+        <Frame HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="15"
+               WidthRequest="300" BackgroundColor="{StaticResource SecondaryTextColor}">
+            <StackLayout Spacing="0">
+                <Label Text="{Binding Date, StringFormat='{0:ddd d}', FallbackValue=Fri 15}"
+                       FontAttributes="Bold" FontSize="14"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="{Binding Temperature, StringFormat='{0}°', FallbackValue=29°}"
+                           FontSize="45" FontAttributes="Bold"/>
+                    <Image Source="{Binding Icon, FallbackValue=_10d.png}"
+                           HeightRequest="70" WidthRequest="70"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ProbabilityIcon, FallbackValue=meteor.png}"
+                                   HeightRequest="15" WidthRequest="15"
+                                   Rotation="-10"/>
+                            <Label Text="{Binding Probability, StringFormat='{0}%', FallbackValue=13%}"
+                                   FontSize="14"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ProbabilityIcon, FallbackValue=wind.png}"
+                                   HeightRequest="16" WidthRequest="16"/>
+                            <Label Text="{Binding WindSpeed, StringFormat='{0} km/h', FallbackValue=17 km/h}"
+                                   FontSize="14"/>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <Frame CornerRadius="10" HasShadow="False" BorderColor="{StaticResource SecondaryTextColor}">
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal"
+                                     Margin="0" Spacing="0" Padding="0">
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="0" Padding="0">
+                                <Image Source="humidity1.png" VerticalOptions="StartAndExpand"
+                                       HeightRequest="16" WidthRequest="16" Margin="0,8,0,0"/>
+                                <StackLayout Spacing="0" VerticalOptions="StartAndExpand">
+                                    <Label Text="Humidity" FontSize="16"/>
+                                    <Label Text="{Binding Humidity, StringFormat='{0}%', FallbackValue=80%}"
+                                           FontSize="16" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="0" Padding="0" HorizontalOptions="CenterAndExpand">
+                                <Image Source="sun1.png" VerticalOptions="StartAndExpand"
+                                       HeightRequest="16" WidthRequest="16" Margin="0,8,0,0"/>
+                                <StackLayout Spacing="0" VerticalOptions="StartAndExpand">
+                                    <Label Text="UV Index" FontSize="16"/>
+                                    <Label Text="{Binding UvIndex, FallbackValue=Extreme}"
+                                           FontSize="16" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        <BoxView HeightRequest="1" Grid.Column="1" Margin="0,5" 
+                                 Color="{StaticResource SecondaryTextColor}"/>
+                        <StackLayout Orientation="Horizontal"
+                                     Margin="0" Spacing="0" Padding="0">
+                            <StackLayout Orientation="Horizontal"
+                                         Margin="0" Padding="0">
+                                <Image Source="sunrise1.png" VerticalOptions="StartAndExpand"
+                                       HeightRequest="16" WidthRequest="16" Margin="0,8,0,0"/>
+                                <StackLayout Spacing="0" VerticalOptions="StartAndExpand">
+                                    <Label Text="Sunrise" FontSize="16"/>
+                                    <Label Text="{Binding Sunrise,StringFormat='{0:HH:mm}' , FallbackValue=6:04}"
+                                           FontSize="16" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"
+                                         Margin="0" Padding="0" HorizontalOptions="CenterAndExpand">
+                                <Image Source="sunset1.png" VerticalOptions="StartAndExpand"
+                                       HeightRequest="16" WidthRequest="16" Margin="0,8,0,0"/>
+                                <StackLayout Spacing="0" VerticalOptions="StartAndExpand">
+                                    <Label Text="Sunset" FontSize="16"/>
+                                    <Label Text="{Binding Sunset,StringFormat='{0:HH:mm}' , FallbackValue=6:04}"
+                                           FontSize="16" FontAttributes="Bold"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+    </popup:PopupPage.Content>
+</popup:PopupPage>
