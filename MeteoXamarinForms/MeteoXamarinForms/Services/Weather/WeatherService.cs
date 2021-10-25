@@ -8,7 +8,7 @@ namespace MeteoXamarinForms.Services.Weather
 {
     public class WeatherService : IWeatherService
     {
-        private readonly string apiKey = "";
+        private readonly string apiKey = "bae28df78f81c27a2be7a7e3f1ef3c4e";
         private readonly HttpClient _client;
 
         public WeatherService()

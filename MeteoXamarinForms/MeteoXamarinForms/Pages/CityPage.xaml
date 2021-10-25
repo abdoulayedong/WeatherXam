@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoXamarinForms.Pages.CityPage"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="True"
+             xmlns:local="clr-namespace:MeteoXamarinForms.PageModels"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="{StaticResource MainBackgroundColor}"
+             Title="{xct:Translate ManageCities}">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<StackLayout Orientation="Horizontal" HeightRequest="50">
+                <Label Text="&#xf073a;" Style="{StaticResource MaterialIcons}" 
+                       FontSize="25" VerticalOptions="Center" HorizontalOptions="Start" 
+                       TextColor="{StaticResource MainTextColor}"
+                       Margin="10,0"/>
+
+                <Label Text="Edit cities"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="18"
+                       VerticalOptions="Center"
+                       TextColor="{StaticResource MainTextColor}"/>
+
+                <Label Text="&#xf012c;" Style="{StaticResource MaterialIcons}" 
+                       FontSize="25" VerticalOptions="Center" HorizontalOptions="End" 
+                       TextColor="{StaticResource MainTextColor}"
+                       Margin="10,0"/>
+            </StackLayout>-->
+            <CollectionView ItemsSource="{Binding CitiesWeather}" 
+                            SelectionMode="Single"
+                            x:Name="Cities" 
+                            SelectionChangedCommand="{Binding ShowWeatherInformationCommand}"
+                            SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference Cities}}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView Threshold="100">
+                            <SwipeView.RightItems>
+                                <SwipeItems SwipeBehaviorOnInvoked="Auto">
+                                    <SwipeItemView Command="{Binding Source={RelativeSource AncestorType={x:Type local:CityPageModel}}, Path=DeleteWeatherInformationCommand}"
+                                                   BackgroundColor="Red"
+                                                   CommandParameter="{Binding}">
+                                        <StackLayout WidthRequest="60"
+                                                     VerticalOptions="CenterAndExpand"
+                                                     Spacing="0"
+                                                     HorizontalOptions="CenterAndExpand">
+                                            <Label Text="&#xf0a7a;" Style="{StaticResource MaterialIcons}" 
+                                                   FontSize="25" VerticalOptions="CenterAndExpand"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   TextColor="{StaticResource MainTextColor}"
+                                                   Margin="0"/>
+                                            <Label Text="Delete"
+                                                   TextColor="{StaticResource MainTextColor}"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   FontSize="16"/>
+                                        </StackLayout>
+                                    </SwipeItemView>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <StackLayout Spacing="0" Margin="0" Padding="0">                                
+                                <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource MainFrameColor}"
+                                             Padding="10">
+                                    <Label Text="{Binding City}"
+                                               FontSize="22"
+                                               VerticalTextAlignment="Center"
+                                               TextColor="{StaticResource MainTextColor}"/>
+                                    <StackLayout HorizontalOptions="EndAndExpand">
+                                        <Label Text="{Binding Path=Temperature,StringFormat='{0}°'}"
+                                                   FontSize="30" HorizontalTextAlignment="End"
+                                                   TextColor="{StaticResource MainTextColor}"/>
+                                        <Label Text="{Binding Description}"
+                                                   TextColor="{StaticResource MainTextColor}"/>
+                                    </StackLayout>                                    
+                                </StackLayout>
+                                <BoxView HeightRequest="1"
+                                         BackgroundColor="Black"
+                                         Grid.ColumnSpan="2"
+                                         Grid.Row="2"
+                                         VerticalOptions="End"/>
+                            </StackLayout>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Frame HorizontalOptions="Center" CornerRadius="50" Padding="0"
+                   BackgroundColor="{StaticResource MainFrameColor}"
+                   Margin="10">
+                <StackLayout Margin="0" Spacing="0" Padding="0" Orientation="Horizontal">
+                    <Button ContentLayout="Top, -10" TextTransform="None" Padding="0"
+                            Margin="0,5,-5,0"
+                            Opacity="0.85" TextColor="{StaticResource MainTextColor}"
+                            BackgroundColor="Transparent"
+                            Text="{xct:Translate AddCity}" FontSize="10"                      
+                            Command="{Binding AddWeatherInformationCommand}">
+                            <Button.ImageSource>
+                                <FontImageSource Color="{StaticResource MainTextColor}" Glyph="&#xf0415;" FontFamily="MaterialDesign" Size="25"/>
+                            </Button.ImageSource>
+                    </Button>
+                    <BoxView HeightRequest="10" BackgroundColor="{StaticResource MainBackgroundColor}"
+                             WidthRequest="1"/>
+                    <Button ContentLayout="Top, -10" TextTransform="None" Padding="0"
+                            Margin="0,5,10,0"
+                            Opacity="0.85" TextColor="{StaticResource MainTextColor}"
+                            BackgroundColor="Transparent"
+                            Text="Weather widget" FontSize="10">
+                            <Button.ImageSource>
+                                <FontImageSource Color="{StaticResource MainTextColor}" Glyph="&#xf1355;" FontFamily="MaterialDesign" Size="25"/>
+                            </Button.ImageSource>
+                    </Button>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

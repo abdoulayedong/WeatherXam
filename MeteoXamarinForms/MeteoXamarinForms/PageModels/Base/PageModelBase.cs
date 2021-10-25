@@ -13,28 +13,6 @@ namespace MeteoXamarinForms.ViewModels.Base
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        //private string _title;
-
-        //public string Title
-        //{
-        //    get { return _title; }
-        //    set => SetProperty(ref _title, value);
-        //}
-
-        //private bool _isLoading;
-
-
-        //public bool IsLoading
-        //{
-        //    get { return _isLoading; }
-        //    set { SetProperty(ref _isLoading, value); }
-        //}
-
-        //public virtual Task InitializeAsync(object navigationData = null)
-        //{
-        //    return Task.CompletedTask;
-        //}
-
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

@@ -5,7 +5,7 @@
                  x:Class="MeteoXamarinForms.Pages.DayPopupPage"
                  CloseWhenBackgroundIsClicked="True">
     <popup:PopupPage.Content>
-        <Frame HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="15"
+        <Frame HorizontalOptions="Center" VerticalOptions="EndAndExpand" CornerRadius="15"
                WidthRequest="300" BackgroundColor="{StaticResource SecondaryTextColor}">
             <StackLayout Spacing="0">
                 <Label Text="{Binding Date, StringFormat='{0:ddd d}', FallbackValue=Fri 15}"

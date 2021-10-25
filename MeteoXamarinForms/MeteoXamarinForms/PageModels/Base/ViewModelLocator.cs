@@ -1,7 +1,6 @@
 ﻿using MeteoXamarinForms.Pages;
 using MeteoXamarinForms.Services.Navigation;
 using MeteoXamarinForms.Services.Weather;
-using MeteoXamarinForms.View;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,7 +20,7 @@ namespace MeteoXamarinForms.ViewModels.Base
             _viewLookup = new Dictionary<Type, Type>();
 
             // Register views and view models
-            Register<AboutViewModel, AboutView>();
+            //Register<AboutPageModel, AboutPage>();
             //Register<WeatherPageModel, WeatherPage>();
             //Register<SearchPageModel, SearchPage>();
 

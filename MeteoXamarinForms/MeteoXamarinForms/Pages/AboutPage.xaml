@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoXamarinForms.Pages.AboutPage"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="True"
+             BackgroundColor="{StaticResource MainBackgroundColor}"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Title="{xct:Translate About}">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Image Source="hommage.jpg"
+                   HeightRequest="300"
+                   WidthRequest="300" Margin="0,20,0,0"/>
+            <Label TextColor="{StaticResource MainTextColor}"
+                   Margin="50,20"
+                   FontSize="14"
+                   HorizontalTextAlignment="Center"
+                   Text="{xct:Translate Hommage}"/>
+
+            <StackLayout HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="EndAndExpand"
+                         Margin="0,10">
+                <Label Text="Météo"
+                       TextColor="{StaticResource MainTextColor}"
+                       FontSize="16"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="{xct:Translate Version,StringFormat='Verison {0}'}"
+                       TextColor="{StaticResource SecondaryTextColor}"
+                       FontSize="12"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

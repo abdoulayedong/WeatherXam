@@ -52,36 +52,6 @@ namespace MeteoXamarinForms.Pages
             }
         }
 
-        private void OnCoordinatorLayoutOnScrollEventHandler(object sender, CoordinatorLayout.XamarinForms.ScrollEventArgs e)
-        {
-            if (BackgroundImage != null)
-            {
-                BackgroundImage.Opacity = e.Progress;
-            }
-
-            if (MainTitle != null)
-            {
-                MainTitle.Opacity = e.Progress;
-            }
-
-            if (SecondaryTitle != null)
-            {
-                if (e.Progress > 0.2f)
-                {
-                    SecondaryTitle.Opacity = 0.0f;
-                    ShowLocation = true;
-                }
-                else
-                {
-                    SecondaryTitle.Opacity = (0.2f - e.Progress) / 0.2f;
-                    ShowLocation = false;
-                }
-            }
-
-            if (SecondaryTitle is null)
-            {
-
-            }
-        }
+        
     }
 }

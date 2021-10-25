@@ -6,7 +6,7 @@
 
 
         <Color x:Key="MainBackgroundColor">#010101</Color>
-        <Color x:Key="MainFrameColor">#d9171717</Color>
+        <Color x:Key="MainFrameColor">#171717</Color>
         <Color x:Key="MainTextColor">#fafafa</Color>
         <Color x:Key="SecondaryTextColor">#999999</Color>
 

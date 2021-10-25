@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeteoXamarinForms.Pages.SearchPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="Black">
+             BackgroundColor="Black"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.Content>
         <Grid RowDefinitions="auto, auto, *">
             <SearchBar x:Name="searchBar"
-                       Placeholder="Search" HorizontalOptions="FillAndExpand" 
+                       Placeholder="{xct:Translate Search}" HorizontalOptions="FillAndExpand" 
                        FontSize="20" PlaceholderColor="GhostWhite"
                        TextColor="White" HorizontalTextAlignment="Start"
                        CancelButtonColor="White" Margin="10"

@@ -6,7 +6,8 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource MainBackgroundColor}"
              xmlns:coordinator="clr-namespace:CoordinatorLayout.XamarinForms;assembly=CoordinatorLayout.XamarinForms" 
-             xmlns:converter="clr-namespace:MeteoXamarinForms.Converter">
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <Grid>
         <coordinator:CoordinatorLayout x:Name="coordinator"
                                        InitialExpansionState="Expanded"
@@ -38,7 +39,7 @@
                     </BoxView>
 
                     <Label x:Name="MainTitle" 
-                           Text="Weather" 
+                           Text="{xct:Translate AppName}" 
                            Grid.Column="0"
                            Grid.ColumnSpan="3"
                            TextTransform="None" 
@@ -61,7 +62,7 @@
                 </Grid>
             </coordinator:CoordinatorLayout.TopView>
             <coordinator:CoordinatorLayout.BottomView>
-                <Grid RowDefinitions="auto,auto,auto">                    
+                <Grid RowDefinitions="auto,auto,auto,auto">                    
                     <Frame CornerRadius="25" Margin="15,10,15,5 " VerticalOptions="Start"
                            Grid.Row="0" BackgroundColor="{StaticResource MainFrameColor}">
                         <Grid RowDefinitions="auto, auto, auto"
@@ -173,10 +174,10 @@
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image Source="uv_index.png" HeightRequest="30"
                                        WidthRequest="30"/>
-                                <Label Text="UV index" HorizontalOptions="StartAndExpand"
+                                <Label Text="{xct:Translate UvIndex}" HorizontalOptions="StartAndExpand"
                                        FontSize="16" VerticalTextAlignment="Center"
                                        TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                <Label Text="{Binding UvIndex}" TextColor="{StaticResource MainTextColor}"
+                                <Label Text="{Binding UvIndex.Localized}" TextColor="{StaticResource MainTextColor}"
                                        FontSize="16" VerticalTextAlignment="Center"
                                        FontAttributes="Bold" />
                             </StackLayout>
@@ -186,7 +187,7 @@
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image Source="sunrise.png" HeightRequest="30"
                                        WidthRequest="30"/>
-                                <Label Text="Sunrise" HorizontalOptions="StartAndExpand"
+                                <Label Text="{xct:Translate Sunrise}" HorizontalOptions="StartAndExpand"
                                        FontSize="16" VerticalTextAlignment="Center"
                                        TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
                                 <Label Text="{Binding Sunrise, StringFormat='{0: HH:mm}'}" 
@@ -200,7 +201,7 @@
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image Source="sunset.png" HeightRequest="30"
                                            WidthRequest="30"/>
-                                <Label Text="Sunset" HorizontalOptions="StartAndExpand"
+                                <Label Text="{xct:Translate Sunset}" HorizontalOptions="StartAndExpand"
                                        FontSize="16" VerticalTextAlignment="Center"
                                        TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
                                 <Label Text="{Binding Sunset, StringFormat='{0: HH:mm}'}" 
@@ -214,7 +215,7 @@
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image Source="cloud.png" HeightRequest="30"
                                        WidthRequest="30"/>
-                                <Label Text="Cloud" HorizontalOptions="StartAndExpand"
+                                <Label Text="{xct:Translate Cloud}" HorizontalOptions="StartAndExpand"
                                        FontSize="16" VerticalTextAlignment="Center"
                                        TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
                                 <Label Text="{Binding Clouds, StringFormat='{0}%'}" 
@@ -225,7 +226,7 @@
                             <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
                                         Color="{StaticResource SecondaryTextColor}"/>
                             
-                            <StackLayout Orientation="Horizontal" Spacing="10">
+                            <!--<StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image Source="wind.png" HeightRequest="30"
                                        WidthRequest="30"/>
                                 <Label Text="Wind" HorizontalOptions="StartAndExpand"
@@ -247,11 +248,11 @@
                             </StackLayout>
                             
                             <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,10" 
-                                        Color="{StaticResource SecondaryTextColor}"/>
+                                        Color="{StaticResource SecondaryTextColor}"/>-->
                             <StackLayout Orientation="Horizontal" Spacing="10">
                                 <Image Source="humidity.png" HeightRequest="30"
                                        WidthRequest="30"/>
-                                <Label Text="Humidity" HorizontalOptions="StartAndExpand"
+                                <Label Text="{xct:Translate Humidity}" HorizontalOptions="StartAndExpand"
                                        FontSize="16" VerticalTextAlignment="Center"
                                        TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
                                 <Label Text="{Binding Humidity, StringFormat='{0}%'}" 
@@ -261,13 +262,45 @@
                             </StackLayout>
 
                         </StackLayout>
-                    </Frame>   
-                    
+                    </Frame>
+                    <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
+                           Grid.Row="3" BackgroundColor="{StaticResource MainFrameColor}">
+                        <StackLayout>
+                            <Label Text="{xct:Translate Wind}" TextColor="{StaticResource MainTextColor}"
+                                   FontSize="18"/>
+                            <StackLayout Orientation="Horizontal" Spacing="0"
+                                         Margin="0" Padding="0">
+                                <forms:AnimationView x:Name="AnimationView"
+                                                 Animation="lf30_editor_bij2hbab.json" 
+                                                 AutoPlay="True"
+                                                 RepeatMode="Infinite"
+                                                 Margin="-15,0"
+                                                 Speed="0.5"
+                                                 VerticalOptions="StartAndExpand"
+                                                 HorizontalOptions="StartAndExpand" 
+                                                 WidthRequest="200"
+                                                 HeightRequest="150"/>
+                                <StackLayout Spacing="10" Padding="0" Margin="0"
+                                             Orientation="Horizontal"
+                                             HorizontalOptions="EndAndExpand"
+                                             VerticalOptions="CenterAndExpand">
+                                    <StackLayout>
+                                        <Label Text="{xct:Translate Direction}" TextColor="{StaticResource SecondaryTextColor}"/>
+                                        <Label Text="{xct:Translate Speed}" TextColor="{StaticResource SecondaryTextColor}"/>
+                                    </StackLayout>
+                                    <StackLayout >
+                                        <Label Text="{Binding WindDirection.Localized}" TextColor="{StaticResource MainTextColor}"/>
+                                        <Label Text="{Binding WindSpeed, StringFormat='{0}km/h'}" TextColor="{StaticResource MainTextColor}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
                 </Grid>           
             </coordinator:CoordinatorLayout.BottomView>
         </coordinator:CoordinatorLayout>
        
-        <ImageButton WidthRequest="30" HeightRequest="30"
+        <!--<ImageButton WidthRequest="30" HeightRequest="30"
                     HorizontalOptions="End" VerticalOptions="Start"
                     Margin="10,25" BackgroundColor="Transparent"
                     Opacity="0.85"
@@ -275,15 +308,45 @@
             <ImageButton.Source>
                 <FontImageSource Color="BlanchedAlmond" Glyph="&#xf0415;" FontFamily="MaterialDesign" Size="60"/>
             </ImageButton.Source>
-        </ImageButton>
+        </ImageButton>-->
+        <!--<ImageButton WidthRequest="30" HeightRequest="30"
+                     HorizontalOptions="Start" VerticalOptions="Start"
+                     Margin="15,25" BackgroundColor="Transparent"
+                     Opacity="0.85" Source="building.png"
+                     Command="{Binding OpenCityManagementCommand}"/>-->
 
-        <ImageButton WidthRequest="30" HeightRequest="30"
+        <Label Text="&#xf0a37;" Style="{StaticResource MaterialIcons}" 
+               FontSize="25" VerticalOptions="Start" HorizontalOptions="Start" 
+               TextColor="{StaticResource MainTextColor}"
+               Margin="15,23">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding OpenCityManagementCommand}"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+
+        <Label Text="&#xf0493;" Style="{StaticResource MaterialIcons}" 
+               FontSize="25" VerticalOptions="Start" HorizontalOptions="End" 
+               TextColor="{StaticResource MainTextColor}"
+               Margin="15,23">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding OpenParameterCommand}"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+        <!--<ImageButton WidthRequest="30" HeightRequest="30"
+                     HorizontalOptions="End" VerticalOptions="Start"
+                     Margin="10,25" BackgroundColor="Transparent"
+                     Opacity="0.85" Source="setting.png"/>-->
+
+
+        <!--<ImageButton WidthRequest="30" HeightRequest="30"
                     HorizontalOptions="Start" VerticalOptions="Start"
                     Margin="15,25" BackgroundColor="Transparent" 
                     Opacity="0.85">
             <ImageButton.Source>
                 <FontImageSource Glyph="&#xf035c;" FontFamily="MaterialDesign" Size="60"/>
             </ImageButton.Source>
-        </ImageButton>
+        </ImageButton>-->
     </Grid>
 </ContentPage>

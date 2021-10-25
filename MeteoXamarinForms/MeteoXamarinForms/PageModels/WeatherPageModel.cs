@@ -8,6 +8,7 @@ using FreshMvvm.Popups;
 using MeteoXamarinForms.PageModels;
 using System.Linq;
 using MeteoXamarinForms.Extensions;
+using Xamarin.CommunityToolkit.Helpers;
 
 namespace MeteoXamarinForms.ViewModels
 {
@@ -25,7 +26,19 @@ namespace MeteoXamarinForms.ViewModels
             AddWeatherInformationCommand = new Command(
                 async () =>
                 {
-                    await CoreMethods.PushPageModel<SearchPageModel>();
+                    await CoreMethods.DisplayActionSheet("", "Cancel", "destroy");
+                });
+
+            OpenCityManagementCommand = new Command(
+                async () =>
+                {
+                    await CoreMethods.PushPageModel<CityPageModel>(data:true, animate:false);
+                });
+
+            OpenParameterCommand = new Command(
+                async () =>
+                {
+                    await CoreMethods.PushPageModel<SettingPageModel>(animate: false);
                 });
         }
 
@@ -81,8 +94,8 @@ namespace MeteoXamarinForms.ViewModels
             set => SetProperty(ref _feelsLike, value);
         }
 
-        private string _uvIndex;
-        public string UvIndex
+        private LocalizedString _uvIndex;
+        public LocalizedString UvIndex
         {
             get { return _uvIndex; }
             set => SetProperty(ref _uvIndex, value);
@@ -121,6 +134,13 @@ namespace MeteoXamarinForms.ViewModels
         {
             get { return _windDeg; }
             set => SetProperty(ref _windDeg, value);
+        }
+
+        private LocalizedString _windDirection;
+        public LocalizedString WindDirection
+        {
+            get { return _windDirection; }
+            set => SetProperty(ref _windDirection, value);
         }
 
         private int _clouds;
@@ -215,11 +235,13 @@ namespace MeteoXamarinForms.ViewModels
             }
 
             // More daily information
-            UvIndex = ToolExtension.getUviValue(current.Uvi);
+            //UvIndex = ToolExtension.getUviValue(current.Uvi);
+            UvIndex = new (() => ToolExtension.getUviValue(current.Uvi));
             Sunrise = ToolExtension.UnixTimeStampToDateTime(current.Sunrise);
             Sunset = ToolExtension.UnixTimeStampToDateTime(current.Sunset);
             WindSpeed = ToolExtension.MetreSecToKilometerHour(current.Wind_Speed);
             WindDeg = current.Wind_Deg;
+            WindDirection = new(() => ToolExtension.GetWindDirection(WindDeg));
             Clouds = current.Clouds;
             Humidity = current.Humidity;
         }
@@ -231,9 +253,11 @@ namespace MeteoXamarinForms.ViewModels
         }
         #endregion
 
-        #region Command
+        #region Commands
         public ICommand DailyDetailCommand { private set; get; }
         public ICommand AddWeatherInformationCommand { private set; get; }
+        public ICommand OpenCityManagementCommand { private set; get; }
+        public ICommand OpenParameterCommand { private set; get; }
         #endregion
     }
 }
