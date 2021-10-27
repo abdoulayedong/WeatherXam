@@ -60,6 +60,8 @@ namespace MeteoXamarinForms
             {
                 var page = FreshPageModelResolver.ResolvePageModel<SearchPageModel>();
                 var navigationPage = new FreshNavigationContainer(page);
+                navigationPage.BarBackground = Brush.Black;
+                navigationPage.BarTextColor = Color.White;
                 MainPage = navigationPage;
             }
         }
