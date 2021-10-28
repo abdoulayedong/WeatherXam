@@ -42,6 +42,11 @@ namespace MeteoXamarinForms.PageModels
                     var fileList = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
                     if (fileList.Count() == 0)
                     {
+                        var existCurrentLocation = Preferences.ContainsKey("CurrentLocation");
+                        if (existCurrentLocation)
+                        {
+                            Preferences.Remove("CurrentLocation");
+                        }
                         await CoreMethods.PushPageModel<SearchPageModel>(animate: false);
                         CoreMethods.RemoveFromNavigation();
                     };
@@ -63,12 +68,24 @@ namespace MeteoXamarinForms.PageModels
             {
                 CitiesManagerData.Add(ToolExtension.GetDataLocaly(file));
                 var city = CitiesManagerData[index];
-                CitiesWeather.Add(new CityManager
+                if (city.Timezone.Contains('/'))
                 {
-                    City = ToolExtension.GetCityName(city.Timezone),
-                    Temperature = ToolExtension.roundedTemperature(city.Current.Temp),
-                    Description = city.Current.Weather[0].Description
-                });
+                    CitiesWeather.Add(new CityManager
+                    {
+                        City = ToolExtension.GetCityName(city.Timezone),
+                        Temperature = ToolExtension.roundedTemperature(city.Current.Temp),
+                        Description = city.Current.Weather[0].Description
+                    });
+                }
+                else
+                {
+                    CitiesWeather.Add(new CityManager
+                    {
+                        City = city.Timezone,
+                        Temperature = ToolExtension.roundedTemperature(city.Current.Temp),
+                        Description = city.Current.Weather[0].Description
+                    });
+                }
             }
         }
         #endregion
@@ -98,8 +115,22 @@ namespace MeteoXamarinForms.PageModels
         public ICommand AddWeatherInformationCommand { private set; get; }
         public ICommand ShowWeatherInformationCommand { private set; get; }
         public ICommand DeleteWeatherInformationCommand { private set; get; }
+        public ICommand BackPressCommand => new Command(BackPressMethod);
+        #endregion
+
+        #region Methods
+        private async void BackPressMethod()
+        {
+            var fullFileName = Preferences.Get("FullFileName", String.Empty);
+            if (fullFileName != String.Empty)
+            {
+                var weatherData = ToolExtension.GetDataLocaly(fullFileName);
+                await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
+            }
+        }
         #endregion
     }
+
 
     public class CityManager
     {

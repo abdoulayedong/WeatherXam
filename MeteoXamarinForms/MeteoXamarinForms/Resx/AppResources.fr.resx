@@ -204,6 +204,9 @@
   <data name="TemperatureUnit" xml:space="preserve">
     <value>Unité de température</value>
   </data>
+  <data name="Updated" xml:space="preserve">
+    <value>MAJ</value>
+  </data>
   <data name="UvIndex" xml:space="preserve">
     <value>Indice UV</value>
   </data>

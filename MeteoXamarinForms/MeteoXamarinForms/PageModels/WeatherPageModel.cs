@@ -9,6 +9,10 @@ using MeteoXamarinForms.PageModels;
 using System.Linq;
 using MeteoXamarinForms.Extensions;
 using Xamarin.CommunityToolkit.Helpers;
+using System.Threading.Tasks;
+using MeteoXamarinForms.Services.Weather;
+using System.Collections.ObjectModel;
+using Xamarin.Essentials;
 
 namespace MeteoXamarinForms.ViewModels
 {
@@ -16,6 +20,8 @@ namespace MeteoXamarinForms.ViewModels
     {
         public WeatherPageModel()
         {
+            _weatherService = ViewModelLocator.Resolve<IWeatherService>();
+
             DailyDetailCommand = new Command<DayPrevision>(
             async (DayPrevision dayPrevision) =>
             {
@@ -40,11 +46,41 @@ namespace MeteoXamarinForms.ViewModels
                 {
                     await CoreMethods.PushPageModel<SettingPageModel>(animate: false);
                 });
+
+            ActualizeDataCommand = new Command(
+                async () =>
+                {
+                    IsRefreshing = true;
+                    await Update();
+                    IsRefreshing = false;
+                });
         }
 
         #region Properties
         public Root Weather { get; set; }
-        
+        private readonly IWeatherService _weatherService;
+
+        private bool _isRefreshing;
+        public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set => SetProperty(ref _isRefreshing, value);
+        }
+
+        private int _rotationDegree;
+        public int RotationDegree
+        {
+            get { return _rotationDegree; }
+            set => SetProperty(ref _rotationDegree, value);
+        }
+
+        private DateTime _updateData;
+        public DateTime UpdateData
+        {
+            get { return _updateData; }
+            set => SetProperty(ref _updateData, value);
+        }
+
         private string _cityName;
         public string CityName
         {
@@ -150,17 +186,17 @@ namespace MeteoXamarinForms.ViewModels
             set => SetProperty(ref _clouds, value);
         }
 
-        private List<HourPrevision> _hourPrevisions;
+        private ObservableCollection<HourPrevision> _hourPrevisions;
 
-        public List<HourPrevision> HourPrevisions
+        public ObservableCollection<HourPrevision> HourPrevisions
         {
             get => _hourPrevisions;
             set => SetProperty(ref _hourPrevisions, value);
         }
 
-        private List<DayPrevision> _dayPrevisions;
+        private ObservableCollection<DayPrevision> _dayPrevisions;
 
-        public List<DayPrevision> DayPrevisions
+        public ObservableCollection<DayPrevision> DayPrevisions
         {
             get => _dayPrevisions;
             set => SetProperty(ref _dayPrevisions, value);
@@ -172,7 +208,19 @@ namespace MeteoXamarinForms.ViewModels
         {
             var city = Weather.Timezone.Split('/');
             CityName = city[city.Length - 1];
+            SetUiData();
+        }
 
+        private async Task Update()
+        {
+            Weather = await _weatherService.GetWeatherFromLatLong(Weather.Lat, Weather.Lon);
+            Weather.Timezone = CityName;
+            ToolExtension.SaveDataLocaly(Weather, CityName);
+            SetUiData();
+        }
+
+        private void SetUiData()
+        {
             // Current day weather
             var current = Weather.Current;
             var currentDay = Weather.Daily[0];
@@ -187,10 +235,10 @@ namespace MeteoXamarinForms.ViewModels
             FeelsLike = ToolExtension.roundedTemperature(current.Feels_Like);
 
             // Hourly weather
-            HourPrevisions = new List<HourPrevision>();
+            HourPrevisions = new ObservableCollection<HourPrevision>();
             for (int i = 0; i < 24; i++)
             {
-                HourPrevision hourPrevision = new HourPrevision();
+                HourPrevision hourPrevision = new();
                 hourPrevision.Hour = ToolExtension.UnixTimeStampToDateTime(hourlyForecast[i].Dt);
                 hourPrevision.Icon = ToolExtension.getIcon(hourlyForecast[i].Weather[0].Icon);
                 hourPrevision.Temperature = ToolExtension.roundedTemperature(hourlyForecast[i].Temp);
@@ -198,7 +246,8 @@ namespace MeteoXamarinForms.ViewModels
                 if (hourPrevision.ProbalilityOfPrecipitation >= 0 && hourPrevision.ProbalilityOfPrecipitation <= 20)
                 {
                     hourPrevision.ProbabilityIcon = "waterdrop1.png";
-                }else if(hourPrevision.ProbalilityOfPrecipitation > 20 && hourPrevision.ProbalilityOfPrecipitation <= 60)
+                }
+                else if (hourPrevision.ProbalilityOfPrecipitation > 20 && hourPrevision.ProbalilityOfPrecipitation <= 60)
                 {
                     hourPrevision.ProbabilityIcon = "waterdrop2.png";
                 }
@@ -210,7 +259,7 @@ namespace MeteoXamarinForms.ViewModels
             }
 
             // Daily weather
-            DayPrevisions = new List<DayPrevision>();
+            DayPrevisions = new ObservableCollection<DayPrevision>();
             for (int i = 0; i < 7; i++)
             {
                 DayPrevision dayPrevision = new DayPrevision();
@@ -236,7 +285,7 @@ namespace MeteoXamarinForms.ViewModels
 
             // More daily information
             //UvIndex = ToolExtension.getUviValue(current.Uvi);
-            UvIndex = new (() => ToolExtension.getUviValue(current.Uvi));
+            UvIndex = new(() => ToolExtension.getUviValue(current.Uvi));
             Sunrise = ToolExtension.UnixTimeStampToDateTime(current.Sunrise);
             Sunset = ToolExtension.UnixTimeStampToDateTime(current.Sunset);
             WindSpeed = ToolExtension.MetreSecToKilometerHour(current.Wind_Speed);
@@ -244,12 +293,23 @@ namespace MeteoXamarinForms.ViewModels
             WindDirection = new(() => ToolExtension.GetWindDirection(WindDeg));
             Clouds = current.Clouds;
             Humidity = current.Humidity;
+            UpdateData = ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
         }
 
         public override void Init(object initData)
         {
             Weather = initData as Root;
             Initialize();
+        }
+
+        private async void BackPressMethod()
+        {
+            var fullFileName = Preferences.Get("FullFileName", String.Empty);
+            if (fullFileName != String.Empty)
+            {
+                var weatherData = ToolExtension.GetDataLocaly(fullFileName);
+                await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
+            }
         }
         #endregion
 
@@ -258,6 +318,8 @@ namespace MeteoXamarinForms.ViewModels
         public ICommand AddWeatherInformationCommand { private set; get; }
         public ICommand OpenCityManagementCommand { private set; get; }
         public ICommand OpenParameterCommand { private set; get; }
+        public ICommand ActualizeDataCommand { private set; get; }
+        public ICommand BackPressCommand => new Command(BackPressMethod);
         #endregion
     }
 }

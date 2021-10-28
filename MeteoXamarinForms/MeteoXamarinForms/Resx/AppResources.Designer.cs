@@ -322,6 +322,15 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Updated.
+        /// </summary>
+        internal static string Updated {
+            get {
+                return ResourceManager.GetString("Updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UV Index.
         /// </summary>
         internal static string UvIndex {

@@ -7,11 +7,16 @@
              BackgroundColor="{StaticResource MainBackgroundColor}"
              xmlns:coordinator="clr-namespace:CoordinatorLayout.XamarinForms;assembly=CoordinatorLayout.XamarinForms" 
              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             xmlns:src="clr-namespace:MeteoXamarinForms.Models">
+    <ContentPage.Resources>
+        <src:Ticker x:Key="Ticker"/>
+    </ContentPage.Resources>
     <Grid>
         <coordinator:CoordinatorLayout x:Name="coordinator"
                                        InitialExpansionState="Expanded"
                                        ExpansionEventHandler="OnCoordinatorLayoutOnExpansionEventHandler"
+                                       ScrollEventHandler="OnCoordinatorLayoutOnScrollEventHandler"
                                        ProportionalTopViewHeightMax="0.25"
                                        ShouldSnap="True"
                                        ProportionalTopViewHeightMin="0.08">
@@ -62,259 +67,259 @@
                 </Grid>
             </coordinator:CoordinatorLayout.TopView>
             <coordinator:CoordinatorLayout.BottomView>
-                <Grid RowDefinitions="auto,auto,auto,auto">                    
-                    <Frame CornerRadius="25" Margin="15,10,15,5 " VerticalOptions="Start"
-                           Grid.Row="0" BackgroundColor="{StaticResource MainFrameColor}">
-                        <Grid RowDefinitions="auto, auto, auto"
-                              RowSpacing="10">
-                                <StackLayout Spacing="0" Grid.Row="0">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" 
-                                             x:Name="LocationTitle">
-                                    <Label Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
-                                    <Label Text="{Binding CityName}" TextColor="{StaticResource MainTextColor}" FontSize="24"/>
+                <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                             Command="{Binding ActualizeDataCommand}">
+                    <ScrollView>
+                        <StackLayout>                            
+                            <Frame CornerRadius="25" Margin="15,10,15,5 " VerticalOptions="Start"
+                                   BackgroundColor="{StaticResource MainFrameColor}">
+                                <Grid RowDefinitions="auto, auto, auto"
+                                  RowSpacing="10">
+                                    <StackLayout Spacing="0" Grid.Row="0">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" 
+                                                 x:Name="LocationTitle">
+                                            <Label Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
+                                            <Label Text="{Binding CityName}" TextColor="{StaticResource MainTextColor}" FontSize="24"/>
+                                        </StackLayout>
+                                        <Label Text="{Binding Source={StaticResource Ticker}, StringFormat='{0:ddd, d MMMM HH:mm}', Path=Now, Mode=OneWay}"
+                                               HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="14" TextColor="{StaticResource SecondaryTextColor}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Grid.Row="1">
+                                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
+                                            <Image Source="{Binding CurrentIcon}"
+                                               HeightRequest="80" Aspect="AspectFit"
+                                               WidthRequest="80"/>
+                                            <Label Text="{Binding CurrentTemperature, StringFormat='{0}°'}" FontSize="60" TextColor="{StaticResource MainTextColor}"/>
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="EndAndExpand" Spacing="2" VerticalOptions="CenterAndExpand">
+                                            <Label Text="{Binding Description}" FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}"/>
+                                            <Label FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}">
+                                                <Label.Text>
+                                                    <MultiBinding StringFormat="{}{0}°/{1}°">
+                                                        <Binding Path="MaxTemperature"/>
+                                                        <Binding Path="MinTemperature"/>
+                                                    </MultiBinding>
+                                                </Label.Text>
+                                            </Label>
+                                            <Label Text="{Binding FeelsLike, StringFormat='Feels like {0}°'}" FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <CollectionView ItemsSource="{Binding HourPrevisions}" Grid.Row="2"
+                                        SelectionMode="None" ItemSizingStrategy="MeasureAllItems" 
+                                        ItemsLayout="HorizontalList" HeightRequest="125"
+                                        VerticalScrollBarVisibility="Never" TabIndex="2">
+                                        <CollectionView.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackLayout HorizontalOptions="FillAndExpand" WidthRequest="60" Spacing="2" Margin="0,0,10,0">
+                                                    <Label Text="{Binding Hour, StringFormat='{0:HH:mm}'}" HorizontalOptions="Center" 
+                                                       TextColor="{StaticResource SecondaryTextColor}" FontSize="15"/>
+                                                    <Image Source="{Binding Icon}"
+                                                   HeightRequest="50" Aspect="AspectFill"
+                                                   WidthRequest="60"/>
+                                                    <Label Text="{Binding Temperature, StringFormat='{0}°'}" FontSize="17" HorizontalOptions="Center"
+                                                       TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                                    <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center">
+                                                        <Image Source="{Binding ProbabilityIcon}" HeightRequest="6" WidthRequest="6" Margin="3,0"/>
+                                                        <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" FontSize="13" TextColor="{StaticResource SecondaryTextColor}"/>
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </DataTemplate>
+                                        </CollectionView.ItemTemplate>
+                                    </CollectionView>
+                                </Grid>
+                            </Frame>
+                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
+                                   BackgroundColor="{StaticResource MainFrameColor}">
+                                <CollectionView ItemsSource="{Binding DayPrevisions}"
+                                            x:Name="DayPrevision"
+                                            SelectionMode="Single" HeightRequest="245" 
+                                            SelectionChangedCommand="{Binding DailyDetailCommand}"
+                                            SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference DayPrevision}}">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid ColumnDefinitions="auto, *, auto" Margin="0">
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup Name="CommonStates">
+                                                        <VisualState Name="Selected">
+                                                            <VisualState.Setters>
+                                                                <Setter Property="BackgroundColor" Value="Transparent" />
+                                                            </VisualState.Setters>
+                                                        </VisualState>
+                                                        <VisualState Name="Focused">
+                                                            <VisualState.Setters>
+                                                                <Setter Property="BackgroundColor" Value="Orange" />
+                                                            </VisualState.Setters>
+                                                        </VisualState>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
+                                                <Label Text="{Binding DaysOfWeek, StringFormat='{0:dddd}'}" 
+                                                   HorizontalOptions="StartAndExpand" FontAttributes="Bold"
+                                                   FontSize="16" TextColor="{StaticResource MainTextColor}"/>
+
+                                                <StackLayout Orientation="Horizontal" Grid.Column="1"
+                                                         HorizontalOptions="EndAndExpand" >
+                                                    <Label Text="{Binding MaxTemperature, StringFormat='{0}°/'}" FontAttributes="Bold"  FontSize="16" TextColor="{StaticResource MainTextColor}"/>
+                                                    <Label Text="{Binding MinTemperature, StringFormat='{0}°'}" FontAttributes="Bold" FontSize="16" TextColor="{StaticResource MainTextColor}"/>
+                                                    <Image Source="{Binding DayIcon}" Margin="5,-5,0,0"
+                                                       HeightRequest="40" Aspect="AspectFill"
+                                                       WidthRequest="40" />
+                                                </StackLayout>
+
+                                                <StackLayout HorizontalOptions="EndAndExpand" Grid.Column="2" Orientation="Horizontal"
+                                                         Margin="40,0,0,0">
+                                                    <Image Source="{Binding ProbabilityIcon}" HeightRequest="7" WidthRequest="7" Margin="3,0,0,10"/>
+                                                    <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" 
+                                                       FontSize="15" TextColor="{StaticResource MainTextColor}"/>
+                                                </StackLayout>
+
+                                            </Grid>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </Frame>
+                            <Frame CornerRadius="25" Margin="15,0,15,5"
+                                BackgroundColor="{StaticResource MainFrameColor}">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Image Source="uv_index.png" HeightRequest="30"
+                                           WidthRequest="30"/>
+                                        <Label Text="{xct:Translate UvIndex}" HorizontalOptions="StartAndExpand"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding UvIndex.Localized}" TextColor="{StaticResource MainTextColor}"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           FontAttributes="Bold" />
+                                    </StackLayout>
+                                    <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,10" 
+                                            Color="{StaticResource SecondaryTextColor}"/>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Image Source="sunrise.png" HeightRequest="30"
+                                           WidthRequest="30"/>
+                                        <Label Text="{xct:Translate Sunrise}" HorizontalOptions="StartAndExpand"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Sunrise, StringFormat='{0: HH:mm}'}" 
+                                           TextColor="{StaticResource MainTextColor}"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           FontAttributes="Bold" />
+                                    </StackLayout>
+                                    <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
+                                            Color="{StaticResource SecondaryTextColor}"/>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Image Source="sunset.png" HeightRequest="30"
+                                               WidthRequest="30"/>
+                                        <Label Text="{xct:Translate Sunset}" HorizontalOptions="StartAndExpand"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Sunset, StringFormat='{0: HH:mm}'}" 
+                                           TextColor="{StaticResource MainTextColor}"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           FontAttributes="Bold" />
+                                    </StackLayout>
+                                    <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
+                                            Color="{StaticResource SecondaryTextColor}"/>
+
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Image Source="cloud.png" HeightRequest="30"
+                                           WidthRequest="30"/>
+                                        <Label Text="{xct:Translate Cloud}" HorizontalOptions="StartAndExpand"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Clouds, StringFormat='{0}%'}" 
+                                           TextColor="{StaticResource MainTextColor}"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           FontAttributes="Bold" />
+                                    </StackLayout>
+                                    <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
+                                            Color="{StaticResource SecondaryTextColor}"/>
+
+                                    <!--<StackLayout Orientation="Horizontal" Spacing="10">
+                                    <Image Source="wind.png" HeightRequest="30"
+                                           WidthRequest="30"/>
+                                    <Label Text="Wind" HorizontalOptions="StartAndExpand"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding WindSpeed, StringFormat='{0}km/h'}" 
+                                           TextColor="{StaticResource MainTextColor}"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           FontAttributes="Bold"/>
+                                    <StackLayout Orientation="Horizontal" Spacing="-2" VerticalOptions="CenterAndExpand">
+                                        <Label Text="(" FontAttributes="Bold"
+                                               FontSize="16" TextColor="{StaticResource MainTextColor}"/>
+                                        <Label Text="&#xf005d;" Style="{StaticResource MaterialIcons}" FontSize="20" 
+                                               TextColor="{StaticResource MainTextColor}"
+                                               Rotation="{Binding WindDeg}"/>
+                                        <Label Text=")" FontAttributes="Bold"
+                                               FontSize="16" TextColor="{StaticResource MainTextColor}"/>
+                                    </StackLayout>
                                 </StackLayout>
-                                <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:ddd, d MMMM HH:mm}'}"
-                                           HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="14" TextColor="{StaticResource SecondaryTextColor}"/>
+                            
+                                <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,10" 
+                                            Color="{StaticResource SecondaryTextColor}"/>-->
+                                    <StackLayout Orientation="Horizontal" Spacing="10">
+                                        <Image Source="humidity.png" HeightRequest="30"
+                                           WidthRequest="30"/>
+                                        <Label Text="{xct:Translate Humidity}" HorizontalOptions="StartAndExpand"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Humidity, StringFormat='{0}%'}" 
+                                           TextColor="{StaticResource MainTextColor}"
+                                           FontSize="16" VerticalTextAlignment="Center"
+                                           FontAttributes="Bold"/>
+                                    </StackLayout>
+
                                 </StackLayout>
-                            <StackLayout Orientation="Horizontal" Grid.Row="1">
-                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" >
-                                    <Image Source="{Binding CurrentIcon}"
-                                           HeightRequest="80" Aspect="AspectFit"
-                                           WidthRequest="80"/>                                   
-                                    <Label Text="{Binding CurrentTemperature, StringFormat='{0}°'}" FontSize="60" TextColor="{StaticResource MainTextColor}"/>
-                                </StackLayout>
-                                <StackLayout HorizontalOptions="EndAndExpand" Spacing="2" VerticalOptions="CenterAndExpand">
-                                    <Label Text="{Binding Description}" FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}"/>
-                                    <Label FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}">
-                                        <Label.Text>
-                                            <MultiBinding StringFormat="{}{0}°/{1}°">
-                                                <Binding Path="MaxTemperature"/>
-                                                <Binding Path="MinTemperature"/>
-                                            </MultiBinding>
-                                        </Label.Text>
-                                    </Label>
-                                    <Label Text="{Binding FeelsLike, StringFormat='Feels like {0}°'}" FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}"/>
-                                </StackLayout>
-                            </StackLayout>
-                            <CollectionView ItemsSource="{Binding HourPrevisions}" Grid.Row="2"
-                                    SelectionMode="None" ItemSizingStrategy="MeasureAllItems" 
-                                    ItemsLayout="HorizontalList" HeightRequest="125">
-                                <CollectionView.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackLayout HorizontalOptions="FillAndExpand" WidthRequest="60" Spacing="2" Margin="0,0,10,0">
-                                            <Label Text="{Binding Hour, StringFormat='{0:HH:mm}'}" HorizontalOptions="Center" 
-                                                   TextColor="{StaticResource SecondaryTextColor}" FontSize="15"/>
-                                            <Image Source="{Binding Icon}"
-                                               HeightRequest="50" Aspect="AspectFill"
-                                               WidthRequest="60"/>
-                                            <Label Text="{Binding Temperature, StringFormat='{0}°'}" FontSize="17" HorizontalOptions="Center"
-                                                   TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                            <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center">
-                                                <Image Source="{Binding ProbabilityIcon}" HeightRequest="6" WidthRequest="6" Margin="3,0"/>
-                                                <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" FontSize="13" TextColor="{StaticResource SecondaryTextColor}"/>
+                            </Frame>
+                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
+                                   BackgroundColor="{StaticResource MainFrameColor}">
+                                <StackLayout>
+                                    <Label Text="{xct:Translate Wind}" TextColor="{StaticResource MainTextColor}"
+                                       FontSize="18"/>
+                                    <StackLayout Orientation="Horizontal" Spacing="0"
+                                             Margin="0" Padding="0">
+                                        <forms:AnimationView x:Name="AnimationView"
+                                                     Animation="lf30_editor_bij2hbab.json" 
+                                                     AutoPlay="True"
+                                                     RepeatMode="Infinite"
+                                                     Margin="-15,0"
+                                                     Speed="0.5"
+                                                     VerticalOptions="StartAndExpand"
+                                                     HorizontalOptions="StartAndExpand" 
+                                                     WidthRequest="200"
+                                                     HeightRequest="150"/>
+                                        <StackLayout Spacing="10" Padding="0" Margin="0"
+                                                 Orientation="Horizontal"
+                                                 HorizontalOptions="EndAndExpand"
+                                                 VerticalOptions="CenterAndExpand">
+                                            <StackLayout>
+                                                <Label Text="{xct:Translate Direction}" TextColor="{StaticResource SecondaryTextColor}"/>
+                                                <Label Text="{xct:Translate Speed}" TextColor="{StaticResource SecondaryTextColor}"/>
+                                            </StackLayout>
+                                            <StackLayout >
+                                                <Label Text="{Binding WindDirection.Localized}" TextColor="{StaticResource MainTextColor}"/>
+                                                <Label Text="{Binding WindSpeed, StringFormat='{0}km/h'}" TextColor="{StaticResource MainTextColor}"/>
                                             </StackLayout>
                                         </StackLayout>
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>
-                            </CollectionView>
-                        </Grid>
-                    </Frame>
-                    <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
-                           Grid.Row="1" BackgroundColor="{StaticResource MainFrameColor}">
-                        <CollectionView ItemsSource="{Binding DayPrevisions}"
-                                        x:Name="DayPrevision"
-                                        SelectionMode="Single" HeightRequest="245" 
-                                        SelectionChangedCommand="{Binding DailyDetailCommand}"
-                                        SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference DayPrevision}}">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid ColumnDefinitions="auto, *, auto" Margin="0">
-                                        <VisualStateManager.VisualStateGroups>
-                                            <VisualStateGroup Name="CommonStates">
-                                                <VisualState Name="Selected">
-                                                    <VisualState.Setters>
-                                                        <Setter Property="BackgroundColor" Value="Transparent" />
-                                                    </VisualState.Setters>
-                                                </VisualState>
-                                                <VisualState Name="Focused">
-                                                    <VisualState.Setters>
-                                                        <Setter Property="BackgroundColor" Value="Orange" />
-                                                    </VisualState.Setters>
-                                                </VisualState>
-                                            </VisualStateGroup>
-                                        </VisualStateManager.VisualStateGroups>
-                                        <Label Text="{Binding DaysOfWeek, StringFormat='{0:dddd}'}" 
-                                               HorizontalOptions="StartAndExpand" FontAttributes="Bold"
-                                               FontSize="16" TextColor="{StaticResource MainTextColor}"/>
-                                                                                
-                                        <StackLayout Orientation="Horizontal" Grid.Column="1"
-                                                     HorizontalOptions="EndAndExpand" >
-                                            <Label Text="{Binding MaxTemperature, StringFormat='{0}°/'}" FontAttributes="Bold"  FontSize="16" TextColor="{StaticResource MainTextColor}"/>
-                                            <Label Text="{Binding MinTemperature, StringFormat='{0}°'}" FontAttributes="Bold" FontSize="16" TextColor="{StaticResource MainTextColor}"/>
-                                            <Image Source="{Binding DayIcon}" Margin="5,-5,0,0"
-                                                   HeightRequest="40" Aspect="AspectFill"
-                                                   WidthRequest="40" />
-                                        </StackLayout>
-                                        
-                                        <StackLayout HorizontalOptions="EndAndExpand" Grid.Column="2" Orientation="Horizontal"
-                                                     Margin="40,0,0,0">
-                                            <Image Source="{Binding ProbabilityIcon}" HeightRequest="7" WidthRequest="7" Margin="3,0,0,10"/>
-                                            <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" 
-                                                   FontSize="15" TextColor="{StaticResource MainTextColor}"/>
-                                        </StackLayout>
-                                        
-                                    </Grid>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-                    </Frame>
-                    <Frame CornerRadius="25" Margin="15,0,15,5" Grid.Row="2"
-                            BackgroundColor="{StaticResource MainFrameColor}">
-                        <StackLayout>
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Image Source="uv_index.png" HeightRequest="30"
-                                       WidthRequest="30"/>
-                                <Label Text="{xct:Translate UvIndex}" HorizontalOptions="StartAndExpand"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                <Label Text="{Binding UvIndex.Localized}" TextColor="{StaticResource MainTextColor}"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       FontAttributes="Bold" />
-                            </StackLayout>
-                            <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,10" 
-                                        Color="{StaticResource SecondaryTextColor}"/>
-                            
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Image Source="sunrise.png" HeightRequest="30"
-                                       WidthRequest="30"/>
-                                <Label Text="{xct:Translate Sunrise}" HorizontalOptions="StartAndExpand"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                <Label Text="{Binding Sunrise, StringFormat='{0: HH:mm}'}" 
-                                       TextColor="{StaticResource MainTextColor}"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       FontAttributes="Bold" />
-                            </StackLayout>
-                            <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
-                                        Color="{StaticResource SecondaryTextColor}"/>
-
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Image Source="sunset.png" HeightRequest="30"
-                                           WidthRequest="30"/>
-                                <Label Text="{xct:Translate Sunset}" HorizontalOptions="StartAndExpand"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                <Label Text="{Binding Sunset, StringFormat='{0: HH:mm}'}" 
-                                       TextColor="{StaticResource MainTextColor}"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       FontAttributes="Bold" />
-                            </StackLayout>
-                            <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
-                                        Color="{StaticResource SecondaryTextColor}"/>
-                            
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Image Source="cloud.png" HeightRequest="30"
-                                       WidthRequest="30"/>
-                                <Label Text="{xct:Translate Cloud}" HorizontalOptions="StartAndExpand"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                <Label Text="{Binding Clouds, StringFormat='{0}%'}" 
-                                       TextColor="{StaticResource MainTextColor}"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       FontAttributes="Bold" />
-                            </StackLayout>
-                            <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
-                                        Color="{StaticResource SecondaryTextColor}"/>
-                            
-                            <!--<StackLayout Orientation="Horizontal" Spacing="10">
-                                <Image Source="wind.png" HeightRequest="30"
-                                       WidthRequest="30"/>
-                                <Label Text="Wind" HorizontalOptions="StartAndExpand"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                <Label Text="{Binding WindSpeed, StringFormat='{0}km/h'}" 
-                                       TextColor="{StaticResource MainTextColor}"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       FontAttributes="Bold"/>
-                                <StackLayout Orientation="Horizontal" Spacing="-2" VerticalOptions="CenterAndExpand">
-                                    <Label Text="(" FontAttributes="Bold"
-                                           FontSize="16" TextColor="{StaticResource MainTextColor}"/>
-                                    <Label Text="&#xf005d;" Style="{StaticResource MaterialIcons}" FontSize="20" 
-                                           TextColor="{StaticResource MainTextColor}"
-                                           Rotation="{Binding WindDeg}"/>
-                                    <Label Text=")" FontAttributes="Bold"
-                                           FontSize="16" TextColor="{StaticResource MainTextColor}"/>
-                                </StackLayout>
-                            </StackLayout>
-                            
-                            <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,10" 
-                                        Color="{StaticResource SecondaryTextColor}"/>-->
-                            <StackLayout Orientation="Horizontal" Spacing="10">
-                                <Image Source="humidity.png" HeightRequest="30"
-                                       WidthRequest="30"/>
-                                <Label Text="{xct:Translate Humidity}" HorizontalOptions="StartAndExpand"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                <Label Text="{Binding Humidity, StringFormat='{0}%'}" 
-                                       TextColor="{StaticResource MainTextColor}"
-                                       FontSize="16" VerticalTextAlignment="Center"
-                                       FontAttributes="Bold"/>
-                            </StackLayout>
-
-                        </StackLayout>
-                    </Frame>
-                    <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
-                           Grid.Row="3" BackgroundColor="{StaticResource MainFrameColor}">
-                        <StackLayout>
-                            <Label Text="{xct:Translate Wind}" TextColor="{StaticResource MainTextColor}"
-                                   FontSize="18"/>
-                            <StackLayout Orientation="Horizontal" Spacing="0"
-                                         Margin="0" Padding="0">
-                                <forms:AnimationView x:Name="AnimationView"
-                                                 Animation="lf30_editor_bij2hbab.json" 
-                                                 AutoPlay="True"
-                                                 RepeatMode="Infinite"
-                                                 Margin="-15,0"
-                                                 Speed="0.5"
-                                                 VerticalOptions="StartAndExpand"
-                                                 HorizontalOptions="StartAndExpand" 
-                                                 WidthRequest="200"
-                                                 HeightRequest="150"/>
-                                <StackLayout Spacing="10" Padding="0" Margin="0"
-                                             Orientation="Horizontal"
-                                             HorizontalOptions="EndAndExpand"
-                                             VerticalOptions="CenterAndExpand">
-                                    <StackLayout>
-                                        <Label Text="{xct:Translate Direction}" TextColor="{StaticResource SecondaryTextColor}"/>
-                                        <Label Text="{xct:Translate Speed}" TextColor="{StaticResource SecondaryTextColor}"/>
-                                    </StackLayout>
-                                    <StackLayout >
-                                        <Label Text="{Binding WindDirection.Localized}" TextColor="{StaticResource MainTextColor}"/>
-                                        <Label Text="{Binding WindSpeed, StringFormat='{0}km/h'}" TextColor="{StaticResource MainTextColor}"/>
                                     </StackLayout>
                                 </StackLayout>
+                            </Frame>
+                            <StackLayout Orientation="Horizontal" Margin="15,10" Padding="0" 
+                                     Spacing="0">
+                                <Label Text="{xct:Translate AppName}" FontSize="14" VerticalTextAlignment="Center" FontAttributes="Bold"
+                                   HorizontalOptions="StartAndExpand" TextColor="{StaticResource SecondaryTextColor}" Margin="10,0"/>
+                                <Label Text="{xct:Translate Updated}" FontSize="13" TextColor="{StaticResource SecondaryTextColor}"
+                                   FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding UpdateData, StringFormat='{0:dd/MM, HH:mm}'}"
+                                   TextColor="{StaticResource SecondaryTextColor}"
+                                   FontSize="13" Margin="5,0" VerticalTextAlignment="Center"/>
                             </StackLayout>
                         </StackLayout>
-                    </Frame>
-                </Grid>           
+                    </ScrollView>
+                </RefreshView>
             </coordinator:CoordinatorLayout.BottomView>
         </coordinator:CoordinatorLayout>
-       
-        <!--<ImageButton WidthRequest="30" HeightRequest="30"
-                    HorizontalOptions="End" VerticalOptions="Start"
-                    Margin="10,25" BackgroundColor="Transparent"
-                    Opacity="0.85"
-                    Command="{Binding AddWeatherInformationCommand}">
-            <ImageButton.Source>
-                <FontImageSource Color="BlanchedAlmond" Glyph="&#xf0415;" FontFamily="MaterialDesign" Size="60"/>
-            </ImageButton.Source>
-        </ImageButton>-->
-        <!--<ImageButton WidthRequest="30" HeightRequest="30"
-                     HorizontalOptions="Start" VerticalOptions="Start"
-                     Margin="15,25" BackgroundColor="Transparent"
-                     Opacity="0.85" Source="building.png"
-                     Command="{Binding OpenCityManagementCommand}"/>-->
-
         <Label Text="&#xf0a37;" Style="{StaticResource MaterialIcons}" 
                FontSize="25" VerticalOptions="Start" HorizontalOptions="Start" 
                TextColor="{StaticResource MainTextColor}"
@@ -323,8 +328,6 @@
                 <TapGestureRecognizer Command="{Binding OpenCityManagementCommand}"/>
             </Label.GestureRecognizers>
         </Label>
-
-
         <Label Text="&#xf0493;" Style="{StaticResource MaterialIcons}" 
                FontSize="25" VerticalOptions="Start" HorizontalOptions="End" 
                TextColor="{StaticResource MainTextColor}"
@@ -333,20 +336,5 @@
                 <TapGestureRecognizer Command="{Binding OpenParameterCommand}"/>
             </Label.GestureRecognizers>
         </Label>
-
-        <!--<ImageButton WidthRequest="30" HeightRequest="30"
-                     HorizontalOptions="End" VerticalOptions="Start"
-                     Margin="10,25" BackgroundColor="Transparent"
-                     Opacity="0.85" Source="setting.png"/>-->
-
-
-        <!--<ImageButton WidthRequest="30" HeightRequest="30"
-                    HorizontalOptions="Start" VerticalOptions="Start"
-                    Margin="15,25" BackgroundColor="Transparent" 
-                    Opacity="0.85">
-            <ImageButton.Source>
-                <FontImageSource Glyph="&#xf035c;" FontFamily="MaterialDesign" Size="60"/>
-            </ImageButton.Source>
-        </ImageButton>-->
     </Grid>
 </ContentPage>

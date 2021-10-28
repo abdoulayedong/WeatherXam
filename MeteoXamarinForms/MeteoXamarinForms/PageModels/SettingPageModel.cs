@@ -69,7 +69,7 @@ namespace MeteoXamarinForms.PageModels
         private async void BackPressMethod()
         {
             var fullFileName = Preferences.Get("FullFileName", String.Empty);
-            if(fullFileName != String.Empty)
+            if (fullFileName != String.Empty)
             {
                 var weatherData = ToolExtension.GetDataLocaly(fullFileName);
                 await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);

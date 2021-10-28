@@ -1,5 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using MeteoXamarinForms.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CoordinatorLayout.XamarinForms;
 
 namespace MeteoXamarinForms.Pages
 {
@@ -20,7 +22,7 @@ namespace MeteoXamarinForms.Pages
             InitializeComponent();
         }
 
-        private void OnCoordinatorLayoutOnExpansionEventHandler(object sender, CoordinatorLayout.XamarinForms.ExpansionEventArgs e)
+        private void OnCoordinatorLayoutOnExpansionEventHandler(object sender, ExpansionEventArgs e)
         {
             if (BackgroundImage != null)
             {
@@ -45,13 +47,17 @@ namespace MeteoXamarinForms.Pages
                     LocationTitle.IsVisible = false;
                 }
             }
-
-            if (SecondaryTitle is null)
-            {
-
-            }
         }
 
-        
+        private void OnCoordinatorLayoutOnScrollEventHandler(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+            return true;
+        }
     }
 }
