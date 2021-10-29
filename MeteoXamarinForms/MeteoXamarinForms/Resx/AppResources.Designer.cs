@@ -151,6 +151,15 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Friday.
+        /// </summary>
+        internal static string Friday {
+            get {
+                return ResourceManager.GetString("Friday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to High.
         /// </summary>
         internal static string High {
@@ -214,6 +223,15 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Monday.
+        /// </summary>
+        internal static string Monday {
+            get {
+                return ResourceManager.GetString("Monday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No network connection.
         /// </summary>
         internal static string NoInternet {
@@ -246,6 +264,15 @@ namespace MeteoXamarinForms.Resx {
         internal static string NorthWest {
             get {
                 return ResourceManager.GetString("NorthWest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saturday.
+        /// </summary>
+        internal static string Saturday {
+            get {
+                return ResourceManager.GetString("Saturday", resourceCulture);
             }
         }
         
@@ -304,6 +331,15 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sunday.
+        /// </summary>
+        internal static string Sunday {
+            get {
+                return ResourceManager.GetString("Sunday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sunrise.
         /// </summary>
         internal static string Sunrise {
@@ -327,6 +363,24 @@ namespace MeteoXamarinForms.Resx {
         internal static string TemperatureUnit {
             get {
                 return ResourceManager.GetString("TemperatureUnit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thursday.
+        /// </summary>
+        internal static string Thursday {
+            get {
+                return ResourceManager.GetString("Thursday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tuesday.
+        /// </summary>
+        internal static string Tuesday {
+            get {
+                return ResourceManager.GetString("Tuesday", resourceCulture);
             }
         }
         
@@ -372,6 +426,15 @@ namespace MeteoXamarinForms.Resx {
         internal static string VeryHigh {
             get {
                 return ResourceManager.GetString("VeryHigh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wednesday.
+        /// </summary>
+        internal static string Wednesday {
+            get {
+                return ResourceManager.GetString("Wednesday", resourceCulture);
             }
         }
         

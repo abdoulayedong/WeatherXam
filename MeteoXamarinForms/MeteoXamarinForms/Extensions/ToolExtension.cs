@@ -31,6 +31,41 @@ namespace MeteoXamarinForms.Extensions
             return dateTime;
         }
 
+        public static string GetDayOfWeek(DateTime currentDate)
+        {
+            if (currentDate.DayOfWeek == DayOfWeek.Sunday)
+                return AppResources.Sunday;
+            else if (currentDate.DayOfWeek == DayOfWeek.Saturday)
+                return AppResources.Saturday;
+            else if (currentDate.DayOfWeek == DayOfWeek.Monday)
+                return AppResources.Monday;
+            else if (currentDate.DayOfWeek == DayOfWeek.Tuesday)
+                return AppResources.Tuesday;
+            else if (currentDate.DayOfWeek == DayOfWeek.Wednesday)
+                return AppResources.Wednesday;
+            else if (currentDate.DayOfWeek == DayOfWeek.Thursday)
+                return AppResources.Thursday;
+            else 
+                return AppResources.Friday;
+            //switch (currentDate.DayOfWeek)
+            //{
+            //    case DayOfWeek.Friday:
+            //        return AppResources.Friday;
+            //    case DayOfWeek.Monday:
+            //        return AppResources.Monday;
+            //    case DayOfWeek.Saturday:
+            //        return AppResources.Saturday;
+            //    case DayOfWeek.Sunday:
+            //        return AppResources.Sunday;
+            //    case DayOfWeek.Thursday:
+            //        return AppResources.Thursday;
+            //    case DayOfWeek.Tuesday:
+            //        return AppResources.Tuesday;
+            //    case DayOfWeek.Wednesday:
+            //        return AppResources.Wednesday;
+            //}
+        }
+
         public static int MetreSecToKilometerHour(double wind_speed)
         {
             return (int)(wind_speed * 3.6);

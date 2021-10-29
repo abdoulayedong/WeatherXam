@@ -152,7 +152,7 @@
                                                         </VisualState>
                                                     </VisualStateGroup>
                                                 </VisualStateManager.VisualStateGroups>
-                                                <Label Text="{Binding DaysOfWeek, StringFormat='{0:dddd}'}" 
+                                                <Label Text="{Binding DaysOfWeek.Localized}" 
                                                    HorizontalOptions="StartAndExpand" FontAttributes="Bold"
                                                    FontSize="16" TextColor="{StaticResource MainTextColor}"/>
 

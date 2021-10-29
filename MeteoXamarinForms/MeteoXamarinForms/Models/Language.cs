@@ -17,7 +17,7 @@ namespace MeteoXamarinForms.Models
         {
                 get { return _name; }
                 set { _name = value; OnPropertyChanged("Name"); }
-            }
+        }
 
         public string CI { get; set; }
 

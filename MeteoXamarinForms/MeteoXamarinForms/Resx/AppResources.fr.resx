@@ -147,6 +147,9 @@
   <data name="French" xml:space="preserve">
     <value>Français</value>
   </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Vendredi</value>
+  </data>
   <data name="High" xml:space="preserve">
     <value>Élevé</value>
   </data>
@@ -168,6 +171,9 @@
   <data name="Moderate" xml:space="preserve">
     <value>Modéré</value>
   </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Lundi</value>
+  </data>
   <data name="NoInternet" xml:space="preserve">
     <value>Pas d'accès internet </value>
   </data>
@@ -179,6 +185,9 @@
   </data>
   <data name="NorthWest" xml:space="preserve">
     <value>Nord-Ouest</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Samedi</value>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Rechercher</value>
@@ -198,6 +207,9 @@
   <data name="Speed" xml:space="preserve">
     <value>Vitesse</value>
   </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Dimanche</value>
+  </data>
   <data name="Sunrise" xml:space="preserve">
     <value>Lever du soleil</value>
   </data>
@@ -206,6 +218,12 @@
   </data>
   <data name="TemperatureUnit" xml:space="preserve">
     <value>Unité de température</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Jeudi</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Mardi</value>
   </data>
   <data name="Updated" xml:space="preserve">
     <value>MAJ</value>
@@ -221,6 +239,9 @@
   </data>
   <data name="VeryHigh" xml:space="preserve">
     <value>Très élevé</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Mercredi</value>
   </data>
   <data name="West" xml:space="preserve">
     <value>Ouest</value>

@@ -26,7 +26,7 @@ namespace MeteoXamarinForms.ViewModels
             DailyDetailCommand = new Command<DayPrevision>(
             async (DayPrevision dayPrevision) =>
             {
-                var selectedDay = Weather.Daily.Where(day => ToolExtension.UnixTimeStampToDateTime(day.Dt) == dayPrevision.DaysOfWeek).FirstOrDefault();
+                var selectedDay = Weather.Daily.Where(day => ToolExtension.GetDayOfWeek(ToolExtension.UnixTimeStampToDateTime(day.Dt)) == dayPrevision.DaysOfWeek.Localized).FirstOrDefault();
                 await CoreMethods.PushPopupPageModel<DayPopupPageModel>(data:selectedDay);
             });
 
@@ -288,7 +288,8 @@ namespace MeteoXamarinForms.ViewModels
                 dayPrevision.MaxTemperature = ToolExtension.roundedTemperature(dailyForecast[i].Temp.Max);
                 dayPrevision.MinTemperature = ToolExtension.roundedTemperature(dailyForecast[i].Temp.Min);
                 dayPrevision.DayIcon = ToolExtension.getIcon(dailyForecast[i].Weather[0].Icon);
-                dayPrevision.DaysOfWeek = ToolExtension.UnixTimeStampToDateTime(dailyForecast[i].Dt);
+                var dateTime = ToolExtension.UnixTimeStampToDateTime(dailyForecast[i].Dt);
+                dayPrevision.DaysOfWeek = new(() => ToolExtension.GetDayOfWeek(dateTime));
                 DayPrevisions.Add(dayPrevision);
             }
 
