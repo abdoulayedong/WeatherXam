@@ -51,13 +51,24 @@ namespace MeteoXamarinForms.Pages
 
         private void OnCoordinatorLayoutOnScrollEventHandler(object sender, ScrollEventArgs e)
         {
+            if(MainTitle != null)
+            {
+                MainTitle.Opacity =  (0.2f - e.Progress) / 0.2f;
+            }
+
+            if(SecondaryTitle != null)
+            {
+                coordinator.ProportionalTopViewHeightMax = 0.2f - e.Progress;
+            }
+            //coordinator.ProportionalTopViewHeightMax = (0.2f - e.Progress) / 0.2f;
+
 
         }
 
-        protected override bool OnBackButtonPressed()
-        {
-            Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
-            return true;
-        }
+        //protected override bool OnBackButtonPressed()
+        //{
+        //    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+        //    return true;
+        //}
     }
 }

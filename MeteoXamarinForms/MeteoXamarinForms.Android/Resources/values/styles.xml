@@ -3,7 +3,7 @@
 		   xmlns:android="http://schemas.android.com/apk/res/android">
 
 	<style name="MainTheme" parent="Theme.AppCompat.Light">		
-		<item name="android:windowBackground ">@color/launcher_background</item>
+		<item name="android:windowBackground ">@color/colorBackground</item>
 		<item name="android:windowLightStatusBar">false</item>
 		<item name="android:statusBarColor">@color/colorBackground</item>
 		<item name="android:navigationBarColor">@color/colorBackground</item>
@@ -11,9 +11,9 @@
 	</style>
 
 	<style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-		<item name="android:windowBackground ">@color/launcher_background</item>
-		<item name="android:statusBarColor">@color/launcher_background</item>
-		<item name="android:navigationBarColor">@color/launcher_background</item>
-		<item name="android:windowLightStatusBar">true</item>
+		<item name="android:windowBackground ">@color/colorBackground</item>
+		<item name="android:statusBarColor">@color/colorBackground</item>
+		<item name="android:navigationBarColor">@color/colorBackground</item>
+		<item name="android:windowLightStatusBar">false</item>
 	</style>
 </resources>

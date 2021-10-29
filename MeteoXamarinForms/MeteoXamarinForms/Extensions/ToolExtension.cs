@@ -4,11 +4,26 @@ using Newtonsoft.Json;
 using System;
 using System.IO;
 using Xamarin.Essentials;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MeteoXamarinForms.Extensions
 {
     public static class ToolExtension
     {
+        public static bool ExistingWeatherData()
+        {
+            var directory = (Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData))).ToList();
+
+            if(directory.Count != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public static DateTime UnixTimeStampToDateTime(int unixTimeStamp)
         {
             DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
@@ -74,6 +89,23 @@ namespace MeteoXamarinForms.Extensions
             File.WriteAllText(fileName, ToolExtension.SerializeWeatherData(weatherData));
         }
 
+        public static Root GetLastRegisterWeatherData()
+        {
+            var files = Directory. GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+            var fileName = String.Empty;
+            foreach(var file in files)
+            {
+                if(fileName == string.Empty)
+                {
+                    fileName = file;
+                }else if(File.GetLastWriteTime(file) < File.GetLastWriteTime(fileName))
+                {
+                    fileName = file;
+                }
+            }
+            
+            return GetDataLocaly(fileName);
+        }
         public static Root GetDataLocaly(string fullFileName)
         {
             return DeserializeWeatherData(File.ReadAllText(fullFileName));
@@ -82,6 +114,10 @@ namespace MeteoXamarinForms.Extensions
         public static void DeleteDataLocaly(string cityName)
         {
             string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), String.Format("{0}.txt", cityName));
+            if(Preferences.Get("FullFileName", String.Empty).Contains(cityName))
+            {
+                Preferences.Remove("FullFileName");
+            }
             File.Delete(fileName);
         }
 

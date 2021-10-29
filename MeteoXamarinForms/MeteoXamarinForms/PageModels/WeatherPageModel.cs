@@ -1,7 +1,6 @@
 ﻿using MeteoXamarinForms.Models;
 using MeteoXamarinForms.ViewModels.Base;
 using System;
-using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.Forms;
 using FreshMvvm.Popups;
@@ -13,6 +12,8 @@ using System.Threading.Tasks;
 using MeteoXamarinForms.Services.Weather;
 using System.Collections.ObjectModel;
 using Xamarin.Essentials;
+using MeteoXamarinForms.Services.Toast;
+using MeteoXamarinForms.Resx;
 
 namespace MeteoXamarinForms.ViewModels
 {
@@ -32,7 +33,7 @@ namespace MeteoXamarinForms.ViewModels
             AddWeatherInformationCommand = new Command(
                 async () =>
                 {
-                    await CoreMethods.DisplayActionSheet("", "Cancel", "destroy");
+                    await CoreMethods.DisplayActionSheet("", "Cancel", "destroy"); 
                 });
 
             OpenCityManagementCommand = new Command(
@@ -213,10 +214,18 @@ namespace MeteoXamarinForms.ViewModels
 
         private async Task Update()
         {
-            Weather = await _weatherService.GetWeatherFromLatLong(Weather.Lat, Weather.Lon);
-            Weather.Timezone = CityName;
-            ToolExtension.SaveDataLocaly(Weather, CityName);
-            SetUiData();
+            try
+            {
+                Weather = await _weatherService.GetWeatherFromLatLong(Weather.Lat, Weather.Lon);
+                Weather.Timezone = CityName;
+                ToolExtension.SaveDataLocaly(Weather, CityName);
+                SetUiData();
+                DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
+            }
+            catch (Exception ex)
+            {
+                DependencyService.Get<IToastService>().ShortToast(AppResources.NoInternet);
+            }
         }
 
         private void SetUiData()

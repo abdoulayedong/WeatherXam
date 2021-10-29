@@ -16,7 +16,6 @@
         <coordinator:CoordinatorLayout x:Name="coordinator"
                                        InitialExpansionState="Expanded"
                                        ExpansionEventHandler="OnCoordinatorLayoutOnExpansionEventHandler"
-                                       ScrollEventHandler="OnCoordinatorLayoutOnScrollEventHandler"
                                        ProportionalTopViewHeightMax="0.25"
                                        ShouldSnap="True"
                                        ProportionalTopViewHeightMin="0.08">
@@ -92,7 +91,8 @@
                                             <Label Text="{Binding CurrentTemperature, StringFormat='{0}°'}" FontSize="60" TextColor="{StaticResource MainTextColor}"/>
                                         </StackLayout>
                                         <StackLayout HorizontalOptions="EndAndExpand" Spacing="2" VerticalOptions="CenterAndExpand">
-                                            <Label Text="{Binding Description}" FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}"/>
+                                            <Label Text="{Binding Description}" FontSize="15" HorizontalTextAlignment="End" WidthRequest="100"
+                                                   HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}"/>
                                             <Label FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}">
                                                 <Label.Text>
                                                     <MultiBinding StringFormat="{}{0}°/{1}°">

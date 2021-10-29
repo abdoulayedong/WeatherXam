@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using MeteoXamarinForms.PageModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MeteoXamarinForms.Pages
@@ -10,5 +11,12 @@ namespace MeteoXamarinForms.Pages
         {
             InitializeComponent();
         }
+
+        //protected override bool OnBackButtonPressed()
+        //{
+        //    var vm = (CityPageModel)BindingContext;
+        //    vm.BackPressCommand.Execute(true);
+        //    return true;
+        //}
     }
 }

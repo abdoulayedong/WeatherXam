@@ -1,9 +1,4 @@
 ﻿using MeteoXamarinForms.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,11 +12,11 @@ namespace MeteoXamarinForms.Pages
             InitializeComponent();
         }
 
-        protected override bool OnBackButtonPressed()
-        {
-            var vm = (AboutPageModel)BindingContext;
-            vm.BackPressCommand.Execute(true);
-            return true;
-        }
+        //protected override bool OnBackButtonPressed()
+        //{
+        //    var vm = (AboutPageModel)BindingContext;
+        //    vm.BackPressCommand.Execute(true);
+        //    return true;
+        //}
     }
 }

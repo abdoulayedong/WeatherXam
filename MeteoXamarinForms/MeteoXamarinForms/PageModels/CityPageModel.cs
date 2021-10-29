@@ -121,11 +121,19 @@ namespace MeteoXamarinForms.PageModels
         #region Methods
         private async void BackPressMethod()
         {
-            var fullFileName = Preferences.Get("FullFileName", String.Empty);
-            if (fullFileName != String.Empty)
+            if (ToolExtension.ExistingWeatherData())
             {
-                var weatherData = ToolExtension.GetDataLocaly(fullFileName);
-                await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
+                var fullFileName = Preferences.Get("FullFileName", String.Empty);
+                if (fullFileName != String.Empty)
+                {
+                    var weatherData = ToolExtension.GetDataLocaly(fullFileName);
+                    await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
+                }
+                else
+                {
+                    var weatherData = ToolExtension.GetLastRegisterWeatherData();
+                    await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
+                }
             }
         }
         #endregion

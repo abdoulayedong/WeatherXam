@@ -168,6 +168,9 @@
   <data name="Moderate" xml:space="preserve">
     <value>Modéré</value>
   </data>
+  <data name="NoInternet" xml:space="preserve">
+    <value>Pas d'accès internet </value>
+  </data>
   <data name="North" xml:space="preserve">
     <value>Nord</value>
   </data>
@@ -206,6 +209,9 @@
   </data>
   <data name="Updated" xml:space="preserve">
     <value>MAJ</value>
+  </data>
+  <data name="UpdatedData" xml:space="preserve">
+    <value>Données météo mise à jour</value>
   </data>
   <data name="UvIndex" xml:space="preserve">
     <value>Indice UV</value>

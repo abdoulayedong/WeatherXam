@@ -214,6 +214,15 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No network connection.
+        /// </summary>
+        internal static string NoInternet {
+            get {
+                return ResourceManager.GetString("NoInternet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to North.
         /// </summary>
         internal static string North {
@@ -327,6 +336,15 @@ namespace MeteoXamarinForms.Resx {
         internal static string Updated {
             get {
                 return ResourceManager.GetString("Updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updated weather data.
+        /// </summary>
+        internal static string UpdatedData {
+            get {
+                return ResourceManager.GetString("UpdatedData", resourceCulture);
             }
         }
         

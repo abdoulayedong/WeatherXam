@@ -3,9 +3,10 @@
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
                  x:Class="MeteoXamarinForms.Pages.DayPopupPage"
-                 CloseWhenBackgroundIsClicked="True">
+                 CloseWhenBackgroundIsClicked="True"
+                 IsAnimating="True">
     <popup:PopupPage.Content>
-        <Frame HorizontalOptions="Center" VerticalOptions="EndAndExpand" CornerRadius="15"
+        <Frame HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="15"
                WidthRequest="300" BackgroundColor="{StaticResource SecondaryTextColor}">
             <StackLayout Spacing="0">
                 <Label Text="{Binding Date, StringFormat='{0:ddd d}', FallbackValue=Fri 15}"
