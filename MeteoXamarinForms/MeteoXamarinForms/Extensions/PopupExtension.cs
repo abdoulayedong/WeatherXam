@@ -42,9 +42,9 @@ namespace FreshMvvm.Popups
             var page = FreshPageModelResolver.ResolvePageModel(data, pageModel);
             FreshPageModelResolver.BindingPageModel(data, page, pageModel);
 
-            if (page is PopupPage)
+            if (page is PopupPage page1)
             {
-                await PushPopupPageModel((PopupPage)page, animate);
+                await PushPopupPageModel(page1, animate);
             }
             else
             {

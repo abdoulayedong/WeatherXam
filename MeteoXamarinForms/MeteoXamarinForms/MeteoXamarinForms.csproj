@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -19,16 +19,6 @@
 	<PropertyGroup>
 	   <LangVersion>9.0</LangVersion>
    </PropertyGroup>
-		
-  <ItemGroup>
-    <Compile Remove="Navigation\**" />
-    <EmbeddedResource Remove="Navigation\**" />
-    <None Remove="Navigation\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Assets\materialdesignicons-webfont.ttf" />
-  </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\materialdesignicons-webfont.ttf" />

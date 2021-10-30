@@ -10,9 +10,9 @@ namespace MeteoXamarinForms.Models
     {
         public Ticker()
         {
-            Timer timer = new Timer();
+            Timer timer = new ();
             timer.Interval = 1000;
-            timer.Elapsed += timer_Elapsed;
+            timer.Elapsed += Timer_Elapsed;
             timer.Start();
         }
 
@@ -21,10 +21,9 @@ namespace MeteoXamarinForms.Models
             get { return DateTime.Now; }
         }
 
-        void timer_Elapsed(object sender, ElapsedEventArgs e)
+        void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs("Now"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Now"));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -19,12 +19,12 @@ namespace MeteoXamarinForms.PageModels
         {
             Day = ToolExtension.UnixTimeStampToDateTime(DailyData.Dt);
             DayOfWeek = new(() => ToolExtension.GetDayOfWeek(Day)); 
-            Temperature = ToolExtension.roundedTemperature(DailyData.Temp.Day);
-            Icon = ToolExtension.getIcon(DailyData.Weather[0].Icon);
+            Temperature = ToolExtension.RoundedTemperature(DailyData.Temp.Day);
+            Icon = ToolExtension.GetIcon(DailyData.Weather[0].Icon);
             Probability = (int)(DailyData.Pop * 100);
             WindSpeed = ToolExtension.MetreSecToKilometerHour(DailyData.Wind_Speed);
             Humidity = DailyData.Humidity;
-            UvIndex = ToolExtension.getUviValue(DailyData.Uvi);
+            UvIndex = ToolExtension.GetUviValue(DailyData.Uvi);
             Sunrise = ToolExtension.UnixTimeStampToDateTime(DailyData.Sunrise);
             Sunset = ToolExtension.UnixTimeStampToDateTime(DailyData.Sunset);
         }

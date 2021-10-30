@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using Xamarin.Essentials;
 using MeteoXamarinForms.Services.Toast;
 using MeteoXamarinForms.Resx;
+using FreshMvvm;
 
 namespace MeteoXamarinForms.ViewModels
 {
@@ -21,7 +22,8 @@ namespace MeteoXamarinForms.ViewModels
     {
         public WeatherPageModel()
         {
-            _weatherService = ViewModelLocator.Resolve<IWeatherService>();
+            _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
+
 
             DailyDetailCommand = new Command<DayPrevision>(
             async (DayPrevision dayPrevision) =>
@@ -222,7 +224,7 @@ namespace MeteoXamarinForms.ViewModels
                 SetUiData();
                 DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 DependencyService.Get<IToastService>().ShortToast(AppResources.NoInternet);
             }
@@ -236,12 +238,12 @@ namespace MeteoXamarinForms.ViewModels
             var hourlyForecast = Weather.Hourly;
             var dailyForecast = Weather.Daily;
 
-            CurrentTemperature = ToolExtension.roundedTemperature(current.Temp);
+            CurrentTemperature = ToolExtension.RoundedTemperature(current.Temp);
             Description = current.Weather[0].Description;
-            MaxTemperature = ToolExtension.roundedTemperature(currentDay.Temp.Max);
-            MinTemperature = ToolExtension.roundedTemperature(currentDay.Temp.Min);
-            CurrentIcon = ToolExtension.getIcon(current.Weather[0].Icon);
-            FeelsLike = ToolExtension.roundedTemperature(current.Feels_Like);
+            MaxTemperature = ToolExtension.RoundedTemperature(currentDay.Temp.Max);
+            MinTemperature = ToolExtension.RoundedTemperature(currentDay.Temp.Min);
+            CurrentIcon = ToolExtension.GetIcon(current.Weather[0].Icon);
+            FeelsLike = ToolExtension.RoundedTemperature(current.Feels_Like);
 
             // Hourly weather
             HourPrevisions = new ObservableCollection<HourPrevision>();
@@ -249,8 +251,8 @@ namespace MeteoXamarinForms.ViewModels
             {
                 HourPrevision hourPrevision = new();
                 hourPrevision.Hour = ToolExtension.UnixTimeStampToDateTime(hourlyForecast[i].Dt);
-                hourPrevision.Icon = ToolExtension.getIcon(hourlyForecast[i].Weather[0].Icon);
-                hourPrevision.Temperature = ToolExtension.roundedTemperature(hourlyForecast[i].Temp);
+                hourPrevision.Icon = ToolExtension.GetIcon(hourlyForecast[i].Weather[0].Icon);
+                hourPrevision.Temperature = ToolExtension.RoundedTemperature(hourlyForecast[i].Temp);
                 hourPrevision.ProbalilityOfPrecipitation = (int)(hourlyForecast[i].Pop * 100);
                 if (hourPrevision.ProbalilityOfPrecipitation >= 0 && hourPrevision.ProbalilityOfPrecipitation <= 20)
                 {
@@ -271,7 +273,7 @@ namespace MeteoXamarinForms.ViewModels
             DayPrevisions = new ObservableCollection<DayPrevision>();
             for (int i = 0; i < 7; i++)
             {
-                DayPrevision dayPrevision = new DayPrevision();
+                DayPrevision dayPrevision = new ();
                 dayPrevision.ProbalilityOfPrecipitation = (int)(dailyForecast[i].Pop * 100);
                 if (dayPrevision.ProbalilityOfPrecipitation >= 0 && dayPrevision.ProbalilityOfPrecipitation <= 20)
                 {
@@ -285,17 +287,16 @@ namespace MeteoXamarinForms.ViewModels
                 {
                     dayPrevision.ProbabilityIcon = "waterdrop3.png";
                 }
-                dayPrevision.MaxTemperature = ToolExtension.roundedTemperature(dailyForecast[i].Temp.Max);
-                dayPrevision.MinTemperature = ToolExtension.roundedTemperature(dailyForecast[i].Temp.Min);
-                dayPrevision.DayIcon = ToolExtension.getIcon(dailyForecast[i].Weather[0].Icon);
+                dayPrevision.MaxTemperature = ToolExtension.RoundedTemperature(dailyForecast[i].Temp.Max);
+                dayPrevision.MinTemperature = ToolExtension.RoundedTemperature(dailyForecast[i].Temp.Min);
+                dayPrevision.DayIcon = ToolExtension.GetIcon(dailyForecast[i].Weather[0].Icon);
                 var dateTime = ToolExtension.UnixTimeStampToDateTime(dailyForecast[i].Dt);
                 dayPrevision.DaysOfWeek = new(() => ToolExtension.GetDayOfWeek(dateTime));
                 DayPrevisions.Add(dayPrevision);
             }
 
             // More daily information
-            //UvIndex = ToolExtension.getUviValue(current.Uvi);
-            UvIndex = new(() => ToolExtension.getUviValue(current.Uvi));
+            UvIndex = new(() => ToolExtension.GetUviValue(current.Uvi));
             Sunrise = ToolExtension.UnixTimeStampToDateTime(current.Sunrise);
             Sunset = ToolExtension.UnixTimeStampToDateTime(current.Sunset);
             var pref = Preferences.Get("UnitParameter", "metric");

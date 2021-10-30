@@ -18,9 +18,6 @@
                            VerticalOptions="CenterAndExpand"/>
                     <StackLayout Orientation="Horizontal"
                                  Spacing="0" Margin="0" Padding="0">
-                        <!--<Label Text="{Binding Unit, FallbackValue=Auto (°C)}"
-                               TextColor="{StaticResource SecondaryTextColor}"
-                               VerticalOptions="CenterAndExpand"/>-->
                         <Picker ItemsSource="{Binding Units}"
                                 ItemDisplayBinding="{Binding Name}"
                                 SelectedItem="{Binding SelectedUnit}"

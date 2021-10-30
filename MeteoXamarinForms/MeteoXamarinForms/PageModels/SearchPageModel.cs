@@ -1,5 +1,4 @@
-﻿using MeteoXamarinForms.Services.Navigation;
-using MeteoXamarinForms.Services.Weather;
+﻿using MeteoXamarinForms.Services.Weather;
 using MeteoXamarinForms.ViewModels.Base;
 using System;
 using System.Collections.Generic;
@@ -9,6 +8,7 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using MeteoXamarinForms.Extensions;
+using FreshMvvm;
 
 namespace MeteoXamarinForms.ViewModels
 {
@@ -18,8 +18,7 @@ namespace MeteoXamarinForms.ViewModels
         public bool IsModalView { get; set; } = false;  
         public SearchPageModel()
         {
-            _weatherService = ViewModelLocator.Resolve<IWeatherService>();
-            NavigateBack = new Command(NavigateBackMethod);            
+            _weatherService = FreshIOC.Container.Resolve<IWeatherService>();      
             GoToWeatherCommand = new Command(
                 async () =>
                 {
@@ -86,11 +85,6 @@ namespace MeteoXamarinForms.ViewModels
         #endregion
 
         #region Method
-        private void NavigateBackMethod()
-        {
-            var navService = ViewModelLocator.Resolve<INavigationService>();
-            navService.CloseAsync();
-        }
         private async Task<Location> GetLocation(string query)
         {
             IEnumerable<Xamarin.Essentials.Location> locations = new List<Xamarin.Essentials.Location>();

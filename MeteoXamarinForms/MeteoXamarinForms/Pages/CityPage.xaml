@@ -10,23 +10,6 @@
              Title="{xct:Translate ManageCities}">
     <ContentPage.Content>
         <StackLayout>
-            <!--<StackLayout Orientation="Horizontal" HeightRequest="50">
-                <Label Text="&#xf073a;" Style="{StaticResource MaterialIcons}" 
-                       FontSize="25" VerticalOptions="Center" HorizontalOptions="Start" 
-                       TextColor="{StaticResource MainTextColor}"
-                       Margin="10,0"/>
-
-                <Label Text="Edit cities"
-                       HorizontalOptions="CenterAndExpand"
-                       FontSize="18"
-                       VerticalOptions="Center"
-                       TextColor="{StaticResource MainTextColor}"/>
-
-                <Label Text="&#xf012c;" Style="{StaticResource MaterialIcons}" 
-                       FontSize="25" VerticalOptions="Center" HorizontalOptions="End" 
-                       TextColor="{StaticResource MainTextColor}"
-                       Margin="10,0"/>
-            </StackLayout>-->
             <CollectionView ItemsSource="{Binding CitiesWeather}" 
                             SelectionMode="Single"
                             x:Name="Cities" 

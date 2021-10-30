@@ -27,7 +27,7 @@ namespace MeteoXamarinForms.Extensions
 
         public static DateTime UnixTimeStampToDateTime(int unixTimeStamp)
         {
-            DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            DateTime dateTime = new (1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dateTime = dateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dateTime;
         }
@@ -60,7 +60,7 @@ namespace MeteoXamarinForms.Extensions
             return (int)(wind_speed * 1.60934);
         }
 
-        public static string getUviValue(double uvi)
+        public static string GetUviValue(double uvi)
         {
             if (uvi >= 0 && uvi < 3)
             {
@@ -81,12 +81,12 @@ namespace MeteoXamarinForms.Extensions
             else return AppResources.Extrem;
         }
 
-        public static int roundedTemperature(double temperature)
+        public static int RoundedTemperature(double temperature)
         {
             return (int)Math.Round(temperature, 0);
         }
 
-        public static string getIcon(string icon)
+        public static string GetIcon(string icon)
         {
             return String.Format("_{0}.png", icon);
         }

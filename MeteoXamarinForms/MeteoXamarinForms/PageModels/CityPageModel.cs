@@ -73,7 +73,7 @@ namespace MeteoXamarinForms.PageModels
                     CitiesWeather.Add(new CityManager
                     {
                         City = ToolExtension.GetCityName(city.Timezone),
-                        Temperature = ToolExtension.roundedTemperature(city.Current.Temp),
+                        Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
                         Description = city.Current.Weather[0].Description
                     });
                 }
@@ -82,7 +82,7 @@ namespace MeteoXamarinForms.PageModels
                     CitiesWeather.Add(new CityManager
                     {
                         City = city.Timezone,
-                        Temperature = ToolExtension.roundedTemperature(city.Current.Temp),
+                        Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
                         Description = city.Current.Weather[0].Description
                     });
                 }

@@ -7,6 +7,7 @@ using System;
 using System.IO;
 using Xamarin.CommunityToolkit.Helpers;
 using MeteoXamarinForms.Resx;
+using MeteoXamarinForms.Services.Weather;
 
 namespace MeteoXamarinForms
 {
@@ -14,6 +15,7 @@ namespace MeteoXamarinForms
     {
         public App()
         {
+
             LocalizationResourceManager.Current.PropertyChanged += (_, _) => AppResources.Culture = LocalizationResourceManager.Current.CurrentCulture;
             LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
             InitializeComponent();              
@@ -21,6 +23,8 @@ namespace MeteoXamarinForms
 
         protected override void OnStart()
         {
+            FreshIOC.Container.Register<IWeatherService, WeatherService>();
+
             var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             var fileList = Directory.EnumerateFiles(folderPath);
             DateTime lastDate = DateTime.MinValue;
@@ -40,17 +44,21 @@ namespace MeteoXamarinForms
                 var data = ToolExtension.GetDataLocaly(fullFileName);
                 var page = FreshPageModelResolver.ResolvePageModel<WeatherPageModel>(data);
 
-                var navigationPage = new FreshNavigationContainer(page);
-                navigationPage.BarBackground = Brush.Black;
-                navigationPage.BarTextColor = Color.White;
+                var navigationPage = new FreshNavigationContainer(page)
+                {
+                    BarBackground = Brush.Black,
+                    BarTextColor = Color.White
+                };
                 MainPage = navigationPage;
             }
             else
             {
                 var page = FreshPageModelResolver.ResolvePageModel<SearchPageModel>();
-                var navigationPage = new FreshNavigationContainer(page);
-                navigationPage.BarBackground = Brush.Black;
-                navigationPage.BarTextColor = Color.White;
+                var navigationPage = new FreshNavigationContainer(page)
+                {
+                    BarBackground = Brush.Black,
+                    BarTextColor = Color.White
+                };
                 MainPage = navigationPage;
             }
 
