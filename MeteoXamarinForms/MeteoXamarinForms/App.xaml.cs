@@ -14,7 +14,7 @@ namespace MeteoXamarinForms
     {
         public App()
         {
-            LocalizationResourceManager.Current.PropertyChanged += (_, t_) => AppResources.Culture = LocalizationResourceManager.Current.CurrentCulture;
+            LocalizationResourceManager.Current.PropertyChanged += (_, _) => AppResources.Culture = LocalizationResourceManager.Current.CurrentCulture;
             LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
             InitializeComponent();              
         }

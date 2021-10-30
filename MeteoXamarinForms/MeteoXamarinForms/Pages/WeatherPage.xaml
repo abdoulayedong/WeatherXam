@@ -8,9 +8,13 @@
              xmlns:coordinator="clr-namespace:CoordinatorLayout.XamarinForms;assembly=CoordinatorLayout.XamarinForms" 
              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
-             xmlns:src="clr-namespace:MeteoXamarinForms.Models">
+             xmlns:src="clr-namespace:MeteoXamarinForms.Models"
+             xmlns:converter="clr-namespace:MeteoXamarinForms.Converters">
     <ContentPage.Resources>
         <src:Ticker x:Key="Ticker"/>
+        <ResourceDictionary>
+            <converter:IntToDoubleConverter x:Key="intToDouble"/>
+        </ResourceDictionary>
     </ContentPage.Resources>
     <Grid>
         <coordinator:CoordinatorLayout x:Name="coordinator"
@@ -284,7 +288,7 @@
                                                      AutoPlay="True"
                                                      RepeatMode="Infinite"
                                                      Margin="-15,0"
-                                                     Speed="0.5"
+                                                     Speed="{Binding WindSpeed, Converter={StaticResource intToDouble}}"
                                                      VerticalOptions="StartAndExpand"
                                                      HorizontalOptions="StartAndExpand" 
                                                      WidthRequest="200"

@@ -2,6 +2,7 @@
 using MeteoXamarinForms.ViewModels.Base;
 using System;
 using MeteoXamarinForms.Extensions;
+using Xamarin.CommunityToolkit.Helpers;
 
 namespace MeteoXamarinForms.PageModels
 {
@@ -16,7 +17,8 @@ namespace MeteoXamarinForms.PageModels
 
         private void Initialize()
         {
-            Date = ToolExtension.UnixTimeStampToDateTime(DailyData.Dt);
+            Day = ToolExtension.UnixTimeStampToDateTime(DailyData.Dt);
+            DayOfWeek = new(() => ToolExtension.GetDayOfWeek(Day)); 
             Temperature = ToolExtension.roundedTemperature(DailyData.Temp.Day);
             Icon = ToolExtension.getIcon(DailyData.Weather[0].Icon);
             Probability = (int)(DailyData.Pop * 100);
@@ -28,11 +30,18 @@ namespace MeteoXamarinForms.PageModels
         }
 
         #region Properties
-        private DateTime _date;
-        public DateTime Date
+        private LocalizedString _dayOfWeek;
+        public LocalizedString DayOfWeek
         {
-            get { return _date; }
-            set => SetProperty(ref _date, value);
+            get { return _dayOfWeek; }
+            set => SetProperty(ref _dayOfWeek, value);
+        }
+
+        private DateTime _day;
+        public DateTime Day
+        {
+            get { return _day; }
+            set => SetProperty(ref _day, value);
         }
 
         private int _temperature;
