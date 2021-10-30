@@ -29,7 +29,7 @@
                            Margin="0,0"
                            Grid.Column="0"
                            Grid.ColumnSpan="3"
-                           Source="weather1.jpg" 
+                           Source="weather2.jpg" 
                            Aspect="AspectFill"
                            HeightRequest="100"/>
 
@@ -51,7 +51,9 @@
                            Grid.Column="0"
                            Grid.ColumnSpan="3"
                            TextTransform="None" 
-                           FontSize="35" 
+                           FontSize="40" 
+                           TextColor="{StaticResource MainTextColor}"
+                           Opacity="0.5"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="CenterAndExpand"
                            Margin="20"/>
@@ -242,30 +244,7 @@
                                     </StackLayout>
                                     <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
                                             Color="{StaticResource SecondaryTextColor}"/>
-
-                                    <!--<StackLayout Orientation="Horizontal" Spacing="10">
-                                    <Image Source="wind.png" HeightRequest="30"
-                                           WidthRequest="30"/>
-                                    <Label Text="Wind" HorizontalOptions="StartAndExpand"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                    <Label Text="{Binding WindSpeed, StringFormat='{0}km/h'}" 
-                                           TextColor="{StaticResource MainTextColor}"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           FontAttributes="Bold"/>
-                                    <StackLayout Orientation="Horizontal" Spacing="-2" VerticalOptions="CenterAndExpand">
-                                        <Label Text="(" FontAttributes="Bold"
-                                               FontSize="16" TextColor="{StaticResource MainTextColor}"/>
-                                        <Label Text="&#xf005d;" Style="{StaticResource MaterialIcons}" FontSize="20" 
-                                               TextColor="{StaticResource MainTextColor}"
-                                               Rotation="{Binding WindDeg}"/>
-                                        <Label Text=")" FontAttributes="Bold"
-                                               FontSize="16" TextColor="{StaticResource MainTextColor}"/>
-                                    </StackLayout>
-                                </StackLayout>
-                            
-                                <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,10" 
-                                            Color="{StaticResource SecondaryTextColor}"/>-->
+                                    
                                     <StackLayout Orientation="Horizontal" Spacing="10">
                                         <Image Source="humidity.png" HeightRequest="30"
                                            WidthRequest="30"/>

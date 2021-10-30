@@ -8,9 +8,9 @@
         android:id="@+id/animation_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:lottie_fileName="lf30_editor_few073ql.json"
+        app:lottie_fileName="61302-weather-icon.json"
         app:lottie_autoPlay="true"
-        app:lottie_speed="0.75"
+        app:lottie_speed="1"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>

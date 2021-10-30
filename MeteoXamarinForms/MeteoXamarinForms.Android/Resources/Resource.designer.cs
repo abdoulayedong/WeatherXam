@@ -23151,7 +23151,10 @@ namespace MeteoXamarinForms.Droid
 			public const int weather2 = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int wind = 2131165368;
+			public const int weatherapp = 2131165368;
+			
+			// aapt resource value: 0x7F0700B9
+			public const int wind = 2131165369;
 			
 			// aapt resource value: 0x7F070006
 			public const int _01d = 2131165190;
@@ -24698,13 +24701,16 @@ namespace MeteoXamarinForms.Droid
 		{
 			
 			// aapt resource value: 0x7F0C0000
-			public const int icon = 2131492864;
+			public const int cloudy = 2131492864;
 			
 			// aapt resource value: 0x7F0C0001
-			public const int icon_round = 2131492865;
+			public const int icon = 2131492865;
 			
 			// aapt resource value: 0x7F0C0002
-			public const int launcher_foreground = 2131492866;
+			public const int icon_round = 2131492866;
+			
+			// aapt resource value: 0x7F0C0003
+			public const int launcher_foreground = 2131492867;
 			
 			static Mipmap()
 			{
