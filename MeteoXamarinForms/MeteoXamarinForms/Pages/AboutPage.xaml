@@ -21,7 +21,7 @@
             <StackLayout HorizontalOptions="CenterAndExpand"
                          VerticalOptions="EndAndExpand"
                          Margin="0,10">
-                <Label Text="Météo"
+                <Label Text="{xct:Translate AppName}"
                        TextColor="{StaticResource MainTextColor}"
                        FontSize="16"
                        HorizontalTextAlignment="Center"/>

@@ -105,7 +105,11 @@
                                                     </MultiBinding>
                                                 </Label.Text>
                                             </Label>
-                                            <Label Text="{Binding FeelsLike, StringFormat='Feels like {0}°'}" FontSize="15" HorizontalOptions="End" TextColor="{StaticResource SecondaryTextColor}"/>
+                                            <StackLayout Orientation="Horizontal" Spacing="0" Padding="0" Margin="0" HorizontalOptions="End">
+                                                <Label Text="{xct:Translate FeelLike}" FontSize="15" TextColor="{StaticResource SecondaryTextColor}"/>
+                                                <Label Text="{Binding FeelsLike, StringFormat=' {0}°'}" FontSize="15" TextColor="{StaticResource SecondaryTextColor}"/>
+                                                
+                                            </StackLayout>
                                         </StackLayout>
                                     </StackLayout>
                                     <CollectionView ItemsSource="{Binding HourPrevisions}" Grid.Row="2"

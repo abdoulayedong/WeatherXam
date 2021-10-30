@@ -298,7 +298,14 @@ namespace MeteoXamarinForms.ViewModels
             UvIndex = new(() => ToolExtension.getUviValue(current.Uvi));
             Sunrise = ToolExtension.UnixTimeStampToDateTime(current.Sunrise);
             Sunset = ToolExtension.UnixTimeStampToDateTime(current.Sunset);
-            WindSpeed = ToolExtension.MetreSecToKilometerHour(current.Wind_Speed);
+            var pref = Preferences.Get("UnitParameter", "metric");
+            if (pref == "imperial")
+            {
+                WindSpeed = ToolExtension.MilesHourToKilometerHour(current.Wind_Speed);
+            }else
+            {
+                WindSpeed = ToolExtension.MetreSecToKilometerHour(current.Wind_Speed);
+            }
             WindDeg = current.Wind_Deg;
             WindDirection = new(() => ToolExtension.GetWindDirection(WindDeg));
             Clouds = current.Clouds;

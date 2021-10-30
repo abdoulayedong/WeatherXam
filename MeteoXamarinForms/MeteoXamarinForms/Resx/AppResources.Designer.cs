@@ -142,6 +142,15 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Feels like.
+        /// </summary>
+        internal static string FeelLike {
+            get {
+                return ResourceManager.GetString("FeelLike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to French.
         /// </summary>
         internal static string French {
@@ -264,6 +273,15 @@ namespace MeteoXamarinForms.Resx {
         internal static string NorthWest {
             get {
                 return ResourceManager.GetString("NorthWest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to en.
+        /// </summary>
+        internal static string RequestLanguage {
+            get {
+                return ResourceManager.GetString("RequestLanguage", resourceCulture);
             }
         }
         

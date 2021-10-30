@@ -35,26 +35,15 @@ namespace MeteoXamarinForms
             }
             
             if (fullFileName != string.Empty)
-            {
-                //var splitFullFileName = fullFileName.Split('/');
-                //var fileName = splitFullFileName[splitFullFileName.Length - 1];
+            {                
                 Preferences.Set("FullFileName", fullFileName);
                 var data = ToolExtension.GetDataLocaly(fullFileName);
                 var page = FreshPageModelResolver.ResolvePageModel<WeatherPageModel>(data);
-                //SharedTransitionNavigationPage navigationPage = new SharedTransitionNavigationPage(page);
 
                 var navigationPage = new FreshNavigationContainer(page);
                 navigationPage.BarBackground = Brush.Black;
                 navigationPage.BarTextColor = Color.White;
                 MainPage = navigationPage;
-
-                //var customNavigationService = new AnimatedNavigation(page);
-                //customNavigationService.BarBackground = Brush.Black;
-                //customNavigationService.BarTextColor = Color.White;
-
-                //FreshIOC.Container.Register<IFreshNavigationService>(customNavigationService);
-
-                //MainPage = customNavigationService;
             }
             else
             {
@@ -63,6 +52,12 @@ namespace MeteoXamarinForms
                 navigationPage.BarBackground = Brush.Black;
                 navigationPage.BarTextColor = Color.White;
                 MainPage = navigationPage;
+            }
+
+            if (!Preferences.ContainsKey("Unit"))
+            {
+                Preferences.Set("Unit", "°C");
+                Preferences.Set("UnitParameter", "metric");
             }
         }
 

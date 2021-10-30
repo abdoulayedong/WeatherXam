@@ -26,7 +26,16 @@ namespace MeteoXamarinForms.PageModels
                 new Language{Name = new (() => AppResources.French), CI = "fr"}
             };
 
+            Units = new ObservableCollection<Unit>()
+            {
+                new Unit{ Name = "°C", Parameter = "metric" },
+                new Unit{ Name = "°F", Parameter = "imperial" },
+                new Unit{ Name = "°K", Parameter = "standard" }
+            };
+
             SelectedLanguage = SupportedLanguages.FirstOrDefault(lang => lang.CI == LocalizationResourceManager.Current.CurrentCulture.TwoLetterISOLanguageName);
+            SelectedUnit = Units.FirstOrDefault(unit => unit.Name == Preferences.Get("Unit", "°C"));
+
             ShowAboutPageCommand = new Command(
                 async() =>
                 {
@@ -54,7 +63,6 @@ namespace MeteoXamarinForms.PageModels
         public Language SelectedLanguage
         {
             get { return _selectedLanguage; }
-            //set => SetProperty(ref _selectedLanguage, value);
             set 
             { 
                 _selectedLanguage = value;
@@ -63,6 +71,27 @@ namespace MeteoXamarinForms.PageModels
             }
         }
 
+        private ObservableCollection<Unit> _units;
+
+        public ObservableCollection<Unit> Units
+        {
+            get { return _units; }
+            set => SetProperty(ref _units, value);
+        }
+
+        private Unit _selectedUnit;
+
+        public Unit SelectedUnit
+        {
+            get { return _selectedUnit; }
+            set
+            {
+                _selectedUnit = value;
+                Preferences.Set("Unit", SelectedUnit.Name);
+                Preferences.Set("UnitParameter", SelectedUnit.Parameter);
+                OnPropertyChanged("SelectedUnit");
+            }
+        }
         #endregion
 
         #region Methods

@@ -11,7 +11,7 @@ namespace MeteoXamarinForms.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             var val = (int)(value);
-            return (double)val /10 ;
+            return (double)val /15 ;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

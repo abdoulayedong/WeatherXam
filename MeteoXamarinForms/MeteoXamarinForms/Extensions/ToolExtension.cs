@@ -24,6 +24,7 @@ namespace MeteoXamarinForms.Extensions
                 return false;
             }
         }
+
         public static DateTime UnixTimeStampToDateTime(int unixTimeStamp)
         {
             DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
@@ -47,28 +48,16 @@ namespace MeteoXamarinForms.Extensions
                 return AppResources.Thursday;
             else 
                 return AppResources.Friday;
-            //switch (currentDate.DayOfWeek)
-            //{
-            //    case DayOfWeek.Friday:
-            //        return AppResources.Friday;
-            //    case DayOfWeek.Monday:
-            //        return AppResources.Monday;
-            //    case DayOfWeek.Saturday:
-            //        return AppResources.Saturday;
-            //    case DayOfWeek.Sunday:
-            //        return AppResources.Sunday;
-            //    case DayOfWeek.Thursday:
-            //        return AppResources.Thursday;
-            //    case DayOfWeek.Tuesday:
-            //        return AppResources.Tuesday;
-            //    case DayOfWeek.Wednesday:
-            //        return AppResources.Wednesday;
-            //}
         }
 
         public static int MetreSecToKilometerHour(double wind_speed)
         {
             return (int)(wind_speed * 3.6);
+        }
+
+        public static int MilesHourToKilometerHour(double wind_speed)
+        {
+            return (int)(wind_speed * 1.60934);
         }
 
         public static string getUviValue(double uvi)
@@ -141,6 +130,7 @@ namespace MeteoXamarinForms.Extensions
             
             return GetDataLocaly(fileName);
         }
+
         public static Root GetDataLocaly(string fullFileName)
         {
             return DeserializeWeatherData(File.ReadAllText(fullFileName));

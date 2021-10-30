@@ -144,6 +144,9 @@
   <data name="Extrem" xml:space="preserve">
     <value>Extrême</value>
   </data>
+  <data name="FeelLike" xml:space="preserve">
+    <value>Ressenti</value>
+  </data>
   <data name="French" xml:space="preserve">
     <value>Français</value>
   </data>
@@ -185,6 +188,9 @@
   </data>
   <data name="NorthWest" xml:space="preserve">
     <value>Nord-Ouest</value>
+  </data>
+  <data name="RequestLanguage" xml:space="preserve">
+    <value>fr</value>
   </data>
   <data name="Saturday" xml:space="preserve">
     <value>Samedi</value>
