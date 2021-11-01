@@ -28,7 +28,7 @@ namespace MeteoXamarinForms.ViewModels
             DailyDetailCommand = new Command<DayPrevision>(
             async (DayPrevision dayPrevision) =>
             {
-                var selectedDay = Weather.Daily.Where(day => ToolExtension.GetDayOfWeek(ToolExtension.UnixTimeStampToDateTime(day.Dt)) == dayPrevision.DaysOfWeek.Localized).FirstOrDefault();
+                Daily selectedDay = Weather.Daily.Where(day => ToolExtension.GetDayOfWeek(ToolExtension.UnixTimeStampToDateTime(day.Dt)) == dayPrevision.DaysOfWeek.Localized).FirstOrDefault();
                 await CoreMethods.PushPopupPageModel<DayPopupPageModel>(data:selectedDay);
             });
 
@@ -220,7 +220,7 @@ namespace MeteoXamarinForms.ViewModels
             {
                 Weather = await _weatherService.GetWeatherFromLatLong(Weather.Lat, Weather.Lon);
                 //Weather.Timezone = CityName;
-                ToolExtension.SaveDataLocaly(Weather, CityName);
+                ToolExtension.SaveDataLocaly(Weather, Weather.Timezone);
                 SetUiData();
                 DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
             }
@@ -237,7 +237,7 @@ namespace MeteoXamarinForms.ViewModels
             var currentDay = Weather.Daily[0];
             var hourlyForecast = Weather.Hourly;
             var dailyForecast = Weather.Daily;
-
+            Preferences.Set("TimezoneOffset", Weather.Timezone_Offset);
             CurrentTemperature = ToolExtension.RoundedTemperature(current.Temp);
             Description = current.Weather[0].Description;
             MaxTemperature = ToolExtension.RoundedTemperature(currentDay.Temp.Max);
@@ -250,7 +250,8 @@ namespace MeteoXamarinForms.ViewModels
             for (int i = 0; i < 24; i++)
             {
                 HourPrevision hourPrevision = new();
-                hourPrevision.Hour = ToolExtension.UnixTimeStampToDateTime(hourlyForecast[i].Dt);
+                DateTime dateTime = ToolExtension.UnixTimeStampToDateTime(hourlyForecast[i].Dt);
+                hourPrevision.Hour = ToolExtension.GetDateTimeFromTimezone(dateTime, Weather.Timezone_Offset);
                 hourPrevision.Icon = ToolExtension.GetIcon(hourlyForecast[i].Weather[0].Icon);
                 hourPrevision.Temperature = ToolExtension.RoundedTemperature(hourlyForecast[i].Temp);
                 hourPrevision.ProbalilityOfPrecipitation = (int)(hourlyForecast[i].Pop * 100);
@@ -290,15 +291,16 @@ namespace MeteoXamarinForms.ViewModels
                 dayPrevision.MaxTemperature = ToolExtension.RoundedTemperature(dailyForecast[i].Temp.Max);
                 dayPrevision.MinTemperature = ToolExtension.RoundedTemperature(dailyForecast[i].Temp.Min);
                 dayPrevision.DayIcon = ToolExtension.GetIcon(dailyForecast[i].Weather[0].Icon);
-                var dateTime = ToolExtension.UnixTimeStampToDateTime(dailyForecast[i].Dt);
-                dayPrevision.DaysOfWeek = new(() => ToolExtension.GetDayOfWeek(dateTime));
+                DateTime dateTime = ToolExtension.UnixTimeStampToDateTime(dailyForecast[i].Dt);
+                DateTime dateTimeUtc = ToolExtension.GetDateTimeFromTimezone(dateTime, Weather.Timezone_Offset);
+                dayPrevision.DaysOfWeek = new(() => ToolExtension.GetDayOfWeek(dateTimeUtc));
                 DayPrevisions.Add(dayPrevision);
             }
 
             // More daily information
             UvIndex = new(() => ToolExtension.GetUviValue(current.Uvi));
-            Sunrise = ToolExtension.UnixTimeStampToDateTime(current.Sunrise);
-            Sunset = ToolExtension.UnixTimeStampToDateTime(current.Sunset);
+            Sunrise = ToolExtension.UnixTimeStampToDateTime(current.Sunrise, Weather.Timezone_Offset);
+            Sunset = ToolExtension.UnixTimeStampToDateTime(current.Sunset, Weather.Timezone_Offset);
             var pref = Preferences.Get("UnitParameter", "metric");
             if (pref == "imperial")
             {

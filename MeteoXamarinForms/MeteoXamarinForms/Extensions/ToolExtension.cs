@@ -17,6 +17,11 @@ namespace MeteoXamarinForms.Extensions
             return DateTime.UtcNow.AddSeconds(timezoneOffset);
         }
 
+        public static DateTime GetDateTimeFromTimezone(DateTime dateTime, int timezoneOffset)
+        {
+            return dateTime.AddSeconds(timezoneOffset);
+        }
+
         public static bool ExistingWeatherData()
         {
             var directory = (Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData))).ToList();
@@ -36,6 +41,13 @@ namespace MeteoXamarinForms.Extensions
             DateTime dateTime = new (1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dateTime = dateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dateTime;
+        }
+
+        public static DateTime UnixTimeStampToDateTime(int unixTimeStamp, int timezoneOffset)
+        {
+            DateTime dateTime = new(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            dateTime = dateTime.AddSeconds(unixTimeStamp).ToUniversalTime();
+            return dateTime.AddSeconds(timezoneOffset);
         }
 
         public static string GetDayOfWeek(DateTime currentDate)

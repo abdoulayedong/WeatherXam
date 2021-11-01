@@ -82,14 +82,14 @@ namespace MeteoXamarinForms.PageModels
             {
                 ToolExtension.DeleteDataLocaly(city);
                 var localCityData = await _weatherService.GetWeatherFromLatLong(city.Lat, city.Lon);
-                //localCityData.Timezone = city.Timezone;
+                localCityData.Timezone = city.Timezone;
                 ToolExtension.SaveDataLocaly(localCityData, city.Timezone);
             }
-            Initialize();
+            await Initialize();
             DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
         }
 
-        private void Initialize()
+        private async Task Initialize()
         {
             CitiesManagerData = new List<Root>();
             CitiesWeather = new ObservableCollection<CityManager>();
@@ -99,6 +99,8 @@ namespace MeteoXamarinForms.PageModels
                 CitiesManagerData.Add(ToolExtension.GetDataLocaly(file));
                 var city = CitiesManagerData[index];
                 var date = ToolExtension.GetDateTimeFromTimezone(city.Timezone_Offset);
+                var placemarks = await Geocoding.GetPlacemarksAsync(city.Lat, city.Lon);
+                var country = placemarks.FirstOrDefault();
                 if (city.Timezone.Contains('/'))
                 {
                     CitiesWeather.Add(new CityManager
@@ -106,7 +108,9 @@ namespace MeteoXamarinForms.PageModels
                         City = ToolExtension.GetCityName(city.Timezone),
                         Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
                         Description = city.Current.Weather[0].Description,
-                        Date = date
+                        Date = date,
+                        Country = String.Format("{0}, {1}", country.AdminArea, country.CountryName),
+                        Icon = ToolExtension.GetIcon(city.Current.Weather[0].Icon)
                     });
                 }
                 else
@@ -116,7 +120,9 @@ namespace MeteoXamarinForms.PageModels
                         City = city.Timezone,
                         Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
                         Description = city.Current.Weather[0].Description, 
-                        Date = date
+                        Date = date,
+                        Country = String.Format("{0}, {1}", country.AdminArea, country.CountryName),
+                        Icon = ToolExtension.GetIcon(city.Current.Weather[0].Icon)
                     });
                 }
             }
@@ -181,5 +187,7 @@ namespace MeteoXamarinForms.PageModels
         public int Temperature { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
+        public string Country { get; set; }
+        public string Icon { get; set; }
     }
 }

@@ -3,6 +3,8 @@ using MeteoXamarinForms.ViewModels.Base;
 using System;
 using MeteoXamarinForms.Extensions;
 using Xamarin.CommunityToolkit.Helpers;
+using Android.Preferences;
+using Xamarin.Essentials;
 
 namespace MeteoXamarinForms.PageModels
 {
@@ -25,8 +27,8 @@ namespace MeteoXamarinForms.PageModels
             WindSpeed = ToolExtension.MetreSecToKilometerHour(DailyData.Wind_Speed);
             Humidity = DailyData.Humidity;
             UvIndex = ToolExtension.GetUviValue(DailyData.Uvi);
-            Sunrise = ToolExtension.UnixTimeStampToDateTime(DailyData.Sunrise);
-            Sunset = ToolExtension.UnixTimeStampToDateTime(DailyData.Sunset);
+            Sunrise = ToolExtension.UnixTimeStampToDateTime(DailyData.Sunrise, Preferences.Get("TimezoneOffset", 0));
+            Sunset = ToolExtension.UnixTimeStampToDateTime(DailyData.Sunset, Preferences.Get("TimezoneOffset", 0));
         }
 
         #region Properties
