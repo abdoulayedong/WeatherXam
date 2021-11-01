@@ -13,10 +13,10 @@
             <RefreshView IsRefreshing="{Binding IsRefreshing}"
                          Command="{Binding ActualizeAllDataCommand}">
                 <CollectionView ItemsSource="{Binding CitiesWeather}" 
-                            SelectionMode="Single"
-                            x:Name="Cities" 
-                            SelectionChangedCommand="{Binding ShowWeatherInformationCommand}"
-                            SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference Cities}}">
+                                SelectionMode="Single"
+                                x:Name="Cities" 
+                                SelectionChangedCommand="{Binding ShowWeatherInformationCommand}"
+                                SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference Cities}}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <SwipeView Threshold="100">
@@ -54,31 +54,45 @@
                                 </SwipeView.RightItems>
                                 <Frame Padding="10" CornerRadius="20" BackgroundColor="{StaticResource MainFrameColor}"
                                        Margin="0,5">
+                                    <!--<Frame.GestureRecognizers>
+                                        <DragGestureRecognizer CanDrag="True"
+                                                               DragStarting="DragGestureRecognizer_DragStarting"
+                                                               DragStartingCommand="{Binding BindingContext.ItemDragged, Source={x:Reference Cities}}"
+                                                               DragStartingCommandParameter="{Binding}"/>
+                                        <DropGestureRecognizer AllowDrop="True"
+                                                               Drop="DropGestureRecognizer_Drop_Collection"
+                                                               DragLeaveCommand="{Binding BindingContext.ItemDragLeave, Source={x:Reference Cities}}"
+                                                               DragLeaveCommandParameter="{Binding}"
+                                                               DragOverCommand="{Binding BindingContext.ItemDraggedOver, Source={x:Reference Cities}}"
+                                                               DragOverCommandParameter="{Binding}"
+                                                               DropCommand="{Binding BindingContext.ItemDropped, Source={x:Reference Cities}}"
+                                                               DropCommandParameter="{Binding}"/>
+                                    </Frame.GestureRecognizers>-->
                                     <StackLayout Orientation="Horizontal" 
-                                                    Padding="10">
-                                        <StackLayout Spacing="0">                                            
+                                                        Padding="10">
+                                        <StackLayout Spacing="0">
                                             <Label Text="{Binding City}"
-                                                   FontSize="22"
-                                                   VerticalTextAlignment="Center"
-                                                   TextColor="{StaticResource MainTextColor}"/>
+                                                       FontSize="22"
+                                                       VerticalTextAlignment="Center"
+                                                       TextColor="{StaticResource MainTextColor}"/>
                                             <Label Text="{Binding Country}"
-                                                   TextColor="{StaticResource SecondaryTextColor}" FontSize="10"/>
+                                                       TextColor="{StaticResource SecondaryTextColor}" FontSize="10"/>
                                             <Label Text="{Binding Date, StringFormat='{0:ddd, d MMMM HH:mm}'}"
-                                                   TextColor="{StaticResource SecondaryTextColor}" FontSize="10"/>
+                                                       TextColor="{StaticResource SecondaryTextColor}" FontSize="10"/>
                                         </StackLayout>
                                         <StackLayout HorizontalOptions="EndAndExpand" Padding="0"
-                                                     Margin="0" Spacing="-10">
+                                                         Margin="0" Spacing="-10">
                                             <StackLayout Orientation="Horizontal" Padding="0"
-                                                     Margin="0" Spacing="0" HorizontalOptions="EndAndExpand">
+                                                         Margin="0" Spacing="0" HorizontalOptions="EndAndExpand">
                                                 <Image Source="{Binding Icon}" HeightRequest="50"
-                                                       WidthRequest="50" VerticalOptions="CenterAndExpand"/>
+                                                           WidthRequest="50" VerticalOptions="CenterAndExpand"/>
                                                 <Label Text="{Binding Path=Temperature,StringFormat='{0}°'}"
-                                                        FontSize="30" HorizontalTextAlignment="End"
-                                                        TextColor="{StaticResource MainTextColor}"/>
+                                                            FontSize="30" HorizontalTextAlignment="End"
+                                                            TextColor="{StaticResource MainTextColor}"/>
                                             </StackLayout>
                                             <Label Text="{Binding Description}" HorizontalOptions="EndAndExpand"
-                                                   TextColor="{StaticResource SecondaryTextColor}"
-                                                   FontSize="12" Margin="10,0"/>
+                                                       TextColor="{StaticResource SecondaryTextColor}"
+                                                       FontSize="12" Margin="10,0"/>
                                         </StackLayout>
                                     </StackLayout>
                                 </Frame>

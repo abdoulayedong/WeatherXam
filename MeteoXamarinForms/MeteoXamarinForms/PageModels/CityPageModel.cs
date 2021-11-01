@@ -7,7 +7,6 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Windows.Input;
-using System.Text;
 using Xamarin.Forms;
 using MeteoXamarinForms.ViewModels;
 using Xamarin.Essentials;
@@ -16,6 +15,7 @@ using FreshMvvm;
 using MeteoXamarinForms.Services.Weather;
 using MeteoXamarinForms.Services.Toast;
 using MeteoXamarinForms.Resx;
+using Xamarin.Forms.Internals;
 
 namespace MeteoXamarinForms.PageModels
 {
@@ -24,7 +24,7 @@ namespace MeteoXamarinForms.PageModels
         public CityPageModel()
         {
             _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
-
+            #region Implemented Command
             AddWeatherInformationCommand = new Command(
                 async () =>
                 {
@@ -68,6 +68,11 @@ namespace MeteoXamarinForms.PageModels
                     await Update();
                     IsRefreshing = false;
                 });
+            #endregion
+            //ItemDragged = new Command<CityManager>(OnItemDragged);
+            //ItemDraggedOver = new Command<CityManager>(OnItemDraggedOver);
+            //ItemDragLeave = new Command<CityManager>(OnItemDragLeave);
+            //ItemDropped = new Command<CityManager>(async c => await OnItemDropped(c));
         }
 
         public override void Init(object initData)
@@ -127,6 +132,43 @@ namespace MeteoXamarinForms.PageModels
                 }
             }
         }
+
+        //private void OnItemDragged(CityManager city)
+        //{
+        //    CitiesWeather.ForEach(c => c.IsBeingDragged = city == c);
+        //}
+
+        //private void OnItemDraggedOver(CityManager city)
+        //{
+        //    CityManager cityBeingDragged = _citiesWeather.FirstOrDefault(c => c.IsBeingDragged);
+        //    CitiesWeather.ForEach(c => c.IsBeingDraggedOver = city == c && city != cityBeingDragged);
+        //}
+
+        //private void OnItemDragLeave(CityManager city)
+        //{
+        //    CitiesWeather.ForEach(c => c.IsBeingDraggedOver = false);
+        //}
+
+        //private async Task OnItemDropped(CityManager city)
+        //{
+        //    var cityToMove = _citiesWeather.First(i => i.IsBeingDragged);
+        //    var cityToInsertBefore = city;
+
+        //    if (cityToMove is null || cityToInsertBefore is null || cityToMove is null)
+        //        return;
+
+        //    var citiesWeatherToMoveFrom = CitiesWeather;
+        //    citiesWeatherToMoveFrom.Remove(cityToMove);
+
+        //    await Task.Delay(1000);
+
+        //    var citiesWeatherToMoveTo = CitiesWeather;
+        //    var insertAtIndex = _citiesWeather.IndexOf(cityToInsertBefore);
+
+        //    citiesWeatherToMoveFrom.Insert(insertAtIndex, cityToMove);
+        //    cityToMove.IsBeingDragged = false;
+        //    cityToInsertBefore.IsBeingDraggedOver = false;
+        //}
         #endregion
 
         #region Properties
@@ -156,6 +198,10 @@ namespace MeteoXamarinForms.PageModels
         public ICommand ShowWeatherInformationCommand { private set; get; }
         public ICommand DeleteWeatherInformationCommand { private set; get; }
         public ICommand ActualizeAllDataCommand { private set; get; }
+        //public ICommand ItemDragged { private set; get; }
+        //public ICommand ItemDraggedOver { private set; get; }
+        //public ICommand ItemDragLeave { private set; get; }
+        //public ICommand ItemDropped { private set; get; }
         public ICommand BackPressCommand => new Command(BackPressMethod);
         #endregion
 
@@ -178,16 +224,5 @@ namespace MeteoXamarinForms.PageModels
             }
         }
         #endregion
-    }
-
-
-    public class CityManager
-    {    
-        public string City { get; set; }
-        public int Temperature { get; set; }
-        public string Description { get; set; }
-        public DateTime Date { get; set; }
-        public string Country { get; set; }
-        public string Icon { get; set; }
     }
 }

@@ -12,6 +12,17 @@ namespace MeteoXamarinForms.Pages
             InitializeComponent();
         }
 
+        //private void DragGestureRecognizer_DragStarting(object sender, DragStartingEventArgs e)
+        //{
+
+        //}
+
+        //private void DropGestureRecognizer_Drop_Collection(object sender, DropEventArgs e)
+        //{
+        //    e.Handled = true;
+        //}
+
+
         //protected override bool OnBackButtonPressed()
         //{
         //    var vm = (CityPageModel)BindingContext;
