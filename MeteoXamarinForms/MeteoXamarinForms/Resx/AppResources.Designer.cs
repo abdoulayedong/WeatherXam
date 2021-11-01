@@ -133,6 +133,51 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Every 12 hours.
+        /// </summary>
+        internal static string Every12Hours {
+            get {
+                return ResourceManager.GetString("Every12Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Every 24 hours.
+        /// </summary>
+        internal static string Every24Hours {
+            get {
+                return ResourceManager.GetString("Every24Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Every 2 hours.
+        /// </summary>
+        internal static string Every2Hours {
+            get {
+                return ResourceManager.GetString("Every2Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Every 6 hours.
+        /// </summary>
+        internal static string Every6Hours {
+            get {
+                return ResourceManager.GetString("Every6Hours", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Every hour.
+        /// </summary>
+        internal static string EveryHour {
+            get {
+                return ResourceManager.GetString("EveryHour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Extrem.
         /// </summary>
         internal static string Extrem {
@@ -273,6 +318,15 @@ namespace MeteoXamarinForms.Resx {
         internal static string NorthWest {
             get {
                 return ResourceManager.GetString("NorthWest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Refresh.
+        /// </summary>
+        internal static string Refresh {
+            get {
+                return ResourceManager.GetString("Refresh", resourceCulture);
             }
         }
         

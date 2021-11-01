@@ -141,6 +141,21 @@
   <data name="English" xml:space="preserve">
     <value>Anglais</value>
   </data>
+  <data name="Every12Hours" xml:space="preserve">
+    <value>Toutes les 12 heures</value>
+  </data>
+  <data name="Every24Hours" xml:space="preserve">
+    <value>Toutes les 24 heures</value>
+  </data>
+  <data name="Every2Hours" xml:space="preserve">
+    <value>Toutes les 2 heures</value>
+  </data>
+  <data name="Every6Hours" xml:space="preserve">
+    <value>Toutes les 6 heures</value>
+  </data>
+  <data name="EveryHour" xml:space="preserve">
+    <value>Toutes les heures</value>
+  </data>
   <data name="Extrem" xml:space="preserve">
     <value>Extrême</value>
   </data>
@@ -188,6 +203,9 @@
   </data>
   <data name="NorthWest" xml:space="preserve">
     <value>Nord-Ouest</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Actualisation</value>
   </data>
   <data name="RequestLanguage" xml:space="preserve">
     <value>fr</value>

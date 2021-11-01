@@ -33,8 +33,20 @@ namespace MeteoXamarinForms.PageModels
                 new Unit{ Name = "°K", Parameter = "standard" }
             };
 
+            RefreshFrequencies = new()
+            {
+                new() { Name = new(() => AppResources.EveryHour), FrequencyTime = 1},
+                new() { Name = new(() => AppResources.Every2Hours), FrequencyTime = 2},
+                new() { Name = new(() => AppResources.Every6Hours), FrequencyTime = 6},
+                new() { Name = new(() => AppResources.Every12Hours), FrequencyTime = 12},
+                new() { Name = new(() => AppResources.Every24Hours), FrequencyTime = 24}
+            };
+
             SelectedLanguage = SupportedLanguages.FirstOrDefault(lang => lang.CI == LocalizationResourceManager.Current.CurrentCulture.TwoLetterISOLanguageName);
             SelectedUnit = Units.FirstOrDefault(unit => unit.Name == Preferences.Get("Unit", "°C"));
+            SelectedFrequency = RefreshFrequencies.FirstOrDefault(frequency => frequency.FrequencyTime == Preferences.Get("FrequencyTime", 1));
+            IsAutoRefresh = Preferences.Get("IsAutoRefresh", false);       
+
 
             ShowAboutPageCommand = new Command(
                 async() =>
@@ -71,8 +83,38 @@ namespace MeteoXamarinForms.PageModels
             }
         }
 
-        private ObservableCollection<Unit> _units;
+        private bool _isAutoRefresh;
+        public bool IsAutoRefresh
+        {
+            get { return _isAutoRefresh; }
+            set 
+            { 
+                SetProperty(ref _isAutoRefresh, value);
+                Preferences.Set("IsAutoRefresh", IsAutoRefresh);
+            } 
+        }
 
+        private ObservableCollection<RefreshFrequency> _refreshFrequencies;
+        public ObservableCollection<RefreshFrequency> RefreshFrequencies
+        {
+            get { return _refreshFrequencies; }
+            set => SetProperty(ref _refreshFrequencies, value);
+        }
+
+        private RefreshFrequency _selectedFrequency;
+        public RefreshFrequency SelectedFrequency
+        {
+            get { return _selectedFrequency; }
+            set
+            {
+                _selectedFrequency = value;
+                Preferences.Set("Frequency", SelectedFrequency.Name.Localized);
+                Preferences.Set("FrequencyTime", SelectedFrequency.FrequencyTime);
+                OnPropertyChanged("SelectedFrequency");
+            }
+        }
+
+        private ObservableCollection<Unit> _units;
         public ObservableCollection<Unit> Units
         {
             get { return _units; }
@@ -80,7 +122,6 @@ namespace MeteoXamarinForms.PageModels
         }
 
         private Unit _selectedUnit;
-
         public Unit SelectedUnit
         {
             get { return _selectedUnit; }

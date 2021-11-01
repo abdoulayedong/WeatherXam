@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeteoXamarinForms.Pages.CityPage"
-             NavigationPage.HasBackButton="False"
-             NavigationPage.HasNavigationBar="True"
+             NavigationPage.HasNavigationBar="False"
              xmlns:local="clr-namespace:MeteoXamarinForms.PageModels"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             BackgroundColor="{StaticResource MainBackgroundColor}"
-             Title="{xct:Translate ManageCities}">
+             BackgroundColor="{StaticResource MainBackgroundColor}">
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="{xct:Translate ManageCities}"
+                   TextColor="{StaticResource MainTextColor}"
+                   FontSize="20" FontAttributes="Bold"
+                   Margin="16,14.5"/>
             <RefreshView IsRefreshing="{Binding IsRefreshing}"
                          Command="{Binding ActualizeAllDataCommand}">
                 <CollectionView ItemsSource="{Binding CitiesWeather}" 

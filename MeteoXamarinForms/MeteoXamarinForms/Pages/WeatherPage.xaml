@@ -124,10 +124,10 @@
                                                     <Label Text="{Binding Hour, StringFormat='{0:HH:mm}'}" HorizontalOptions="Center" 
                                                        TextColor="{StaticResource SecondaryTextColor}" FontSize="15"/>
                                                     <Image Source="{Binding Icon}"
-                                                   HeightRequest="50" Aspect="AspectFill"
-                                                   WidthRequest="60"/>
+                                                           HeightRequest="50" Aspect="AspectFill"
+                                                           WidthRequest="60"/>
                                                     <Label Text="{Binding Temperature, StringFormat='{0}°'}" FontSize="17" HorizontalOptions="Center"
-                                                       TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
                                                     <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center">
                                                         <Image Source="{Binding ProbabilityIcon}" HeightRequest="6" WidthRequest="6" Margin="3,0"/>
                                                         <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" FontSize="13" TextColor="{StaticResource SecondaryTextColor}"/>
