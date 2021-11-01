@@ -227,7 +227,7 @@ namespace MeteoXamarinForms.Models
         public string Timezone { get; set; }
 
         [JsonPropertyName("timezone_offset")]
-        public int TimezoneOffset { get; set; }
+        public int Timezone_Offset { get; set; }
 
         [JsonPropertyName("current")]
         public Current Current { get; set; }

@@ -11,6 +11,11 @@ using System.Text;
 using Xamarin.Forms;
 using MeteoXamarinForms.ViewModels;
 using Xamarin.Essentials;
+using System.Threading.Tasks;
+using FreshMvvm;
+using MeteoXamarinForms.Services.Weather;
+using MeteoXamarinForms.Services.Toast;
+using MeteoXamarinForms.Resx;
 
 namespace MeteoXamarinForms.PageModels
 {
@@ -18,6 +23,8 @@ namespace MeteoXamarinForms.PageModels
     {
         public CityPageModel()
         {
+            _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
+
             AddWeatherInformationCommand = new Command(
                 async () =>
                 {
@@ -38,7 +45,9 @@ namespace MeteoXamarinForms.PageModels
                 async (CityManager city) =>
                 {
                     CitiesWeather.Remove(city);
-                    ToolExtension.DeleteDataLocaly(city.City);
+                    var current = CitiesManagerData.Where(current => current.Timezone.Contains(city.City)).FirstOrDefault();
+                    CitiesManagerData.Remove(current);
+                    ToolExtension.DeleteDataLocaly(current);
                     var fileList = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
                     if (fileList.Count() == 0)
                     {
@@ -51,6 +60,14 @@ namespace MeteoXamarinForms.PageModels
                         CoreMethods.RemoveFromNavigation();
                     };
                 });
+
+            ActualizeAllDataCommand = new Command(
+                async () =>
+                {
+                    IsRefreshing = true;
+                    await Update();
+                    IsRefreshing = false;
+                });
         }
 
         public override void Init(object initData)
@@ -59,6 +76,19 @@ namespace MeteoXamarinForms.PageModels
         }
 
         #region Methods
+        private async Task Update()
+        {
+            foreach (var city in CitiesManagerData)
+            {
+                ToolExtension.DeleteDataLocaly(city);
+                var localCityData = await _weatherService.GetWeatherFromLatLong(city.Lat, city.Lon);
+                //localCityData.Timezone = city.Timezone;
+                ToolExtension.SaveDataLocaly(localCityData, city.Timezone);
+            }
+            Initialize();
+            DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
+        }
+
         private void Initialize()
         {
             CitiesManagerData = new List<Root>();
@@ -68,13 +98,15 @@ namespace MeteoXamarinForms.PageModels
             {
                 CitiesManagerData.Add(ToolExtension.GetDataLocaly(file));
                 var city = CitiesManagerData[index];
+                var date = ToolExtension.GetDateTimeFromTimezone(city.Timezone_Offset);
                 if (city.Timezone.Contains('/'))
                 {
                     CitiesWeather.Add(new CityManager
                     {
                         City = ToolExtension.GetCityName(city.Timezone),
                         Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
-                        Description = city.Current.Weather[0].Description
+                        Description = city.Current.Weather[0].Description,
+                        Date = date
                     });
                 }
                 else
@@ -83,7 +115,8 @@ namespace MeteoXamarinForms.PageModels
                     {
                         City = city.Timezone,
                         Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
-                        Description = city.Current.Weather[0].Description
+                        Description = city.Current.Weather[0].Description, 
+                        Date = date
                     });
                 }
             }
@@ -92,6 +125,8 @@ namespace MeteoXamarinForms.PageModels
 
         #region Properties
         public Root Weather { get; set; }
+        private readonly IWeatherService _weatherService;
+
 
         private ObservableCollection<CityManager> _citiesWeather;
         public ObservableCollection<CityManager> CitiesWeather
@@ -100,12 +135,11 @@ namespace MeteoXamarinForms.PageModels
             set => SetProperty(ref _citiesWeather, value);
         }
 
-
-        private bool _test;
-        public bool Test
+        private bool _isRefreshing;
+        public bool IsRefreshing
         {
-            get { return _test; }
-            set => SetProperty(ref _test, value);
+            get { return _isRefreshing; }
+            set => SetProperty(ref _isRefreshing, value);
         }
 
         public List<Root> CitiesManagerData { get; set; }
@@ -115,6 +149,7 @@ namespace MeteoXamarinForms.PageModels
         public ICommand AddWeatherInformationCommand { private set; get; }
         public ICommand ShowWeatherInformationCommand { private set; get; }
         public ICommand DeleteWeatherInformationCommand { private set; get; }
+        public ICommand ActualizeAllDataCommand { private set; get; }
         public ICommand BackPressCommand => new Command(BackPressMethod);
         #endregion
 
@@ -141,9 +176,10 @@ namespace MeteoXamarinForms.PageModels
 
 
     public class CityManager
-    {
+    {    
         public string City { get; set; }
         public int Temperature { get; set; }
         public string Description { get; set; }
+        public DateTime Date { get; set; }
     }
 }

@@ -63,7 +63,7 @@ namespace MeteoXamarinForms.ViewModels
                         var weatherData = await _weatherService.GetWeatherFromLatLong(location.Latitude, location.Longitude);
                         var timezoneRemake = weatherData.Timezone.Split('/');
                         weatherData.Timezone = String.Format("{0}/{1}", timezoneRemake[0], StringExtensions.FirstCharToUpper(query));
-                        ToolExtension.SaveDataLocaly(weatherData, StringExtensions.FirstCharToUpper(query));
+                        ToolExtension.SaveDataLocaly(weatherData, weatherData.Timezone);
                         if (IsModalView)
                         {
                             await CoreMethods.PushPageModel<WeatherPageModel>(data: weatherData);

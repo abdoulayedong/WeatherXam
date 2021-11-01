@@ -141,10 +141,10 @@
                             <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
                                    BackgroundColor="{StaticResource MainFrameColor}">
                                 <CollectionView ItemsSource="{Binding DayPrevisions}"
-                                            x:Name="DayPrevision"
-                                            SelectionMode="Single" HeightRequest="245" 
-                                            SelectionChangedCommand="{Binding DailyDetailCommand}"
-                                            SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference DayPrevision}}">
+                                                x:Name="DayPrevision"
+                                                SelectionMode="Single" HeightRequest="245" 
+                                                SelectionChangedCommand="{Binding DailyDetailCommand}"
+                                                SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference DayPrevision}}">
                                     <CollectionView.ItemTemplate>
                                         <DataTemplate>
                                             <Grid ColumnDefinitions="auto, *, auto" Margin="0">
@@ -152,12 +152,7 @@
                                                     <VisualStateGroup Name="CommonStates">
                                                         <VisualState Name="Selected">
                                                             <VisualState.Setters>
-                                                                <Setter Property="BackgroundColor" Value="Transparent" />
-                                                            </VisualState.Setters>
-                                                        </VisualState>
-                                                        <VisualState Name="Focused">
-                                                            <VisualState.Setters>
-                                                                <Setter Property="BackgroundColor" Value="Orange" />
+                                                                <Setter Property="BackgroundColor" Value="Transparent"/>
                                                             </VisualState.Setters>
                                                         </VisualState>
                                                     </VisualStateGroup>

@@ -219,7 +219,7 @@ namespace MeteoXamarinForms.ViewModels
             try
             {
                 Weather = await _weatherService.GetWeatherFromLatLong(Weather.Lat, Weather.Lon);
-                Weather.Timezone = CityName;
+                //Weather.Timezone = CityName;
                 ToolExtension.SaveDataLocaly(Weather, CityName);
                 SetUiData();
                 DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);

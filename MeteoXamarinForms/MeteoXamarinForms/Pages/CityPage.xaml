@@ -10,61 +10,79 @@
              Title="{xct:Translate ManageCities}">
     <ContentPage.Content>
         <StackLayout>
-            <CollectionView ItemsSource="{Binding CitiesWeather}" 
+            <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                         Command="{Binding ActualizeAllDataCommand}">
+                <CollectionView ItemsSource="{Binding CitiesWeather}" 
                             SelectionMode="Single"
                             x:Name="Cities" 
                             SelectionChangedCommand="{Binding ShowWeatherInformationCommand}"
                             SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference Cities}}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <SwipeView Threshold="100">
-                            <SwipeView.RightItems>
-                                <SwipeItems SwipeBehaviorOnInvoked="Auto">
-                                    <SwipeItemView Command="{Binding Source={RelativeSource AncestorType={x:Type local:CityPageModel}}, Path=DeleteWeatherInformationCommand}"
-                                                   BackgroundColor="Red"
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <SwipeView Threshold="100">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="Transparent" />
+                                                <Setter Property="Opacity" Value="0.5"/>
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <SwipeView.RightItems>
+                                    <SwipeItems SwipeBehaviorOnInvoked="Auto">
+                                        <SwipeItemView Command="{Binding Source={RelativeSource AncestorType={x:Type local:CityPageModel}}, Path=DeleteWeatherInformationCommand}"
+                                                   BackgroundColor="OrangeRed"
                                                    CommandParameter="{Binding}">
-                                        <StackLayout WidthRequest="60"
+                                            <StackLayout WidthRequest="60"
                                                      VerticalOptions="CenterAndExpand"
                                                      Spacing="0"
                                                      HorizontalOptions="CenterAndExpand">
-                                            <Label Text="&#xf0a7a;" Style="{StaticResource MaterialIcons}" 
+                                                <Label Text="&#xf0a7a;" Style="{StaticResource MaterialIcons}" 
                                                    FontSize="25" VerticalOptions="CenterAndExpand"
                                                    HorizontalOptions="CenterAndExpand"
                                                    TextColor="{StaticResource MainTextColor}"
                                                    Margin="0"/>
-                                            <Label Text="Delete"
+                                                <Label Text="Delete"
                                                    TextColor="{StaticResource MainTextColor}"
                                                    HorizontalOptions="CenterAndExpand"
                                                    FontSize="16"/>
-                                        </StackLayout>
-                                    </SwipeItemView>
-                                </SwipeItems>
-                            </SwipeView.RightItems>
-                            <StackLayout Spacing="0" Margin="0" Padding="0">                                
-                                <StackLayout Orientation="Horizontal" BackgroundColor="{StaticResource MainFrameColor}"
-                                             Padding="10">
-                                    <Label Text="{Binding City}"
-                                               FontSize="22"
-                                               VerticalTextAlignment="Center"
+                                            </StackLayout>
+                                        </SwipeItemView>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                                <Frame Padding="5" CornerRadius="20" BackgroundColor="{StaticResource MainFrameColor}"
+                                       Margin="10,5">
+                                    <!--<StackLayout Spacing="0" Margin="0" Padding="0">-->
+                                        <StackLayout Orientation="Horizontal" 
+                                                     Padding="10">
+                                        <Label Text="{Binding City}"
+                                                       FontSize="22"
+                                                       VerticalTextAlignment="Center"
+                                                       TextColor="{StaticResource MainTextColor}"/>
+                                        <Label Text="{Binding Date, StringFormat='{0:ddd, d MMMM HH:mm}'}"
                                                TextColor="{StaticResource MainTextColor}"/>
-                                    <StackLayout HorizontalOptions="EndAndExpand">
-                                        <Label Text="{Binding Path=Temperature,StringFormat='{0}°'}"
-                                                   FontSize="30" HorizontalTextAlignment="End"
-                                                   TextColor="{StaticResource MainTextColor}"/>
-                                        <Label Text="{Binding Description}"
-                                                   TextColor="{StaticResource MainTextColor}"/>
-                                    </StackLayout>                                    
-                                </StackLayout>
-                                <BoxView HeightRequest="1"
-                                         BackgroundColor="Black"
-                                         Grid.ColumnSpan="2"
-                                         Grid.Row="2"
-                                         VerticalOptions="End"/>
-                            </StackLayout>
-                        </SwipeView>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                                        <StackLayout HorizontalOptions="EndAndExpand">
+                                                <Label Text="{Binding Path=Temperature,StringFormat='{0}°'}"
+                                                       FontSize="30" HorizontalTextAlignment="End"
+                                                       TextColor="{StaticResource MainTextColor}"/>
+                                                <Label Text="{Binding Description}"
+                                                       TextColor="{StaticResource MainTextColor}"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <!--<BoxView HeightRequest="1"
+                                             BackgroundColor="Black"
+                                             Grid.ColumnSpan="2"
+                                             Grid.Row="2"
+                                             VerticalOptions="End"/>-->
+                                    <!--</StackLayout>-->
+                                </Frame>
+                            </SwipeView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
             <Frame HorizontalOptions="Center" CornerRadius="50" Padding="0"
                    BackgroundColor="{StaticResource MainFrameColor}"
                    Margin="10">

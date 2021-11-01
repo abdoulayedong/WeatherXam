@@ -6,11 +6,17 @@ using System.IO;
 using Xamarin.Essentials;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 
 namespace MeteoXamarinForms.Extensions
 {
     public static class ToolExtension
     {
+        public static DateTime GetDateTimeFromTimezone(int timezoneOffset)
+        {
+            return DateTime.UtcNow.AddSeconds(timezoneOffset);
+        }
+
         public static bool ExistingWeatherData()
         {
             var directory = (Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData))).ToList();
@@ -109,7 +115,8 @@ namespace MeteoXamarinForms.Extensions
 
         public static void SaveDataLocaly(Root weatherData, string cityName)
         {
-            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), String.Format("{0}.txt", cityName));
+            string cityNameRemaster = cityName.Split('/')[1];
+            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), String.Format("{0}.txt", cityNameRemaster));
             File.WriteAllText(fileName, ToolExtension.SerializeWeatherData(weatherData));
         }
 
@@ -133,19 +140,33 @@ namespace MeteoXamarinForms.Extensions
 
         public static Root GetDataLocaly(string fullFileName)
         {
-            return DeserializeWeatherData(File.ReadAllText(fullFileName));
+            var data = File.ReadAllText(fullFileName);
+            return DeserializeWeatherData(data);
         }
 
-        public static void DeleteDataLocaly(string cityName)
+        //public static void DeleteDataLocaly(string cityName)
+        //{
+        //    string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), String.Format("{0}.txt", cityName));
+        //    if(Preferences.Get("FullFileName", String.Empty).Contains(cityName))
+        //    {
+        //        Preferences.Remove("FullFileName");
+        //    }
+        //    File.Delete(fileName);
+        //}
+
+        public static void DeleteDataLocaly(Root city)
         {
-            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), String.Format("{0}.txt", cityName));
-            if(Preferences.Get("FullFileName", String.Empty).Contains(cityName))
+            var firstString = SerializeWeatherData(city);
+            var fileList = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+            foreach (var file in fileList)
             {
-                Preferences.Remove("FullFileName");
+                var secondString = SerializeWeatherData(GetDataLocaly(file));
+                if (firstString.Equals(secondString))
+                {
+                    File.Delete(file);
+                }
             }
-            File.Delete(fileName);
         }
-
         public static string GetWindDirection(int wind_deg)
         {
             if(wind_deg >= 0 && wind_deg < 22.5)            
