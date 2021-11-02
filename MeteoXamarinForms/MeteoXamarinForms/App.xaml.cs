@@ -39,7 +39,7 @@ namespace MeteoXamarinForms
             }
             
             if (fullFileName != string.Empty)
-            {                
+            {              
                 Preferences.Set("FullFileName", fullFileName);
                 var data = ToolExtension.GetDataLocaly(fullFileName);
                 var page = FreshPageModelResolver.ResolvePageModel<WeatherPageModel>(data);

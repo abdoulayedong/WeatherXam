@@ -1,10 +1,10 @@
 ﻿using Android.Widget;
-using MeteoXamarinForms.Droid;
+using MeteoXamarinForms.Droid.DependencyServices;
 using MeteoXamarinForms.Services.Toast;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(ToastService))]
-namespace MeteoXamarinForms.Droid
+namespace MeteoXamarinForms.Droid.DependencyServices
 {
     public class ToastService : IToastService
     {

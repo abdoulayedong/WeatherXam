@@ -1,243 +1,287 @@
-﻿using System;
+﻿using SQLite;
+using SQLiteNetExtensions.Attributes;
 using System.Collections.Generic;
-using System.Text;
-using System.Text.Json.Serialization;
 
 namespace MeteoXamarinForms.Models
-{    
+{
     public class Weather
     {
-        [JsonPropertyName("id")]
-        public int Id { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int WeatherId { get; set; }
 
-        [JsonPropertyName("main")]
+        [Column("main")]
         public string Main { get; set; }
 
-        [JsonPropertyName("description")]
+        [Column("description")]
         public string Description { get; set; }
 
-        [JsonPropertyName("icon")]
+        [Column("icon")]
         public string Icon { get; set; }
-    }
 
+        [ForeignKey(typeof(Current))]
+        public int CurrentId { get; set; }
+
+        [ForeignKey(typeof(Hourly))]
+        public int HourlyId { get; set; }
+
+        [ForeignKey(typeof(Daily))]
+        public int DailyId { get; set; }
+
+    }
+    
     public class Current
     {
-        [JsonPropertyName("dt")]
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        [Column("unixDateTime")]
         public int Dt { get; set; }
 
-        [JsonPropertyName("sunrise")]
+        [Column("sunrise")]
         public int Sunrise { get; set; }
 
-        [JsonPropertyName("sunset")]
+        [Column("sunset")]
         public int Sunset { get; set; }
 
-        [JsonPropertyName("temp")]
+        [Column("temperature")]
         public double Temp { get; set; }
 
-        [JsonPropertyName("feels_like")]
+        [Column("feelsLike")]
         public double Feels_Like { get; set; }
 
-        [JsonPropertyName("pressure")]
+        [Column("pressure")]
         public int Pressure { get; set; }
 
-        [JsonPropertyName("humidity")]
+        [Column("humidity")]
         public int Humidity { get; set; }
 
-        [JsonPropertyName("dew_point")]
+        [Column("dewPoint")]
         public double Dew_Point { get; set; }
 
-        [JsonPropertyName("uvi")]
+        [Column("uvindex")]
         public double Uvi { get; set; }
 
-        [JsonPropertyName("clouds")]
+        [Column("clouds")]
         public int Clouds { get; set; }
 
-        [JsonPropertyName("visibility")]
+        [Column("visibility")]
         public int Visibility { get; set; }
-
-        [JsonPropertyName("wind_speed")]
+        
+        [Column("windSpeed")]
         public double Wind_Speed { get; set; }
 
-        [JsonPropertyName("wind_deg")]
+        [Column("windDegre")]
         public int Wind_Deg { get; set; }
 
-        [JsonPropertyName("weather")]
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<Weather> Weather { get; set; }
     }
 
     public class Rain
     {
-        [JsonPropertyName("1h")]
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
         public double _1h { get; set; }
     }
 
     public class Hourly
     {
-        [JsonPropertyName("dt")]
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        [Column("unixDateTime")]
         public int Dt { get; set; }
 
-        [JsonPropertyName("temp")]
+        [Column("temperature")]
         public double Temp { get; set; }
 
-        [JsonPropertyName("feels_like")]
+        [Column("feelsLike")]
         public double Feels_Like { get; set; }
 
-        [JsonPropertyName("pressure")]
+        [Column("pressure")]
         public int Pressure { get; set; }
 
-        [JsonPropertyName("humidity")]
+        [Column("humidity")]
         public int Humidity { get; set; }
 
-        [JsonPropertyName("dew_point")]
+        [Column("dewPoint")]
         public double DewPoint { get; set; }
 
-        [JsonPropertyName("uvi")]
+        [Column("uvindex")]
         public double Uvi { get; set; }
 
-        [JsonPropertyName("clouds")]
+        [Column("clouds")]
         public int Clouds { get; set; }
 
-        [JsonPropertyName("visibility")]
+        [Column("visibility")]
         public int Visibility { get; set; }
 
-        [JsonPropertyName("wind_speed")]
+        [Column("windSpeed")]
         public double Wind_Speed { get; set; }
 
-        [JsonPropertyName("wind_deg")]
+        [Column("windDegre")]
         public int Wind_Deg { get; set; }
 
-        [JsonPropertyName("wind_gust")]
+        [Column("windGust")]
         public double Wind_Gust { get; set; }
 
-        [JsonPropertyName("weather")]
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<Weather> Weather { get; set; }
 
-        [JsonPropertyName("pop")]
+        [Column("pop")]
         public double Pop { get; set; }
 
-        [JsonPropertyName("rain")]
+        [ForeignKey(typeof(Rain))]
+        public int RainId { get; set; }
+
+        [OneToOne(CascadeOperations = CascadeOperation.All)]
         public Rain Rain { get; set; }
+
+        [ForeignKey(typeof(Root))]
+        public int RootId { get; set; }
     }
 
     public class Temp
     {
-        [JsonPropertyName("day")]
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        [Column("day")]
         public double Day { get; set; }
 
-        [JsonPropertyName("min")]
+        [Column("min")]
         public double Min { get; set; }
 
-        [JsonPropertyName("max")]
+        [Column("max")]
         public double Max { get; set; }
 
-        [JsonPropertyName("night")]
+        [Column("night")]
         public double Night { get; set; }
 
-        [JsonPropertyName("eve")]
+        [Column("eve")]
         public double Eve { get; set; }
 
-        [JsonPropertyName("morn")]
+        [Column("morn")]
         public double Morn { get; set; }
     }
-
+    
     public class FeelsLike
     {
-        [JsonPropertyName("day")]
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+
+        [Column("day")]
         public double Day { get; set; }
 
-        [JsonPropertyName("night")]
+        [Column("night")]
         public double Night { get; set; }
 
-        [JsonPropertyName("eve")]
+        [Column("eve")]
         public double Eve { get; set; }
 
-        [JsonPropertyName("morn")]
+        [Column("morn")]
         public double Morn { get; set; }
     }
 
     public class Daily
     {
-        [JsonPropertyName("dt")]
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
+        
+        [Column("unixDateTime")]
         public int Dt { get; set; }
 
-        [JsonPropertyName("sunrise")]
+        [Column("sunrise")]
         public int Sunrise { get; set; }
 
-        [JsonPropertyName("sunset")]
+        [Column("sunset")]
         public int Sunset { get; set; }
 
-        [JsonPropertyName("moonrise")]
+        [Column("moonrise")]
         public int Moonrise { get; set; }
 
-        [JsonPropertyName("moonset")]
+        [Column("moonset")]
         public int Moonset { get; set; }
 
-        [JsonPropertyName("moon_phase")]
+        [Column("moonPhase")]
         public double Moon_Phase { get; set; }
 
-        [JsonPropertyName("temp")]
+        [ForeignKey(typeof(Temp))]
+        public int TempId { get; set; }
+
+        [OneToOne(CascadeOperations = CascadeOperation.All)]
         public Temp Temp { get; set; }
 
-        [JsonPropertyName("feels_like")]
+        [ForeignKey(typeof(FeelsLike))]
+        public int Feels_LikeId { get; set; }
+
+        [OneToOne(CascadeOperations = CascadeOperation.All)]
         public FeelsLike Feels_Like { get; set; }
 
-        [JsonPropertyName("pressure")]
+        [Column("pressure")]
         public int Pressure { get; set; }
 
-        [JsonPropertyName("humidity")]
+        [Column("humidity")]
         public int Humidity { get; set; }
 
-        [JsonPropertyName("dew_point")]
+        [Column("dewPoint")]
         public double Dew_Point { get; set; }
 
-        [JsonPropertyName("wind_speed")]
+        [Column("windSpeed")]
         public double Wind_Speed { get; set; }
 
-        [JsonPropertyName("wind_deg")]
+        [Column("windDegre")]
         public int Wind_Deg { get; set; }
 
-        [JsonPropertyName("wind_gust")]
+        [Column("windGust")]
         public double Wind_Gust { get; set; }
 
-        [JsonPropertyName("weather")]
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<Weather> Weather { get; set; }
 
-        [JsonPropertyName("clouds")]
+        [Column("clouds")]
         public int Clouds { get; set; }
 
-        [JsonPropertyName("pop")]
+        [Column("pop")]
         public double Pop { get; set; }
 
-        [JsonPropertyName("rain")]
+        [Column("rain")]
         public double Rain { get; set; }
 
-        [JsonPropertyName("uvi")]
+        [Column("uvindex")]
         public double Uvi { get; set; }
+
+        [ForeignKey(typeof(Root))]
+        public int RootId { get; set; }
     }
 
     public class Root
     {
-        [JsonPropertyName("lat")]
-        public double Lat { get; set; }
+        [PrimaryKey, AutoIncrement]
+        public int Id { get; set; }
 
-        [JsonPropertyName("lon")]
+        [Column("latitue")]
+        public double Lat { get; set; }
+        
+        [Column("longitude")]
         public double Lon { get; set; }
 
-        [JsonPropertyName("timezone")]
+        [Column("timezone")]
         public string Timezone { get; set; }
 
-        [JsonPropertyName("timezone_offset")]
+        [Column("timezoneOffset")]
         public int Timezone_Offset { get; set; }
 
-        [JsonPropertyName("current")]
+        [ForeignKey(typeof(Current))]
+        public int CurrentId { get; set; }
+
+        [OneToOne(CascadeOperations = CascadeOperation.All)]
         public Current Current { get; set; }
 
-        [JsonPropertyName("hourly")]
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<Hourly> Hourly { get; set; }
-
-        [JsonPropertyName("daily")]
+        
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<Daily> Daily { get; set; }
     }
-
-
 }
