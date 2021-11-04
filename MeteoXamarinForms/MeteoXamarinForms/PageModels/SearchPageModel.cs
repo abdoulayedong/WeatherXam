@@ -9,6 +9,11 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using MeteoXamarinForms.Extensions;
 using FreshMvvm;
+using MeteoXamarinForms.Models;
+using System.Diagnostics;
+using MeteoXamarinForms.Services.Toast;
+using MeteoXamarinForms.Resx;
+using MeteoXamarinForms.Services;
 
 namespace MeteoXamarinForms.ViewModels
 {
@@ -35,10 +40,24 @@ namespace MeteoXamarinForms.ViewModels
                     else
                     {
                         IsNotFoundLocation = false;
-                        var weatherData = await _weatherService.GetWeatherFromLatLong(currentLocation.Latitude, currentLocation.Longitude);
-                        ToolExtension.SaveDataLocaly(weatherData, ToolExtension.GetCityName(weatherData.Timezone));
-                        Preferences.Set("CurrentLocation", ToolExtension.GetCityName(weatherData.Timezone));
-                        await CoreMethods.PushPageModel<WeatherPageModel>(data: weatherData);
+                        //var weatherData = await _weatherService.GetWeatherFromLatLong(currentLocation.Latitude, currentLocation.Longitude);
+                        //ToolExtension.SaveDataLocaly(weatherData, ToolExtension.GetCityName(weatherData.Timezone));
+                        //Preferences.Set("CurrentLocation", ToolExtension.GetCityName(weatherData.Timezone));
+                        //await CoreMethods.PushPageModel<WeatherPageModel>(data: weatherData);
+                        Root weatherData;
+                        try
+                        {
+                            weatherData = await _weatherService.GetWeatherFromLatLong(currentLocation.Latitude, currentLocation.Longitude);
+                            Root data = await SQLiteDataContext.Instance.AddRoot(weatherData);
+                            Preferences.Set("CurrentTimezone", weatherData.Timezone);
+                            Preferences.Set("LocalTimezone", weatherData.Timezone);
+                            await CoreMethods.PushPageModel<WeatherPageModel>(data: data);
+                        }
+                        catch (Exception ex)
+                        {
+                            DependencyService.Get<IToastService>().ShortToast(ex.Message);
+                            Debug.WriteLine(ex.Message);
+                        }                          
                         SearchInProgress = false;
                         IsActivatedSearch = false;
                     }
@@ -60,17 +79,38 @@ namespace MeteoXamarinForms.ViewModels
                     else
                     {
                         IsNotFoundLocation = false;
-                        var weatherData = await _weatherService.GetWeatherFromLatLong(location.Latitude, location.Longitude);
-                        var timezoneRemake = weatherData.Timezone.Split('/');
-                        weatherData.Timezone = String.Format("{0}/{1}", timezoneRemake[0], StringExtensions.FirstCharToUpper(query));                        
-                        ToolExtension.SaveDataLocaly(weatherData, weatherData.Timezone);
-                        if (IsModalView)
+                        //var weatherData = await _weatherService.GetWeatherFromLatLong(location.Latitude, location.Longitude);
+                        //var timezoneRemake = weatherData.Timezone.Split('/');
+                        //weatherData.Timezone = String.Format("{0}/{1}", timezoneRemake[0], StringExtensions.FirstCharToUpper(query));                        
+                        //ToolExtension.SaveDataLocaly(weatherData, weatherData.Timezone);
+                        //if (IsModalView)
+                        //{
+                        //    await CoreMethods.PushPageModel<WeatherPageModel>(data: weatherData);
+                        //}
+                        //else
+                        //{
+                        //    await CoreMethods.PushPageModel<WeatherPageModel>(data:weatherData);
+                        //}
+                        Root weatherData;
+                        try
                         {
-                            await CoreMethods.PushPageModel<WeatherPageModel>(data: weatherData);
+                            weatherData = await _weatherService.GetWeatherFromLatLong(location.Latitude, location.Longitude);
+                            weatherData.Timezone = ToolExtension.GetTimezone(weatherData.Timezone, query);
+                            Root data = await SQLiteDataContext.Instance.AddRoot(weatherData);
+                            if(data.Id == 0)
+                            {
+                                DependencyService.Get<IToastService>().ShortToast("La position a déjà été ajoutée.");
+                            }
+                            else
+                            {
+                                Preferences.Set("CurrentTimezone", weatherData.Timezone);
+                                await CoreMethods.PushPageModel<WeatherPageModel>(data: weatherData);
+                            }
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            await CoreMethods.PushPageModel<WeatherPageModel>(data:weatherData);
+                            DependencyService.Get<IToastService>().ShortToast(ex.Message);
+                            Debug.WriteLine(ex.Message);
                         }
                         SearchInProgress = false;
                         IsActivatedSearch = false;
@@ -87,7 +127,7 @@ namespace MeteoXamarinForms.ViewModels
         #region Method
         private async Task<Location> GetLocation(string query)
         {
-            IEnumerable<Xamarin.Essentials.Location> locations = new List<Xamarin.Essentials.Location>();
+            IEnumerable<Location> locations = new List<Location>();
             try
             {
                 locations = await Geocoding.GetLocationsAsync(query);

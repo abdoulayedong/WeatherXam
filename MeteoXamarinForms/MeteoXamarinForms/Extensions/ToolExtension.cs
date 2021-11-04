@@ -7,11 +7,25 @@ using Xamarin.Essentials;
 using System.Collections.Generic;
 using System.Linq;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace MeteoXamarinForms.Extensions
 {
     public static class ToolExtension
     {
+        public async static Task<string> GetCountry(double latitude, double longitude)
+        {
+            var placemarks = await Geocoding.GetPlacemarksAsync(latitude, longitude);
+            var country = placemarks.FirstOrDefault();
+            return String.Format("{0}, {1}", country.AdminArea, country.CountryName);
+        }
+
+        public static string GetTimezone(string timezone, string city)
+        {
+            var timezoneSplit = timezone.Split('/');
+            return String.Format("{0}/{1}", timezoneSplit[0], StringExtensions.FirstCharToUpper(city));
+        }
+
         public static DateTime GetDateTimeFromTimezone(int timezoneOffset)
         {
             return DateTime.UtcNow.AddSeconds(timezoneOffset);

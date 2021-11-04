@@ -293,7 +293,7 @@
                                    HorizontalOptions="StartAndExpand" TextColor="{StaticResource SecondaryTextColor}" Margin="10,0"/>
                                 <Label Text="{xct:Translate Updated}" FontSize="13" TextColor="{StaticResource SecondaryTextColor}"
                                    FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalTextAlignment="Center"/>
-                                <Label Text="{Binding UpdateData, StringFormat='{0:dd/MM, HH:mm}'}"
+                                <Label Text="{Binding UpdateDate, StringFormat='{0:dd/MM, HH:mm}'}"
                                    TextColor="{StaticResource SecondaryTextColor}"
                                    FontSize="13" Margin="5,0" VerticalTextAlignment="Center"/>
                             </StackLayout>

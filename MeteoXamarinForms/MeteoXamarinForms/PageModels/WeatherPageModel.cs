@@ -15,15 +15,16 @@ using Xamarin.Essentials;
 using MeteoXamarinForms.Services.Toast;
 using MeteoXamarinForms.Resx;
 using FreshMvvm;
+using MeteoXamarinForms.Services;
 
 namespace MeteoXamarinForms.ViewModels
 {
     public class WeatherPageModel : PageModelBase
     {
+#region Constructor
         public WeatherPageModel()
         {
             _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
-
 
             DailyDetailCommand = new Command<DayPrevision>(
             async (DayPrevision dayPrevision) =>
@@ -58,8 +59,9 @@ namespace MeteoXamarinForms.ViewModels
                     IsRefreshing = false;
                 });
         }
+#endregion
 
-        #region Properties
+#region Properties
         public Root Weather { get; set; }
         private readonly IWeatherService _weatherService;
 
@@ -77,11 +79,11 @@ namespace MeteoXamarinForms.ViewModels
             set => SetProperty(ref _rotationDegree, value);
         }
 
-        private DateTime _updateData;
-        public DateTime UpdateData
+        private DateTime _updateDate;
+        public DateTime UpdateDate
         {
-            get { return _updateData; }
-            set => SetProperty(ref _updateData, value);
+            get { return _updateDate; }
+            set => SetProperty(ref _updateDate, value);
         }
 
         private string _cityName;
@@ -204,23 +206,17 @@ namespace MeteoXamarinForms.ViewModels
             get => _dayPrevisions;
             set => SetProperty(ref _dayPrevisions, value);
         }
-        #endregion
+#endregion
 
-        #region Methods
-        private void Initialize()
-        {
-            var city = Weather.Timezone.Split('/');
-            CityName = city[city.Length - 1];
-            SetUiData();
-        }
-
+#region Methods
         private async Task Update()
         {
             try
             {
                 Weather = await _weatherService.GetWeatherFromLatLong(Weather.Lat, Weather.Lon);
                 Weather.Timezone = String.Format("{0}/{1}", Weather.Timezone.Split('/')[0], CityName);
-                ToolExtension.SaveDataLocaly(Weather, Weather.Timezone);
+                //ToolExtension.SaveDataLocaly(Weather, Weather.Timezone);
+                await SQLiteDataContext.Instance.UpdateRootAsync(Weather);
                 SetUiData();
                 DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
             }
@@ -271,7 +267,7 @@ namespace MeteoXamarinForms.ViewModels
             }
 
             // Daily weather
-            DayPrevisions = new ObservableCollection<DayPrevision>();
+            DayPrevisions = new ();
             for (int i = 0; i < 7; i++)
             {
                 DayPrevision dayPrevision = new ();
@@ -313,13 +309,29 @@ namespace MeteoXamarinForms.ViewModels
             WindDirection = new(() => ToolExtension.GetWindDirection(WindDeg));
             Clouds = current.Clouds;
             Humidity = current.Humidity;
-            UpdateData = ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
+            UpdateDate = ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
         }
 
-        public override void Init(object initData)
+        public async override void Init(object initData)
         {
             Weather = initData as Root;
-            Initialize();
+            string[] city = Weather.Timezone.Split('/');
+            CityName = city[city.Length - 1];
+            TimeSpan time = DateTime.Now - ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
+            #if DEBUG
+                time = TimeSpan.FromHours(0.6);
+            #else
+                time = TimeSpan.FromSeconds(1000);    
+            #endif
+            if (time.TotalMinutes > 30)
+            {
+                SetUiData();
+                IsRefreshing = true;
+                await Update();
+                IsRefreshing = false;
+            }               
+            else
+                SetUiData();
         }
 
         private async void BackPressMethod()
@@ -331,15 +343,15 @@ namespace MeteoXamarinForms.ViewModels
                 await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
             }
         }
-        #endregion
+#endregion
 
-        #region Commands
+#region Commands
         public ICommand DailyDetailCommand { private set; get; }
         public ICommand AddWeatherInformationCommand { private set; get; }
         public ICommand OpenCityManagementCommand { private set; get; }
         public ICommand OpenParameterCommand { private set; get; }
         public ICommand ActualizeDataCommand { private set; get; }
         public ICommand BackPressCommand => new Command(BackPressMethod);
-        #endregion
+#endregion
     }
 }

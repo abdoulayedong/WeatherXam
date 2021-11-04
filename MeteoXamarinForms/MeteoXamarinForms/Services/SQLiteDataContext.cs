@@ -1,9 +1,12 @@
 ﻿using MeteoXamarinForms.Models;
-using SQLiteNetExtensions.Extensions;
+using SQLite;
+using SQLiteNetExtensionsAsync.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace MeteoXamarinForms.Services
@@ -24,164 +27,84 @@ namespace MeteoXamarinForms.Services
             }
         }
 
-        private SQLite.SQLiteConnection connection;
+        private SQLiteAsyncConnection connection;
 
         private SQLiteDataContext()
         {
             connection = DependencyService.Get<ISQLite>().GetSQLiteConnection();
-            CreateTableIfNotExist();
+            //CreateTableIfNotExist();
+            connection.CreateTableAsync<Root>().Wait();
+            connection.CreateTableAsync<Models.Weather>().Wait();
+            connection.CreateTableAsync<Current>().Wait();
+            connection.CreateTableAsync<Rain>().Wait();
+            connection.CreateTableAsync<Hourly>().Wait();
+            connection.CreateTableAsync<Temp>().Wait();
+            connection.CreateTableAsync<FeelsLike>().Wait();
+            connection.CreateTableAsync<Daily>().Wait();
         }
 
-        private void CreateTableIfNotExist()
+        public async Task<List<Root>> GetAllRoot()
         {
-            bool isTableNotExist = false;
-
-            try
-            {
-                var test = connection.Table<Root>().FirstOrDefault();
-            }
-            catch
-            {
-                isTableNotExist = true;
-            }
-            
-            if (isTableNotExist)
-            {
-                connection.CreateTable<Root>();
-            }
-
-            isTableNotExist = false;
-
-            try
-            {
-                var test = connection.Table<Current>().FirstOrDefault();
-            }
-            catch
-            {
-                isTableNotExist = true;
-            }
-
-            if (isTableNotExist)
-            {
-                connection.CreateTable<Current>();
-            }
-
-            isTableNotExist = false;
-
-            try
-            {
-                var test = connection.Table<Daily>().FirstOrDefault();
-            }
-            catch
-            {
-                isTableNotExist = true;
-            }
-
-            if (isTableNotExist)
-            {
-                connection.CreateTable<Daily>();
-            }
-
-            isTableNotExist = false;
-
-            try
-            {
-                var test = connection.Table<Hourly>().FirstOrDefault();
-            }
-            catch
-            {
-                isTableNotExist = true;
-            }
-
-            if (isTableNotExist)
-            {
-                connection.CreateTable<Hourly>();
-            }
-
-            isTableNotExist = false;
-
-            try
-            {
-                var test = connection.Table<FeelsLike>().FirstOrDefault();
-            }
-            catch
-            {
-                isTableNotExist = true;
-            }
-
-            if (isTableNotExist)
-            {
-                connection.CreateTable<FeelsLike>();
-            }
-
-            isTableNotExist = false;
-
-            try
-            {
-                var test = connection.Table<Temp>().FirstOrDefault();
-            }
-            catch
-            {
-                isTableNotExist = true;
-            }
-
-            if (isTableNotExist)
-            {
-                connection.CreateTable<Temp>();
-            }
-
-            isTableNotExist = false;
-
-            try
-            {
-                var test = connection.Table<Rain>().FirstOrDefault();
-            }
-            catch
-            {
-                isTableNotExist = true;
-            }
-
-            if (isTableNotExist)
-            {
-                connection.CreateTable<Rain>();
-            }
-
-            isTableNotExist = false;
-
-            try
-            {
-                var test = connection.Table<Models.Weather>().FirstOrDefault();
-            }
-            catch
-            {
-                isTableNotExist = true;
-            }
-
-            if (isTableNotExist)
-            {
-                connection.CreateTable<Models.Weather>();
-            }
-
-            isTableNotExist = false;
+            return await ReadOperations.GetAllWithChildrenAsync<Root>(connection, recursive: true);
         }
 
-        public List<Root> GetAllRoot()
+        public async Task<Root> AddRoot(Root root)
+        {            
+            if(!await ExistRoot(root.Timezone))
+                await WriteOperations.InsertWithChildrenAsync(connection, root, recursive: true);
+            return root;
+        }
+
+        public async Task<Root> GetRootAsync(string timezone)
         {
-            return ReadOperations.GetAllWithChildren<Root>(connection, recursive: true).ToList();
+            return (await ReadOperations.GetAllWithChildrenAsync<Root>(connection, recursive:true)).FirstOrDefault(root => root.Timezone == timezone);
         }
 
-        public int AddRoot(Root root)
+        public async Task<Root> GetRootAsync(Root root)
         {
-            WriteOperations.InsertOrReplaceWithChildren(connection, root, recursive: true);
-
-            return root.Id;
+            int id = await GetRootId(root);
+            return await ReadOperations.FindWithChildrenAsync<Root>(connection, id, recursive:true);
         }
 
-        public Root GetRoot(int id)
+        public async Task<bool> ExistRoot(string timezone) 
         {
-            return ReadOperations.GetWithChildren<Root>(connection, recursive:true, pk: id);
+            Root result = (await ReadOperations.GetAllWithChildrenAsync<Root>(connection, recursive:true)).FirstOrDefault(root => root.Timezone == timezone);
+            if(result == null)
+                return false;
+            else
+                return true;
         }
 
+        public async Task<int> GetRootId(Root root)
+        {
+            return (await ReadOperations.GetAllWithChildrenAsync<Root>(connection, recursive: true)).FirstOrDefault(r => r.Timezone == root.Timezone).Id;
+        }
 
+        public async Task<int> GetRootId()
+        {
+            var timezone = Preferences.Get("CurrentTimezone", "");
+            if(timezone == "")
+                return 0;
+            return (await ReadOperations.GetAllWithChildrenAsync<Root>(connection, recursive: true)).FirstOrDefault(r => r.Timezone == timezone).Id;
+        }
+
+        public async Task DeleteAsync(string timezone)
+        {
+            Root root = await GetRootAsync(timezone);
+            await WriteOperations.DeleteAsync(connection, root, true);
+        }
+
+        public async Task<Root> UpdateRootAsync(Root root)
+        {
+            await DeleteAsync(root.Timezone);
+            await WriteOperations.InsertWithChildrenAsync(connection, root, true);
+            return root;
+        }
+
+        public async Task DeleteRootsAsync()
+        {
+            IEnumerable<Root> roots = await GetAllRoot();
+            await WriteOperations.DeleteAllAsync(connection, roots);
+        }
     }
 }

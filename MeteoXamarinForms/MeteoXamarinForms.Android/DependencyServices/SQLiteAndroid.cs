@@ -10,12 +10,11 @@ namespace MeteoXamarinForms.Droid.DependencyServices
 {
     internal class SQLiteAndroid : ISQLite
     {
-        public SQLiteConnection GetSQLiteConnection()
+        public SQLiteAsyncConnection GetSQLiteConnection()
         {
-            var fileName = "weather.db3";
+            var fileName = "Weathers.db3";
             var databasePath = Path.Combine(FileSystem.AppDataDirectory, fileName);
-            var connection = new SQLiteConnection(databasePath, true);
-
+            var connection = new SQLiteAsyncConnection(databasePath);
             return connection;
         }
     }
