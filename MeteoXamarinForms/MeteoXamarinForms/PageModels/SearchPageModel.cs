@@ -19,8 +19,6 @@ namespace MeteoXamarinForms.ViewModels
 {
     public class SearchPageModel : PageModelBase
     {
-        private readonly IWeatherService _weatherService;
-        public bool IsModalView { get; set; } = false;  
         public SearchPageModel()
         {
             _weatherService = FreshIOC.Container.Resolve<IWeatherService>();      
@@ -116,6 +114,8 @@ namespace MeteoXamarinForms.ViewModels
                         IsActivatedSearch = false;
                     }
                 });
+
+            VerifyLocalTimezone();
         }
 
         #region Commands
@@ -139,22 +139,25 @@ namespace MeteoXamarinForms.ViewModels
 
             return locations?.FirstOrDefault();
         }
-        public override void Init(object initData)
+
+        private void VerifyLocalTimezone()
         {
-            var existCurrentLocation = Preferences.ContainsKey("CurrentLocation");
-            if (existCurrentLocation)
+            var existLocalTimezone = Preferences.Get("LocalTimezone", "");
+            if (string.IsNullOrEmpty(existLocalTimezone) || string.IsNullOrWhiteSpace(existLocalTimezone))
             {
-                IsModalView = true;
+                ExistLocalTimezone = false;
             }
             else
             {
-                IsModalView = false;
+                ExistLocalTimezone = true;
             }
         }
         #endregion
 
         #region Properties
         private bool _isActivatedSearch = false;
+        private readonly IWeatherService _weatherService;
+        public bool ExistLocalTimezone { get; set; } 
         public bool IsActivatedSearch
         {
             get { return _isActivatedSearch; }

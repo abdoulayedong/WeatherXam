@@ -16,6 +16,9 @@ using MeteoXamarinForms.Services.Weather;
 using MeteoXamarinForms.Services.Toast;
 using MeteoXamarinForms.Resx;
 using Xamarin.Forms.Internals;
+using MeteoXamarinForms.Services;
+using AutoMapper;
+using System.Diagnostics;
 
 namespace MeteoXamarinForms.PageModels
 {
@@ -24,11 +27,20 @@ namespace MeteoXamarinForms.PageModels
         public CityPageModel()
         {
             _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
+            CurrentTimezone = Preferences.Get("CurrentTimezone", "");
+            try
+            {
+                _mapper = FreshIOC.Container.Resolve<IMapper>();
+            }catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+
             #region Implemented Command
             AddWeatherInformationCommand = new Command(
                 async () =>
                 {
-                    await CoreMethods.PushPageModel<SearchPageModel>(animate:false);
+                    await CoreMethods.PushPageModel<SearchPageModel>(animate:true);
                 });
 
 
@@ -45,20 +57,43 @@ namespace MeteoXamarinForms.PageModels
                 async (CityManager city) =>
                 {
                     CitiesWeather.Remove(city);
-                    var current = CitiesManagerData.Where(current => current.Timezone.Contains(city.City)).FirstOrDefault();
+                    var current = CitiesManagerData.FirstOrDefault(current => current.Timezone.Contains(city.City));
                     CitiesManagerData.Remove(current);
-                    ToolExtension.DeleteDataLocaly(current);
-                    var fileList = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
-                    if (fileList.Count() == 0)
+                    await SQLiteDataContext.Instance.DeleteAsync(current.Timezone);
+                    if(current.Timezone == Preferences.Get("LocalTimezone", ""))
                     {
-                        var existCurrentLocation = Preferences.ContainsKey("CurrentLocation");
-                        if (existCurrentLocation)
-                        {
-                            Preferences.Remove("CurrentLocation");
-                        }
-                        await CoreMethods.PushPageModel<SearchPageModel>(animate: false);
-                        CoreMethods.RemoveFromNavigation();
-                    };
+                        Preferences.Set("LocalTimezone", "");
+                    }
+                    if(current.Timezone == Preferences.Get("CurrentTimezone", ""))
+                    {
+                        Preferences.Set("CurrentTimezone", "");
+                    }
+                    if (CitiesManagerData.Count != 0 && Preferences.Get("CurrentTimezone", "") == "")
+                    {
+                        Preferences.Set("CurrentTimezone", CitiesManagerData.FirstOrDefault().Timezone);
+                    }
+                    if(CitiesManagerData.Count == 0) 
+                    { 
+                        CoreMethods.RemoveFromNavigation<WeatherPageModel>();
+                        await CoreMethods.PushPageModel<SearchPageModel>(animate: true);
+                        CoreMethods.RemoveFromNavigation<CityPageModel>();
+                    }
+
+                    //CitiesWeather.Remove(city);
+                    //var current = CitiesManagerData.Where(current => current.Timezone.Contains(city.City)).FirstOrDefault();
+                    //CitiesManagerData.Remove(current);
+                    //ToolExtension.DeleteDataLocaly(current);
+                    //var fileList = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+                    //if (fileList.Count() == 0)
+                    //{
+                    //    var existCurrentLocation = Preferences.ContainsKey("CurrentLocation");
+                    //    if (existCurrentLocation)
+                    //    {
+                    //        Preferences.Remove("CurrentLocation");
+                    //    }
+                    //    await CoreMethods.PushPageModel<SearchPageModel>(animate: false);
+                    //    CoreMethods.RemoveFromNavigation();
+                    //};
                 });
 
             ActualizeAllDataCommand = new Command(
@@ -69,69 +104,140 @@ namespace MeteoXamarinForms.PageModels
                     IsRefreshing = false;
                 });
             #endregion
-            //ItemDragged = new Command<CityManager>(OnItemDragged);
-            //ItemDraggedOver = new Command<CityManager>(OnItemDraggedOver);
-            //ItemDragLeave = new Command<CityManager>(OnItemDragLeave);
-            //ItemDropped = new Command<CityManager>(async c => await OnItemDropped(c));
         }
 
         public override void Init(object initData)
         {
-            Initialize();
+            Task.Run(async () => await Initialize()).Wait();
         }
 
         #region Methods
         private async Task Update()
         {
+            //List<Root> roots = new();
+            //await SQLiteDataContext.Instance.DeleteRootsAsync();
+            //foreach(var city in CitiesManagerData)
+            //{
+            //    Root cityData = await _weatherService.GetWeatherFromLatLong(city.Lat, city.Lon);
+            //    cityData.Timezone = city.Timezone;
+            //    Root root = await SQLiteDataContext.Instance.AddRoot(cityData);
+            //    roots.Add(root);
+            //};
+            //CitiesManagerData = roots;
+            //CitiesWeather = new();
+            //CitiesManagerData.ForEach(city =>
+            //{
+            //    CitiesWeather.Add(_mapper.Map<CityManager>(city));
+            //});
+            //DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
+
+            List<Root> roots = new();
+            await SQLiteDataContext.Instance.DeleteRootsAsync();
             foreach (var city in CitiesManagerData)
             {
-                ToolExtension.DeleteDataLocaly(city);
-                var localCityData = await _weatherService.GetWeatherFromLatLong(city.Lat, city.Lon);
-                localCityData.Timezone = city.Timezone;
-                ToolExtension.SaveDataLocaly(localCityData, city.Timezone);
-            }
-            await Initialize();
+                Root cityData = await _weatherService.GetWeatherFromLatLong(city.Lat, city.Lon);
+                cityData.Timezone = city.Timezone;
+                roots.Add(cityData);
+            };
+            CitiesManagerData.Clear();
+            CitiesManagerData.AddRange(await SQLiteDataContext.Instance.AddRoots(roots));
+            CitiesWeather = new();
+            CitiesManagerData.ForEach(async (Root city) =>
+            {
+                var cityData = _mapper.Map<CityManager>(city);
+                cityData.Country = await ToolExtension.GetCountry(city.Lat, city.Lon);
+                CitiesWeather.Add(cityData);
+            });
             DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
+
+
+            //foreach (var city in CitiesManagerData)
+            //{
+            //    ToolExtension.DeleteDataLocaly(city);
+            //    var localCityData = await _weatherService.GetWeatherFromLatLong(city.Lat, city.Lon);
+            //    localCityData.Timezone = city.Timezone;
+            //    ToolExtension.SaveDataLocaly(localCityData, city.Timezone);
+            //}
+            //await Initialize();
+            //await Initialize();
+            //_mapper = FreshIOC.Container.Resolve<IMapper>();
+
+            //foreach(var city in CitiesManagerData)
+            //{
+            //    //var cityData = _mapper.Map<CityManager>(city);
+            //    //CitiesManagerData.Add(ToolExtension.GetDataLocaly(file));
+            //    //var city = CitiesManagerData[index];
+            //    var date = ToolExtension.GetDateTimeFromTimezone(city.Timezone_Offset);
+            //    var placemarks = await Geocoding.GetPlacemarksAsync(city.Lat, city.Lon);
+            //    var country = placemarks.FirstOrDefault();
+            //    CitiesWeather.Add(
+            //        new CityManager
+            //        {
+            //            City = ToolExtension.GetCityName(city.Timezone),
+            //            Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
+            //            Description = city.Current.Weather[0].Description,
+            //            Date = date,
+            //            Country = String.Format("{0}, {1}", country.AdminArea, country.CountryName),
+            //            Icon = ToolExtension.GetIcon(city.Current.Weather[0].Icon)
+            //        });
+            //    }
+
+            //CitiesManagerData.ForEach(city => CitiesWeather.Add(_mapper.Map<CityManager>(city)));
         }
 
         private async Task Initialize()
         {
             CitiesManagerData = new List<Root>();
             CitiesWeather = new ObservableCollection<CityManager>();
-            var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
-            foreach(var (file, index) in files.Select((value, i) => (value, i)))
+            List<Root> roots = await SQLiteDataContext.Instance.GetAllRoot();
+            CitiesManagerData = roots;
+            CitiesManagerData.ForEach(async (Root city) =>
             {
-                CitiesManagerData.Add(ToolExtension.GetDataLocaly(file));
-                var city = CitiesManagerData[index];
-                var date = ToolExtension.GetDateTimeFromTimezone(city.Timezone_Offset);
-                var placemarks = await Geocoding.GetPlacemarksAsync(city.Lat, city.Lon);
-                var country = placemarks.FirstOrDefault();
-                if (city.Timezone.Contains('/'))
-                {
-                    CitiesWeather.Add(new CityManager
-                    {
-                        City = ToolExtension.GetCityName(city.Timezone),
-                        Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
-                        Description = city.Current.Weather[0].Description,
-                        Date = date,
-                        Country = String.Format("{0}, {1}", country.AdminArea, country.CountryName),
-                        Icon = ToolExtension.GetIcon(city.Current.Weather[0].Icon)
-                    });
-                }
-                else
-                {
-                    CitiesWeather.Add(new CityManager
-                    {
-                        City = city.Timezone,
-                        Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
-                        Description = city.Current.Weather[0].Description, 
-                        Date = date,
-                        Country = String.Format("{0}, {1}", country.AdminArea, country.CountryName),
-                        Icon = ToolExtension.GetIcon(city.Current.Weather[0].Icon)
-                    });
-                }
-            }
+                var cityData = _mapper.Map<CityManager>(city);
+                cityData.Country = await ToolExtension.GetCountry(city.Lat, city.Lon);
+                cityData.IsLocalPosition = Preferences.Get("LocalTimezone", "") == city.Timezone ? true : false;
+                CitiesWeather.Add(cityData);
+            });
         }
+
+        //private async Task Initialize()
+        //{
+        //    CitiesManagerData = new List<Root>();
+        //    CitiesWeather = new ObservableCollection<CityManager>();
+        //    var files = Directory.EnumerateFiles(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
+        //    foreach(var (file, index) in files.Select((value, i) => (value, i)))
+        //    {
+        //        CitiesManagerData.Add(ToolExtension.GetDataLocaly(file));
+        //        var city = CitiesManagerData[index];
+        //        var date = ToolExtension.GetDateTimeFromTimezone(city.Timezone_Offset);
+        //        var placemarks = await Geocoding.GetPlacemarksAsync(city.Lat, city.Lon);
+        //        var country = placemarks.FirstOrDefault();
+        //        if (city.Timezone.Contains('/'))
+        //        {
+        //            CitiesWeather.Add(new CityManager
+        //            {
+        //                City = ToolExtension.GetCityName(city.Timezone),
+        //                Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
+        //                Description = city.Current.Weather[0].Description,
+        //                Date = date,
+        //                Country = String.Format("{0}, {1}", country.AdminArea, country.CountryName),
+        //                Icon = ToolExtension.GetIcon(city.Current.Weather[0].Icon)
+        //            });
+        //        }
+        //        else
+        //        {
+        //            CitiesWeather.Add(new CityManager
+        //            {
+        //                City = city.Timezone,
+        //                Temperature = ToolExtension.RoundedTemperature(city.Current.Temp),
+        //                Description = city.Current.Weather[0].Description, 
+        //                Date = date,
+        //                Country = String.Format("{0}, {1}", country.AdminArea, country.CountryName),
+        //                Icon = ToolExtension.GetIcon(city.Current.Weather[0].Icon)
+        //            });
+        //        }
+        //    }
+        //}
 
         //private void OnItemDragged(CityManager city)
         //{
@@ -172,10 +278,10 @@ namespace MeteoXamarinForms.PageModels
         #endregion
 
         #region Properties
-        public Root Weather { get; set; }
         private readonly IWeatherService _weatherService;
-
-
+        private IMapper _mapper;
+        public readonly string CurrentTimezone;
+        //public bool CurrentTimezoneDeleted { get; set; } = false;
         private ObservableCollection<CityManager> _citiesWeather;
         public ObservableCollection<CityManager> CitiesWeather
         {
@@ -198,30 +304,50 @@ namespace MeteoXamarinForms.PageModels
         public ICommand ShowWeatherInformationCommand { private set; get; }
         public ICommand DeleteWeatherInformationCommand { private set; get; }
         public ICommand ActualizeAllDataCommand { private set; get; }
-        //public ICommand ItemDragged { private set; get; }
-        //public ICommand ItemDraggedOver { private set; get; }
-        //public ICommand ItemDragLeave { private set; get; }
-        //public ICommand ItemDropped { private set; get; }
         public ICommand BackPressCommand => new Command(BackPressMethod);
         #endregion
 
         #region Methods
         private async void BackPressMethod()
         {
-            if (ToolExtension.ExistingWeatherData())
+            //if (ToolExtension.ExistingWeatherData())
+            //{
+            //    var fullFileName = Preferences.Get("FullFileName", String.Empty);
+            //    if (fullFileName != String.Empty)
+            //    {
+            //        var weatherData = ToolExtension.GetDataLocaly(fullFileName);
+            //        await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
+            //    }
+            //    else
+            //    {
+            //        var weatherData = ToolExtension.GetLastRegisterWeatherData();
+            //        await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
+            //    }
+            //}
+            if(Preferences.Get("CurrentTimezone", "") == CurrentTimezone)
             {
-                var fullFileName = Preferences.Get("FullFileName", String.Empty);
-                if (fullFileName != String.Empty)
-                {
-                    var weatherData = ToolExtension.GetDataLocaly(fullFileName);
-                    await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
-                }
-                else
-                {
-                    var weatherData = ToolExtension.GetLastRegisterWeatherData();
-                    await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
-                }
+                await CoreMethods.PopPageModel(animate: true);
+            }else if(Preferences.Get("CurrentTimezone", "") != CurrentTimezone)
+            {
+                string currentTimezone = Preferences.Get("CurrentTimezone", "");
+                Root data = Task.Run(async () => await SQLiteDataContext.Instance.GetRootAsync(currentTimezone)).Result;
+                await CoreMethods.PopPageModel(animate: true, data: data);
             }
+
+            //if (CurrentTimezoneDeleted)
+            //{
+            //    //CoreMethods.RemoveFromNavigation<WeatherPageModel>(removeAll:true);
+            //    await CoreMethods.PopPageModel(animate:true,data:CitiesManagerData.FirstOrDefault(timezone => timezone.Timezone == Preferences.Get("CurrentTimezone", "")));
+            //}
+            //else if(Preferences.Get("CurrentTimezone","") != "" && CurrentTimezoneDeleted)
+            //{
+            //    string currentTimezone = Preferences.Get("CurrentTimezone", "");
+            //    Root data = Task.Run(async () => await SQLiteDataContext.Instance.GetRootAsync(currentTimezone)).Result;
+            //    await CoreMethods.PopPageModel(animate: true, data:data);
+            //}
+            //{
+            //    await CoreMethods.PopPageModel(animate: true);
+            //}
         }
         #endregion
     }

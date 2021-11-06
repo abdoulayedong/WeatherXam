@@ -73,10 +73,13 @@
                                     <StackLayout Orientation="Horizontal" 
                                                         Padding="10">
                                         <StackLayout Spacing="0">
-                                            <Label Text="{Binding City}"
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
+                                                <Label Text="{Binding City}"
                                                        FontSize="22"
                                                        VerticalTextAlignment="Center"
                                                        TextColor="{StaticResource MainTextColor}"/>
+                                            </StackLayout>
                                             <Label Text="{Binding Country}"
                                                        TextColor="{StaticResource SecondaryTextColor}" FontSize="10"/>
                                             <Label Text="{Binding Date, StringFormat='{0:ddd, d MMMM HH:mm}'}"

@@ -66,7 +66,7 @@
                                  VerticalOptions="Center"
                                  Opacity="0.0"
                                  Margin="50,10,0,0">
-                        <Label Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
+                        <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
                         <Label Text="{Binding CityName}" TextColor="{StaticResource MainTextColor}" FontSize="24"/>
                     </StackLayout>                    
                 </Grid>
@@ -82,8 +82,8 @@
                                   RowSpacing="10">
                                     <StackLayout Spacing="0" Grid.Row="0">
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" 
-                                                 x:Name="LocationTitle">
-                                            <Label Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
+                                                     x:Name="LocationTitle">
+                                            <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
                                             <Label Text="{Binding CityName}" TextColor="{StaticResource MainTextColor}" FontSize="24"/>
                                         </StackLayout>
                                         <Label Text="{Binding Source={StaticResource Ticker}, StringFormat='{0:ddd, d MMMM HH:mm}', Path=Now, Mode=OneWay}"

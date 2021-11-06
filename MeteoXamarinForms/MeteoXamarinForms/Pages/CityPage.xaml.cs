@@ -23,11 +23,11 @@ namespace MeteoXamarinForms.Pages
         //}
 
 
-        //protected override bool OnBackButtonPressed()
-        //{
-        //    var vm = (CityPageModel)BindingContext;
-        //    vm.BackPressCommand.Execute(true);
-        //    return true;
-        //}
+        protected override bool OnBackButtonPressed()
+        {
+            var vm = (CityPageModel)BindingContext;
+            vm.BackPressCommand.Execute(true);
+            return true;
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace MeteoXamarinForms.Models
         public DateTime Date { get; set; }
         public string Country { get; set; }
         public string Icon { get; set; }
-
+        public bool IsLocalPosition { get; set; }
         //private bool _isBeingDragged;
         //public bool IsBeingDragged
         //{

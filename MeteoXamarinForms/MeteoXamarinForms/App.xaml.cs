@@ -12,11 +12,24 @@ using AutoMapper;
 using MeteoXamarinForms.Models;
 using MeteoXamarinForms.Services;
 using System.Threading.Tasks;
+using MeteoXamarinForms.Profiles;
+using System.Collections.Generic;
 
 namespace MeteoXamarinForms
 {
     public partial class App : Application
     {
+        public static IMapper CreateMapper()
+        {
+            List<Profile> profiles = new();
+            profiles.Add(new CityManagerProfile());
+            var configuration = new MapperConfiguration(conf =>
+            {
+                conf.AddProfiles(profiles);
+            });
+            return configuration.CreateMapper();
+        }
+
         public App()
         {
             LocalizationResourceManager.Current.PropertyChanged += (_, _) => AppResources.Culture = LocalizationResourceManager.Current.CurrentCulture;
@@ -24,7 +37,7 @@ namespace MeteoXamarinForms
             InitializeComponent();              
         }
 
-        protected override async void OnStart()
+        protected override void OnStart()
         {
             FreshIOC.Container.Register<IWeatherService, WeatherService>();
             IMapper mapper = App.CreateMapper();
@@ -146,41 +159,5 @@ namespace MeteoXamarinForms
         //    }
         //}
 
-        protected override void OnSleep()
-        { 
-            
-        }
-
-        protected override void OnResume()
-        {
-        }
-
-        public static IMapper CreateMapper()
-        {
-            var configuration = new MapperConfiguration(conf =>
-            {
-                conf.CreateMap<Root, CityManager>()
-                    .ForMember(dest =>
-                        dest.City,
-                        opt => opt.MapFrom(src => ToolExtension.GetCityName(src.Timezone)))
-                    .ForMember(dest =>
-                        dest.Temperature,
-                        opt => opt.MapFrom(src => ToolExtension.RoundedTemperature(src.Current.Temp)))
-                    .ForMember(dest =>
-                        dest.Description,
-                        opt => opt.MapFrom(src => src.Current.Weather[0].Description))
-                    .ForMember(dest =>
-                        dest.Date,
-                        opt => opt.MapFrom(src => ToolExtension.GetDateTimeFromTimezone(src.Timezone_Offset)))
-                    .ForMember(dest =>
-                        dest.Country,
-                        opt => opt.MapFrom(src => ToolExtension.GetCountry(src.Lat, src.Lon).Result))
-                    .ForMember(dest =>
-                        dest.Icon,
-                        opt => opt.MapFrom(src => ToolExtension.GetIcon(src.Current.Weather[0].Icon)));
-            });
-
-            return configuration.CreateMapper();
-        }
     }
 }

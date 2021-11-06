@@ -15,9 +15,18 @@ namespace MeteoXamarinForms.Extensions
     {
         public async static Task<string> GetCountry(double latitude, double longitude)
         {
-            var placemarks = await Geocoding.GetPlacemarksAsync(latitude, longitude);
-            var country = placemarks.FirstOrDefault();
-            return String.Format("{0}, {1}", country.AdminArea, country.CountryName);
+            places:
+                var placemarks = await Task.FromResult(await Geocoding.GetPlacemarksAsync(latitude, longitude));
+            var country = placemarks?.FirstOrDefault();
+            if(country == null)
+            {
+                return "";
+                goto places;
+            }
+            else
+            {
+                return String.Format("{0}, {1}", country.AdminArea, country.CountryName);
+            }
         }
 
         public static string GetTimezone(string timezone, string city)

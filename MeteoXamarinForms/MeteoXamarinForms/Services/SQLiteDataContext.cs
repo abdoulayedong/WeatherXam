@@ -75,6 +75,14 @@ namespace MeteoXamarinForms.Services
                 return true;
         }
 
+        public async Task<bool> ExistRoot()
+        {
+            if (await ReadOperations.GetAllWithChildrenAsync<Root>(connection) == null)
+                return false;
+            else
+                return true;
+        }
+
         public async Task<int> GetRootId(Root root)
         {
             return (await ReadOperations.GetAllWithChildrenAsync<Root>(connection, recursive: true)).FirstOrDefault(r => r.Timezone == root.Timezone).Id;
@@ -105,6 +113,12 @@ namespace MeteoXamarinForms.Services
         {
             IEnumerable<Root> roots = await GetAllRoot();
             await WriteOperations.DeleteAllAsync(connection, roots);
+        }
+
+        public async Task<IEnumerable<Root>> AddRoots(IEnumerable<Root> roots)
+        {
+            await WriteOperations.InsertOrReplaceAllWithChildrenAsync(connection, roots, true);
+            return roots;
         }
     }
 }

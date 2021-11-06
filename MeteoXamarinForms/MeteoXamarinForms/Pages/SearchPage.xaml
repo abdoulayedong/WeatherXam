@@ -57,12 +57,12 @@
                         <Setter Property="IsEnabled" Value="True"/>
                     </DataTrigger>
                     <DataTrigger TargetType="Button"
-                                 Binding="{Binding IsModalView}"
+                                 Binding="{Binding ExistLocalTimezone}"
                                  Value="True">
                         <Setter Property="IsVisible" Value="false"/>
                     </DataTrigger>
                     <DataTrigger TargetType="Button"
-                                 Binding="{Binding IsModalView}"
+                                 Binding="{Binding ExistLocalTimezone}"
                                  Value="False">
                         <Setter Property="IsVisible" Value="true"/>
                     </DataTrigger>

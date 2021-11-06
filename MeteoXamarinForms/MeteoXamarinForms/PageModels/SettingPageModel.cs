@@ -1,14 +1,17 @@
-﻿using MeteoXamarinForms.Extensions;
+﻿using FreshMvvm;
 using MeteoXamarinForms.Models;
 using MeteoXamarinForms.Resx;
+using MeteoXamarinForms.Services;
+using MeteoXamarinForms.Services.Toast;
+using MeteoXamarinForms.Services.Weather;
 using MeteoXamarinForms.ViewModels;
 using MeteoXamarinForms.ViewModels.Base;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
-using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.CommunityToolkit.Helpers;
 using Xamarin.Essentials;
@@ -20,6 +23,7 @@ namespace MeteoXamarinForms.PageModels
     {
         public SettingPageModel()
         {
+            _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
             SupportedLanguages = new ObservableCollection<Language>()
             {
                 new Language{Name = new (() => AppResources.English), CI = "en"},
@@ -53,17 +57,22 @@ namespace MeteoXamarinForms.PageModels
                 {
                     await CoreMethods.PushPageModel<AboutPageModel>(animate: false);
                 });
+
+            TemperatureUnit = Preferences.Get("Unit", "°C");
+            Language = SelectedLanguage;
         }
 
         #region Commands
         public ICommand ShowAboutPageCommand { private set; get; }
         public ICommand BackPressCommand => new Command(BackPressMethod);
-        
+
         #endregion
 
         #region Properties
+        public readonly string TemperatureUnit;
+        public readonly Language Language;
+        private readonly IWeatherService _weatherService;
         private ObservableCollection<Language> _supportedLanguages;
-
         public ObservableCollection<Language> SupportedLanguages
         {
             get { return _supportedLanguages; }
@@ -138,12 +147,30 @@ namespace MeteoXamarinForms.PageModels
         #region Methods
         private async void BackPressMethod()
         {
-            var fullFileName = Preferences.Get("FullFileName", String.Empty);
-            if (fullFileName != String.Empty)
+            if (TemperatureUnit == SelectedUnit.Name && Language == SelectedLanguage)
             {
-                var weatherData = ToolExtension.GetDataLocaly(fullFileName);
-                await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
+                try
+                {
+                    Root data = await Task.Run(async () => await SQLiteDataContext.Instance.GetRootAsync(Preferences.Get("CurrentTimezone", "")));
+                    data.Timezone = Preferences.Get("CurrentTimezone", "");
+                    await CoreMethods.PushPageModel<WeatherPageModel>(data:data);
+                }catch(Exception ex)
+                {
+                    DependencyService.Get<IToastService>().ShortToast(ex.Message);
+                }
             }
+            else 
+            {
+                string currentTimezone = Preferences.Get("CurrentTimezone", "");
+                var lat = Preferences.Get("Lat", 6.1111);
+                var lon = Preferences.Get("Long", 0.2222);
+                Root data = await Task.Run(async () => await _weatherService.GetWeatherFromLatLong(lat, lon));
+                data.Timezone = currentTimezone;
+                await SQLiteDataContext.Instance.DeleteAsync(currentTimezone);
+                data = await Task.Run(async () => await SQLiteDataContext.Instance.AddRoot(data));
+                await CoreMethods.PushPageModel<WeatherPageModel>(animate: true, data: data);
+            }
+
         }
         #endregion
     }

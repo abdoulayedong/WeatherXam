@@ -72,6 +72,13 @@ namespace MeteoXamarinForms.ViewModels
             set => SetProperty(ref _isRefreshing, value);
         }
 
+        private bool _isLocalPosition;
+        public bool IsLocalPosition
+        {
+            get { return _isLocalPosition; }
+            set => SetProperty(ref _isLocalPosition, value);
+        }
+
         private int _rotationDegree;
         public int RotationDegree
         {
@@ -90,7 +97,7 @@ namespace MeteoXamarinForms.ViewModels
         public string CityName
         {
             get { return _cityName; }
-            set { _cityName = value; }
+            set => SetProperty(ref _cityName, value);
         }
 
         private string _description;
@@ -214,7 +221,7 @@ namespace MeteoXamarinForms.ViewModels
             try
             {
                 Weather = await _weatherService.GetWeatherFromLatLong(Weather.Lat, Weather.Lon);
-                Weather.Timezone = String.Format("{0}/{1}", Weather.Timezone.Split('/')[0], CityName);
+                Weather.Timezone = Preferences.Get("CurrentTimezone", "");
                 //ToolExtension.SaveDataLocaly(Weather, Weather.Timezone);
                 await SQLiteDataContext.Instance.UpdateRootAsync(Weather);
                 SetUiData();
@@ -225,10 +232,12 @@ namespace MeteoXamarinForms.ViewModels
                 DependencyService.Get<IToastService>().ShortToast(AppResources.NoInternet);
             }
         }
-
         private void SetUiData()
         {
+            Preferences.Set("Lat", Weather.Lat);
+            Preferences.Set("Lon", Weather.Lon);
             // Current day weather
+            IsLocalPosition = Preferences.Get("LocalTimezone", "") == Weather.Timezone ?  true :  false;
             var current = Weather.Current;
             var currentDay = Weather.Daily[0];
             var hourlyForecast = Weather.Hourly;
@@ -311,29 +320,6 @@ namespace MeteoXamarinForms.ViewModels
             Humidity = current.Humidity;
             UpdateDate = ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
         }
-
-        public async override void Init(object initData)
-        {
-            Weather = initData as Root;
-            string[] city = Weather.Timezone.Split('/');
-            CityName = city[city.Length - 1];
-            TimeSpan time = DateTime.Now - ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
-            #if DEBUG
-                time = TimeSpan.FromHours(0.6);
-            #else
-                time = TimeSpan.FromSeconds(1000);    
-            #endif
-            if (time.TotalMinutes > 30)
-            {
-                SetUiData();
-                IsRefreshing = true;
-                await Update();
-                IsRefreshing = false;
-            }               
-            else
-                SetUiData();
-        }
-
         private async void BackPressMethod()
         {
             var fullFileName = Preferences.Get("FullFileName", String.Empty);
@@ -345,7 +331,51 @@ namespace MeteoXamarinForms.ViewModels
         }
 #endregion
 
-#region Commands
+#region Override Methods
+        public async override void Init(object initData)
+        {
+            Weather = initData as Root;
+            string[] city = Weather.Timezone.Split('/');
+            CityName = city[city.Length - 1];
+            TimeSpan time = DateTime.Now - ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
+            //#if DEBUG
+            //    time = TimeSpan.FromHours(0.6);
+            //#else
+            //    time = TimeSpan.FromSeconds(1000);    
+            //#endif
+            if (time.TotalMinutes > 30)
+            {
+                SetUiData();
+                IsRefreshing = true;
+                await Update();
+                IsRefreshing = false;
+            }               
+            else
+                SetUiData();
+        }
+        public async override void ReverseInit(object returnedData)
+        {
+            Weather = returnedData as Root;
+            string[] city = Weather.Timezone.Split('/');
+            CityName = city[city.Length - 1];
+            TimeSpan time = DateTime.Now - ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
+            //#if DEBUG
+            //    time = TimeSpan.FromHours(0.6);
+            //#else
+            //    time = TimeSpan.FromSeconds(1000);    
+            //#endif
+            if (time.TotalMinutes > 30)
+            {
+                SetUiData();
+                IsRefreshing = true;
+                await Update();
+                IsRefreshing = false;
+            }
+            else
+                SetUiData();
+        }
+        #endregion
+        #region Commands
         public ICommand DailyDetailCommand { private set; get; }
         public ICommand AddWeatherInformationCommand { private set; get; }
         public ICommand OpenCityManagementCommand { private set; get; }
