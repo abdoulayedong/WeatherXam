@@ -22,7 +22,9 @@ namespace MeteoXamarinForms.Services.Weather
         {
             var pref = Preferences.Get("UnitParameter", "metric");
 
-            var Url = String.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=minutely,alerts&appid={2}&lang={3}&units={4}", latitude, longitude, apiKey, AppResources.RequestLanguage, pref);
+            var lang = Preferences.Get("Language", AppResources.RequestLanguage);
+
+            var Url = String.Format("https://api.openweathermap.org/data/2.5/onecall?lat={0}&lon={1}&exclude=minutely,alerts&appid={2}&lang={3}&units={4}", latitude, longitude, apiKey, lang, pref);
             
             var response = await _client.GetAsync(Url);
 

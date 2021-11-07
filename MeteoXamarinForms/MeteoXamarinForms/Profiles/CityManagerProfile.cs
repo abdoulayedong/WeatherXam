@@ -25,6 +25,9 @@ namespace MeteoXamarinForms.Profiles
                         dest.Date,
                         opt => opt.MapFrom(src => ToolExtension.GetDateTimeFromTimezone(src.Timezone_Offset)))
                     .ForMember(dest =>
+                        dest.Country,
+                        opt => opt.MapFrom(src => ToolExtension.GetCountry(src.Lat, src.Lon).Result))
+                    .ForMember(dest =>
                         dest.Icon,
                         opt => opt.MapFrom(src => ToolExtension.GetIcon(src.Current.Weather[0].Icon)));
         }

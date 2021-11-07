@@ -38,10 +38,6 @@ namespace MeteoXamarinForms.ViewModels
                     else
                     {
                         IsNotFoundLocation = false;
-                        //var weatherData = await _weatherService.GetWeatherFromLatLong(currentLocation.Latitude, currentLocation.Longitude);
-                        //ToolExtension.SaveDataLocaly(weatherData, ToolExtension.GetCityName(weatherData.Timezone));
-                        //Preferences.Set("CurrentLocation", ToolExtension.GetCityName(weatherData.Timezone));
-                        //await CoreMethods.PushPageModel<WeatherPageModel>(data: weatherData);
                         Root weatherData;
                         try
                         {
@@ -77,18 +73,6 @@ namespace MeteoXamarinForms.ViewModels
                     else
                     {
                         IsNotFoundLocation = false;
-                        //var weatherData = await _weatherService.GetWeatherFromLatLong(location.Latitude, location.Longitude);
-                        //var timezoneRemake = weatherData.Timezone.Split('/');
-                        //weatherData.Timezone = String.Format("{0}/{1}", timezoneRemake[0], StringExtensions.FirstCharToUpper(query));                        
-                        //ToolExtension.SaveDataLocaly(weatherData, weatherData.Timezone);
-                        //if (IsModalView)
-                        //{
-                        //    await CoreMethods.PushPageModel<WeatherPageModel>(data: weatherData);
-                        //}
-                        //else
-                        //{
-                        //    await CoreMethods.PushPageModel<WeatherPageModel>(data:weatherData);
-                        //}
                         Root weatherData;
                         try
                         {

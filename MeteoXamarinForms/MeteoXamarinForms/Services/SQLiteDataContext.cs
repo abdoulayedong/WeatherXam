@@ -1,8 +1,12 @@
-﻿using MeteoXamarinForms.Models;
+﻿using AutoMapper;
+using FreshMvvm;
+using MeteoXamarinForms.Extensions;
+using MeteoXamarinForms.Models;
 using SQLite;
 using SQLiteNetExtensionsAsync.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +50,23 @@ namespace MeteoXamarinForms.Services
         public async Task<List<Root>> GetAllRoot()
         {
             return await ReadOperations.GetAllWithChildrenAsync<Root>(connection, recursive: true);
+        }
+
+        public async Task<dynamic> GetCityManager()
+        {
+            ObservableCollection<CityManager> CitiesWeather = new ();
+            List<Root> roots = new();
+            roots = await GetAllRoot();
+            IMapper _mapper = FreshIOC.Container.Resolve<IMapper>(); 
+            foreach (var (city,index) in roots.Select((value,i) => (value, i)))
+            {
+                var cityData = _mapper.Map<CityManager>(city);
+                //cityData.Country = Task.Run(async () => ToolExtension.GetCountry(city.Lat, city.Lon).Result).Result;
+                cityData.IsLocalPosition = Preferences.Get("LocalTimezone", "") == city.Timezone ? true : false;
+                CitiesWeather.Add(cityData);
+            }
+            
+            return new { roots, CitiesWeather};
         }
 
         public async Task<Root> AddRoot(Root root)

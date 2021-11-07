@@ -20,7 +20,6 @@ namespace MeteoXamarinForms.Extensions
             var country = placemarks?.FirstOrDefault();
             if(country == null)
             {
-                return "";
                 goto places;
             }
             else

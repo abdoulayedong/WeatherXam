@@ -86,9 +86,10 @@ namespace MeteoXamarinForms.PageModels
             get { return _selectedLanguage; }
             set 
             { 
-                _selectedLanguage = value;
-                LocalizationResourceManager.Current.CurrentCulture = CultureInfo.GetCultureInfo(SelectedLanguage.CI);
-                OnPropertyChanged("SelectedLanguage");
+                SetProperty(ref _selectedLanguage, value);
+                var vap = _selectedLanguage?.CI; 
+                if(vap != null)
+                    LocalizationResourceManager.Current.CurrentCulture = CultureInfo.GetCultureInfo(vap);
             }
         }
 
@@ -114,13 +115,7 @@ namespace MeteoXamarinForms.PageModels
         public RefreshFrequency SelectedFrequency
         {
             get { return _selectedFrequency; }
-            set
-            {
-                _selectedFrequency = value;
-                Preferences.Set("Frequency", SelectedFrequency.Name.Localized);
-                Preferences.Set("FrequencyTime", SelectedFrequency.FrequencyTime);
-                OnPropertyChanged("SelectedFrequency");
-            }
+            set => SetProperty(ref _selectedFrequency, value);
         }
 
         private ObservableCollection<Unit> _units;
@@ -134,13 +129,7 @@ namespace MeteoXamarinForms.PageModels
         public Unit SelectedUnit
         {
             get { return _selectedUnit; }
-            set
-            {
-                _selectedUnit = value;
-                Preferences.Set("Unit", SelectedUnit.Name);
-                Preferences.Set("UnitParameter", SelectedUnit.Parameter);
-                OnPropertyChanged("SelectedUnit");
-            }
+            set => SetProperty(ref _selectedUnit, value);
         }
         #endregion
 
@@ -151,23 +140,24 @@ namespace MeteoXamarinForms.PageModels
             {
                 try
                 {
-                    Root data = await Task.Run(async () => await SQLiteDataContext.Instance.GetRootAsync(Preferences.Get("CurrentTimezone", "")));
-                    data.Timezone = Preferences.Get("CurrentTimezone", "");
-                    await CoreMethods.PushPageModel<WeatherPageModel>(data:data);
-                }catch(Exception ex)
+                    await CoreMethods.PopPageModel();
+                }
+                catch (Exception ex)
                 {
                     DependencyService.Get<IToastService>().ShortToast(ex.Message);
                 }
             }
             else 
             {
+                Preferences.Set("Unit", SelectedUnit?.Name);
+                Preferences.Set("UnitParameter", SelectedUnit?.Parameter);
+                Preferences.Set("Language", SelectedLanguage?.CI);
                 string currentTimezone = Preferences.Get("CurrentTimezone", "");
                 var lat = Preferences.Get("Lat", 6.1111);
-                var lon = Preferences.Get("Long", 0.2222);
-                Root data = await Task.Run(async () => await _weatherService.GetWeatherFromLatLong(lat, lon));
+                var lon = Preferences.Get("Lon", 0.2222);
+                Root data = Task.Run(async () => await _weatherService.GetWeatherFromLatLong(lat, lon)).Result;
                 data.Timezone = currentTimezone;
-                await SQLiteDataContext.Instance.DeleteAsync(currentTimezone);
-                data = await Task.Run(async () => await SQLiteDataContext.Instance.AddRoot(data));
+                data = Task.Run(async () => await SQLiteDataContext.Instance.UpdateRootAsync(data)).Result;
                 await CoreMethods.PushPageModel<WeatherPageModel>(animate: true, data: data);
             }
 
