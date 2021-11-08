@@ -15,6 +15,7 @@ Features include:
 * time according to position
 * Store data into sqlite3
 
+<img src="/MeteoXamarinForms/MeteoXamarinForms.Android/Resources/mipmap-xxxhdpi/cloudy.png" width="10%" />
 
 ## Home Screen
 <p align="center">
