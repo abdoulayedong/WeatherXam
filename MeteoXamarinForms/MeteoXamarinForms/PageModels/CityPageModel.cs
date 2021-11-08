@@ -127,7 +127,6 @@ namespace MeteoXamarinForms.PageModels
         private readonly IWeatherService _weatherService;
         private IMapper _mapper;
         public readonly string CurrentTimezone;
-        //public bool CurrentTimezoneDeleted { get; set; } = false;
         private ObservableCollection<CityManager> _citiesWeather;
         public ObservableCollection<CityManager> CitiesWeather
         {

@@ -13,8 +13,7 @@ namespace MeteoXamarinForms.Pages
         public bool ShowLocation
         {
             get { return _showLocation; }
-            set { OnPropertyChanged();
-                  _showLocation = value; }
+            set { OnPropertyChanged(); _showLocation = value; }
         }
 
         public WeatherPage()
@@ -51,15 +50,21 @@ namespace MeteoXamarinForms.Pages
 
         private void OnCoordinatorLayoutOnScrollEventHandler(object sender, ScrollEventArgs e)
         {
-            if(MainTitle != null)
-            {
-                MainTitle.Opacity =  (0.2f - e.Progress) / 0.2f;
-            }
+            //if(e.Progress < 0.25f)
+            //{
+            //    coordinator.ProportionalTopViewHeightMax = (0.25f - e.Progress) / 0.25f;
+            //}
 
-            if(SecondaryTitle != null)
-            {
-                coordinator.ProportionalTopViewHeightMax = 0.2f - e.Progress;
-            }
+
+            //if(MainTitle != null)
+            //{
+            //    if()
+            //}
+
+            //if(SecondaryTitle != null)
+            //{
+            //    coordinator.ProportionalTopViewHeightMax = 0.2f - e.Progress;
+            //}
             //coordinator.ProportionalTopViewHeightMax = (0.2f - e.Progress) / 0.2f;
 
 

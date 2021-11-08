@@ -32,7 +32,7 @@
                 </CollectionView>
             </Frame>
 
-            <Button Text="Add current location"
+            <Button Text="{xct:Translate CurrentLocation}"
                     TextTransform="None"
                     HorizontalOptions="FillAndExpand"
                     Margin="20,0" MinimumWidthRequest="250"                    

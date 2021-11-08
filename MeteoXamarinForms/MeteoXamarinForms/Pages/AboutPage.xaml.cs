@@ -11,12 +11,5 @@ namespace MeteoXamarinForms.Pages
         {
             InitializeComponent();
         }
-
-        //protected override bool OnBackButtonPressed()
-        //{
-        //    var vm = (AboutPageModel)BindingContext;
-        //    vm.BackPressCommand.Execute(true);
-        //    return true;
-        //}
     }
 }

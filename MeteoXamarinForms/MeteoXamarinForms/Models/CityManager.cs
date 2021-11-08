@@ -3,7 +3,7 @@ using System;
 
 namespace MeteoXamarinForms.Models
 {
-    public class CityManager //: PageModelBase
+    public class CityManager 
     {
         public string City { get; set; }
         public int Temperature { get; set; }
@@ -12,18 +12,5 @@ namespace MeteoXamarinForms.Models
         public string Country { get; set; }
         public string Icon { get; set; }
         public bool IsLocalPosition { get; set; }
-        //private bool _isBeingDragged;
-        //public bool IsBeingDragged
-        //{
-        //    get { return _isBeingDragged; }
-        //    set { SetProperty(ref _isBeingDragged, value); }
-        //}
-
-        //private bool _isBeingDraggedOver;
-        //public bool IsBeingDraggedOver
-        //{
-        //    get { return _isBeingDraggedOver; }
-        //    set { SetProperty(ref _isBeingDraggedOver, value); }
-        //}
     }
 }

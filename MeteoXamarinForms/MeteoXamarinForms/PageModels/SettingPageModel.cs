@@ -27,7 +27,8 @@ namespace MeteoXamarinForms.PageModels
             SupportedLanguages = new ObservableCollection<Language>()
             {
                 new Language{Name = new (() => AppResources.English), CI = "en"},
-                new Language{Name = new (() => AppResources.French), CI = "fr"}
+                new Language{Name = new (() => AppResources.French), CI = "fr"},
+                new Language{Name = new (() => AppResources.Spanish), CI = "es"}
             };
 
             Units = new ObservableCollection<Unit>()
@@ -46,7 +47,7 @@ namespace MeteoXamarinForms.PageModels
                 new() { Name = new(() => AppResources.Every24Hours), FrequencyTime = 24}
             };
 
-            SelectedLanguage = SupportedLanguages.FirstOrDefault(lang => lang.CI == LocalizationResourceManager.Current.CurrentCulture.TwoLetterISOLanguageName);
+            SelectedLanguage = SupportedLanguages.FirstOrDefault(lang => lang.CI == Preferences.Get("Language", "en"));
             SelectedUnit = Units.FirstOrDefault(unit => unit.Name == Preferences.Get("Unit", "°C"));
             SelectedFrequency = RefreshFrequencies.FirstOrDefault(frequency => frequency.FrequencyTime == Preferences.Get("FrequencyTime", 1));
             IsAutoRefresh = Preferences.Get("IsAutoRefresh", false);       
@@ -60,6 +61,7 @@ namespace MeteoXamarinForms.PageModels
 
             TemperatureUnit = Preferences.Get("Unit", "°C");
             Language = SelectedLanguage;
+            IsDownload = false;
         }
 
         #region Commands
@@ -89,9 +91,19 @@ namespace MeteoXamarinForms.PageModels
                 SetProperty(ref _selectedLanguage, value);
                 var vap = _selectedLanguage?.CI; 
                 if(vap != null)
+                {
                     LocalizationResourceManager.Current.CurrentCulture = CultureInfo.GetCultureInfo(vap);
+                    Preferences.Set("Language", vap);
+                }
             }
         }
+
+        private bool _isDownload;
+        public bool IsDownload
+        {
+            get { return _isDownload; }
+            set => SetProperty(ref _isDownload, value);
+        } 
 
         private bool _isAutoRefresh;
         public bool IsAutoRefresh
@@ -136,6 +148,8 @@ namespace MeteoXamarinForms.PageModels
         #region Methods
         private async void BackPressMethod()
         {
+            IsDownload = true;
+            await Task.Delay(100);
             if (TemperatureUnit == SelectedUnit.Name && Language == SelectedLanguage)
             {
                 try
@@ -160,7 +174,7 @@ namespace MeteoXamarinForms.PageModels
                 data = Task.Run(async () => await SQLiteDataContext.Instance.UpdateRootAsync(data)).Result;
                 await CoreMethods.PushPageModel<WeatherPageModel>(animate: true, data: data);
             }
-
+            IsDownload = false;
         }
         #endregion
     }

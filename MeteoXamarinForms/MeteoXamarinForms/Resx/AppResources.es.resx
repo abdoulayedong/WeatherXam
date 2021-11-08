@@ -118,163 +118,163 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>À propos</value>
+    <value>A propósito</value>
   </data>
   <data name="AddCity" xml:space="preserve">
-    <value>Ajouter une ville</value>
+    <value>Añadir una ciudad</value>
   </data>
   <data name="AppName" xml:space="preserve">
-    <value>Météo</value>
+    <value>Pronóstico del tiempo</value>
   </data>
   <data name="AutoRefresh" xml:space="preserve">
-    <value>Actualisation automatique</value>
+    <value>Actualización automática</value>
   </data>
   <data name="Cloud" xml:space="preserve">
-    <value>Nuage</value>
+    <value>Nube</value>
   </data>
   <data name="CurrentLocation" xml:space="preserve">
-    <value>Ajouter le lieu actuel</value>
+    <value>Agregar la ubicación actual</value>
   </data>
   <data name="Direction" xml:space="preserve">
-    <value>Direction</value>
+    <value>Dirección</value>
   </data>
   <data name="East" xml:space="preserve">
-    <value>Est</value>
+    <value>Este</value>
   </data>
   <data name="English" xml:space="preserve">
-    <value>Anglais</value>
+    <value>Inglés</value>
   </data>
   <data name="Every12Hours" xml:space="preserve">
-    <value>Toutes les 12 heures</value>
+    <value>Cada 12 horas</value>
   </data>
   <data name="Every24Hours" xml:space="preserve">
-    <value>Toutes les 24 heures</value>
+    <value>Cada 24 horas</value>
   </data>
   <data name="Every2Hours" xml:space="preserve">
-    <value>Toutes les 2 heures</value>
+    <value>Cada 2 horas</value>
   </data>
   <data name="Every6Hours" xml:space="preserve">
-    <value>Toutes les 6 heures</value>
+    <value>Cada 6 horas</value>
   </data>
   <data name="EveryHour" xml:space="preserve">
-    <value>Toutes les heures</value>
+    <value>Cada hora</value>
   </data>
   <data name="Extrem" xml:space="preserve">
-    <value>Extrême</value>
+    <value>Extremo</value>
   </data>
   <data name="FeelLike" xml:space="preserve">
-    <value>Ressenti</value>
+    <value>Sentido</value>
   </data>
   <data name="French" xml:space="preserve">
-    <value>Français</value>
+    <value>Francés</value>
   </data>
   <data name="Friday" xml:space="preserve">
-    <value>Vendredi</value>
+    <value>Viernes</value>
   </data>
   <data name="High" xml:space="preserve">
-    <value>Élevé</value>
+    <value>Alto</value>
   </data>
   <data name="Hommage" xml:space="preserve">
-    <value>En hommage à ma grande mère que j'ai pas eu l'occasion de connaître mais qui a été la source de mon bonheur actuel qu'est ma maman.</value>
+    <value>En homenaje a mi abuela a quien no tuve la oportunidad de conocer pero que fue la fuente de mi felicidad actual que es mi madre.</value>
   </data>
   <data name="Humidity" xml:space="preserve">
-    <value>Humidité</value>
+    <value>Humedad</value>
   </data>
   <data name="Language" xml:space="preserve">
-    <value>Langue</value>
+    <value>Lengua</value>
   </data>
   <data name="Low" xml:space="preserve">
-    <value>Faible</value>
+    <value>Débil</value>
   </data>
   <data name="ManageCities" xml:space="preserve">
-    <value>Gérer les villes</value>
+    <value>Gestionar ciudades</value>
   </data>
   <data name="Moderate" xml:space="preserve">
-    <value>Modéré</value>
+    <value>Moderado</value>
   </data>
   <data name="Monday" xml:space="preserve">
-    <value>Lundi</value>
+    <value>Lunes</value>
   </data>
   <data name="NoInternet" xml:space="preserve">
-    <value>Pas d'accès internet </value>
+    <value>Sin acceso a Internet</value>
   </data>
   <data name="North" xml:space="preserve">
-    <value>Nord</value>
+    <value>Norte</value>
   </data>
   <data name="NorthEast" xml:space="preserve">
-    <value>Nord-Est</value>
+    <value>Nordeste</value>
   </data>
   <data name="NorthWest" xml:space="preserve">
-    <value>Nord-Ouest</value>
+    <value>Noroeste</value>
   </data>
   <data name="Refresh" xml:space="preserve">
-    <value>Actualisation</value>
+    <value>Actualización</value>
   </data>
   <data name="RequestLanguage" xml:space="preserve">
-    <value>fr</value>
+    <value>es</value>
   </data>
   <data name="Saturday" xml:space="preserve">
-    <value>Samedi</value>
+    <value>Sábado</value>
   </data>
   <data name="Search" xml:space="preserve">
-    <value>Rechercher</value>
+    <value>Investigación</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Paramètres</value>
+    <value>Parámetros</value>
   </data>
   <data name="South" xml:space="preserve">
-    <value>Sud</value>
+    <value>Sur</value>
   </data>
   <data name="SouthEast" xml:space="preserve">
-    <value>Sud-Est</value>
+    <value>Sudeste</value>
   </data>
   <data name="SouthWest" xml:space="preserve">
-    <value>Sud-Ouest</value>
+    <value>Suroeste</value>
   </data>
   <data name="Spanish" xml:space="preserve">
-    <value>Espagnol</value>
+    <value>Español</value>
   </data>
   <data name="Speed" xml:space="preserve">
-    <value>Vitesse</value>
+    <value>Velocidad</value>
   </data>
   <data name="Sunday" xml:space="preserve">
-    <value>Dimanche</value>
+    <value>Domingo</value>
   </data>
   <data name="Sunrise" xml:space="preserve">
-    <value>Lever du soleil</value>
+    <value>Leve del sol</value>
   </data>
   <data name="Sunset" xml:space="preserve">
-    <value>Coucher du soleil</value>
+    <value>Puesta del sol</value>
   </data>
   <data name="TemperatureUnit" xml:space="preserve">
-    <value>Unité de température</value>
+    <value>Unidad de temperatura</value>
   </data>
   <data name="Thursday" xml:space="preserve">
-    <value>Jeudi</value>
+    <value>Jueves</value>
   </data>
   <data name="Tuesday" xml:space="preserve">
-    <value>Mardi</value>
+    <value>Martes</value>
   </data>
   <data name="Updated" xml:space="preserve">
-    <value>MAJ</value>
+    <value>Actualizar</value>
   </data>
   <data name="UpdatedData" xml:space="preserve">
-    <value>Données météo mises à jour</value>
+    <value>Datos meteorológicos actualizados</value>
   </data>
   <data name="UvIndex" xml:space="preserve">
-    <value>Indice UV</value>
+    <value>Índice UV</value>
   </data>
   <data name="Version" xml:space="preserve">
     <value>1.0.0.203</value>
   </data>
   <data name="VeryHigh" xml:space="preserve">
-    <value>Très élevé</value>
+    <value>Muy alto</value>
   </data>
   <data name="Wednesday" xml:space="preserve">
-    <value>Mercredi</value>
+    <value>Miércoles</value>
   </data>
   <data name="West" xml:space="preserve">
-    <value>Ouest</value>
+    <value>Oeste</value>
   </data>
   <data name="Wind" xml:space="preserve">
     <value>Vent</value>

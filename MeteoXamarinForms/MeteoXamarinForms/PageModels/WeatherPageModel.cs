@@ -222,7 +222,6 @@ namespace MeteoXamarinForms.ViewModels
             {
                 Weather = await _weatherService.GetWeatherFromLatLong(Weather.Lat, Weather.Lon);
                 Weather.Timezone = Preferences.Get("CurrentTimezone", "");
-                //ToolExtension.SaveDataLocaly(Weather, Weather.Timezone);
                 await SQLiteDataContext.Instance.UpdateRootAsync(Weather);
                 SetUiData();
                 DependencyService.Get<IToastService>().ShortToast(AppResources.UpdatedData);
@@ -236,6 +235,7 @@ namespace MeteoXamarinForms.ViewModels
         {
             Preferences.Set("Lat", Weather.Lat);
             Preferences.Set("Lon", Weather.Lon);
+
             // Current day weather
             IsLocalPosition = Preferences.Get("LocalTimezone", "") == Weather.Timezone ?  true :  false;
             var current = Weather.Current;

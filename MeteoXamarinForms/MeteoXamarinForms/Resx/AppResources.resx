@@ -132,6 +132,9 @@
   <data name="Cloud" xml:space="preserve">
     <value>Cloud</value>
   </data>
+  <data name="CurrentLocation" xml:space="preserve">
+    <value>Add current location</value>
+  </data>
   <data name="Direction" xml:space="preserve">
     <value>Direction</value>
   </data>
@@ -227,6 +230,9 @@
   </data>
   <data name="SouthWest" xml:space="preserve">
     <value>South-West</value>
+  </data>
+  <data name="Spanish" xml:space="preserve">
+    <value>Spanish</value>
   </data>
   <data name="Speed" xml:space="preserve">
     <value>Speed</value>

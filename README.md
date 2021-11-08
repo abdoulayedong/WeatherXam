@@ -9,7 +9,8 @@ Features include:
 * Adding current localation
 * Search many location
 * Autorefresh
-* wind turbine animation speed proportional to wind speed
-* Language(fr/en)
+* Wind turbine animation speed proportional to wind speed
+* Language(en/es/fr)
 * Temperature unit (°C/°F/°K)
 * time according to position
+* Store data into sqlite3

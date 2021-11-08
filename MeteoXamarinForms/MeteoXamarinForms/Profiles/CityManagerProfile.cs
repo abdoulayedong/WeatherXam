@@ -11,7 +11,7 @@ namespace MeteoXamarinForms.Profiles
     {
         public CityManagerProfile()
         {
-            _ = CreateMap<Root, CityManager>()
+            CreateMap<Root, CityManager>()
                 .ForMember(dest =>
                         dest.City,
                         opt => opt.MapFrom(src => ToolExtension.GetCityName(src.Timezone)))
@@ -24,9 +24,6 @@ namespace MeteoXamarinForms.Profiles
                     .ForMember(dest =>
                         dest.Date,
                         opt => opt.MapFrom(src => ToolExtension.GetDateTimeFromTimezone(src.Timezone_Offset)))
-                    .ForMember(dest =>
-                        dest.Country,
-                        opt => opt.MapFrom(src => ToolExtension.GetCountry(src.Lat, src.Lon).Result))
                     .ForMember(dest =>
                         dest.Icon,
                         opt => opt.MapFrom(src => ToolExtension.GetIcon(src.Current.Weather[0].Icon)));

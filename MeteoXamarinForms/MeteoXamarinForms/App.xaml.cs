@@ -14,6 +14,7 @@ using MeteoXamarinForms.Services;
 using System.Threading.Tasks;
 using MeteoXamarinForms.Profiles;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace MeteoXamarinForms
 {
@@ -32,6 +33,9 @@ namespace MeteoXamarinForms
 
         public App()
         {
+            var existingCulture = CultureInfo.GetCultureInfo(Preferences.Get("Language", "en"));
+            LocalizationResourceManager.Current.CurrentCulture = existingCulture;
+            AppResources.Culture = existingCulture;
             LocalizationResourceManager.Current.PropertyChanged += (_, _) => AppResources.Culture = LocalizationResourceManager.Current.CurrentCulture;
             LocalizationResourceManager.Current.Init(AppResources.ResourceManager);
             InitializeComponent();              
@@ -42,44 +46,6 @@ namespace MeteoXamarinForms
             FreshIOC.Container.Register<IWeatherService, WeatherService>();
             IMapper mapper = App.CreateMapper();
             FreshIOC.Container.Register(mapper);
-
-            //var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            //var fileList = Directory.EnumerateFiles(folderPath);
-            //DateTime lastDate = DateTime.MinValue;
-            //string fullFileName = string.Empty;
-            //foreach (var file in fileList)
-            //{
-            //    var creationTime = File.GetCreationTime(file);
-            //    if (creationTime > lastDate)
-            //    {
-            //        fullFileName = file;
-            //    }
-            //}
-
-            //if (fullFileName != string.Empty)
-            //{
-            //    Preferences.Set("FullFileName", fullFileName);
-            //    var data = ToolExtension.GetDataLocaly(fullFileName);
-            //    var page = FreshPageModelResolver.ResolvePageModel<WeatherPageModel>(data);
-
-            //    var navigationPage = new FreshNavigationContainer(page)
-            //    {
-            //        BarBackground = Brush.Black,
-            //        BarTextColor = Color.White
-            //    };
-            //    MainPage = navigationPage;
-            //}
-            //else
-            //{
-            //    var page = FreshPageModelResolver.ResolvePageModel<SearchPageModel>();
-            //    var navigationPage = new FreshNavigationContainer(page)
-            //    {
-            //        BarBackground = Brush.Black,
-            //        BarTextColor = Color.White
-            //    };
-            //    MainPage = navigationPage;
-            //}
-
             var currentTimezone = Preferences.Get("CurrentTimezone", "");
             if(currentTimezone == "")
             {
@@ -110,54 +76,5 @@ namespace MeteoXamarinForms
                 Preferences.Set("UnitParameter", "metric");
             }
         }
-
-        //protected override void OnStart()
-        //{
-        //    FreshIOC.Container.Register<IWeatherService, WeatherService>();
-
-        //    var folderPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-        //    var fileList = Directory.EnumerateFiles(folderPath);
-        //    DateTime lastDate = DateTime.MinValue;
-        //    string fullFileName = string.Empty;
-        //    foreach(var file in fileList)
-        //    {
-        //        var creationTime = File.GetCreationTime(file);
-        //        if(creationTime > lastDate)
-        //        {
-        //            fullFileName = file;
-        //        }
-        //    }
-
-        //    if (fullFileName != string.Empty)
-        //    {              
-        //        Preferences.Set("FullFileName", fullFileName);
-        //        var data = ToolExtension.GetDataLocaly(fullFileName);
-        //        var page = FreshPageModelResolver.ResolvePageModel<WeatherPageModel>(data);
-
-        //        var navigationPage = new FreshNavigationContainer(page)
-        //        {
-        //            BarBackground = Brush.Black,
-        //            BarTextColor = Color.White
-        //        };
-        //        MainPage = navigationPage;
-        //    }
-        //    else
-        //    {
-        //        var page = FreshPageModelResolver.ResolvePageModel<SearchPageModel>();
-        //        var navigationPage = new FreshNavigationContainer(page)
-        //        {
-        //            BarBackground = Brush.Black,
-        //            BarTextColor = Color.White
-        //        };
-        //        MainPage = navigationPage;
-        //    }
-
-        //    if (!Preferences.ContainsKey("Unit"))
-        //    {
-        //        Preferences.Set("Unit", "°C");
-        //        Preferences.Set("UnitParameter", "metric");
-        //    }
-        //}
-
     }
 }

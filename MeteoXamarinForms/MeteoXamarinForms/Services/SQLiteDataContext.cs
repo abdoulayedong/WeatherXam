@@ -2,6 +2,7 @@
 using FreshMvvm;
 using MeteoXamarinForms.Extensions;
 using MeteoXamarinForms.Models;
+using MeteoXamarinForms.Services.Weather;
 using SQLite;
 using SQLiteNetExtensionsAsync.Extensions;
 using System;
@@ -18,6 +19,7 @@ namespace MeteoXamarinForms.Services
     public class SQLiteDataContext
     {
         private static SQLiteDataContext instance;
+        private readonly IWeatherService _weatherService;
 
         public static SQLiteDataContext Instance
         {
@@ -36,6 +38,7 @@ namespace MeteoXamarinForms.Services
         private SQLiteDataContext()
         {
             connection = DependencyService.Get<ISQLite>().GetSQLiteConnection();
+            _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
             //CreateTableIfNotExist();
             connection.CreateTableAsync<Root>().Wait();
             connection.CreateTableAsync<Models.Weather>().Wait();
@@ -61,11 +64,10 @@ namespace MeteoXamarinForms.Services
             foreach (var (city,index) in roots.Select((value,i) => (value, i)))
             {
                 var cityData = _mapper.Map<CityManager>(city);
-                //cityData.Country = Task.Run(async () => ToolExtension.GetCountry(city.Lat, city.Lon).Result).Result;
+                cityData.Country = Task.Run(async () => await ToolExtension.GetCountry(city.Lat, city.Lon)).Result;
                 cityData.IsLocalPosition = Preferences.Get("LocalTimezone", "") == city.Timezone ? true : false;
                 CitiesWeather.Add(cityData);
-            }
-            
+            }            
             return new { roots, CitiesWeather};
         }
 
@@ -140,6 +142,20 @@ namespace MeteoXamarinForms.Services
         {
             await WriteOperations.InsertOrReplaceAllWithChildrenAsync(connection, roots, true);
             return roots;
+        }
+
+        public async Task<IEnumerable<Root>> UpdateRoots(IEnumerable<Root> roots)
+        {
+            await DeleteRootsAsync();
+            List<Root> cities = new List<Root>();
+            foreach (var city in roots)
+            {
+                Root cityData = await _weatherService.GetWeatherFromLatLong(city.Lat, city.Lon);
+                cityData.Timezone = city.Timezone;
+                cities.Add(cityData);
+            };
+            var temps = await AddRoots(cities);
+            return temps;
         }
     }
 }
