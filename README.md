@@ -14,3 +14,22 @@ Features include:
 * Temperature unit (°C/°F/°K)
 * time according to position
 * Store data into sqlite3
+
+<img src="/MeteoXamarinForms/MeteoXamarinForms.Android/Resources/mipmap-xxxhdpi/cloudy.png" width="10%" />
+
+## Home Screen
+<p align="center">
+  <img src="/Images/main.jpg" width="60%" />
+</p>
+
+## Manage cities
+
+<p align="center">
+    <img src="/Images/managecity.jpg" width="30%"/>
+</p>
+
+## Settings
+
+<p align="center">
+    <img src="/Images/setting.jpg" width="30%"/>
+</p>
