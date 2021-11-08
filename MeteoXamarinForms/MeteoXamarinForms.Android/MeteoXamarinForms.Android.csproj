@@ -94,10 +94,7 @@
     <Compile Include="DependencyServices\ToastService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\77253-hot-weather-animation.json" />
     <AndroidAsset Include="Assets\lf30_editor_bij2hbab.json" />
-    <AndroidAsset Include="Assets\lf30_editor_few073ql.json" />
-    <AndroidAsset Include="Assets\27599-sunny-snowy-weather-icon-set-animation.json" />
     <AndroidAsset Include="Assets\61302-weather-icon.json" />
     <AndroidAsset Include="Assets\materialdesignicons-webfont.ttf" />
     <None Include="Resources\AboutResources.txt" />

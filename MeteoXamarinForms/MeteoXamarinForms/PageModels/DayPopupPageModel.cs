@@ -3,7 +3,6 @@ using MeteoXamarinForms.ViewModels.Base;
 using System;
 using MeteoXamarinForms.Extensions;
 using Xamarin.CommunityToolkit.Helpers;
-using Android.Preferences;
 using Xamarin.Essentials;
 
 namespace MeteoXamarinForms.PageModels
