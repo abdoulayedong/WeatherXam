@@ -1,0 +1,43 @@
+# Xamarin.Android
+# Build a Xamarin.Android project.
+# Add steps that test, sign, and distribute an app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/xamarin
+
+trigger:
+- master
+
+pool:
+  vmImage: 'macos-latest'
+
+variables:
+  buildConfiguration: 'Debug'
+  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+
+steps:
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: '4.4.1'
+
+- task: MSBuild@1
+  inputs:
+    solution: 'MeteoXamarinForms/MeteoXamarinForms.Android/MeteoXamarinForms.Android.csproj'
+    configuration: '$(BuildConfiguration)'
+    msbuildArguments: '/t:Restore'
+
+- task: XamarinAndroid@1
+  inputs:
+    projectFile: 'MeteoXamarinForms/MeteoXamarinForms.Android/MeteoXamarinForms.Android.csproj'
+    outputDirectory: '$(build.binariesdirectory)/$(BuildConfiguration)'
+    configuration: '$(BuildConfiguration)'
+    jdkOption: 'JDKVersion'
+
+- task: AndroidSigning@3
+  inputs:
+    apkFiles: '$(build.binariesdirectory)/$(BuildConfiguration)/*.apk'
+    apksign: false
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(build.binariesdirectory)/$(BuildConfiguration)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
