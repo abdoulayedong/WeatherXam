@@ -23,6 +23,7 @@ steps:
     solution: 'MeteoXamarinForms/MeteoXamarinForms.Android/MeteoXamarinForms.Android.csproj'
     configuration: '$(BuildConfiguration)'
     msbuildArguments: '/t:Restore'
+    msbuildVersion: '17.0'
 
 - task: XamarinAndroid@1
   inputs:
