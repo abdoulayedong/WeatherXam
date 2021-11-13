@@ -23,9 +23,9 @@ namespace MeteoXamarinForms.Pages
 
         private void OnCoordinatorLayoutOnExpansionEventHandler(object sender, ExpansionEventArgs e)
         {
-            if (BackgroundImage != null)
+            if (BackImage != null)
             {
-                BackgroundImage.Opacity = e.Progress;
+                BackImage.Opacity = e.Progress;
             }
 
             if (MainTitle != null)
