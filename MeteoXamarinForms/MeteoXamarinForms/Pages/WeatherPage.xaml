@@ -77,9 +77,6 @@
                              Command="{Binding ActualizeDataCommand}">
                     <ScrollView>
                         <StackLayout>
-                            <!--<Frame CornerRadius="25" Margin="15,10,15,5" VerticalOptions="Start">
-                                <graph:ChartView  />
-                            </Frame>-->
                             <Frame CornerRadius="25" Margin="15,10,15,5 " VerticalOptions="Start"
                                    BackgroundColor="{StaticResource MainFrameColor}">
                                 <Grid RowDefinitions="auto, auto, auto"
@@ -148,7 +145,8 @@
                                                 x:Name="DayPrevision"
                                                 SelectionMode="Single" HeightRequest="245" 
                                                 SelectionChangedCommand="{Binding DailyDetailCommand}"
-                                                SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference DayPrevision}}">
+                                                SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference DayPrevision}}"
+                                                Margin="0, -0, 0, -10">
                                     <CollectionView.ItemTemplate>
                                         <DataTemplate>
                                             <Grid ColumnDefinitions="110, *, 55" Margin="0">
@@ -268,7 +266,7 @@
                                                      Animation="lf30_editor_bij2hbab.json" 
                                                      AutoPlay="True"
                                                      RepeatMode="Infinite"
-                                                     Margin="-15,0"
+                                                     Margin="-15,-10"
                                                      Speed="{Binding WindSpeed, Converter={StaticResource intToDouble}}"
                                                      VerticalOptions="StartAndExpand"
                                                      HorizontalOptions="StartAndExpand" 
@@ -288,6 +286,17 @@
                                             </StackLayout>
                                         </StackLayout>
                                     </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
+                                   BackgroundColor="{StaticResource MainFrameColor}">
+                                <StackLayout>
+                                    <Label Text="{xct:Translate Rain}" TextColor="{StaticResource MainTextColor}"
+                                       FontSize="18"/>
+                                    <graph:ChartView Chart="{Binding LineChart}"
+                                                     HeightRequest="180"
+                                                     VerticalOptions="Start"
+                                                     Margin="-10"/>
                                 </StackLayout>
                             </Frame>
                             <StackLayout Orientation="Horizontal" Margin="15,10" Padding="0" 

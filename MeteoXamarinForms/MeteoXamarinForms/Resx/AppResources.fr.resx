@@ -207,6 +207,9 @@
   <data name="NorthWest" xml:space="preserve">
     <value>Nord-Ouest</value>
   </data>
+  <data name="Rain" xml:space="preserve">
+    <value>Pluie</value>
+  </data>
   <data name="Refresh" xml:space="preserve">
     <value>Actualisation</value>
   </data>

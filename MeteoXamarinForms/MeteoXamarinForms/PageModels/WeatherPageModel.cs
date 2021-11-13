@@ -16,12 +16,15 @@ using MeteoXamarinForms.Services.Toast;
 using MeteoXamarinForms.Resx;
 using FreshMvvm;
 using MeteoXamarinForms.Services;
+using Microcharts;
+using SkiaSharp;
+using System.Collections.Generic;
 
 namespace MeteoXamarinForms.ViewModels
 {
     public class WeatherPageModel : PageModelBase
     {
-#region Constructor
+        #region Constructor
         public WeatherPageModel()
         {
             _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
@@ -30,19 +33,19 @@ namespace MeteoXamarinForms.ViewModels
             async (DayPrevision dayPrevision) =>
             {
                 Daily selectedDay = Weather.Daily.Where(day => ToolExtension.GetDayOfWeek(ToolExtension.UnixTimeStampToDateTime(day.Dt)) == dayPrevision.DaysOfWeek.Localized).FirstOrDefault();
-                await CoreMethods.PushPopupPageModel<DayPopupPageModel>(data:selectedDay);
+                await CoreMethods.PushPopupPageModel<DayPopupPageModel>(data: selectedDay);
             });
 
             AddWeatherInformationCommand = new Command(
                 async () =>
                 {
-                    await CoreMethods.DisplayActionSheet("", "Cancel", "destroy"); 
+                    await CoreMethods.DisplayActionSheet("", "Cancel", "destroy");
                 });
 
             OpenCityManagementCommand = new Command(
                 async () =>
                 {
-                    await CoreMethods.PushPageModel<CityPageModel>(data:true, animate:false);
+                    await CoreMethods.PushPageModel<CityPageModel>(data: true, animate: false);
                 });
 
             OpenParameterCommand = new Command(
@@ -59,9 +62,20 @@ namespace MeteoXamarinForms.ViewModels
                     IsRefreshing = false;
                 });
         }
-#endregion
+        #endregion
 
-#region Properties
+        #region Properties
+        private LineChart lineChart;
+        public LineChart LineChart 
+        { 
+            get => lineChart; 
+            set => SetProperty(ref lineChart, value); 
+        }
+
+        private string[] Days = new string[7];
+        private int[] Temperatures = new int[7];
+        private SKColor orangeColor = SKColor.Parse("#C06048");
+
         public Root Weather { get; set; }
         private readonly IWeatherService _weatherService;
 
@@ -277,6 +291,7 @@ namespace MeteoXamarinForms.ViewModels
 
             // Daily weather
             DayPrevisions = new ();
+            var turnoverEntries = new List<ChartEntry>();
             for (int i = 0; i < 7; i++)
             {
                 DayPrevision dayPrevision = new ();
@@ -299,8 +314,28 @@ namespace MeteoXamarinForms.ViewModels
                 DateTime dateTime = ToolExtension.UnixTimeStampToDateTime(dailyForecast[i].Dt);
                 DateTime dateTimeUtc = ToolExtension.GetDateTimeFromTimezone(dateTime, Weather.Timezone_Offset);
                 dayPrevision.DaysOfWeek = new(() => ToolExtension.GetDayOfWeek(dateTimeUtc));
+                var data = (float)dailyForecast[i].Rain;
+                turnoverEntries.Add(new ChartEntry(data)
+                {
+                    Color = orangeColor,
+                    Label = dayPrevision.DaysOfWeek.Localized.Substring(0,3),
+                    ValueLabel = $"{data } mm",
+                    ValueLabelColor = SKColor.Parse("#fafafa")
+                });
+
                 DayPrevisions.Add(dayPrevision);
             }
+
+            LineChart = new LineChart { 
+                Entries = turnoverEntries, 
+                IsAnimated = true, 
+                LabelTextSize = 30f, 
+                LabelOrientation = Orientation.Horizontal, 
+                ValueLabelOrientation = Orientation.Vertical,
+                BackgroundColor = SKColor.Parse("#171717"),
+                LabelColor = SKColor.Parse("#999999"),
+                PointSize = 20,
+            };
 
             // More daily information
             UvIndex = new(() => ToolExtension.GetUviValue(current.Uvi));
@@ -329,6 +364,21 @@ namespace MeteoXamarinForms.ViewModels
                 await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
             }
         }
+        //private void InitGraphic()
+        //{
+        //    var turnoverEntries = new List<ChartEntry>();
+        //    for(int i = 0; i < 7 ; i++)
+        //    {
+                
+        //    }
+        //    foreach (var temp in Temperatures)
+        //    {
+        //        turnoverEntries.Add(new ChartEntry(temp)
+        //        {
+
+        //        });
+        //    }
+        //}
 #endregion
 
 #region Override Methods
