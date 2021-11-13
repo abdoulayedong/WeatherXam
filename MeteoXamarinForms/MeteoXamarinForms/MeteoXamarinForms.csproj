@@ -29,6 +29,7 @@
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.11" />
     <PackageReference Include="CoordinatorLayout.XamarinForms" Version="1.3.0" />
     <PackageReference Include="FreshMvvm" Version="4.0.1" />
+    <PackageReference Include="Microcharts.Forms" Version="0.9.5.9" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.14" />
     <PackageReference Include="SkiaSharp.Views.Forms" Version="2.80.3" />

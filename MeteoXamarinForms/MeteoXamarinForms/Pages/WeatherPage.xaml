@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              x:Class="MeteoXamarinForms.Pages.WeatherPage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{StaticResource MainBackgroundColor}"
@@ -9,7 +8,8 @@
              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
              xmlns:src="clr-namespace:MeteoXamarinForms.Models"
-             xmlns:converter="clr-namespace:MeteoXamarinForms.Converters">
+             xmlns:converter="clr-namespace:MeteoXamarinForms.Converters" 
+             xmlns:graph="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms">
     <ContentPage.Resources>
         <src:Ticker x:Key="Ticker"/>
         <ResourceDictionary>
@@ -76,7 +76,10 @@
                 <RefreshView IsRefreshing="{Binding IsRefreshing}"
                              Command="{Binding ActualizeDataCommand}">
                     <ScrollView>
-                        <StackLayout>                            
+                        <StackLayout>
+                            <!--<Frame CornerRadius="25" Margin="15,10,15,5" VerticalOptions="Start">
+                                <graph:ChartView  />
+                            </Frame>-->
                             <Frame CornerRadius="25" Margin="15,10,15,5 " VerticalOptions="Start"
                                    BackgroundColor="{StaticResource MainFrameColor}">
                                 <Grid RowDefinitions="auto, auto, auto"
@@ -148,7 +151,7 @@
                                                 SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference DayPrevision}}">
                                     <CollectionView.ItemTemplate>
                                         <DataTemplate>
-                                            <Grid ColumnDefinitions="auto, *, auto" Margin="0">
+                                            <Grid ColumnDefinitions="110, *, 55" Margin="0">
                                                 <VisualStateManager.VisualStateGroups>
                                                     <VisualStateGroup Name="CommonStates">
                                                         <VisualState Name="Selected">
@@ -159,11 +162,11 @@
                                                     </VisualStateGroup>
                                                 </VisualStateManager.VisualStateGroups>
                                                 <Label Text="{Binding DaysOfWeek.Localized}" 
-                                                   HorizontalOptions="StartAndExpand" FontAttributes="Bold"
+                                                   HorizontalOptions="Start" FontAttributes="Bold"
                                                    FontSize="16" TextColor="{StaticResource MainTextColor}"/>
 
                                                 <StackLayout Orientation="Horizontal" Grid.Column="1"
-                                                         HorizontalOptions="EndAndExpand" >
+                                                         HorizontalOptions="CenterAndExpand" >
                                                     <Label Text="{Binding MaxTemperature, StringFormat='{0}°/'}" FontAttributes="Bold"  FontSize="16" TextColor="{StaticResource MainTextColor}"/>
                                                     <Label Text="{Binding MinTemperature, StringFormat='{0}°'}" FontAttributes="Bold" FontSize="16" TextColor="{StaticResource MainTextColor}"/>
                                                     <Image Source="{Binding DayIcon}" Margin="5,-5,0,0"
@@ -171,8 +174,7 @@
                                                        WidthRequest="40" />
                                                 </StackLayout>
 
-                                                <StackLayout HorizontalOptions="EndAndExpand" Grid.Column="2" Orientation="Horizontal"
-                                                         Margin="40,0,0,0">
+                                                <StackLayout HorizontalOptions="End" Grid.Column="2" Orientation="Horizontal">
                                                     <Image Source="{Binding ProbabilityIcon}" HeightRequest="7" WidthRequest="7" Margin="3,0,0,10"/>
                                                     <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" 
                                                        FontSize="15" TextColor="{StaticResource MainTextColor}"/>
