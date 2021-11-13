@@ -61,6 +61,8 @@ namespace MeteoXamarinForms.ViewModels
                     await Update();
                     IsRefreshing = false;
                 });
+
+            IsSpanish = Preferences.Get("Language", "en") == "es" ? true : false;
         }
         #endregion
 
@@ -78,6 +80,8 @@ namespace MeteoXamarinForms.ViewModels
 
         public Root Weather { get; set; }
         private readonly IWeatherService _weatherService;
+
+        public bool IsSpanish { get; set; } = false;
 
         private bool _isRefreshing;
         public bool IsRefreshing

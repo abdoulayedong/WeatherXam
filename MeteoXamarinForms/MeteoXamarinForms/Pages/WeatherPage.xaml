@@ -51,13 +51,23 @@
                            Text="{xct:Translate AppName}" 
                            Grid.Column="0"
                            Grid.ColumnSpan="3"
-                           TextTransform="None" 
-                           FontSize="40" 
+                           TextTransform="None"
                            TextColor="{StaticResource MainTextColor}"
                            Opacity="0.5"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="CenterAndExpand"
-                           Margin="20"/>
+                           Margin="20">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsSpanish}"
+                                         Value="True">
+                                <Setter Property="FontSize" Value="32"/>
+                            </DataTrigger>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsSpanish}"
+                                         Value="False">
+                                <Setter Property="FontSize" Value="38"/>
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
 
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" 
