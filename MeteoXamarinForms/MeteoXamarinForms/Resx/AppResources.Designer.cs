@@ -205,7 +205,7 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to French.
+        ///   Looks up a localized string similar to Français.
         /// </summary>
         internal static string French {
             get {
@@ -412,7 +412,7 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Spanish.
+        ///   Looks up a localized string similar to Español.
         /// </summary>
         internal static string Spanish {
             get {

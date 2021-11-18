@@ -149,7 +149,7 @@ namespace MeteoXamarinForms.PageModels
         private async void BackPressMethod()
         {
             IsDownload = true;
-            await Task.Delay(100);
+            await Task.Delay(5);
             if (TemperatureUnit == SelectedUnit.Name && Language == SelectedLanguage)
             {
                 try

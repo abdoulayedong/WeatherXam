@@ -142,7 +142,7 @@
     <value>Est</value>
   </data>
   <data name="English" xml:space="preserve">
-    <value>Anglais</value>
+    <value>English</value>
   </data>
   <data name="Every12Hours" xml:space="preserve">
     <value>Toutes les 12 heures</value>
@@ -235,7 +235,7 @@
     <value>Sud-Ouest</value>
   </data>
   <data name="Spanish" xml:space="preserve">
-    <value>Espagnol</value>
+    <value>Español</value>
   </data>
   <data name="Speed" xml:space="preserve">
     <value>Vitesse</value>

@@ -142,7 +142,7 @@
     <value>Este</value>
   </data>
   <data name="English" xml:space="preserve">
-    <value>Inglés</value>
+    <value>English</value>
   </data>
   <data name="Every12Hours" xml:space="preserve">
     <value>Cada 12 horas</value>
@@ -166,7 +166,7 @@
     <value>Sentido</value>
   </data>
   <data name="French" xml:space="preserve">
-    <value>Francés</value>
+    <value>Français</value>
   </data>
   <data name="Friday" xml:space="preserve">
     <value>Viernes</value>
@@ -280,6 +280,6 @@
     <value>Oeste</value>
   </data>
   <data name="Wind" xml:space="preserve">
-    <value>Vent</value>
+    <value>Viento</value>
   </data>
 </root>
