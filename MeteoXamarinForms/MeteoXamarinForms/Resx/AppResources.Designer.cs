@@ -115,6 +115,15 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        internal static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Direction.
         /// </summary>
         internal static string Direction {
@@ -232,7 +241,7 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to En hommage à ma grande mère que j&apos;ai pas eu l&apos;occasion de connaître mais qui a été la source de mon bonheur actuel qu&apos;est ma mère..
+        ///   Looks up a localized string similar to In tribute to my grandmother whom I did not have the opportunity to know but who was the source of my current happiness that is my mother..
         /// </summary>
         internal static string Hommage {
             get {

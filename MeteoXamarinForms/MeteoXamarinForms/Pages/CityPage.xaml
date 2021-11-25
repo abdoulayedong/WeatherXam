@@ -46,7 +46,7 @@
                                                    HorizontalOptions="CenterAndExpand"
                                                    TextColor="{StaticResource MainTextColor}"
                                                    Margin="0"/>
-                                                <Label Text="Delete"
+                                                <Label Text="{xct:Translate Delete}"
                                                    TextColor="{StaticResource MainTextColor}"
                                                    HorizontalOptions="CenterAndExpand"
                                                    FontSize="16"/>

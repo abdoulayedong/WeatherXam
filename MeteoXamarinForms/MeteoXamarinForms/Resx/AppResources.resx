@@ -135,6 +135,9 @@
   <data name="CurrentLocation" xml:space="preserve">
     <value>Add current location</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="Direction" xml:space="preserve">
     <value>Direction</value>
   </data>
@@ -175,7 +178,7 @@
     <value>High</value>
   </data>
   <data name="Hommage" xml:space="preserve">
-    <value>En hommage à ma grande mère que j'ai pas eu l'occasion de connaître mais qui a été la source de mon bonheur actuel qu'est ma mère.</value>
+    <value>In tribute to my grandmother whom I did not have the opportunity to know but who was the source of my current happiness that is my mother.</value>
   </data>
   <data name="Humidity" xml:space="preserve">
     <value>Humidity</value>

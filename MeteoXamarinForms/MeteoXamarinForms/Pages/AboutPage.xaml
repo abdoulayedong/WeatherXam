@@ -11,7 +11,8 @@
         <StackLayout HorizontalOptions="CenterAndExpand">
             <Image Source="hommage.jpg"
                    HeightRequest="300"
-                   WidthRequest="300" Margin="0,20,0,0"/>
+                   WidthRequest="300" Margin="0,20,0,0"
+                   VerticalOptions="Center"/>
             <Label TextColor="{StaticResource MainTextColor}"
                    Margin="50,20"
                    FontSize="14"
@@ -27,7 +28,7 @@
                        HorizontalTextAlignment="Center"/>
                 <Label Text="{xct:Translate Version,StringFormat='Verison {0}'}"
                        TextColor="{StaticResource SecondaryTextColor}"
-                       FontSize="12"/>
+                       FontSize="12" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

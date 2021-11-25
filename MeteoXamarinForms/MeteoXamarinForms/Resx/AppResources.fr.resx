@@ -135,6 +135,9 @@
   <data name="CurrentLocation" xml:space="preserve">
     <value>Ajouter le lieu actuel</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
   <data name="Direction" xml:space="preserve">
     <value>Direction</value>
   </data>
