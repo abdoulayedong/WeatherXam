@@ -556,6 +556,15 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Weather widget.
+        /// </summary>
+        internal static string Widget {
+            get {
+                return ResourceManager.GetString("Widget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Wind.
         /// </summary>
         internal static string Wind {

@@ -49,6 +49,7 @@
                                                 <Label Text="{xct:Translate Delete}"
                                                    TextColor="{StaticResource MainTextColor}"
                                                    HorizontalOptions="CenterAndExpand"
+                                                   LineBreakMode="TailTruncation"
                                                    FontSize="16"/>
                                             </StackLayout>
                                         </SwipeItemView>
@@ -74,7 +75,8 @@
                                                         Padding="10">
                                         <StackLayout Spacing="0">
                                             <StackLayout Orientation="Horizontal">
-                                                <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
+                                                <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" 
+                                                       FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
                                                 <Label Text="{Binding City}"
                                                        FontSize="22"
                                                        VerticalTextAlignment="Center"
@@ -114,11 +116,22 @@
                             Margin="0,5,-5,0"
                             Opacity="0.85" TextColor="{StaticResource MainTextColor}"
                             BackgroundColor="Transparent"
-                            Text="{xct:Translate AddCity}" FontSize="10"                      
+                            Text="{xct:Translate AddCity}" FontSize="10"
                             Command="{Binding AddWeatherInformationCommand}">
                             <Button.ImageSource>
                                 <FontImageSource Color="{StaticResource MainTextColor}" Glyph="&#xf0415;" FontFamily="MaterialDesign" Size="25"/>
                             </Button.ImageSource>
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="es">
+                                <Setter Property="WidthRequest" Value="115"/>
+                            </DataTrigger>
+                            <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="en">
+                                <Setter Property="WidthRequest" Value="80"/>
+                            </DataTrigger>
+                            <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="fr">
+                                <Setter Property="WidthRequest" Value="110"/>
+                            </DataTrigger>
+                        </Button.Triggers>
                     </Button>
                     <BoxView HeightRequest="10" BackgroundColor="{StaticResource MainBackgroundColor}"
                              WidthRequest="1"/>
@@ -126,10 +139,21 @@
                             Margin="0,5,10,0"
                             Opacity="0.85" TextColor="{StaticResource MainTextColor}"
                             BackgroundColor="Transparent"
-                            Text="Weather widget" FontSize="10">
+                            Text="{xct:Translate Widget}" FontSize="10">
                             <Button.ImageSource>
                                 <FontImageSource Color="{StaticResource MainTextColor}" Glyph="&#xf1355;" FontFamily="MaterialDesign" Size="25"/>
                             </Button.ImageSource>
+                            <Button.Triggers>
+                                <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="es">
+                                    <Setter Property="WidthRequest" Value="120"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="en">
+                                    <Setter Property="WidthRequest" Value="90"/>
+                                </DataTrigger>
+                                <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="fr">
+                                    <Setter Property="WidthRequest" Value="80"/>
+                                </DataTrigger>
+                            </Button.Triggers>
                     </Button>
                 </StackLayout>
             </Frame>

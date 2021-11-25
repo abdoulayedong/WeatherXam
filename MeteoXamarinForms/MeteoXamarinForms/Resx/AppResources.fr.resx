@@ -282,6 +282,9 @@
   <data name="West" xml:space="preserve">
     <value>Ouest</value>
   </data>
+  <data name="Widget" xml:space="preserve">
+    <value>Widget météo</value>
+  </data>
   <data name="Wind" xml:space="preserve">
     <value>Vent</value>
   </data>

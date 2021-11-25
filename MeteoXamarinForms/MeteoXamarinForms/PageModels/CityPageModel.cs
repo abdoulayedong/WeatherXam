@@ -29,7 +29,22 @@ namespace MeteoXamarinForms.PageModels
             _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
             CurrentTimezone = Preferences.Get("CurrentTimezone", "");
             _mapper = FreshIOC.Container.Resolve<IMapper>();
-
+            var lang = Preferences.Get("Language", "en");
+            switch (lang)
+            {
+                case "en":
+                    AddCityButtonWidth = "en";
+                    break;
+                case "fr":
+                    AddCityButtonWidth = "fr";
+                    break;
+                case "es":
+                    AddCityButtonWidth = "es";
+                    break;
+                default:
+                    AddCityButtonWidth = "en";
+                    break;
+            }
             #region Implemented Command
             AddWeatherInformationCommand = new Command(
                 async () =>
@@ -126,7 +141,14 @@ namespace MeteoXamarinForms.PageModels
         #region Properties
         private readonly IWeatherService _weatherService;
         private IMapper _mapper;
-        public readonly string CurrentTimezone;
+        public readonly string CurrentTimezone;        
+        private string _addCityButtonWidth;
+        public string AddCityButtonWidth
+        {
+            get => _addCityButtonWidth;
+            set => SetProperty(ref _addCityButtonWidth, value);
+        }
+
         private ObservableCollection<CityManager> _citiesWeather;
         public ObservableCollection<CityManager> CitiesWeather
         {

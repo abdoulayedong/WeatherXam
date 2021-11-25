@@ -282,6 +282,9 @@
   <data name="West" xml:space="preserve">
     <value>West</value>
   </data>
+  <data name="Widget" xml:space="preserve">
+    <value>Weather widget</value>
+  </data>
   <data name="Wind" xml:space="preserve">
     <value>Wind</value>
   </data>

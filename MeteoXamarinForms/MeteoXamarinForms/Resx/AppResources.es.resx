@@ -282,6 +282,9 @@
   <data name="West" xml:space="preserve">
     <value>Oeste</value>
   </data>
+  <data name="Widget" xml:space="preserve">
+    <value>Widget meteorológico</value>
+  </data>
   <data name="Wind" xml:space="preserve">
     <value>Viento</value>
   </data>
