@@ -289,7 +289,7 @@
                                                      HeightRequest="150">
                                             <forms:AnimationView.Triggers>
                                                 <DataTrigger TargetType="forms:AnimationView" Binding="{Binding ThemeNumber}" Value="1">
-                                                    <Setter Property="Animation" Value="lf30_editor_v4lmein6.json"/>
+                                                    <Setter Property="Animation" Value="lf30_editor_rf1dh8ok.json"/>
                                                 </DataTrigger>
                                                 <DataTrigger TargetType="forms:AnimationView" Binding="{Binding ThemeNumber}" Value="2">
                                                     <Setter Property="Animation" Value="lf30_editor_bij2hbab.json"/>

@@ -2,11 +2,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools"
 		   xmlns:android="http://schemas.android.com/apk/res/android">
 
-	<style name="MainTheme" parent="Theme.AppCompat.Light">		
-		<item name="android:windowBackground ">@color/colorBackground</item>
+	<style name="MainTheme" parent="Theme.AppCompat.Light.DarkActionBar">		
 		<item name="android:windowLightStatusBar">false</item>
-		<item name="android:statusBarColor">@color/colorBackground</item>
-		<item name="android:navigationBarColor">@color/colorBackground</item>
 		<item name="windowNoTitle">true</item>
 	</style>
 

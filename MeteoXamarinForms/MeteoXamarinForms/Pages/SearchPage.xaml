@@ -73,7 +73,7 @@
             <StackLayout Grid.RowSpan="3" Grid.Row="0"
                          VerticalOptions="Center" HorizontalOptions="Center">
                 <Label Text="{xct:Translate SearchMessage}" FontSize="18">
-                    <Label.Triggers>
+                    <Label.Triggers>                        
                         <DataTrigger TargetType="Label" Value="true" Binding="{Binding IsActivatedSearch}">
                             <Setter Property="IsVisible" Value="false"/>
                         </DataTrigger>
@@ -82,7 +82,8 @@
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
-                <Label Text="{xct:Translate SearchErrorMessage}" IsVisible="{Binding IsNotFoundLocation}"/>
+                <Label Text="{xct:Translate SearchErrorMessage}" IsVisible="{Binding IsNotFoundLocation}"
+                       FontSize="18"/>
                 <ActivityIndicator Color="CornflowerBlue" IsVisible="true" IsRunning="{Binding IsActivatedSearch}"/>
             </StackLayout>              
         </Grid>

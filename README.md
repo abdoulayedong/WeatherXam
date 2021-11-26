@@ -18,6 +18,9 @@ Features include:
 * Temperature unit (°C/°F/°K)
 * time according to position
 * Store data into sqlite3
+* Graph of expected amount of water
+* Dynamic theme according to the theme of the system
+
 
 <img src="/MeteoXamarinForms/MeteoXamarinForms.Android/Resources/mipmap-xxxhdpi/cloudy.png" width="10%" />
 
@@ -29,6 +32,7 @@ Features include:
 ## Home Screen
 <p align="center">
   <img src="/Images/main.jpg" width="60%" />
+  <img src="/Images/DynamicTheme.jpg" width="60%" />
 </p>
 
 ## Manage cities
