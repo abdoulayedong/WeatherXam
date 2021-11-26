@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeteoXamarinForms.Pages.SettingPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource MainBackgroundColor}"
+             BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColor}, Dark={StaticResource MainBackgroundColorDark}}"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.Content>
         <Grid>
@@ -20,14 +20,13 @@
                     </DataTrigger>
                 </StackLayout.Triggers>
                 <Label Text="{xct:Translate Settings}"
-                       TextColor="{StaticResource MainTextColor}"
                        FontSize="20" FontAttributes="Bold"
                        Margin="16,14.5"/>
                 <BoxView HeightRequest="1" Color="{StaticResource SecondaryTextColor}"
                          Margin="0"/>
                 <StackLayout Margin="20">
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="{xct:Translate TemperatureUnit}" TextColor="{StaticResource MainTextColor}"
+                        <Label Text="{xct:Translate TemperatureUnit}"
                                FontSize="16" HorizontalOptions="StartAndExpand"
                                VerticalOptions="CenterAndExpand"/>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand"
@@ -47,7 +46,7 @@
                     <BoxView HeightRequest="1" Color="{StaticResource SecondaryTextColor}"
                         Margin="0,15"/>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="{xct:Translate AutoRefresh}" TextColor="{StaticResource MainTextColor}"
+                        <Label Text="{xct:Translate AutoRefresh}" 
                                FontSize="16" HorizontalOptions="StartAndExpand"
                                VerticalOptions="CenterAndExpand"/>
                         <Switch OnColor="White"
@@ -58,13 +57,7 @@
                     <BoxView HeightRequest="1" Color="{StaticResource SecondaryTextColor}"
                         Margin="0,15"/>
                     <StackLayout Orientation="Horizontal" IsEnabled="{Binding IsAutoRefresh}">
-                        <!--<StackLayout.Triggers>
-                            --><!--<DataTrigger Binding="{Binding IsAutoRefresh}" Value="True" TargetType="StackLayout">
-                                <Setter Property="IsEnabled" Value="True"/>
-                                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryTextColor}"/>
-                            </DataTrigger>--><!--
-                        </StackLayout.Triggers>-->
-                        <Label Text="{xct:Translate Refresh}" TextColor="{StaticResource MainTextColor}"
+                        <Label Text="{xct:Translate Refresh}" 
                                FontSize="16" HorizontalOptions="StartAndExpand"
                                VerticalOptions="CenterAndExpand"/>
                         <StackLayout Orientation="Horizontal"
@@ -72,17 +65,18 @@
                             <Picker ItemsSource="{Binding RefreshFrequencies}"
                                     ItemDisplayBinding="{Binding Name.Localized}"
                                     SelectedItem="{Binding SelectedFrequency}"
-                                    TextColor="{StaticResource MainTextColor}"
+                                    HorizontalTextAlignment="End"
                                     FontSize="16"
                                     Title="{xct:Translate Refresh}"
                                     Margin="0" CharacterSpacing="0">
                                 <Picker.Triggers>
                                     <DataTrigger Binding="{Binding IsAutoRefresh}" Value="True" TargetType="Picker">
                                         <Setter Property="IsEnabled" Value="True"/>
-                                        <Setter Property="TextColor" Value="{StaticResource MainTextColor}"/>
+                                        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource MainTextColor}, Dark={StaticResource MainTextColorDark}}"/>
                                     </DataTrigger>
                                     <DataTrigger Binding="{Binding IsAutoRefresh}" Value="False" TargetType="Picker">
                                         <Setter Property="IsEnabled" Value="False"/>
+                                        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource MainTextColor}, Dark={StaticResource MainTextColorDark}}"/>
                                     </DataTrigger>
                                 </Picker.Triggers>
                             </Picker>
@@ -97,7 +91,7 @@
                     <BoxView HeightRequest="1" Color="{StaticResource SecondaryTextColor}"
                         Margin="0,15"/>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="{xct:Translate Language}" TextColor="{StaticResource MainTextColor}"
+                        <Label Text="{xct:Translate Language}" 
                                FontSize="16" HorizontalOptions="StartAndExpand"
                                VerticalOptions="CenterAndExpand"/>
                         <StackLayout Orientation="Horizontal"
@@ -105,7 +99,7 @@
                             <Picker ItemsSource="{Binding SupportedLanguages}"
                                     ItemDisplayBinding="{Binding Name.Localized}"
                                     SelectedItem="{Binding SelectedLanguage}"
-                                    TextColor="{StaticResource MainTextColor}"
+                                    TextColor="{AppThemeBinding Light={StaticResource MainTextColor}, Dark={StaticResource MainTextColorDark}}"
                                     FontSize="16" Title="{xct:Translate Language}"
                                     Margin="0" CharacterSpacing="0" HorizontalTextAlignment="End"/>
                             <Label Text="&#xf0142;" Style="{StaticResource MaterialIcons}" 
@@ -121,7 +115,7 @@
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ShowAboutPageCommand}"/>
                         </StackLayout.GestureRecognizers>
-                        <Label Text="{xct:Translate About}" TextColor="{StaticResource MainTextColor}"
+                        <Label Text="{xct:Translate About}" 
                            FontSize="16" HorizontalOptions="StartAndExpand"
                            VerticalOptions="CenterAndExpand"/>
 

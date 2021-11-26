@@ -225,6 +225,12 @@
   <data name="Search" xml:space="preserve">
     <value>Rechercher</value>
   </data>
+  <data name="SearchErrorMessage" xml:space="preserve">
+    <value>L'emplacement est introuvable</value>
+  </data>
+  <data name="SearchMessage" xml:space="preserve">
+    <value>Entrez un nom d'emplacement</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Paramètres</value>
   </data>

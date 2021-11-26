@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeteoXamarinForms.Pages.SearchPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="Black"
+             BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColor}, Dark={StaticResource MainBackgroundColorDark}}"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.Content>
         <Grid RowDefinitions="auto, auto, *">
             <SearchBar x:Name="searchBar"
                        Placeholder="{xct:Translate Search}" HorizontalOptions="FillAndExpand" 
-                       FontSize="20" PlaceholderColor="GhostWhite"
-                       TextColor="White" HorizontalTextAlignment="Start"
-                       CancelButtonColor="White" Margin="10"
+                       FontSize="20" 
+                       TextColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}"
+                       CancelButtonColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}" 
+                       HorizontalTextAlignment="Start" Margin="10"
                        SearchCommand="{Binding PerformSearch}"
                        SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
 
@@ -38,8 +39,8 @@
                     Margin="20,0" MinimumWidthRequest="250"                    
                     Grid.Row ="1"
                     FontSize="18"
-                    TextColor="{StaticResource MainTextColor}"
-                    BackgroundColor="{StaticResource MainFrameColor}"
+                    TextColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}"
+                    BackgroundColor="{AppThemeBinding Dark={StaticResource MainFrameColorDark}, Light={StaticResource MainFrameColor}}"
                     BorderColor="Transparent"
                     CornerRadius="35"                    
                     BorderWidth="1.5"
@@ -71,7 +72,7 @@
 
             <StackLayout Grid.RowSpan="3" Grid.Row="0"
                          VerticalOptions="Center" HorizontalOptions="Center">
-                <Label Text="Enter a location name" FontSize="18">
+                <Label Text="{xct:Translate SearchMessage}" FontSize="18">
                     <Label.Triggers>
                         <DataTrigger TargetType="Label" Value="true" Binding="{Binding IsActivatedSearch}">
                             <Setter Property="IsVisible" Value="false"/>
@@ -81,7 +82,7 @@
                         </DataTrigger>
                     </Label.Triggers>
                 </Label>
-                <Label Text="Location is not found" IsVisible="{Binding IsNotFoundLocation}"/>
+                <Label Text="{xct:Translate SearchErrorMessage}" IsVisible="{Binding IsNotFoundLocation}"/>
                 <ActivityIndicator Color="CornflowerBlue" IsVisible="true" IsRunning="{Binding IsActivatedSearch}"/>
             </StackLayout>              
         </Grid>

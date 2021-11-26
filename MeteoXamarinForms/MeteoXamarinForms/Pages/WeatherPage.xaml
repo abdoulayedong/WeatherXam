@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeteoXamarinForms.Pages.WeatherPage"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource MainBackgroundColor}"
+             BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColor}, Dark={StaticResource MainBackgroundColorDark}}"
              xmlns:coordinator="clr-namespace:CoordinatorLayout.XamarinForms;assembly=CoordinatorLayout.XamarinForms" 
              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
@@ -34,17 +34,42 @@
                            Aspect="AspectFill"
                            HeightRequest="100"/>
 
-                    <BoxView BackgroundColor="Black"
-                             Grid.ColumnSpan="3"
+                    <BoxView Grid.ColumnSpan="3"
                              Opacity="1">
-                        <BoxView.Background>
+                        <BoxView.Triggers>
+                            <DataTrigger TargetType="BoxView" Binding="{Binding ThemeNumber}" Value="1">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0,1">
+                                            <GradientStop Color="Transparent"
+                                                          Offset="0.1" />
+                                            <GradientStop Color="{StaticResource MainBackgroundColor}"
+                                                          Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                            <DataTrigger TargetType="BoxView" Binding="{Binding ThemeNumber}" Value="2">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0,1">
+                                            <GradientStop Color="Transparent"
+                                                          Offset="0.1" />
+                                            <GradientStop Color="{StaticResource MainBackgroundColorDark}"
+                                                          Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </BoxView.Triggers>
+                        <!--<BoxView.Background>
                             <LinearGradientBrush EndPoint="0,1">
                                 <GradientStop Color="Transparent"
                                               Offset="0.1" />
                                 <GradientStop Color="Black"
                                               Offset="1.0" />
                             </LinearGradientBrush>
-                        </BoxView.Background>
+                        </BoxView.Background>-->
                     </BoxView>
 
                     <Label x:Name="MainTitle" 
@@ -52,7 +77,6 @@
                            Grid.Column="0"
                            Grid.ColumnSpan="3"
                            TextTransform="None"
-                           TextColor="{StaticResource MainTextColor}"
                            Opacity="0.5"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="CenterAndExpand"
@@ -77,8 +101,8 @@
                                  VerticalOptions="Center"
                                  Opacity="0.0"
                                  Margin="50,10,0,0">
-                        <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
-                        <Label Text="{Binding CityName}" TextColor="{StaticResource MainTextColor}" FontSize="24"/>
+                        <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center"/>
+                        <Label Text="{Binding CityName}" FontSize="24"/>
                     </StackLayout>                    
                 </Grid>
             </coordinator:CoordinatorLayout.TopView>
@@ -87,15 +111,14 @@
                              Command="{Binding ActualizeDataCommand}">
                     <ScrollView>
                         <StackLayout>
-                            <Frame CornerRadius="25" Margin="15,10,15,5 " VerticalOptions="Start"
-                                   BackgroundColor="{StaticResource MainFrameColor}">
+                            <Frame CornerRadius="25" Margin="15,10,15,5 " VerticalOptions="Start">
                                 <Grid RowDefinitions="auto, auto, auto"
                                   RowSpacing="10">
                                     <StackLayout Spacing="0" Grid.Row="0">
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" 
                                                      x:Name="LocationTitle">
-                                            <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
-                                            <Label Text="{Binding CityName}" TextColor="{StaticResource MainTextColor}" FontSize="24"/>
+                                            <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center"/>
+                                            <Label Text="{Binding CityName}" FontSize="24"/>
                                         </StackLayout>
                                         <Label Text="{Binding Source={StaticResource Ticker}, StringFormat='{0:ddd, d MMMM HH:mm}', Path=Now, Mode=OneWay}"
                                                HorizontalOptions="StartAndExpand" Margin="5,0" FontSize="14" TextColor="{StaticResource SecondaryTextColor}"/>
@@ -105,7 +128,7 @@
                                             <Image Source="{Binding CurrentIcon}"
                                                HeightRequest="80" Aspect="AspectFit"
                                                WidthRequest="80"/>
-                                            <Label Text="{Binding CurrentTemperature, StringFormat='{0}°'}" FontSize="60" TextColor="{StaticResource MainTextColor}"/>
+                                            <Label Text="{Binding CurrentTemperature, StringFormat='{0}°'}" FontSize="60"/>
                                         </StackLayout>
                                         <StackLayout HorizontalOptions="EndAndExpand" Spacing="2" VerticalOptions="CenterAndExpand">
                                             <Label Text="{Binding Description}" FontSize="15" HorizontalTextAlignment="End" WidthRequest="100"
@@ -137,8 +160,7 @@
                                                     <Image Source="{Binding Icon}"
                                                            HeightRequest="50" Aspect="AspectFill"
                                                            WidthRequest="60"/>
-                                                    <Label Text="{Binding Temperature, StringFormat='{0}°'}" FontSize="17" HorizontalOptions="Center"
-                                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
+                                                    <Label Text="{Binding Temperature, StringFormat='{0}°'}" FontSize="17" HorizontalOptions="Center" FontAttributes="Bold"/>
                                                     <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Center">
                                                         <Image Source="{Binding ProbabilityIcon}" HeightRequest="6" WidthRequest="6" Margin="3,0"/>
                                                         <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" FontSize="13" TextColor="{StaticResource SecondaryTextColor}"/>
@@ -149,8 +171,7 @@
                                     </CollectionView>
                                 </Grid>
                             </Frame>
-                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
-                                   BackgroundColor="{StaticResource MainFrameColor}">
+                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start">
                                 <CollectionView ItemsSource="{Binding DayPrevisions}"
                                                 x:Name="DayPrevision"
                                                 SelectionMode="Single" HeightRequest="245" 
@@ -170,13 +191,12 @@
                                                     </VisualStateGroup>
                                                 </VisualStateManager.VisualStateGroups>
                                                 <Label Text="{Binding DaysOfWeek.Localized}" 
-                                                   HorizontalOptions="Start" FontAttributes="Bold"
-                                                   FontSize="16" TextColor="{StaticResource MainTextColor}"/>
+                                                   HorizontalOptions="Start" FontAttributes="Bold" FontSize="16"/>
 
                                                 <StackLayout Orientation="Horizontal" Grid.Column="1"
                                                          HorizontalOptions="CenterAndExpand" >
-                                                    <Label Text="{Binding MaxTemperature, StringFormat='{0}°/'}" FontAttributes="Bold"  FontSize="16" TextColor="{StaticResource MainTextColor}"/>
-                                                    <Label Text="{Binding MinTemperature, StringFormat='{0}°'}" FontAttributes="Bold" FontSize="16" TextColor="{StaticResource MainTextColor}"/>
+                                                    <Label Text="{Binding MaxTemperature, StringFormat='{0}°/'}" FontAttributes="Bold"  FontSize="16"/>
+                                                    <Label Text="{Binding MinTemperature, StringFormat='{0}°'}" FontAttributes="Bold" FontSize="16"/>
                                                     <Image Source="{Binding DayIcon}" Margin="5,-5,0,0"
                                                        HeightRequest="40" Aspect="AspectFill"
                                                        WidthRequest="40" />
@@ -184,41 +204,34 @@
 
                                                 <StackLayout HorizontalOptions="End" Grid.Column="2" Orientation="Horizontal">
                                                     <Image Source="{Binding ProbabilityIcon}" HeightRequest="7" WidthRequest="7" Margin="3,0,0,10"/>
-                                                    <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" 
-                                                       FontSize="15" TextColor="{StaticResource MainTextColor}"/>
+                                                    <Label Text="{Binding ProbalilityOfPrecipitation, StringFormat='{0}%'}" FontSize="15"/>
                                                 </StackLayout>
-
                                             </Grid>
                                         </DataTemplate>
                                     </CollectionView.ItemTemplate>
                                 </CollectionView>
                             </Frame>
-                            <Frame CornerRadius="25" Margin="15,0,15,5"
-                                BackgroundColor="{StaticResource MainFrameColor}">
+                            <Frame CornerRadius="25" Margin="15,0,15,5">
                                 <StackLayout>
                                     <StackLayout Orientation="Horizontal" Spacing="10">
                                         <Image Source="uv_index.png" HeightRequest="30"
-                                           WidthRequest="30"/>
+                                               WidthRequest="30"/>
                                         <Label Text="{xct:Translate UvIndex}" HorizontalOptions="StartAndExpand"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                        <Label Text="{Binding UvIndex.Localized}" TextColor="{StaticResource MainTextColor}"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           FontAttributes="Bold" />
+                                               FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                                        <Label Text="{Binding UvIndex.Localized}" FontSize="16" VerticalTextAlignment="Center"
+                                               FontAttributes="Bold" />
                                     </StackLayout>
                                     <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,10" 
-                                            Color="{StaticResource SecondaryTextColor}"/>
+                                             Color="{StaticResource SecondaryTextColor}"/>
 
                                     <StackLayout Orientation="Horizontal" Spacing="10">
                                         <Image Source="sunrise.png" HeightRequest="30"
-                                           WidthRequest="30"/>
+                                               WidthRequest="30"/>
                                         <Label Text="{xct:Translate Sunrise}" HorizontalOptions="StartAndExpand"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Sunrise, StringFormat='{0: HH:mm}'}" 
-                                           TextColor="{StaticResource MainTextColor}"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           FontAttributes="Bold" />
+                                               FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Sunrise, StringFormat='{0: HH:mm}'}"
+                                               FontSize="16" VerticalTextAlignment="Center"
+                                               FontAttributes="Bold" />
                                     </StackLayout>
                                     <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
                                             Color="{StaticResource SecondaryTextColor}"/>
@@ -227,53 +240,45 @@
                                         <Image Source="sunset.png" HeightRequest="30"
                                                WidthRequest="30"/>
                                         <Label Text="{xct:Translate Sunset}" HorizontalOptions="StartAndExpand"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Sunset, StringFormat='{0: HH:mm}'}" 
-                                           TextColor="{StaticResource MainTextColor}"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           FontAttributes="Bold" />
+                                               FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Sunset, StringFormat='{0: HH:mm}'}"
+                                               FontSize="16" VerticalTextAlignment="Center"
+                                               FontAttributes="Bold" />
                                     </StackLayout>
                                     <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
-                                            Color="{StaticResource SecondaryTextColor}"/>
+                                             Color="{StaticResource SecondaryTextColor}"/>
 
                                     <StackLayout Orientation="Horizontal" Spacing="10">
                                         <Image Source="cloud.png" HeightRequest="30"
-                                           WidthRequest="30"/>
+                                               WidthRequest="30"/>
                                         <Label Text="{xct:Translate Cloud}" HorizontalOptions="StartAndExpand"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Clouds, StringFormat='{0}%'}" 
-                                           TextColor="{StaticResource MainTextColor}"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           FontAttributes="Bold" />
+                                               FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Clouds, StringFormat='{0}%'}"
+                                               FontSize="16" VerticalTextAlignment="Center"
+                                               FontAttributes="Bold" />
                                     </StackLayout>
                                     <BoxView HeightRequest="1" Grid.Column="1" Margin="40,10,0,5" 
                                             Color="{StaticResource SecondaryTextColor}"/>
                                     
                                     <StackLayout Orientation="Horizontal" Spacing="10">
                                         <Image Source="humidity.png" HeightRequest="30"
-                                           WidthRequest="30"/>
+                                               WidthRequest="30"/>
                                         <Label Text="{xct:Translate Humidity}" HorizontalOptions="StartAndExpand"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           TextColor="{StaticResource MainTextColor}" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Humidity, StringFormat='{0}%'}" 
-                                           TextColor="{StaticResource MainTextColor}"
-                                           FontSize="16" VerticalTextAlignment="Center"
-                                           FontAttributes="Bold"/>
+                                               FontSize="16" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Humidity, StringFormat='{0}%'}"
+                                               FontSize="16" VerticalTextAlignment="Center"
+                                               FontAttributes="Bold"/>
                                     </StackLayout>
 
                                 </StackLayout>
                             </Frame>
-                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
-                                   BackgroundColor="{StaticResource MainFrameColor}">
+                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start">
                                 <StackLayout>
-                                    <Label Text="{xct:Translate Wind}" TextColor="{StaticResource MainTextColor}"
-                                       FontSize="18"/>
+                                    <Label Text="{xct:Translate Wind}"
+                                           FontSize="18"/>
                                     <StackLayout Orientation="Horizontal" Spacing="0"
                                              Margin="0" Padding="0">
                                         <forms:AnimationView x:Name="AnimationView"
-                                                     Animation="lf30_editor_bij2hbab.json" 
                                                      AutoPlay="True"
                                                      RepeatMode="Infinite"
                                                      Margin="-15,-10"
@@ -281,7 +286,16 @@
                                                      VerticalOptions="StartAndExpand"
                                                      HorizontalOptions="StartAndExpand" 
                                                      WidthRequest="200"
-                                                     HeightRequest="150"/>
+                                                     HeightRequest="150">
+                                            <forms:AnimationView.Triggers>
+                                                <DataTrigger TargetType="forms:AnimationView" Binding="{Binding ThemeNumber}" Value="1">
+                                                    <Setter Property="Animation" Value="lf30_editor_v4lmein6.json"/>
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="forms:AnimationView" Binding="{Binding ThemeNumber}" Value="2">
+                                                    <Setter Property="Animation" Value="lf30_editor_bij2hbab.json"/>
+                                                </DataTrigger>                                                
+                                            </forms:AnimationView.Triggers>
+                                        </forms:AnimationView>
                                         <StackLayout Spacing="10" Padding="0" Margin="0"
                                                  Orientation="Horizontal"
                                                  HorizontalOptions="EndAndExpand"
@@ -291,18 +305,16 @@
                                                 <Label Text="{xct:Translate Speed}" TextColor="{StaticResource SecondaryTextColor}"/>
                                             </StackLayout>
                                             <StackLayout >
-                                                <Label Text="{Binding WindDirection.Localized}" TextColor="{StaticResource MainTextColor}"/>
-                                                <Label Text="{Binding WindSpeed, StringFormat='{0}km/h'}" TextColor="{StaticResource MainTextColor}"/>
+                                                <Label Text="{Binding WindDirection.Localized}"/>
+                                                <Label Text="{Binding WindSpeed, StringFormat='{0}km/h'}"/>
                                             </StackLayout>
                                         </StackLayout>
                                     </StackLayout>
                                 </StackLayout>
                             </Frame>
-                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start"
-                                   BackgroundColor="{StaticResource MainFrameColor}">
+                            <Frame CornerRadius="25" Margin="15,0,15,5" VerticalOptions="Start">
                                 <StackLayout>
-                                    <Label Text="{xct:Translate Rain}" TextColor="{StaticResource MainTextColor}"
-                                       FontSize="18" Margin="0, 0, 0, 5"/>
+                                    <Label Text="{xct:Translate Rain}" FontSize="18" Margin="0, 0, 0, 5"/>
                                     <graph:ChartView Chart="{Binding LineChart}"
                                                      HeightRequest="180"
                                                      VerticalOptions="Start"
@@ -325,16 +337,14 @@
             </coordinator:CoordinatorLayout.BottomView>
         </coordinator:CoordinatorLayout>
         <Label Text="&#xf0a37;" Style="{StaticResource MaterialIcons}" 
-               FontSize="25" VerticalOptions="Start" HorizontalOptions="Start" 
-               TextColor="{StaticResource MainTextColor}"
+               FontSize="25" VerticalOptions="Start" HorizontalOptions="Start"
                Margin="15,23">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding OpenCityManagementCommand}"/>
             </Label.GestureRecognizers>
         </Label>
         <Label Text="&#xf0493;" Style="{StaticResource MaterialIcons}" 
-               FontSize="25" VerticalOptions="Start" HorizontalOptions="End" 
-               TextColor="{StaticResource MainTextColor}"
+               FontSize="25" VerticalOptions="Start" HorizontalOptions="End"
                Margin="15,23">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding OpenParameterCommand}"/>

@@ -4,10 +4,15 @@
              x:Class="MeteoXamarinForms.App">
     <Application.Resources>
 
+        <Color x:Key="MainBackgroundColor">#f2f2f2</Color>
+        <Color x:Key="MainBackgroundColorDark">#010101</Color>
+        
+        <Color x:Key="MainFrameColorDark">#171717</Color>
+        <Color x:Key="MainFrameColor">#fafafa</Color>        
 
-        <Color x:Key="MainBackgroundColor">#010101</Color>
-        <Color x:Key="MainFrameColor">#171717</Color>
-        <Color x:Key="MainTextColor">#fafafa</Color>
+        <Color x:Key="MainTextColorDark">#fafafa</Color>
+        <Color x:Key="MainTextColor">#252525</Color>        
+        
         <Color x:Key="SecondaryTextColor">#999999</Color>
 
         <OnPlatform x:Key="Material" x:TypeArguments="x:String">
@@ -15,13 +20,26 @@
             <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
         </OnPlatform>
 
+               
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={x:StaticResource Key=MainTextColorDark}, Light={StaticResource Key=MainTextColor}}"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={x:StaticResource Key=MainTextColorDark}, Light={StaticResource Key=MainTextColor}}"/>
+        </Style>
+
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={x:StaticResource Key=MainFrameColorDark}, Light={StaticResource Key=MainFrameColor}}"/>
+        </Style>
+
         <Style TargetType="{x:Type Label}" x:Key="MaterialIcons">
             <Setter Property="FontFamily" Value="{StaticResource Material}"/>
             <Setter Property="FontSize" Value="100"/>
             <Setter Property="HorizontalOptions" Value="Center"/>
             <Setter Property="VerticalOptions" Value="EndAndExpand"/>
             <Setter Property="VerticalTextAlignment" Value="End"/>
-            <Setter Property="TextColor" Value="LightBlue"/>
+            <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Key=MainTextColor}, Dark={StaticResource Key=MainTextColorDark}}"/>
             <Setter Property="FontSize" Value="Large"/>
         </Style>
 
@@ -32,20 +50,6 @@
             <Setter Property="TextColor" Value="LightSkyBlue"/>
             <Setter Property="BackgroundColor" Value="Red"/>
             <Setter Property="FontSize" Value="30"/>
-        </Style>
-
-        <Style TargetType="Frame">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup>
-                        <VisualState x:Name="Selected">
-                            <VisualState.StateTriggers>
-                                
-                            </VisualState.StateTriggers>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
         </Style>
     </Application.Resources>
 </Application>

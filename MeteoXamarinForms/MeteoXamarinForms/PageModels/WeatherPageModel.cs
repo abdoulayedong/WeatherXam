@@ -19,6 +19,7 @@ using MeteoXamarinForms.Services;
 using Microcharts;
 using SkiaSharp;
 using System.Collections.Generic;
+using Xamarin.Forms.Internals;
 
 namespace MeteoXamarinForms.ViewModels
 {
@@ -63,10 +64,44 @@ namespace MeteoXamarinForms.ViewModels
                 });
 
             IsSpanish = Preferences.Get("Language", "en") == "es" ? true : false;
+
+            Application.Current.RequestedThemeChanged += (sender, args) =>
+            {
+                dynamic backgroundColor;
+                dynamic valueLabelColor;
+                if (args.RequestedTheme == OSAppTheme.Light)
+                {
+                    backgroundColor = Application.Current.Resources["MainFrameColor"];
+                    valueLabelColor = Application.Current.Resources["MainFrameColorDark"];
+                }
+                else
+                {
+                    backgroundColor = Application.Current.Resources["MainFrameColorDark"];
+                    valueLabelColor = Application.Current.Resources["MainFrameColor"];
+                }
+
+                ThemeNumber = args.RequestedTheme == OSAppTheme.Light ? 1 : 2;
+
+                Color myBackgroundColor = Color.FromRgba(backgroundColor.R, backgroundColor.G, backgroundColor.B, backgroundColor.A);
+                Color myValueLabelColor = Color.FromRgba(valueLabelColor.R, valueLabelColor.G, valueLabelColor.B, valueLabelColor.A);
+                string hexBackgroundColor = myBackgroundColor.ToHex();
+                string hexValueLabelColor = myValueLabelColor.ToHex();
+
+                LineChart.BackgroundColor = SKColor.Parse(hexBackgroundColor);
+                LineChart.Entries.ForEach(entry => entry.ValueLabelColor = SKColor.Parse(hexValueLabelColor));
+            };
         }
         #endregion
 
         #region Properties
+        private int _themeNumber = Application.Current.RequestedTheme == OSAppTheme.Light ? 1 : 2;
+
+        public int ThemeNumber
+        {
+            get => _themeNumber; 
+            set => SetProperty (ref _themeNumber, value); 
+        }
+
         private LineChart lineChart;
         public LineChart LineChart 
         { 
@@ -336,7 +371,6 @@ namespace MeteoXamarinForms.ViewModels
                 LabelTextSize = 30f, 
                 LabelOrientation = Orientation.Horizontal, 
                 ValueLabelOrientation = Orientation.Vertical,
-                BackgroundColor = SKColor.Parse("#171717"),
                 LabelColor = SKColor.Parse("#999999"),
                 PointSize = 20,
             };

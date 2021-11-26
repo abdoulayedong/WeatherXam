@@ -225,6 +225,12 @@
   <data name="Search" xml:space="preserve">
     <value>Investigación</value>
   </data>
+  <data name="SearchErrorMessage" xml:space="preserve">
+    <value>No se encuentra la ubicación</value>
+  </data>
+  <data name="SearchMessage" xml:space="preserve">
+    <value>Introduzca un nombre de ubicación</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Parámetros</value>
   </data>

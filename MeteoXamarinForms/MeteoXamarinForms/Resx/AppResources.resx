@@ -225,6 +225,12 @@
   <data name="Search" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="SearchErrorMessage" xml:space="preserve">
+    <value>Location is not found</value>
+  </data>
+  <data name="SearchMessage" xml:space="preserve">
+    <value>Enter a location name</value>
+  </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
   </data>

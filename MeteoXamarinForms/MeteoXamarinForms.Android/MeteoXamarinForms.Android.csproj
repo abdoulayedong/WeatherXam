@@ -100,6 +100,7 @@
     <AndroidAsset Include="Assets\lf30_editor_bij2hbab.json" />
     <AndroidAsset Include="Assets\61302-weather-icon.json" />
     <AndroidAsset Include="Assets\materialdesignicons-webfont.ttf" />
+    <AndroidAsset Include="Assets\lf30_editor_v4lmein6.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

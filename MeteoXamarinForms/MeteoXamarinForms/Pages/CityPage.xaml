@@ -5,15 +5,17 @@
              NavigationPage.HasNavigationBar="False"
              xmlns:local="clr-namespace:MeteoXamarinForms.PageModels"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             BackgroundColor="{StaticResource MainBackgroundColor}">
+             BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColor}, Dark={StaticResource MainBackgroundColorDark}}">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="{xct:Translate ManageCities}"
-                   TextColor="{StaticResource MainTextColor}"
+                   TextColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}"
                    FontSize="20" FontAttributes="Bold"
                    Margin="16,14.5"/>
             <RefreshView IsRefreshing="{Binding IsRefreshing}"
-                         Command="{Binding ActualizeAllDataCommand}">
+                         Command="{Binding ActualizeAllDataCommand}"
+                         RefreshColor="{AppThemeBinding Light={StaticResource MainTextColor}, Dark={StaticResource MainTextColorDark}}"
+                         BackgroundColor="{AppThemeBinding Light={StaticResource MainTextColorDark}, Dark={StaticResource MainTextColor}}">
                 <CollectionView ItemsSource="{Binding CitiesWeather}" 
                                 SelectionMode="Single"
                                 x:Name="Cities" 
@@ -44,10 +46,8 @@
                                                 <Label Text="&#xf0a7a;" Style="{StaticResource MaterialIcons}" 
                                                    FontSize="25" VerticalOptions="CenterAndExpand"
                                                    HorizontalOptions="CenterAndExpand"
-                                                   TextColor="{StaticResource MainTextColor}"
                                                    Margin="0"/>
                                                 <Label Text="{xct:Translate Delete}"
-                                                   TextColor="{StaticResource MainTextColor}"
                                                    HorizontalOptions="CenterAndExpand"
                                                    LineBreakMode="TailTruncation"
                                                    FontSize="16"/>
@@ -55,32 +55,17 @@
                                         </SwipeItemView>
                                     </SwipeItems>
                                 </SwipeView.RightItems>
-                                <Frame Padding="10" CornerRadius="20" BackgroundColor="{StaticResource MainFrameColor}"
+                                <Frame Padding="10" CornerRadius="20" BackgroundColor="{AppThemeBinding Dark={StaticResource MainFrameColorDark}, Light={StaticResource MainFrameColor}}"
                                        Margin="0,5">
-                                    <!--<Frame.GestureRecognizers>
-                                        <DragGestureRecognizer CanDrag="True"
-                                                               DragStarting="DragGestureRecognizer_DragStarting"
-                                                               DragStartingCommand="{Binding BindingContext.ItemDragged, Source={x:Reference Cities}}"
-                                                               DragStartingCommandParameter="{Binding}"/>
-                                        <DropGestureRecognizer AllowDrop="True"
-                                                               Drop="DropGestureRecognizer_Drop_Collection"
-                                                               DragLeaveCommand="{Binding BindingContext.ItemDragLeave, Source={x:Reference Cities}}"
-                                                               DragLeaveCommandParameter="{Binding}"
-                                                               DragOverCommand="{Binding BindingContext.ItemDraggedOver, Source={x:Reference Cities}}"
-                                                               DragOverCommandParameter="{Binding}"
-                                                               DropCommand="{Binding BindingContext.ItemDropped, Source={x:Reference Cities}}"
-                                                               DropCommandParameter="{Binding}"/>
-                                    </Frame.GestureRecognizers>-->
                                     <StackLayout Orientation="Horizontal" 
                                                         Padding="10">
                                         <StackLayout Spacing="0">
                                             <StackLayout Orientation="Horizontal">
                                                 <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" 
-                                                       FontSize="20" VerticalOptions="Center" TextColor="{StaticResource MainTextColor}"/>
+                                                       FontSize="20" VerticalOptions="Center"/>
                                                 <Label Text="{Binding City}"
                                                        FontSize="22"
-                                                       VerticalTextAlignment="Center"
-                                                       TextColor="{StaticResource MainTextColor}"/>
+                                                       VerticalTextAlignment="Center"/>
                                             </StackLayout>
                                             <Label Text="{Binding Country}"
                                                        TextColor="{StaticResource SecondaryTextColor}" FontSize="10"/>
@@ -94,8 +79,7 @@
                                                 <Image Source="{Binding Icon}" HeightRequest="50"
                                                            WidthRequest="50" VerticalOptions="CenterAndExpand"/>
                                                 <Label Text="{Binding Path=Temperature,StringFormat='{0}°'}"
-                                                            FontSize="30" HorizontalTextAlignment="End"
-                                                            TextColor="{StaticResource MainTextColor}"/>
+                                                            FontSize="30" HorizontalTextAlignment="End"/>
                                             </StackLayout>
                                             <Label Text="{Binding Description}" HorizontalOptions="EndAndExpand"
                                                        TextColor="{StaticResource SecondaryTextColor}"
@@ -109,49 +93,49 @@
                 </CollectionView>
             </RefreshView>
             <Frame HorizontalOptions="Center" CornerRadius="50" Padding="0"
-                   BackgroundColor="{StaticResource MainFrameColor}"
+                   BackgroundColor="{AppThemeBinding Dark={StaticResource MainFrameColorDark}, Light={StaticResource MainFrameColor}}"
                    Margin="10">
                 <StackLayout Margin="0" Spacing="0" Padding="0" Orientation="Horizontal">
                     <Button ContentLayout="Top, -10" TextTransform="None" Padding="0"
                             Margin="0,5,-5,0"
-                            Opacity="0.85" TextColor="{StaticResource MainTextColor}"
+                            Opacity="0.85"
                             BackgroundColor="Transparent"
                             Text="{xct:Translate AddCity}" FontSize="10"
                             Command="{Binding AddWeatherInformationCommand}">
                             <Button.ImageSource>
-                                <FontImageSource Color="{StaticResource MainTextColor}" Glyph="&#xf0415;" FontFamily="MaterialDesign" Size="25"/>
+                                <FontImageSource Color="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}" Glyph="&#xf0415;" FontFamily="MaterialDesign" Size="25"/>
                             </Button.ImageSource>
                         <Button.Triggers>
                             <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="es">
-                                <Setter Property="WidthRequest" Value="115"/>
+                                <Setter Property="WidthRequest" Value="105"/>
                             </DataTrigger>
                             <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="en">
-                                <Setter Property="WidthRequest" Value="80"/>
+                                <Setter Property="WidthRequest" Value="60"/>
                             </DataTrigger>
                             <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="fr">
-                                <Setter Property="WidthRequest" Value="110"/>
+                                <Setter Property="WidthRequest" Value="95"/>
                             </DataTrigger>
                         </Button.Triggers>
                     </Button>
-                    <BoxView HeightRequest="10" BackgroundColor="{StaticResource MainBackgroundColor}"
+                    <BoxView Margin="0,5" BackgroundColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}"
                              WidthRequest="1"/>
                     <Button ContentLayout="Top, -10" TextTransform="None" Padding="0"
                             Margin="0,5,10,0"
-                            Opacity="0.85" TextColor="{StaticResource MainTextColor}"
+                            Opacity="0.85"
                             BackgroundColor="Transparent"
                             Text="{xct:Translate Widget}" FontSize="10">
                             <Button.ImageSource>
-                                <FontImageSource Color="{StaticResource MainTextColor}" Glyph="&#xf1355;" FontFamily="MaterialDesign" Size="25"/>
+                            <FontImageSource Color="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}" Glyph="&#xf1355;" FontFamily="MaterialDesign" Size="25"/>
                             </Button.ImageSource>
                             <Button.Triggers>
                                 <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="es">
-                                    <Setter Property="WidthRequest" Value="120"/>
+                                    <Setter Property="WidthRequest" Value="110"/>
                                 </DataTrigger>
                                 <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="en">
-                                    <Setter Property="WidthRequest" Value="90"/>
+                                    <Setter Property="WidthRequest" Value="80"/>
                                 </DataTrigger>
                                 <DataTrigger TargetType="Button" Binding="{Binding AddCityButtonWidth}" Value="fr">
-                                    <Setter Property="WidthRequest" Value="80"/>
+                                    <Setter Property="WidthRequest" Value="75"/>
                                 </DataTrigger>
                             </Button.Triggers>
                     </Button>

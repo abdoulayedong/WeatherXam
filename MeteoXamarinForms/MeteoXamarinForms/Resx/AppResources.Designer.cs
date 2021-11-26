@@ -385,6 +385,24 @@ namespace MeteoXamarinForms.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Location is not found.
+        /// </summary>
+        internal static string SearchErrorMessage {
+            get {
+                return ResourceManager.GetString("SearchErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter a location name.
+        /// </summary>
+        internal static string SearchMessage {
+            get {
+                return ResourceManager.GetString("SearchMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string Settings {
