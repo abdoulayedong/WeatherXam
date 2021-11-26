@@ -31,8 +31,8 @@ Features include:
 
 ## Home Screen
 <p align="center">
-  <img src="/Images/main.jpg" width="60%" />
-  <img src="/Images/DynamicTheme.jpg" width="60%" />
+  <img src="/Images/Dark.jpg" width="60%" />
+  <img src="/Images/Light.jpg" width="60%" />
 </p>
 
 ## Manage cities
