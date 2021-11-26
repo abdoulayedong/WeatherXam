@@ -67,28 +67,9 @@ namespace MeteoXamarinForms.ViewModels
 
             Application.Current.RequestedThemeChanged += (sender, args) =>
             {
-                dynamic backgroundColor;
-                dynamic valueLabelColor;
-                if (args.RequestedTheme == OSAppTheme.Light)
-                {
-                    backgroundColor = Application.Current.Resources["MainFrameColor"];
-                    valueLabelColor = Application.Current.Resources["MainFrameColorDark"];
-                }
-                else
-                {
-                    backgroundColor = Application.Current.Resources["MainFrameColorDark"];
-                    valueLabelColor = Application.Current.Resources["MainFrameColor"];
-                }
-
-                ThemeNumber = args.RequestedTheme == OSAppTheme.Light ? 1 : 2;
-
-                Color myBackgroundColor = Color.FromRgba(backgroundColor.R, backgroundColor.G, backgroundColor.B, backgroundColor.A);
-                Color myValueLabelColor = Color.FromRgba(valueLabelColor.R, valueLabelColor.G, valueLabelColor.B, valueLabelColor.A);
-                string hexBackgroundColor = myBackgroundColor.ToHex();
-                string hexValueLabelColor = myValueLabelColor.ToHex();
-
-                LineChart.BackgroundColor = SKColor.Parse(hexBackgroundColor);
-                LineChart.Entries.ForEach(entry => entry.ValueLabelColor = SKColor.Parse(hexValueLabelColor));
+                dynamic result = ThemeEvaluation(args);
+                LineChart.BackgroundColor = SKColor.Parse(result.hexBackgroundColor);
+                LineChart.Entries.ForEach(entry => entry.ValueLabelColor = SKColor.Parse(result.hexValueLabelColor));
             };
         }
         #endregion
@@ -268,7 +249,31 @@ namespace MeteoXamarinForms.ViewModels
         }
 #endregion
 
-#region Methods
+        #region Methods
+        private dynamic ThemeEvaluation(dynamic theme)
+        {
+            dynamic backgroundColor;
+            dynamic valueLabelColor;
+            if (theme.RequestedTheme == OSAppTheme.Light)
+            {
+                backgroundColor = Application.Current.Resources["MainFrameColor"];
+                valueLabelColor = Application.Current.Resources["MainFrameColorDark"];
+            }
+            else
+            {
+                backgroundColor = Application.Current.Resources["MainFrameColorDark"];
+                valueLabelColor = Application.Current.Resources["MainFrameColor"];
+            }
+
+            ThemeNumber = theme.RequestedTheme == OSAppTheme.Light ? 1 : 2;
+
+            Color myBackgroundColor = Color.FromRgba(backgroundColor.R, backgroundColor.G, backgroundColor.B, backgroundColor.A);
+            Color myValueLabelColor = Color.FromRgba(valueLabelColor.R, valueLabelColor.G, valueLabelColor.B, valueLabelColor.A);
+            string hexBackgroundColor = myBackgroundColor.ToHex();
+            string hexValueLabelColor = myValueLabelColor.ToHex();
+            return new { hexBackgroundColor,  hexValueLabelColor };
+        } 
+
         private async Task Update()
         {
             try
@@ -330,6 +335,7 @@ namespace MeteoXamarinForms.ViewModels
 
             // Daily weather
             DayPrevisions = new ();
+            dynamic result = ThemeEvaluation(Application.Current);
             var turnoverEntries = new List<ChartEntry>();
             for (int i = 0; i < 7; i++)
             {
@@ -359,16 +365,17 @@ namespace MeteoXamarinForms.ViewModels
                     Color = orangeColor,
                     Label = dayPrevision.DaysOfWeek.Localized.Substring(0,3),
                     ValueLabel = $"{data } mm",
-                    ValueLabelColor = SKColor.Parse("#fafafa")
+                    ValueLabelColor = SKColor.Parse(result.hexValueLabelColor)
                 });
 
                 DayPrevisions.Add(dayPrevision);
             }
 
-            LineChart = new LineChart { 
-                Entries = turnoverEntries, 
-                IsAnimated = true, 
-                LabelTextSize = 30f, 
+            LineChart = new LineChart {
+                Entries = turnoverEntries,
+                IsAnimated = true,
+                LabelTextSize = 30f,
+                BackgroundColor = SKColor.Parse(result.hexBackgroundColor),
                 LabelOrientation = Orientation.Horizontal, 
                 ValueLabelOrientation = Orientation.Vertical,
                 LabelColor = SKColor.Parse("#999999"),
@@ -402,24 +409,9 @@ namespace MeteoXamarinForms.ViewModels
                 await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
             }
         }
-        //private void InitGraphic()
-        //{
-        //    var turnoverEntries = new List<ChartEntry>();
-        //    for(int i = 0; i < 7 ; i++)
-        //    {
-                
-        //    }
-        //    foreach (var temp in Temperatures)
-        //    {
-        //        turnoverEntries.Add(new ChartEntry(temp)
-        //        {
+        #endregion
 
-        //        });
-        //    }
-        //}
-#endregion
-
-#region Override Methods
+        #region Override Methods
         public async override void Init(object initData)
         {
             Weather = initData as Root;
@@ -463,6 +455,7 @@ namespace MeteoXamarinForms.ViewModels
                 SetUiData();
         }
         #endregion
+
         #region Commands
         public ICommand DailyDetailCommand { private set; get; }
         public ICommand AddWeatherInformationCommand { private set; get; }
@@ -470,6 +463,6 @@ namespace MeteoXamarinForms.ViewModels
         public ICommand OpenParameterCommand { private set; get; }
         public ICommand ActualizeDataCommand { private set; get; }
         public ICommand BackPressCommand => new Command(BackPressMethod);
-#endregion
+        #endregion
     }
 }
