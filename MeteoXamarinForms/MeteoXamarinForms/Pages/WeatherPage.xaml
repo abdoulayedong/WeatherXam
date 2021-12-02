@@ -20,22 +20,25 @@
         <coordinator:CoordinatorLayout x:Name="coordinator"
                                        InitialExpansionState="Expanded"
                                        ExpansionEventHandler="OnCoordinatorLayoutOnExpansionEventHandler"
-                                       ScrollEventHandler="OnCoordinatorLayoutOnScrollEventHandler"
+                                       ShouldSnap="true"
+                                       ShouldKineticScroll="true"
+                                       ShouldExpandFromKineticScroll="true"
                                        ProportionalTopViewHeightMax="0.25"
-                                       ShouldSnap="True"
+                                       ProportionalSnapHeight="0.20"
                                        ProportionalTopViewHeightMin="0.08">
             <coordinator:CoordinatorLayout.TopView >
                 <Grid>                    
                     <Image x:Name="BackImage" 
                            Margin="0,0"
+                           Opacity="0"
                            Grid.Column="0"
                            Grid.ColumnSpan="3"
                            Source="weather2.jpg" 
-                           Aspect="AspectFill"
-                           HeightRequest="100"/>
+                           Aspect="AspectFill"/>
 
                     <BoxView Grid.ColumnSpan="3"
-                             Opacity="1">
+                             Opacity="0"
+                             x:Name="BackImageShadow">
                         <BoxView.Triggers>
                             <DataTrigger TargetType="BoxView" Binding="{Binding ThemeNumber}" Value="1">
                                 <Setter Property="Background">
@@ -62,14 +65,6 @@
                                 </Setter>
                             </DataTrigger>
                         </BoxView.Triggers>
-                        <!--<BoxView.Background>
-                            <LinearGradientBrush EndPoint="0,1">
-                                <GradientStop Color="Transparent"
-                                              Offset="0.1" />
-                                <GradientStop Color="Black"
-                                              Offset="1.0" />
-                            </LinearGradientBrush>
-                        </BoxView.Background>-->
                     </BoxView>
 
                     <Label x:Name="MainTitle" 
@@ -77,17 +72,17 @@
                            Grid.Column="0"
                            Grid.ColumnSpan="3"
                            TextTransform="None"
-                           Opacity="0.5"
+                           Opacity="0"
                            HorizontalOptions="CenterAndExpand"
                            VerticalOptions="CenterAndExpand"
                            Margin="20">
                         <Label.Triggers>
                             <DataTrigger TargetType="Label" Binding="{Binding IsSpanish}"
-                                         Value="True">
+                                             Value="True">
                                 <Setter Property="FontSize" Value="32"/>
                             </DataTrigger>
                             <DataTrigger TargetType="Label" Binding="{Binding IsSpanish}"
-                                         Value="False">
+                                             Value="False">
                                 <Setter Property="FontSize" Value="38"/>
                             </DataTrigger>
                         </Label.Triggers>
@@ -109,14 +104,13 @@
             <coordinator:CoordinatorLayout.BottomView>
                 <RefreshView IsRefreshing="{Binding IsRefreshing}"
                              Command="{Binding ActualizeDataCommand}">
-                    <ScrollView>
                         <StackLayout>
                             <Frame CornerRadius="25" Margin="15,10,15,5 " VerticalOptions="Start">
                                 <Grid RowDefinitions="auto, auto, auto"
                                   RowSpacing="10">
                                     <StackLayout Spacing="0" Grid.Row="0">
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" 
-                                                     x:Name="LocationTitle">
+                                                     x:Name="LocationTitle" Opacity="{Binding Source={x:Reference coordinator}, Path=ExpansionProgress}">
                                             <Label IsVisible="{Binding IsLocalPosition}" Text="&#xf034e;" Style="{StaticResource MaterialIcons}" FontSize="20" VerticalOptions="Center"/>
                                             <Label Text="{Binding CityName}" FontSize="24"/>
                                         </StackLayout>
@@ -150,8 +144,7 @@
                                     </StackLayout>
                                     <CollectionView ItemsSource="{Binding HourPrevisions}" Grid.Row="2"
                                         SelectionMode="None" ItemSizingStrategy="MeasureAllItems" 
-                                        ItemsLayout="HorizontalList" HeightRequest="125"
-                                        VerticalScrollBarVisibility="Never" TabIndex="2">
+                                        ItemsLayout="HorizontalList" HeightRequest="125">
                                         <CollectionView.ItemTemplate>
                                             <DataTemplate>
                                                 <StackLayout HorizontalOptions="FillAndExpand" WidthRequest="60" Spacing="2" Margin="0,0,10,0">
@@ -332,7 +325,6 @@
                                    FontSize="13" Margin="5,0" VerticalTextAlignment="Center"/>
                             </StackLayout>
                         </StackLayout>
-                    </ScrollView>
                 </RefreshView>
             </coordinator:CoordinatorLayout.BottomView>
         </coordinator:CoordinatorLayout>

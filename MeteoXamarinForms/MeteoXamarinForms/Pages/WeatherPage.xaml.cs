@@ -22,34 +22,22 @@ namespace MeteoXamarinForms.Pages
         }
 
         private void OnCoordinatorLayoutOnExpansionEventHandler(object sender, ExpansionEventArgs e)
-        {
-            if (BackImage != null)
-            {
-                BackImage.Opacity = e.Progress;
-            }
+        {    
+            
+            BackImage.Opacity = e.Progress;
+            BackImageShadow.Opacity = e.Progress;
+            MainTitle.Opacity = e.Progress;
 
-            if (MainTitle != null)
-            {
-                MainTitle.Opacity = e.Progress;
-            }
+            SecondaryTitle.Opacity = 1.0 - e.Progress;
 
-            if (SecondaryTitle != null)
+            if(e.Progress == 0)
             {
-                if (e.Progress > 0.2f)
-                {
-                    SecondaryTitle.Opacity = 0.0f;
-                    LocationTitle.IsVisible = true;
-                }
-                else
-                {
-                    SecondaryTitle.Opacity = (0.2f - e.Progress) / 0.2f;
-                    LocationTitle.IsVisible = false;
-                }
+                LocationTitle.IsVisible = false;
             }
-        }
-
-        private void OnCoordinatorLayoutOnScrollEventHandler(object sender, ScrollEventArgs e)
-        {
+            else
+            {
+                LocationTitle.IsVisible = true;
+            }
         }
     }
 }
