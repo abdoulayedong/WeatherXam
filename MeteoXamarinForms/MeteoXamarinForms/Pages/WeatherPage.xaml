@@ -330,14 +330,14 @@
         </coordinator:CoordinatorLayout>
         <Label Text="&#xf0a37;" Style="{StaticResource MaterialIcons}" 
                FontSize="25" VerticalOptions="Start" HorizontalOptions="Start"
-               Margin="15,23" IsEnabled="{Binding IsNavigate}">
+               Margin="15,23">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding OpenCityManagementCommand}"/>
             </Label.GestureRecognizers>
         </Label>
         <Label Text="&#xf0493;" Style="{StaticResource MaterialIcons}" 
                FontSize="25" VerticalOptions="Start" HorizontalOptions="End"
-               Margin="15,23" IsEnabled="{Binding IsNavigate}">
+               Margin="15,23">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding OpenParameterCommand}"/>
             </Label.GestureRecognizers>

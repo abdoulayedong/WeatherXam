@@ -29,7 +29,7 @@ namespace MeteoXamarinForms.ViewModels
         public WeatherPageModel()
         {
             _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
-            IsNavigate = true;
+
             DailyDetailCommand = new Command<DayPrevision>(
             async (DayPrevision dayPrevision) =>
             {
@@ -46,17 +46,13 @@ namespace MeteoXamarinForms.ViewModels
             OpenCityManagementCommand = new Command(
                 async () =>
                 {
-                    IsNavigate = false;
-                    await CoreMethods.PushPageModel<CityPageModel>(data: true);
-                    IsNavigate = true;
+                    await CoreMethods.PushPageModel<CityPageModel>(data: true, animate: false);
                 });
 
             OpenParameterCommand = new Command(
                 async () =>
                 {
-                    IsNavigate = false;
-                    await CoreMethods.PushPageModel<SettingPageModel>();
-                    IsNavigate = true;
+                    await CoreMethods.PushPageModel<SettingPageModel>(animate: false);
                 });
 
             ActualizeDataCommand = new Command(
@@ -115,13 +111,6 @@ namespace MeteoXamarinForms.ViewModels
         {
             get { return _isLocalPosition; }
             set => SetProperty(ref _isLocalPosition, value);
-        }
-
-        private bool _isNavigate;
-        public bool IsNavigate
-        {
-            get { return _isNavigate; }
-            set => SetProperty(ref _isNavigate, value);
         }
 
         private int _rotationDegree;
