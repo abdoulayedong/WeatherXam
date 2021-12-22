@@ -56,7 +56,7 @@ namespace MeteoXamarinForms.PageModels
             ShowAboutPageCommand = new Command(
                 async() =>
                 {
-                    await CoreMethods.PushPageModel<AboutPageModel>(animate: false);
+                    await CoreMethods.PushPageModel<AboutPageModel>();
                 });
 
             TemperatureUnit = Preferences.Get("Unit", "°C");

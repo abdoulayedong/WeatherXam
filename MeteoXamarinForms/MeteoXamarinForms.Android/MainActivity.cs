@@ -16,6 +16,7 @@ namespace MeteoXamarinForms.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            FormsControls.Droid.Main.Init(this);
             LoadApplication(new App());
             App.Current.On<Xamarin.Forms.PlatformConfiguration.Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
         }

@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using MeteoXamarinForms.Profiles;
 using System.Collections.Generic;
 using System.Globalization;
+using FormsControls.Base;
 
 namespace MeteoXamarinForms
 {
@@ -55,7 +56,7 @@ namespace MeteoXamarinForms
                     BarBackground = Brush.Black,
                     BarTextColor = Color.White
                 };
-                MainPage = navigationPage;
+                MainPage = new AnimationNavigationPage(navigationPage);
             }
             else
             {

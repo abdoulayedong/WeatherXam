@@ -2665,6 +2665,2741 @@ namespace MeteoXamarinForms.Droid
 			global::CoordinatorLayout.XamarinForms.Resource.Styleable.View_paddingEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.View_paddingEnd;
 			global::CoordinatorLayout.XamarinForms.Resource.Styleable.View_paddingStart = global::MeteoXamarinForms.Droid.Resource.Styleable.View_paddingStart;
 			global::CoordinatorLayout.XamarinForms.Resource.Styleable.View_theme = global::MeteoXamarinForms.Droid.Resource.Styleable.View_theme;
+			global::FormsControls.Droid.Resource.Animation.abc_fade_in = global::MeteoXamarinForms.Droid.Resource.Animation.abc_fade_in;
+			global::FormsControls.Droid.Resource.Animation.abc_fade_out = global::MeteoXamarinForms.Droid.Resource.Animation.abc_fade_out;
+			global::FormsControls.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::FormsControls.Droid.Resource.Animation.abc_popup_enter = global::MeteoXamarinForms.Droid.Resource.Animation.abc_popup_enter;
+			global::FormsControls.Droid.Resource.Animation.abc_popup_exit = global::MeteoXamarinForms.Droid.Resource.Animation.abc_popup_exit;
+			global::FormsControls.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::FormsControls.Droid.Resource.Animation.abc_slide_in_bottom = global::MeteoXamarinForms.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::FormsControls.Droid.Resource.Animation.abc_slide_in_top = global::MeteoXamarinForms.Droid.Resource.Animation.abc_slide_in_top;
+			global::FormsControls.Droid.Resource.Animation.abc_slide_out_bottom = global::MeteoXamarinForms.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::FormsControls.Droid.Resource.Animation.abc_slide_out_top = global::MeteoXamarinForms.Droid.Resource.Animation.abc_slide_out_top;
+			global::FormsControls.Droid.Resource.Animation.abc_tooltip_enter = global::MeteoXamarinForms.Droid.Resource.Animation.abc_tooltip_enter;
+			global::FormsControls.Droid.Resource.Animation.abc_tooltip_exit = global::MeteoXamarinForms.Droid.Resource.Animation.abc_tooltip_exit;
+			global::FormsControls.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::MeteoXamarinForms.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::FormsControls.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::MeteoXamarinForms.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::FormsControls.Droid.Resource.Animation.design_snackbar_in = global::MeteoXamarinForms.Droid.Resource.Animation.design_snackbar_in;
+			global::FormsControls.Droid.Resource.Animation.design_snackbar_out = global::MeteoXamarinForms.Droid.Resource.Animation.design_snackbar_out;
+			global::FormsControls.Droid.Resource.Animation.EnterFromLeft = global::MeteoXamarinForms.Droid.Resource.Animation.EnterFromLeft;
+			global::FormsControls.Droid.Resource.Animation.EnterFromRight = global::MeteoXamarinForms.Droid.Resource.Animation.EnterFromRight;
+			global::FormsControls.Droid.Resource.Animation.ExitToLeft = global::MeteoXamarinForms.Droid.Resource.Animation.ExitToLeft;
+			global::FormsControls.Droid.Resource.Animation.ExitToRight = global::MeteoXamarinForms.Droid.Resource.Animation.ExitToRight;
+			global::FormsControls.Droid.Resource.Animator.design_appbar_state_list_animator = global::MeteoXamarinForms.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::FormsControls.Droid.Resource.Animator.design_fab_hide_motion_spec = global::MeteoXamarinForms.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::FormsControls.Droid.Resource.Animator.design_fab_show_motion_spec = global::MeteoXamarinForms.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::FormsControls.Droid.Resource.Animator.empty_Animation = global::MeteoXamarinForms.Droid.Resource.Animator.empty_Animation;
+			global::FormsControls.Droid.Resource.Animator.empty_Animation_long = global::MeteoXamarinForms.Droid.Resource.Animator.empty_Animation_long;
+			global::FormsControls.Droid.Resource.Animator.empty_Animation_short = global::MeteoXamarinForms.Droid.Resource.Animator.empty_Animation_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_bottom_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_left_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_right_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_from_top_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_bottom_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_left_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_right_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_from_top_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_long;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_short;
+			global::FormsControls.Droid.Resource.Animator.enter_landing_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_landing_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_bottom_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_left_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_right_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_roll_from_top_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_roll_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_bottom_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_left_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_right_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_from_top_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_long;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_short;
+			global::FormsControls.Droid.Resource.Animator.enter_rotate_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_rotate_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_bottom_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_left;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_left_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_right;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_right_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_top;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_from_top_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_from_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_long = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_long;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_short = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_short;
+			global::FormsControls.Droid.Resource.Animator.enter_scale_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.enter_scale_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_landing = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_left = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_left;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_right = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_right;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_top = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_top;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_from_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_long;
+			global::FormsControls.Droid.Resource.Animator.exit_landing_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_landing_short;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_left = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_left;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_right = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_right;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_top = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_top;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_roll_to_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_roll_to_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_left = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_left;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_right = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_right;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_top = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_top;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_rotate_to_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_rotate_to_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_left = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_left;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_right = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_right;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_top = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_top;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_from_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_from_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_long;
+			global::FormsControls.Droid.Resource.Animator.exit_scale_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_scale_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_bottom;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_bottom_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_bottom_long;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_bottom_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_bottom_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_bottom_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_bottom_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_left;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_left_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_left_long;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_left_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_left_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_left_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_left_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_right;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_right_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_right_long;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_right_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_right_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_right_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_right_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_top;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_top_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_long = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_top_long;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_long_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_top_long_bounce;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_short = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_top_short;
+			global::FormsControls.Droid.Resource.Animator.exit_to_top_short_bounce = global::MeteoXamarinForms.Droid.Resource.Animator.exit_to_top_short_bounce;
+			global::FormsControls.Droid.Resource.Animator.mtrl_btn_state_list_anim = global::MeteoXamarinForms.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::FormsControls.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::MeteoXamarinForms.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::FormsControls.Droid.Resource.Animator.mtrl_chip_state_list_anim = global::MeteoXamarinForms.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::FormsControls.Droid.Resource.Animator.mtrl_fab_hide_motion_spec = global::MeteoXamarinForms.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::FormsControls.Droid.Resource.Animator.mtrl_fab_show_motion_spec = global::MeteoXamarinForms.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::FormsControls.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::MeteoXamarinForms.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::FormsControls.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::MeteoXamarinForms.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::FormsControls.Droid.Resource.Attribute.actionBarDivider = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarDivider;
+			global::FormsControls.Droid.Resource.Attribute.actionBarItemBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarItemBackground;
+			global::FormsControls.Droid.Resource.Attribute.actionBarPopupTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::FormsControls.Droid.Resource.Attribute.actionBarSize = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarSize;
+			global::FormsControls.Droid.Resource.Attribute.actionBarSplitStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarTabBarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarTabStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarTabStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarTabTextStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionBarTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarTheme;
+			global::FormsControls.Droid.Resource.Attribute.actionBarWidgetTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::FormsControls.Droid.Resource.Attribute.actionButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionDropDownStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionDropDownStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.actionLayout;
+			global::FormsControls.Droid.Resource.Attribute.actionMenuTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.actionMenuTextColor = global::MeteoXamarinForms.Droid.Resource.Attribute.actionMenuTextColor;
+			global::FormsControls.Droid.Resource.Attribute.actionModeBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeBackground;
+			global::FormsControls.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionModeCloseDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeCopyDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeCutDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeFindDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModePasteDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModePopupWindowStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeShareDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionModeSplitBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::FormsControls.Droid.Resource.Attribute.actionModeStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::FormsControls.Droid.Resource.Attribute.actionOverflowButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionOverflowMenuStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::FormsControls.Droid.Resource.Attribute.actionProviderClass = global::MeteoXamarinForms.Droid.Resource.Attribute.actionProviderClass;
+			global::FormsControls.Droid.Resource.Attribute.actionViewClass = global::MeteoXamarinForms.Droid.Resource.Attribute.actionViewClass;
+			global::FormsControls.Droid.Resource.Attribute.activityChooserViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::FormsControls.Droid.Resource.Attribute.alertDialogCenterButtons = global::MeteoXamarinForms.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::FormsControls.Droid.Resource.Attribute.alertDialogStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.alertDialogStyle;
+			global::FormsControls.Droid.Resource.Attribute.alertDialogTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.alertDialogTheme;
+			global::FormsControls.Droid.Resource.Attribute.allowStacking = global::MeteoXamarinForms.Droid.Resource.Attribute.allowStacking;
+			global::FormsControls.Droid.Resource.Attribute.alpha = global::MeteoXamarinForms.Droid.Resource.Attribute.alpha;
+			global::FormsControls.Droid.Resource.Attribute.alphabeticModifiers = global::MeteoXamarinForms.Droid.Resource.Attribute.alphabeticModifiers;
+			global::FormsControls.Droid.Resource.Attribute.arrowHeadLength = global::MeteoXamarinForms.Droid.Resource.Attribute.arrowHeadLength;
+			global::FormsControls.Droid.Resource.Attribute.arrowShaftLength = global::MeteoXamarinForms.Droid.Resource.Attribute.arrowShaftLength;
+			global::FormsControls.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.autoSizeMaxTextSize = global::MeteoXamarinForms.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::FormsControls.Droid.Resource.Attribute.autoSizeMinTextSize = global::MeteoXamarinForms.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::FormsControls.Droid.Resource.Attribute.autoSizePresetSizes = global::MeteoXamarinForms.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::FormsControls.Droid.Resource.Attribute.autoSizeStepGranularity = global::MeteoXamarinForms.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::FormsControls.Droid.Resource.Attribute.autoSizeTextType = global::MeteoXamarinForms.Droid.Resource.Attribute.autoSizeTextType;
+			global::FormsControls.Droid.Resource.Attribute.background = global::MeteoXamarinForms.Droid.Resource.Attribute.background;
+			global::FormsControls.Droid.Resource.Attribute.backgroundSplit = global::MeteoXamarinForms.Droid.Resource.Attribute.backgroundSplit;
+			global::FormsControls.Droid.Resource.Attribute.backgroundStacked = global::MeteoXamarinForms.Droid.Resource.Attribute.backgroundStacked;
+			global::FormsControls.Droid.Resource.Attribute.backgroundTint = global::MeteoXamarinForms.Droid.Resource.Attribute.backgroundTint;
+			global::FormsControls.Droid.Resource.Attribute.backgroundTintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.backgroundTintMode;
+			global::FormsControls.Droid.Resource.Attribute.barLength = global::MeteoXamarinForms.Droid.Resource.Attribute.barLength;
+			global::FormsControls.Droid.Resource.Attribute.behavior_autoHide = global::MeteoXamarinForms.Droid.Resource.Attribute.behavior_autoHide;
+			global::FormsControls.Droid.Resource.Attribute.behavior_fitToContents = global::MeteoXamarinForms.Droid.Resource.Attribute.behavior_fitToContents;
+			global::FormsControls.Droid.Resource.Attribute.behavior_hideable = global::MeteoXamarinForms.Droid.Resource.Attribute.behavior_hideable;
+			global::FormsControls.Droid.Resource.Attribute.behavior_overlapTop = global::MeteoXamarinForms.Droid.Resource.Attribute.behavior_overlapTop;
+			global::FormsControls.Droid.Resource.Attribute.behavior_peekHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.behavior_peekHeight;
+			global::FormsControls.Droid.Resource.Attribute.behavior_skipCollapsed = global::MeteoXamarinForms.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::FormsControls.Droid.Resource.Attribute.borderlessButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.borderWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.borderWidth;
+			global::FormsControls.Droid.Resource.Attribute.bottomAppBarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.bottomNavigationStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::FormsControls.Droid.Resource.Attribute.bottomSheetDialogTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::FormsControls.Droid.Resource.Attribute.bottomSheetStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.bottomSheetStyle;
+			global::FormsControls.Droid.Resource.Attribute.boxBackgroundColor = global::MeteoXamarinForms.Droid.Resource.Attribute.boxBackgroundColor;
+			global::FormsControls.Droid.Resource.Attribute.boxBackgroundMode = global::MeteoXamarinForms.Droid.Resource.Attribute.boxBackgroundMode;
+			global::FormsControls.Droid.Resource.Attribute.boxCollapsedPaddingTop = global::MeteoXamarinForms.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::FormsControls.Droid.Resource.Attribute.boxCornerRadiusBottomEnd = global::MeteoXamarinForms.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::FormsControls.Droid.Resource.Attribute.boxCornerRadiusBottomStart = global::MeteoXamarinForms.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::FormsControls.Droid.Resource.Attribute.boxCornerRadiusTopEnd = global::MeteoXamarinForms.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::FormsControls.Droid.Resource.Attribute.boxCornerRadiusTopStart = global::MeteoXamarinForms.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::FormsControls.Droid.Resource.Attribute.boxStrokeColor = global::MeteoXamarinForms.Droid.Resource.Attribute.boxStrokeColor;
+			global::FormsControls.Droid.Resource.Attribute.boxStrokeWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.boxStrokeWidth;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonBarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonGravity = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonGravity;
+			global::FormsControls.Droid.Resource.Attribute.buttonIconDimen = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonIconDimen;
+			global::FormsControls.Droid.Resource.Attribute.buttonPanelSideLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::FormsControls.Droid.Resource.Attribute.buttonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonStyle;
+			global::FormsControls.Droid.Resource.Attribute.buttonStyleSmall = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonStyleSmall;
+			global::FormsControls.Droid.Resource.Attribute.buttonTint = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonTint;
+			global::FormsControls.Droid.Resource.Attribute.buttonTintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.buttonTintMode;
+			global::FormsControls.Droid.Resource.Attribute.cardBackgroundColor = global::MeteoXamarinForms.Droid.Resource.Attribute.cardBackgroundColor;
+			global::FormsControls.Droid.Resource.Attribute.cardCornerRadius = global::MeteoXamarinForms.Droid.Resource.Attribute.cardCornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.cardElevation = global::MeteoXamarinForms.Droid.Resource.Attribute.cardElevation;
+			global::FormsControls.Droid.Resource.Attribute.cardMaxElevation = global::MeteoXamarinForms.Droid.Resource.Attribute.cardMaxElevation;
+			global::FormsControls.Droid.Resource.Attribute.cardPreventCornerOverlap = global::MeteoXamarinForms.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::FormsControls.Droid.Resource.Attribute.cardUseCompatPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::FormsControls.Droid.Resource.Attribute.cardViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.cardViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.checkboxStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.checkboxStyle;
+			global::FormsControls.Droid.Resource.Attribute.checkedChip = global::MeteoXamarinForms.Droid.Resource.Attribute.checkedChip;
+			global::FormsControls.Droid.Resource.Attribute.checkedIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.checkedIcon;
+			global::FormsControls.Droid.Resource.Attribute.checkedIconEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.checkedIconEnabled;
+			global::FormsControls.Droid.Resource.Attribute.checkedIconVisible = global::MeteoXamarinForms.Droid.Resource.Attribute.checkedIconVisible;
+			global::FormsControls.Droid.Resource.Attribute.checkedTextViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.chipBackgroundColor = global::MeteoXamarinForms.Droid.Resource.Attribute.chipBackgroundColor;
+			global::FormsControls.Droid.Resource.Attribute.chipCornerRadius = global::MeteoXamarinForms.Droid.Resource.Attribute.chipCornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.chipEndPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.chipEndPadding;
+			global::FormsControls.Droid.Resource.Attribute.chipGroupStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.chipGroupStyle;
+			global::FormsControls.Droid.Resource.Attribute.chipIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.chipIcon;
+			global::FormsControls.Droid.Resource.Attribute.chipIconEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.chipIconEnabled;
+			global::FormsControls.Droid.Resource.Attribute.chipIconSize = global::MeteoXamarinForms.Droid.Resource.Attribute.chipIconSize;
+			global::FormsControls.Droid.Resource.Attribute.chipIconTint = global::MeteoXamarinForms.Droid.Resource.Attribute.chipIconTint;
+			global::FormsControls.Droid.Resource.Attribute.chipIconVisible = global::MeteoXamarinForms.Droid.Resource.Attribute.chipIconVisible;
+			global::FormsControls.Droid.Resource.Attribute.chipMinHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.chipMinHeight;
+			global::FormsControls.Droid.Resource.Attribute.chipSpacing = global::MeteoXamarinForms.Droid.Resource.Attribute.chipSpacing;
+			global::FormsControls.Droid.Resource.Attribute.chipSpacingHorizontal = global::MeteoXamarinForms.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::FormsControls.Droid.Resource.Attribute.chipSpacingVertical = global::MeteoXamarinForms.Droid.Resource.Attribute.chipSpacingVertical;
+			global::FormsControls.Droid.Resource.Attribute.chipStandaloneStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::FormsControls.Droid.Resource.Attribute.chipStartPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.chipStartPadding;
+			global::FormsControls.Droid.Resource.Attribute.chipStrokeColor = global::MeteoXamarinForms.Droid.Resource.Attribute.chipStrokeColor;
+			global::FormsControls.Droid.Resource.Attribute.chipStrokeWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.chipStrokeWidth;
+			global::FormsControls.Droid.Resource.Attribute.chipStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.chipStyle;
+			global::FormsControls.Droid.Resource.Attribute.closeIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.closeIcon;
+			global::FormsControls.Droid.Resource.Attribute.closeIconEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.closeIconEnabled;
+			global::FormsControls.Droid.Resource.Attribute.closeIconEndPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.closeIconEndPadding;
+			global::FormsControls.Droid.Resource.Attribute.closeIconSize = global::MeteoXamarinForms.Droid.Resource.Attribute.closeIconSize;
+			global::FormsControls.Droid.Resource.Attribute.closeIconStartPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.closeIconStartPadding;
+			global::FormsControls.Droid.Resource.Attribute.closeIconTint = global::MeteoXamarinForms.Droid.Resource.Attribute.closeIconTint;
+			global::FormsControls.Droid.Resource.Attribute.closeIconVisible = global::MeteoXamarinForms.Droid.Resource.Attribute.closeIconVisible;
+			global::FormsControls.Droid.Resource.Attribute.closeItemLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.closeItemLayout;
+			global::FormsControls.Droid.Resource.Attribute.collapseContentDescription = global::MeteoXamarinForms.Droid.Resource.Attribute.collapseContentDescription;
+			global::FormsControls.Droid.Resource.Attribute.collapsedTitleGravity = global::MeteoXamarinForms.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::FormsControls.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.collapseIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.collapseIcon;
+			global::FormsControls.Droid.Resource.Attribute.color = global::MeteoXamarinForms.Droid.Resource.Attribute.color;
+			global::FormsControls.Droid.Resource.Attribute.colorAccent = global::MeteoXamarinForms.Droid.Resource.Attribute.colorAccent;
+			global::FormsControls.Droid.Resource.Attribute.colorBackgroundFloating = global::MeteoXamarinForms.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::FormsControls.Droid.Resource.Attribute.colorButtonNormal = global::MeteoXamarinForms.Droid.Resource.Attribute.colorButtonNormal;
+			global::FormsControls.Droid.Resource.Attribute.colorControlActivated = global::MeteoXamarinForms.Droid.Resource.Attribute.colorControlActivated;
+			global::FormsControls.Droid.Resource.Attribute.colorControlHighlight = global::MeteoXamarinForms.Droid.Resource.Attribute.colorControlHighlight;
+			global::FormsControls.Droid.Resource.Attribute.colorControlNormal = global::MeteoXamarinForms.Droid.Resource.Attribute.colorControlNormal;
+			global::FormsControls.Droid.Resource.Attribute.colorError = global::MeteoXamarinForms.Droid.Resource.Attribute.colorError;
+			global::FormsControls.Droid.Resource.Attribute.colorPrimary = global::MeteoXamarinForms.Droid.Resource.Attribute.colorPrimary;
+			global::FormsControls.Droid.Resource.Attribute.colorPrimaryDark = global::MeteoXamarinForms.Droid.Resource.Attribute.colorPrimaryDark;
+			global::FormsControls.Droid.Resource.Attribute.colorSecondary = global::MeteoXamarinForms.Droid.Resource.Attribute.colorSecondary;
+			global::FormsControls.Droid.Resource.Attribute.colorSwitchThumbNormal = global::MeteoXamarinForms.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::FormsControls.Droid.Resource.Attribute.commitIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.commitIcon;
+			global::FormsControls.Droid.Resource.Attribute.contentDescription = global::MeteoXamarinForms.Droid.Resource.Attribute.contentDescription;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetEnd = global::MeteoXamarinForms.Droid.Resource.Attribute.contentInsetEnd;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetEndWithActions = global::MeteoXamarinForms.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetLeft = global::MeteoXamarinForms.Droid.Resource.Attribute.contentInsetLeft;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetRight = global::MeteoXamarinForms.Droid.Resource.Attribute.contentInsetRight;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetStart = global::MeteoXamarinForms.Droid.Resource.Attribute.contentInsetStart;
+			global::FormsControls.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::MeteoXamarinForms.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::FormsControls.Droid.Resource.Attribute.contentPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.contentPadding;
+			global::FormsControls.Droid.Resource.Attribute.contentPaddingBottom = global::MeteoXamarinForms.Droid.Resource.Attribute.contentPaddingBottom;
+			global::FormsControls.Droid.Resource.Attribute.contentPaddingLeft = global::MeteoXamarinForms.Droid.Resource.Attribute.contentPaddingLeft;
+			global::FormsControls.Droid.Resource.Attribute.contentPaddingRight = global::MeteoXamarinForms.Droid.Resource.Attribute.contentPaddingRight;
+			global::FormsControls.Droid.Resource.Attribute.contentPaddingTop = global::MeteoXamarinForms.Droid.Resource.Attribute.contentPaddingTop;
+			global::FormsControls.Droid.Resource.Attribute.contentScrim = global::MeteoXamarinForms.Droid.Resource.Attribute.contentScrim;
+			global::FormsControls.Droid.Resource.Attribute.controlBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.controlBackground;
+			global::FormsControls.Droid.Resource.Attribute.coordinatorLayoutStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::FormsControls.Droid.Resource.Attribute.cornerRadius = global::MeteoXamarinForms.Droid.Resource.Attribute.cornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.counterEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.counterEnabled;
+			global::FormsControls.Droid.Resource.Attribute.counterMaxLength = global::MeteoXamarinForms.Droid.Resource.Attribute.counterMaxLength;
+			global::FormsControls.Droid.Resource.Attribute.counterOverflowTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.counterTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.counterTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.customNavigationLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.customNavigationLayout;
+			global::FormsControls.Droid.Resource.Attribute.defaultQueryHint = global::MeteoXamarinForms.Droid.Resource.Attribute.defaultQueryHint;
+			global::FormsControls.Droid.Resource.Attribute.dialogCornerRadius = global::MeteoXamarinForms.Droid.Resource.Attribute.dialogCornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.dialogPreferredPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::FormsControls.Droid.Resource.Attribute.dialogTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.dialogTheme;
+			global::FormsControls.Droid.Resource.Attribute.displayOptions = global::MeteoXamarinForms.Droid.Resource.Attribute.displayOptions;
+			global::FormsControls.Droid.Resource.Attribute.divider = global::MeteoXamarinForms.Droid.Resource.Attribute.divider;
+			global::FormsControls.Droid.Resource.Attribute.dividerHorizontal = global::MeteoXamarinForms.Droid.Resource.Attribute.dividerHorizontal;
+			global::FormsControls.Droid.Resource.Attribute.dividerPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.dividerPadding;
+			global::FormsControls.Droid.Resource.Attribute.dividerVertical = global::MeteoXamarinForms.Droid.Resource.Attribute.dividerVertical;
+			global::FormsControls.Droid.Resource.Attribute.drawableSize = global::MeteoXamarinForms.Droid.Resource.Attribute.drawableSize;
+			global::FormsControls.Droid.Resource.Attribute.drawerArrowStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.drawerArrowStyle;
+			global::FormsControls.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::FormsControls.Droid.Resource.Attribute.dropDownListViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.editTextBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.editTextBackground;
+			global::FormsControls.Droid.Resource.Attribute.editTextColor = global::MeteoXamarinForms.Droid.Resource.Attribute.editTextColor;
+			global::FormsControls.Droid.Resource.Attribute.editTextStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.editTextStyle;
+			global::FormsControls.Droid.Resource.Attribute.elevation = global::MeteoXamarinForms.Droid.Resource.Attribute.elevation;
+			global::FormsControls.Droid.Resource.Attribute.enforceMaterialTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::FormsControls.Droid.Resource.Attribute.enforceTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.enforceTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.errorEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.errorEnabled;
+			global::FormsControls.Droid.Resource.Attribute.errorTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.errorTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::FormsControls.Droid.Resource.Attribute.expanded = global::MeteoXamarinForms.Droid.Resource.Attribute.expanded;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleGravity = global::MeteoXamarinForms.Droid.Resource.Attribute.expandedTitleGravity;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMargin = global::MeteoXamarinForms.Droid.Resource.Attribute.expandedTitleMargin;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMarginBottom = global::MeteoXamarinForms.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMarginEnd = global::MeteoXamarinForms.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMarginStart = global::MeteoXamarinForms.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleMarginTop = global::MeteoXamarinForms.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::FormsControls.Droid.Resource.Attribute.expandedTitleTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.fabAlignmentMode = global::MeteoXamarinForms.Droid.Resource.Attribute.fabAlignmentMode;
+			global::FormsControls.Droid.Resource.Attribute.fabCradleMargin = global::MeteoXamarinForms.Droid.Resource.Attribute.fabCradleMargin;
+			global::FormsControls.Droid.Resource.Attribute.fabCradleRoundedCornerRadius = global::MeteoXamarinForms.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::FormsControls.Droid.Resource.Attribute.fabCradleVerticalOffset = global::MeteoXamarinForms.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::FormsControls.Droid.Resource.Attribute.fabCustomSize = global::MeteoXamarinForms.Droid.Resource.Attribute.fabCustomSize;
+			global::FormsControls.Droid.Resource.Attribute.fabSize = global::MeteoXamarinForms.Droid.Resource.Attribute.fabSize;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.fastScrollEnabled;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::FormsControls.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::FormsControls.Droid.Resource.Attribute.firstBaselineToTopHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::FormsControls.Droid.Resource.Attribute.floatingActionButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.font = global::MeteoXamarinForms.Droid.Resource.Attribute.font;
+			global::FormsControls.Droid.Resource.Attribute.fontFamily = global::MeteoXamarinForms.Droid.Resource.Attribute.fontFamily;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderAuthority = global::MeteoXamarinForms.Droid.Resource.Attribute.fontProviderAuthority;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderCerts = global::MeteoXamarinForms.Droid.Resource.Attribute.fontProviderCerts;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderFetchStrategy = global::MeteoXamarinForms.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderFetchTimeout = global::MeteoXamarinForms.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderPackage = global::MeteoXamarinForms.Droid.Resource.Attribute.fontProviderPackage;
+			global::FormsControls.Droid.Resource.Attribute.fontProviderQuery = global::MeteoXamarinForms.Droid.Resource.Attribute.fontProviderQuery;
+			global::FormsControls.Droid.Resource.Attribute.fontStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.fontStyle;
+			global::FormsControls.Droid.Resource.Attribute.fontVariationSettings = global::MeteoXamarinForms.Droid.Resource.Attribute.fontVariationSettings;
+			global::FormsControls.Droid.Resource.Attribute.fontWeight = global::MeteoXamarinForms.Droid.Resource.Attribute.fontWeight;
+			global::FormsControls.Droid.Resource.Attribute.foregroundInsidePadding = global::MeteoXamarinForms.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::FormsControls.Droid.Resource.Attribute.gapBetweenBars = global::MeteoXamarinForms.Droid.Resource.Attribute.gapBetweenBars;
+			global::FormsControls.Droid.Resource.Attribute.goIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.goIcon;
+			global::FormsControls.Droid.Resource.Attribute.headerLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.headerLayout;
+			global::FormsControls.Droid.Resource.Attribute.height = global::MeteoXamarinForms.Droid.Resource.Attribute.height;
+			global::FormsControls.Droid.Resource.Attribute.helperText = global::MeteoXamarinForms.Droid.Resource.Attribute.helperText;
+			global::FormsControls.Droid.Resource.Attribute.helperTextEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.helperTextEnabled;
+			global::FormsControls.Droid.Resource.Attribute.helperTextTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.hideMotionSpec = global::MeteoXamarinForms.Droid.Resource.Attribute.hideMotionSpec;
+			global::FormsControls.Droid.Resource.Attribute.hideOnContentScroll = global::MeteoXamarinForms.Droid.Resource.Attribute.hideOnContentScroll;
+			global::FormsControls.Droid.Resource.Attribute.hideOnScroll = global::MeteoXamarinForms.Droid.Resource.Attribute.hideOnScroll;
+			global::FormsControls.Droid.Resource.Attribute.hintAnimationEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::FormsControls.Droid.Resource.Attribute.hintEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.hintEnabled;
+			global::FormsControls.Droid.Resource.Attribute.hintTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.hintTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.homeAsUpIndicator = global::MeteoXamarinForms.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::FormsControls.Droid.Resource.Attribute.homeLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.homeLayout;
+			global::FormsControls.Droid.Resource.Attribute.hoveredFocusedTranslationZ = global::MeteoXamarinForms.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::FormsControls.Droid.Resource.Attribute.icon = global::MeteoXamarinForms.Droid.Resource.Attribute.icon;
+			global::FormsControls.Droid.Resource.Attribute.iconEndPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.iconEndPadding;
+			global::FormsControls.Droid.Resource.Attribute.iconGravity = global::MeteoXamarinForms.Droid.Resource.Attribute.iconGravity;
+			global::FormsControls.Droid.Resource.Attribute.iconifiedByDefault = global::MeteoXamarinForms.Droid.Resource.Attribute.iconifiedByDefault;
+			global::FormsControls.Droid.Resource.Attribute.iconPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.iconPadding;
+			global::FormsControls.Droid.Resource.Attribute.iconSize = global::MeteoXamarinForms.Droid.Resource.Attribute.iconSize;
+			global::FormsControls.Droid.Resource.Attribute.iconStartPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.iconStartPadding;
+			global::FormsControls.Droid.Resource.Attribute.iconTint = global::MeteoXamarinForms.Droid.Resource.Attribute.iconTint;
+			global::FormsControls.Droid.Resource.Attribute.iconTintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.iconTintMode;
+			global::FormsControls.Droid.Resource.Attribute.imageButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.imageButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.indeterminateProgressStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::FormsControls.Droid.Resource.Attribute.initialActivityCount = global::MeteoXamarinForms.Droid.Resource.Attribute.initialActivityCount;
+			global::FormsControls.Droid.Resource.Attribute.insetForeground = global::MeteoXamarinForms.Droid.Resource.Attribute.insetForeground;
+			global::FormsControls.Droid.Resource.Attribute.isLightTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.isLightTheme;
+			global::FormsControls.Droid.Resource.Attribute.itemBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.itemBackground;
+			global::FormsControls.Droid.Resource.Attribute.itemHorizontalPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::FormsControls.Droid.Resource.Attribute.itemHorizontalTranslationEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::FormsControls.Droid.Resource.Attribute.itemIconPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.itemIconPadding;
+			global::FormsControls.Droid.Resource.Attribute.itemIconSize = global::MeteoXamarinForms.Droid.Resource.Attribute.itemIconSize;
+			global::FormsControls.Droid.Resource.Attribute.itemIconTint = global::MeteoXamarinForms.Droid.Resource.Attribute.itemIconTint;
+			global::FormsControls.Droid.Resource.Attribute.itemPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.itemPadding;
+			global::FormsControls.Droid.Resource.Attribute.itemSpacing = global::MeteoXamarinForms.Droid.Resource.Attribute.itemSpacing;
+			global::FormsControls.Droid.Resource.Attribute.itemTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.itemTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.itemTextAppearanceActive = global::MeteoXamarinForms.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::FormsControls.Droid.Resource.Attribute.itemTextAppearanceInactive = global::MeteoXamarinForms.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::FormsControls.Droid.Resource.Attribute.itemTextColor = global::MeteoXamarinForms.Droid.Resource.Attribute.itemTextColor;
+			global::FormsControls.Droid.Resource.Attribute.keylines = global::MeteoXamarinForms.Droid.Resource.Attribute.keylines;
+			global::FormsControls.Droid.Resource.Attribute.labelVisibilityMode = global::MeteoXamarinForms.Droid.Resource.Attribute.labelVisibilityMode;
+			global::FormsControls.Droid.Resource.Attribute.lastBaselineToBottomHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::FormsControls.Droid.Resource.Attribute.layout = global::MeteoXamarinForms.Droid.Resource.Attribute.layout;
+			global::FormsControls.Droid.Resource.Attribute.layoutManager = global::MeteoXamarinForms.Droid.Resource.Attribute.layoutManager;
+			global::FormsControls.Droid.Resource.Attribute.layout_anchor = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_anchor;
+			global::FormsControls.Droid.Resource.Attribute.layout_anchorGravity = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_anchorGravity;
+			global::FormsControls.Droid.Resource.Attribute.layout_behavior = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_behavior;
+			global::FormsControls.Droid.Resource.Attribute.layout_collapseMode = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_collapseMode;
+			global::FormsControls.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::FormsControls.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::FormsControls.Droid.Resource.Attribute.layout_insetEdge = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_insetEdge;
+			global::FormsControls.Droid.Resource.Attribute.layout_keyline = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_keyline;
+			global::FormsControls.Droid.Resource.Attribute.layout_scrollFlags = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_scrollFlags;
+			global::FormsControls.Droid.Resource.Attribute.layout_scrollInterpolator = global::MeteoXamarinForms.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::FormsControls.Droid.Resource.Attribute.liftOnScroll = global::MeteoXamarinForms.Droid.Resource.Attribute.liftOnScroll;
+			global::FormsControls.Droid.Resource.Attribute.lineHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.lineHeight;
+			global::FormsControls.Droid.Resource.Attribute.lineSpacing = global::MeteoXamarinForms.Droid.Resource.Attribute.lineSpacing;
+			global::FormsControls.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::MeteoXamarinForms.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::FormsControls.Droid.Resource.Attribute.listDividerAlertDialog = global::MeteoXamarinForms.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::FormsControls.Droid.Resource.Attribute.listItemLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.listItemLayout;
+			global::FormsControls.Droid.Resource.Attribute.listLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.listLayout;
+			global::FormsControls.Droid.Resource.Attribute.listMenuViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.listMenuViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.listPopupWindowStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::MeteoXamarinForms.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::MeteoXamarinForms.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::MeteoXamarinForms.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::FormsControls.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::MeteoXamarinForms.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::FormsControls.Droid.Resource.Attribute.logo = global::MeteoXamarinForms.Droid.Resource.Attribute.logo;
+			global::FormsControls.Droid.Resource.Attribute.logoDescription = global::MeteoXamarinForms.Droid.Resource.Attribute.logoDescription;
+			global::FormsControls.Droid.Resource.Attribute.materialButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.materialButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.materialCardViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.materialCardViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.maxActionInlineWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::FormsControls.Droid.Resource.Attribute.maxButtonHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.maxButtonHeight;
+			global::FormsControls.Droid.Resource.Attribute.maxImageSize = global::MeteoXamarinForms.Droid.Resource.Attribute.maxImageSize;
+			global::FormsControls.Droid.Resource.Attribute.measureWithLargestChild = global::MeteoXamarinForms.Droid.Resource.Attribute.measureWithLargestChild;
+			global::FormsControls.Droid.Resource.Attribute.menu = global::MeteoXamarinForms.Droid.Resource.Attribute.menu;
+			global::FormsControls.Droid.Resource.Attribute.multiChoiceItemLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::FormsControls.Droid.Resource.Attribute.navigationContentDescription = global::MeteoXamarinForms.Droid.Resource.Attribute.navigationContentDescription;
+			global::FormsControls.Droid.Resource.Attribute.navigationIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.navigationIcon;
+			global::FormsControls.Droid.Resource.Attribute.navigationMode = global::MeteoXamarinForms.Droid.Resource.Attribute.navigationMode;
+			global::FormsControls.Droid.Resource.Attribute.navigationViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.navigationViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.numericModifiers = global::MeteoXamarinForms.Droid.Resource.Attribute.numericModifiers;
+			global::FormsControls.Droid.Resource.Attribute.overlapAnchor = global::MeteoXamarinForms.Droid.Resource.Attribute.overlapAnchor;
+			global::FormsControls.Droid.Resource.Attribute.paddingBottomNoButtons = global::MeteoXamarinForms.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::FormsControls.Droid.Resource.Attribute.paddingEnd = global::MeteoXamarinForms.Droid.Resource.Attribute.paddingEnd;
+			global::FormsControls.Droid.Resource.Attribute.paddingStart = global::MeteoXamarinForms.Droid.Resource.Attribute.paddingStart;
+			global::FormsControls.Droid.Resource.Attribute.paddingTopNoTitle = global::MeteoXamarinForms.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::FormsControls.Droid.Resource.Attribute.panelBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.panelBackground;
+			global::FormsControls.Droid.Resource.Attribute.panelMenuListTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.panelMenuListTheme;
+			global::FormsControls.Droid.Resource.Attribute.panelMenuListWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.panelMenuListWidth;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleContentDescription = global::MeteoXamarinForms.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleDrawable = global::MeteoXamarinForms.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleTint = global::MeteoXamarinForms.Droid.Resource.Attribute.passwordToggleTint;
+			global::FormsControls.Droid.Resource.Attribute.passwordToggleTintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::FormsControls.Droid.Resource.Attribute.popupMenuStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.popupMenuStyle;
+			global::FormsControls.Droid.Resource.Attribute.popupTheme = global::MeteoXamarinForms.Droid.Resource.Attribute.popupTheme;
+			global::FormsControls.Droid.Resource.Attribute.popupWindowStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.popupWindowStyle;
+			global::FormsControls.Droid.Resource.Attribute.preserveIconSpacing = global::MeteoXamarinForms.Droid.Resource.Attribute.preserveIconSpacing;
+			global::FormsControls.Droid.Resource.Attribute.pressedTranslationZ = global::MeteoXamarinForms.Droid.Resource.Attribute.pressedTranslationZ;
+			global::FormsControls.Droid.Resource.Attribute.progressBarPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.progressBarPadding;
+			global::FormsControls.Droid.Resource.Attribute.progressBarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.progressBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.queryBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.queryBackground;
+			global::FormsControls.Droid.Resource.Attribute.queryHint = global::MeteoXamarinForms.Droid.Resource.Attribute.queryHint;
+			global::FormsControls.Droid.Resource.Attribute.radioButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.radioButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.ratingBarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.ratingBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.ratingBarStyleIndicator = global::MeteoXamarinForms.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::FormsControls.Droid.Resource.Attribute.ratingBarStyleSmall = global::MeteoXamarinForms.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::FormsControls.Droid.Resource.Attribute.reverseLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.reverseLayout;
+			global::FormsControls.Droid.Resource.Attribute.rippleColor = global::MeteoXamarinForms.Droid.Resource.Attribute.rippleColor;
+			global::FormsControls.Droid.Resource.Attribute.scrimAnimationDuration = global::MeteoXamarinForms.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::FormsControls.Droid.Resource.Attribute.scrimBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.scrimBackground;
+			global::FormsControls.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::MeteoXamarinForms.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::FormsControls.Droid.Resource.Attribute.searchHintIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.searchHintIcon;
+			global::FormsControls.Droid.Resource.Attribute.searchIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.searchIcon;
+			global::FormsControls.Droid.Resource.Attribute.searchViewStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.searchViewStyle;
+			global::FormsControls.Droid.Resource.Attribute.seekBarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.seekBarStyle;
+			global::FormsControls.Droid.Resource.Attribute.selectableItemBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.selectableItemBackground;
+			global::FormsControls.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::MeteoXamarinForms.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::FormsControls.Droid.Resource.Attribute.showAsAction = global::MeteoXamarinForms.Droid.Resource.Attribute.showAsAction;
+			global::FormsControls.Droid.Resource.Attribute.showDividers = global::MeteoXamarinForms.Droid.Resource.Attribute.showDividers;
+			global::FormsControls.Droid.Resource.Attribute.showMotionSpec = global::MeteoXamarinForms.Droid.Resource.Attribute.showMotionSpec;
+			global::FormsControls.Droid.Resource.Attribute.showText = global::MeteoXamarinForms.Droid.Resource.Attribute.showText;
+			global::FormsControls.Droid.Resource.Attribute.showTitle = global::MeteoXamarinForms.Droid.Resource.Attribute.showTitle;
+			global::FormsControls.Droid.Resource.Attribute.singleChoiceItemLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::FormsControls.Droid.Resource.Attribute.singleLine = global::MeteoXamarinForms.Droid.Resource.Attribute.singleLine;
+			global::FormsControls.Droid.Resource.Attribute.singleSelection = global::MeteoXamarinForms.Droid.Resource.Attribute.singleSelection;
+			global::FormsControls.Droid.Resource.Attribute.snackbarButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.snackbarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.snackbarStyle;
+			global::FormsControls.Droid.Resource.Attribute.spanCount = global::MeteoXamarinForms.Droid.Resource.Attribute.spanCount;
+			global::FormsControls.Droid.Resource.Attribute.spinBars = global::MeteoXamarinForms.Droid.Resource.Attribute.spinBars;
+			global::FormsControls.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::FormsControls.Droid.Resource.Attribute.spinnerStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.spinnerStyle;
+			global::FormsControls.Droid.Resource.Attribute.splitTrack = global::MeteoXamarinForms.Droid.Resource.Attribute.splitTrack;
+			global::FormsControls.Droid.Resource.Attribute.srcCompat = global::MeteoXamarinForms.Droid.Resource.Attribute.srcCompat;
+			global::FormsControls.Droid.Resource.Attribute.stackFromEnd = global::MeteoXamarinForms.Droid.Resource.Attribute.stackFromEnd;
+			global::FormsControls.Droid.Resource.Attribute.state_above_anchor = global::MeteoXamarinForms.Droid.Resource.Attribute.state_above_anchor;
+			global::FormsControls.Droid.Resource.Attribute.state_collapsed = global::MeteoXamarinForms.Droid.Resource.Attribute.state_collapsed;
+			global::FormsControls.Droid.Resource.Attribute.state_collapsible = global::MeteoXamarinForms.Droid.Resource.Attribute.state_collapsible;
+			global::FormsControls.Droid.Resource.Attribute.state_liftable = global::MeteoXamarinForms.Droid.Resource.Attribute.state_liftable;
+			global::FormsControls.Droid.Resource.Attribute.state_lifted = global::MeteoXamarinForms.Droid.Resource.Attribute.state_lifted;
+			global::FormsControls.Droid.Resource.Attribute.statusBarBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.statusBarBackground;
+			global::FormsControls.Droid.Resource.Attribute.statusBarScrim = global::MeteoXamarinForms.Droid.Resource.Attribute.statusBarScrim;
+			global::FormsControls.Droid.Resource.Attribute.strokeColor = global::MeteoXamarinForms.Droid.Resource.Attribute.strokeColor;
+			global::FormsControls.Droid.Resource.Attribute.strokeWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.strokeWidth;
+			global::FormsControls.Droid.Resource.Attribute.subMenuArrow = global::MeteoXamarinForms.Droid.Resource.Attribute.subMenuArrow;
+			global::FormsControls.Droid.Resource.Attribute.submitBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.submitBackground;
+			global::FormsControls.Droid.Resource.Attribute.subtitle = global::MeteoXamarinForms.Droid.Resource.Attribute.subtitle;
+			global::FormsControls.Droid.Resource.Attribute.subtitleTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.subtitleTextColor = global::MeteoXamarinForms.Droid.Resource.Attribute.subtitleTextColor;
+			global::FormsControls.Droid.Resource.Attribute.subtitleTextStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.subtitleTextStyle;
+			global::FormsControls.Droid.Resource.Attribute.suggestionRowLayout = global::MeteoXamarinForms.Droid.Resource.Attribute.suggestionRowLayout;
+			global::FormsControls.Droid.Resource.Attribute.switchMinWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.switchMinWidth;
+			global::FormsControls.Droid.Resource.Attribute.switchPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.switchPadding;
+			global::FormsControls.Droid.Resource.Attribute.switchStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.switchStyle;
+			global::FormsControls.Droid.Resource.Attribute.switchTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.switchTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.tabBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.tabBackground;
+			global::FormsControls.Droid.Resource.Attribute.tabContentStart = global::MeteoXamarinForms.Droid.Resource.Attribute.tabContentStart;
+			global::FormsControls.Droid.Resource.Attribute.tabGravity = global::MeteoXamarinForms.Droid.Resource.Attribute.tabGravity;
+			global::FormsControls.Droid.Resource.Attribute.tabIconTint = global::MeteoXamarinForms.Droid.Resource.Attribute.tabIconTint;
+			global::FormsControls.Droid.Resource.Attribute.tabIconTintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.tabIconTintMode;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicator = global::MeteoXamarinForms.Droid.Resource.Attribute.tabIndicator;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorAnimationDuration = global::MeteoXamarinForms.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorColor = global::MeteoXamarinForms.Droid.Resource.Attribute.tabIndicatorColor;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorFullWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorGravity = global::MeteoXamarinForms.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::FormsControls.Droid.Resource.Attribute.tabIndicatorHeight = global::MeteoXamarinForms.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::FormsControls.Droid.Resource.Attribute.tabInlineLabel = global::MeteoXamarinForms.Droid.Resource.Attribute.tabInlineLabel;
+			global::FormsControls.Droid.Resource.Attribute.tabMaxWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.tabMaxWidth;
+			global::FormsControls.Droid.Resource.Attribute.tabMinWidth = global::MeteoXamarinForms.Droid.Resource.Attribute.tabMinWidth;
+			global::FormsControls.Droid.Resource.Attribute.tabMode = global::MeteoXamarinForms.Droid.Resource.Attribute.tabMode;
+			global::FormsControls.Droid.Resource.Attribute.tabPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.tabPadding;
+			global::FormsControls.Droid.Resource.Attribute.tabPaddingBottom = global::MeteoXamarinForms.Droid.Resource.Attribute.tabPaddingBottom;
+			global::FormsControls.Droid.Resource.Attribute.tabPaddingEnd = global::MeteoXamarinForms.Droid.Resource.Attribute.tabPaddingEnd;
+			global::FormsControls.Droid.Resource.Attribute.tabPaddingStart = global::MeteoXamarinForms.Droid.Resource.Attribute.tabPaddingStart;
+			global::FormsControls.Droid.Resource.Attribute.tabPaddingTop = global::MeteoXamarinForms.Droid.Resource.Attribute.tabPaddingTop;
+			global::FormsControls.Droid.Resource.Attribute.tabRippleColor = global::MeteoXamarinForms.Droid.Resource.Attribute.tabRippleColor;
+			global::FormsControls.Droid.Resource.Attribute.tabSelectedTextColor = global::MeteoXamarinForms.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::FormsControls.Droid.Resource.Attribute.tabStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.tabStyle;
+			global::FormsControls.Droid.Resource.Attribute.tabTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.tabTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.tabTextColor = global::MeteoXamarinForms.Droid.Resource.Attribute.tabTextColor;
+			global::FormsControls.Droid.Resource.Attribute.tabUnboundedRipple = global::MeteoXamarinForms.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::FormsControls.Droid.Resource.Attribute.textAllCaps = global::MeteoXamarinForms.Droid.Resource.Attribute.textAllCaps;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceBody1 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceBody1;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceBody2 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceBody2;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceButton = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceButton;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceCaption = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceCaption;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline1 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline2 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline3 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline4 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline5 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceHeadline6 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceListItem = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceListItem;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceListItemSmall = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceOverline = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceOverline;
+			global::FormsControls.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSubtitle1 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::FormsControls.Droid.Resource.Attribute.textAppearanceSubtitle2 = global::MeteoXamarinForms.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::FormsControls.Droid.Resource.Attribute.textColorAlertDialogListItem = global::MeteoXamarinForms.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::FormsControls.Droid.Resource.Attribute.textColorSearchUrl = global::MeteoXamarinForms.Droid.Resource.Attribute.textColorSearchUrl;
+			global::FormsControls.Droid.Resource.Attribute.textEndPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.textEndPadding;
+			global::FormsControls.Droid.Resource.Attribute.textInputStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.textInputStyle;
+			global::FormsControls.Droid.Resource.Attribute.textStartPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.textStartPadding;
+			global::FormsControls.Droid.Resource.Attribute.theme = global::MeteoXamarinForms.Droid.Resource.Attribute.theme;
+			global::FormsControls.Droid.Resource.Attribute.thickness = global::MeteoXamarinForms.Droid.Resource.Attribute.thickness;
+			global::FormsControls.Droid.Resource.Attribute.thumbTextPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.thumbTextPadding;
+			global::FormsControls.Droid.Resource.Attribute.thumbTint = global::MeteoXamarinForms.Droid.Resource.Attribute.thumbTint;
+			global::FormsControls.Droid.Resource.Attribute.thumbTintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.thumbTintMode;
+			global::FormsControls.Droid.Resource.Attribute.tickMark = global::MeteoXamarinForms.Droid.Resource.Attribute.tickMark;
+			global::FormsControls.Droid.Resource.Attribute.tickMarkTint = global::MeteoXamarinForms.Droid.Resource.Attribute.tickMarkTint;
+			global::FormsControls.Droid.Resource.Attribute.tickMarkTintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.tickMarkTintMode;
+			global::FormsControls.Droid.Resource.Attribute.tint = global::MeteoXamarinForms.Droid.Resource.Attribute.tint;
+			global::FormsControls.Droid.Resource.Attribute.tintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.tintMode;
+			global::FormsControls.Droid.Resource.Attribute.title = global::MeteoXamarinForms.Droid.Resource.Attribute.title;
+			global::FormsControls.Droid.Resource.Attribute.titleEnabled = global::MeteoXamarinForms.Droid.Resource.Attribute.titleEnabled;
+			global::FormsControls.Droid.Resource.Attribute.titleMargin = global::MeteoXamarinForms.Droid.Resource.Attribute.titleMargin;
+			global::FormsControls.Droid.Resource.Attribute.titleMarginBottom = global::MeteoXamarinForms.Droid.Resource.Attribute.titleMarginBottom;
+			global::FormsControls.Droid.Resource.Attribute.titleMarginEnd = global::MeteoXamarinForms.Droid.Resource.Attribute.titleMarginEnd;
+			global::FormsControls.Droid.Resource.Attribute.titleMargins = global::MeteoXamarinForms.Droid.Resource.Attribute.titleMargins;
+			global::FormsControls.Droid.Resource.Attribute.titleMarginStart = global::MeteoXamarinForms.Droid.Resource.Attribute.titleMarginStart;
+			global::FormsControls.Droid.Resource.Attribute.titleMarginTop = global::MeteoXamarinForms.Droid.Resource.Attribute.titleMarginTop;
+			global::FormsControls.Droid.Resource.Attribute.titleTextAppearance = global::MeteoXamarinForms.Droid.Resource.Attribute.titleTextAppearance;
+			global::FormsControls.Droid.Resource.Attribute.titleTextColor = global::MeteoXamarinForms.Droid.Resource.Attribute.titleTextColor;
+			global::FormsControls.Droid.Resource.Attribute.titleTextStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.titleTextStyle;
+			global::FormsControls.Droid.Resource.Attribute.toolbarId = global::MeteoXamarinForms.Droid.Resource.Attribute.toolbarId;
+			global::FormsControls.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::FormsControls.Droid.Resource.Attribute.toolbarStyle = global::MeteoXamarinForms.Droid.Resource.Attribute.toolbarStyle;
+			global::FormsControls.Droid.Resource.Attribute.tooltipForegroundColor = global::MeteoXamarinForms.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::FormsControls.Droid.Resource.Attribute.tooltipFrameBackground = global::MeteoXamarinForms.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::FormsControls.Droid.Resource.Attribute.tooltipText = global::MeteoXamarinForms.Droid.Resource.Attribute.tooltipText;
+			global::FormsControls.Droid.Resource.Attribute.track = global::MeteoXamarinForms.Droid.Resource.Attribute.track;
+			global::FormsControls.Droid.Resource.Attribute.trackTint = global::MeteoXamarinForms.Droid.Resource.Attribute.trackTint;
+			global::FormsControls.Droid.Resource.Attribute.trackTintMode = global::MeteoXamarinForms.Droid.Resource.Attribute.trackTintMode;
+			global::FormsControls.Droid.Resource.Attribute.ttcIndex = global::MeteoXamarinForms.Droid.Resource.Attribute.ttcIndex;
+			global::FormsControls.Droid.Resource.Attribute.useCompatPadding = global::MeteoXamarinForms.Droid.Resource.Attribute.useCompatPadding;
+			global::FormsControls.Droid.Resource.Attribute.viewInflaterClass = global::MeteoXamarinForms.Droid.Resource.Attribute.viewInflaterClass;
+			global::FormsControls.Droid.Resource.Attribute.voiceIcon = global::MeteoXamarinForms.Droid.Resource.Attribute.voiceIcon;
+			global::FormsControls.Droid.Resource.Attribute.windowActionBar = global::MeteoXamarinForms.Droid.Resource.Attribute.windowActionBar;
+			global::FormsControls.Droid.Resource.Attribute.windowActionBarOverlay = global::MeteoXamarinForms.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::FormsControls.Droid.Resource.Attribute.windowActionModeOverlay = global::MeteoXamarinForms.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::FormsControls.Droid.Resource.Attribute.windowFixedHeightMajor = global::MeteoXamarinForms.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::FormsControls.Droid.Resource.Attribute.windowFixedHeightMinor = global::MeteoXamarinForms.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::FormsControls.Droid.Resource.Attribute.windowFixedWidthMajor = global::MeteoXamarinForms.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::FormsControls.Droid.Resource.Attribute.windowFixedWidthMinor = global::MeteoXamarinForms.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::FormsControls.Droid.Resource.Attribute.windowMinWidthMajor = global::MeteoXamarinForms.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::FormsControls.Droid.Resource.Attribute.windowMinWidthMinor = global::MeteoXamarinForms.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::FormsControls.Droid.Resource.Attribute.windowNoTitle = global::MeteoXamarinForms.Droid.Resource.Attribute.windowNoTitle;
+			global::FormsControls.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::MeteoXamarinForms.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::FormsControls.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::MeteoXamarinForms.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::FormsControls.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::MeteoXamarinForms.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::FormsControls.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::MeteoXamarinForms.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::FormsControls.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::MeteoXamarinForms.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::MeteoXamarinForms.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::FormsControls.Droid.Resource.Color.abc_btn_colored_text_material = global::MeteoXamarinForms.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::FormsControls.Droid.Resource.Color.abc_color_highlight_material = global::MeteoXamarinForms.Droid.Resource.Color.abc_color_highlight_material;
+			global::FormsControls.Droid.Resource.Color.abc_hint_foreground_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_hint_foreground_material_light = global::MeteoXamarinForms.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::MeteoXamarinForms.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_primary_text_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_primary_text_material_light = global::MeteoXamarinForms.Droid.Resource.Color.abc_primary_text_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_search_url_text = global::MeteoXamarinForms.Droid.Resource.Color.abc_search_url_text;
+			global::FormsControls.Droid.Resource.Color.abc_search_url_text_normal = global::MeteoXamarinForms.Droid.Resource.Color.abc_search_url_text_normal;
+			global::FormsControls.Droid.Resource.Color.abc_search_url_text_pressed = global::MeteoXamarinForms.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::FormsControls.Droid.Resource.Color.abc_search_url_text_selected = global::MeteoXamarinForms.Droid.Resource.Color.abc_search_url_text_selected;
+			global::FormsControls.Droid.Resource.Color.abc_secondary_text_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::FormsControls.Droid.Resource.Color.abc_secondary_text_material_light = global::MeteoXamarinForms.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::FormsControls.Droid.Resource.Color.abc_tint_btn_checkable = global::MeteoXamarinForms.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::FormsControls.Droid.Resource.Color.abc_tint_default = global::MeteoXamarinForms.Droid.Resource.Color.abc_tint_default;
+			global::FormsControls.Droid.Resource.Color.abc_tint_edittext = global::MeteoXamarinForms.Droid.Resource.Color.abc_tint_edittext;
+			global::FormsControls.Droid.Resource.Color.abc_tint_seek_thumb = global::MeteoXamarinForms.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::FormsControls.Droid.Resource.Color.abc_tint_spinner = global::MeteoXamarinForms.Droid.Resource.Color.abc_tint_spinner;
+			global::FormsControls.Droid.Resource.Color.abc_tint_switch_track = global::MeteoXamarinForms.Droid.Resource.Color.abc_tint_switch_track;
+			global::FormsControls.Droid.Resource.Color.accent_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.accent_material_dark;
+			global::FormsControls.Droid.Resource.Color.accent_material_light = global::MeteoXamarinForms.Droid.Resource.Color.accent_material_light;
+			global::FormsControls.Droid.Resource.Color.background_floating_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.background_floating_material_dark;
+			global::FormsControls.Droid.Resource.Color.background_floating_material_light = global::MeteoXamarinForms.Droid.Resource.Color.background_floating_material_light;
+			global::FormsControls.Droid.Resource.Color.background_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.background_material_dark;
+			global::FormsControls.Droid.Resource.Color.background_material_light = global::MeteoXamarinForms.Droid.Resource.Color.background_material_light;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_disabled_material_light = global::MeteoXamarinForms.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_inverse_material_light = global::MeteoXamarinForms.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.bright_foreground_material_dark;
+			global::FormsControls.Droid.Resource.Color.bright_foreground_material_light = global::MeteoXamarinForms.Droid.Resource.Color.bright_foreground_material_light;
+			global::FormsControls.Droid.Resource.Color.browser_actions_bg_grey = global::MeteoXamarinForms.Droid.Resource.Color.browser_actions_bg_grey;
+			global::FormsControls.Droid.Resource.Color.browser_actions_divider_color = global::MeteoXamarinForms.Droid.Resource.Color.browser_actions_divider_color;
+			global::FormsControls.Droid.Resource.Color.browser_actions_text_color = global::MeteoXamarinForms.Droid.Resource.Color.browser_actions_text_color;
+			global::FormsControls.Droid.Resource.Color.browser_actions_title_color = global::MeteoXamarinForms.Droid.Resource.Color.browser_actions_title_color;
+			global::FormsControls.Droid.Resource.Color.button_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.button_material_dark;
+			global::FormsControls.Droid.Resource.Color.button_material_light = global::MeteoXamarinForms.Droid.Resource.Color.button_material_light;
+			global::FormsControls.Droid.Resource.Color.cardview_dark_background = global::MeteoXamarinForms.Droid.Resource.Color.cardview_dark_background;
+			global::FormsControls.Droid.Resource.Color.cardview_light_background = global::MeteoXamarinForms.Droid.Resource.Color.cardview_light_background;
+			global::FormsControls.Droid.Resource.Color.cardview_shadow_end_color = global::MeteoXamarinForms.Droid.Resource.Color.cardview_shadow_end_color;
+			global::FormsControls.Droid.Resource.Color.cardview_shadow_start_color = global::MeteoXamarinForms.Droid.Resource.Color.cardview_shadow_start_color;
+			global::FormsControls.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::MeteoXamarinForms.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::FormsControls.Droid.Resource.Color.design_default_color_primary = global::MeteoXamarinForms.Droid.Resource.Color.design_default_color_primary;
+			global::FormsControls.Droid.Resource.Color.design_default_color_primary_dark = global::MeteoXamarinForms.Droid.Resource.Color.design_default_color_primary_dark;
+			global::FormsControls.Droid.Resource.Color.design_error = global::MeteoXamarinForms.Droid.Resource.Color.design_error;
+			global::FormsControls.Droid.Resource.Color.design_fab_shadow_end_color = global::MeteoXamarinForms.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_shadow_mid_color = global::MeteoXamarinForms.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_shadow_start_color = global::MeteoXamarinForms.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::MeteoXamarinForms.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::MeteoXamarinForms.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::MeteoXamarinForms.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::FormsControls.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::MeteoXamarinForms.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::FormsControls.Droid.Resource.Color.design_snackbar_background_color = global::MeteoXamarinForms.Droid.Resource.Color.design_snackbar_background_color;
+			global::FormsControls.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.dim_foreground_disabled_material_light = global::MeteoXamarinForms.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.dim_foreground_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.dim_foreground_material_dark;
+			global::FormsControls.Droid.Resource.Color.dim_foreground_material_light = global::MeteoXamarinForms.Droid.Resource.Color.dim_foreground_material_light;
+			global::FormsControls.Droid.Resource.Color.error_color_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.error_color_material_dark;
+			global::FormsControls.Droid.Resource.Color.error_color_material_light = global::MeteoXamarinForms.Droid.Resource.Color.error_color_material_light;
+			global::FormsControls.Droid.Resource.Color.foreground_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.foreground_material_dark;
+			global::FormsControls.Droid.Resource.Color.foreground_material_light = global::MeteoXamarinForms.Droid.Resource.Color.foreground_material_light;
+			global::FormsControls.Droid.Resource.Color.highlighted_text_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.highlighted_text_material_dark;
+			global::FormsControls.Droid.Resource.Color.highlighted_text_material_light = global::MeteoXamarinForms.Droid.Resource.Color.highlighted_text_material_light;
+			global::FormsControls.Droid.Resource.Color.material_blue_grey_800 = global::MeteoXamarinForms.Droid.Resource.Color.material_blue_grey_800;
+			global::FormsControls.Droid.Resource.Color.material_blue_grey_900 = global::MeteoXamarinForms.Droid.Resource.Color.material_blue_grey_900;
+			global::FormsControls.Droid.Resource.Color.material_blue_grey_950 = global::MeteoXamarinForms.Droid.Resource.Color.material_blue_grey_950;
+			global::FormsControls.Droid.Resource.Color.material_deep_teal_200 = global::MeteoXamarinForms.Droid.Resource.Color.material_deep_teal_200;
+			global::FormsControls.Droid.Resource.Color.material_deep_teal_500 = global::MeteoXamarinForms.Droid.Resource.Color.material_deep_teal_500;
+			global::FormsControls.Droid.Resource.Color.material_grey_100 = global::MeteoXamarinForms.Droid.Resource.Color.material_grey_100;
+			global::FormsControls.Droid.Resource.Color.material_grey_300 = global::MeteoXamarinForms.Droid.Resource.Color.material_grey_300;
+			global::FormsControls.Droid.Resource.Color.material_grey_50 = global::MeteoXamarinForms.Droid.Resource.Color.material_grey_50;
+			global::FormsControls.Droid.Resource.Color.material_grey_600 = global::MeteoXamarinForms.Droid.Resource.Color.material_grey_600;
+			global::FormsControls.Droid.Resource.Color.material_grey_800 = global::MeteoXamarinForms.Droid.Resource.Color.material_grey_800;
+			global::FormsControls.Droid.Resource.Color.material_grey_850 = global::MeteoXamarinForms.Droid.Resource.Color.material_grey_850;
+			global::FormsControls.Droid.Resource.Color.material_grey_900 = global::MeteoXamarinForms.Droid.Resource.Color.material_grey_900;
+			global::FormsControls.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::FormsControls.Droid.Resource.Color.mtrl_bottom_nav_item_tint = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_bg_color_selector = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_ripple_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_stroke_color_selector = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_text_color_disabled = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_text_color_selector = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_btn_transparent_bg_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_chip_background_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_chip_background_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_chip_close_icon_tint = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::FormsControls.Droid.Resource.Color.mtrl_chip_ripple_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_chip_text_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_chip_text_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_fab_ripple_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_scrim_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_scrim_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_colored_ripple_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_icon_color_selector = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::FormsControls.Droid.Resource.Color.mtrl_tabs_ripple_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_textinput_disabled_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::FormsControls.Droid.Resource.Color.mtrl_text_btn_text_color_selector = global::MeteoXamarinForms.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::FormsControls.Droid.Resource.Color.notification_action_color_filter = global::MeteoXamarinForms.Droid.Resource.Color.notification_action_color_filter;
+			global::FormsControls.Droid.Resource.Color.notification_icon_bg_color = global::MeteoXamarinForms.Droid.Resource.Color.notification_icon_bg_color;
+			global::FormsControls.Droid.Resource.Color.notification_material_background_media_default_color = global::MeteoXamarinForms.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::FormsControls.Droid.Resource.Color.primary_dark_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.primary_dark_material_dark;
+			global::FormsControls.Droid.Resource.Color.primary_dark_material_light = global::MeteoXamarinForms.Droid.Resource.Color.primary_dark_material_light;
+			global::FormsControls.Droid.Resource.Color.primary_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.primary_material_dark;
+			global::FormsControls.Droid.Resource.Color.primary_material_light = global::MeteoXamarinForms.Droid.Resource.Color.primary_material_light;
+			global::FormsControls.Droid.Resource.Color.primary_text_default_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.primary_text_default_material_dark;
+			global::FormsControls.Droid.Resource.Color.primary_text_default_material_light = global::MeteoXamarinForms.Droid.Resource.Color.primary_text_default_material_light;
+			global::FormsControls.Droid.Resource.Color.primary_text_disabled_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.primary_text_disabled_material_light = global::MeteoXamarinForms.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.ripple_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.ripple_material_dark;
+			global::FormsControls.Droid.Resource.Color.ripple_material_light = global::MeteoXamarinForms.Droid.Resource.Color.ripple_material_light;
+			global::FormsControls.Droid.Resource.Color.secondary_text_default_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::FormsControls.Droid.Resource.Color.secondary_text_default_material_light = global::MeteoXamarinForms.Droid.Resource.Color.secondary_text_default_material_light;
+			global::FormsControls.Droid.Resource.Color.secondary_text_disabled_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.secondary_text_disabled_material_light = global::MeteoXamarinForms.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_disabled_material_light = global::MeteoXamarinForms.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.switch_thumb_material_dark;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_material_light = global::MeteoXamarinForms.Droid.Resource.Color.switch_thumb_material_light;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_normal_material_dark = global::MeteoXamarinForms.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::FormsControls.Droid.Resource.Color.switch_thumb_normal_material_light = global::MeteoXamarinForms.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::FormsControls.Droid.Resource.Color.tooltip_background_dark = global::MeteoXamarinForms.Droid.Resource.Color.tooltip_background_dark;
+			global::FormsControls.Droid.Resource.Color.tooltip_background_light = global::MeteoXamarinForms.Droid.Resource.Color.tooltip_background_light;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_button_min_height_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_button_min_width_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::FormsControls.Droid.Resource.Dimension.abc_alert_dialog_button_dimen = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::FormsControls.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::FormsControls.Droid.Resource.Dimension.abc_control_corner_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_control_corner_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_control_inset_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_control_inset_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_control_padding_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_control_padding_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_corner_radius_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_min_width_major = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_padding_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::FormsControls.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::FormsControls.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_floating_window_z = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_floating_window_z;
+			global::FormsControls.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_panel_menu_list_width = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_progress_bar_height_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_search_view_preferred_height = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::FormsControls.Droid.Resource.Dimension.abc_search_view_preferred_width = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::FormsControls.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_switch_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_switch_padding;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_body_1_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_body_2_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_button_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_caption_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_display_1_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_display_2_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_display_3_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_display_4_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_headline_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_large_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_medium_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_menu_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_small_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_subhead_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_title_material = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::FormsControls.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::MeteoXamarinForms.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::FormsControls.Droid.Resource.Dimension.browser_actions_context_menu_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::FormsControls.Droid.Resource.Dimension.browser_actions_context_menu_min_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::FormsControls.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::MeteoXamarinForms.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::FormsControls.Droid.Resource.Dimension.cardview_default_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.cardview_default_elevation;
+			global::FormsControls.Droid.Resource.Dimension.cardview_default_radius = global::MeteoXamarinForms.Droid.Resource.Dimension.cardview_default_radius;
+			global::FormsControls.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::MeteoXamarinForms.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::MeteoXamarinForms.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::MeteoXamarinForms.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::MeteoXamarinForms.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_control_corner_material = global::MeteoXamarinForms.Droid.Resource.Dimension.compat_control_corner_material;
+			global::FormsControls.Droid.Resource.Dimension.compat_notification_large_icon_max_height = global::MeteoXamarinForms.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::FormsControls.Droid.Resource.Dimension.compat_notification_large_icon_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_appbar_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.design_appbar_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_height = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_icon_size = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_margin = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::MeteoXamarinForms.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_border_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_fab_border_width;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.design_fab_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_image_size = global::MeteoXamarinForms.Droid.Resource.Dimension.design_fab_image_size;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_size_mini = global::MeteoXamarinForms.Droid.Resource.Dimension.design_fab_size_mini;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_size_normal = global::MeteoXamarinForms.Droid.Resource.Dimension.design_fab_size_normal;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused = global::MeteoXamarinForms.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::FormsControls.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::MeteoXamarinForms.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.design_navigation_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_icon_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_icon_size = global::MeteoXamarinForms.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_item_horizontal_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_item_icon_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_navigation_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_padding_bottom = global::MeteoXamarinForms.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::FormsControls.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_min_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::FormsControls.Droid.Resource.Dimension.design_snackbar_text_size = global::MeteoXamarinForms.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::FormsControls.Droid.Resource.Dimension.design_tab_max_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_tab_max_width;
+			global::FormsControls.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::MeteoXamarinForms.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::FormsControls.Droid.Resource.Dimension.design_tab_text_size = global::MeteoXamarinForms.Droid.Resource.Dimension.design_tab_text_size;
+			global::FormsControls.Droid.Resource.Dimension.design_tab_text_size_2line = global::MeteoXamarinForms.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::FormsControls.Droid.Resource.Dimension.design_textinput_caption_translate_y = global::MeteoXamarinForms.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::FormsControls.Droid.Resource.Dimension.disabled_alpha_material_dark = global::MeteoXamarinForms.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.disabled_alpha_material_light = global::MeteoXamarinForms.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.fastscroll_default_thickness = global::MeteoXamarinForms.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::FormsControls.Droid.Resource.Dimension.fastscroll_margin = global::MeteoXamarinForms.Droid.Resource.Dimension.fastscroll_margin;
+			global::FormsControls.Droid.Resource.Dimension.fastscroll_minimum_range = global::MeteoXamarinForms.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::FormsControls.Droid.Resource.Dimension.highlight_alpha_material_colored = global::MeteoXamarinForms.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::FormsControls.Droid.Resource.Dimension.highlight_alpha_material_dark = global::MeteoXamarinForms.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.highlight_alpha_material_light = global::MeteoXamarinForms.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.hint_alpha_material_dark = global::MeteoXamarinForms.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.hint_alpha_material_light = global::MeteoXamarinForms.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::MeteoXamarinForms.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::FormsControls.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::MeteoXamarinForms.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::FormsControls.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::MeteoXamarinForms.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::FormsControls.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::MeteoXamarinForms.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::FormsControls.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::MeteoXamarinForms.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_bottomappbar_height = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_corner_radius = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_disabled_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_disabled_z = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_focused_z = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_hovered_z = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_icon_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_inset = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_letter_spacing = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_padding_bottom = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_padding_left = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_padding_right = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_padding_top = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_pressed_z = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_stroke_size = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_text_size = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_btn_z = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_btn_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_card_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_card_spacing = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_chip_text_size = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_fab_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_navigation_elevation = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_snackbar_margin = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::FormsControls.Droid.Resource.Dimension.mtrl_toolbar_default_height = global::MeteoXamarinForms.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::FormsControls.Droid.Resource.Dimension.notification_action_icon_size = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_action_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.notification_action_text_size = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_action_text_size;
+			global::FormsControls.Droid.Resource.Dimension.notification_big_circle_margin = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::FormsControls.Droid.Resource.Dimension.notification_content_margin_start = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_content_margin_start;
+			global::FormsControls.Droid.Resource.Dimension.notification_large_icon_height = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_large_icon_height;
+			global::FormsControls.Droid.Resource.Dimension.notification_large_icon_width = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_large_icon_width;
+			global::FormsControls.Droid.Resource.Dimension.notification_main_column_padding_top = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::FormsControls.Droid.Resource.Dimension.notification_media_narrow_margin = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::FormsControls.Droid.Resource.Dimension.notification_right_icon_size = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_right_icon_size;
+			global::FormsControls.Droid.Resource.Dimension.notification_right_side_padding_top = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::FormsControls.Droid.Resource.Dimension.notification_small_icon_background_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::FormsControls.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::FormsControls.Droid.Resource.Dimension.notification_subtext_size = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_subtext_size;
+			global::FormsControls.Droid.Resource.Dimension.notification_top_pad = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_top_pad;
+			global::FormsControls.Droid.Resource.Dimension.notification_top_pad_large_text = global::MeteoXamarinForms.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_corner_radius = global::MeteoXamarinForms.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_horizontal_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_margin = global::MeteoXamarinForms.Droid.Resource.Dimension.tooltip_margin;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::MeteoXamarinForms.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::MeteoXamarinForms.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_vertical_padding = global::MeteoXamarinForms.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::MeteoXamarinForms.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::FormsControls.Droid.Resource.Dimension.tooltip_y_offset_touch = global::MeteoXamarinForms.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::FormsControls.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_borderless_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_check_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_check_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_colored_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_radio_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::FormsControls.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::FormsControls.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::FormsControls.Droid.Resource.Drawable.abc_cab_background_top_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_control_background_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_control_background_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_dialog_material_background = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::FormsControls.Droid.Resource.Drawable.abc_edit_text_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_edit_text_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_ab_back_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_clear_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_search_api_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::FormsControls.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_item_background_holo_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_item_background_holo_light = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_divider_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_divider_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_focused_holo = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_longpressed_holo = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_list_selector_holo_light = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::FormsControls.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::FormsControls.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ratingbar_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_ratingbar_small_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_seekbar_track_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_switch_thumb_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_tab_indicator_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::FormsControls.Droid.Resource.Drawable.abc_textfield_search_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_cursor_material = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::FormsControls.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::FormsControls.Droid.Resource.Drawable.abc_vector_test = global::MeteoXamarinForms.Droid.Resource.Drawable.abc_vector_test;
+			global::FormsControls.Droid.Resource.Drawable.avd_hide_password = global::MeteoXamarinForms.Droid.Resource.Drawable.avd_hide_password;
+			global::FormsControls.Droid.Resource.Drawable.avd_show_password = global::MeteoXamarinForms.Droid.Resource.Drawable.avd_show_password;
+			global::FormsControls.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::MeteoXamarinForms.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::FormsControls.Droid.Resource.Drawable.design_fab_background = global::MeteoXamarinForms.Droid.Resource.Drawable.design_fab_background;
+			global::FormsControls.Droid.Resource.Drawable.design_ic_visibility = global::MeteoXamarinForms.Droid.Resource.Drawable.design_ic_visibility;
+			global::FormsControls.Droid.Resource.Drawable.design_ic_visibility_off = global::MeteoXamarinForms.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::FormsControls.Droid.Resource.Drawable.design_password_eye = global::MeteoXamarinForms.Droid.Resource.Drawable.design_password_eye;
+			global::FormsControls.Droid.Resource.Drawable.design_snackbar_background = global::MeteoXamarinForms.Droid.Resource.Drawable.design_snackbar_background;
+			global::FormsControls.Droid.Resource.Drawable.ic_mtrl_chip_checked_black = global::MeteoXamarinForms.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::FormsControls.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle = global::MeteoXamarinForms.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::FormsControls.Droid.Resource.Drawable.ic_mtrl_chip_close_circle = global::MeteoXamarinForms.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::FormsControls.Droid.Resource.Drawable.mtrl_tabs_default_indicator = global::MeteoXamarinForms.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::FormsControls.Droid.Resource.Drawable.navigation_empty_icon = global::MeteoXamarinForms.Droid.Resource.Drawable.navigation_empty_icon;
+			global::FormsControls.Droid.Resource.Drawable.notification_action_background = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_action_background;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_bg;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_low = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_bg_low;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_low_normal = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_low_pressed = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_normal = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_bg_normal;
+			global::FormsControls.Droid.Resource.Drawable.notification_bg_normal_pressed = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::FormsControls.Droid.Resource.Drawable.notification_icon_background = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_icon_background;
+			global::FormsControls.Droid.Resource.Drawable.notification_template_icon_bg = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::FormsControls.Droid.Resource.Drawable.notification_template_icon_low_bg = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::FormsControls.Droid.Resource.Drawable.notification_tile_bg = global::MeteoXamarinForms.Droid.Resource.Drawable.notification_tile_bg;
+			global::FormsControls.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::MeteoXamarinForms.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::FormsControls.Droid.Resource.Drawable.tooltip_frame_dark = global::MeteoXamarinForms.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::FormsControls.Droid.Resource.Drawable.tooltip_frame_light = global::MeteoXamarinForms.Droid.Resource.Drawable.tooltip_frame_light;
+			global::FormsControls.Droid.Resource.Id.action0 = global::MeteoXamarinForms.Droid.Resource.Id.action0;
+			global::FormsControls.Droid.Resource.Id.actions = global::MeteoXamarinForms.Droid.Resource.Id.actions;
+			global::FormsControls.Droid.Resource.Id.action_bar = global::MeteoXamarinForms.Droid.Resource.Id.action_bar;
+			global::FormsControls.Droid.Resource.Id.action_bar_activity_content = global::MeteoXamarinForms.Droid.Resource.Id.action_bar_activity_content;
+			global::FormsControls.Droid.Resource.Id.action_bar_container = global::MeteoXamarinForms.Droid.Resource.Id.action_bar_container;
+			global::FormsControls.Droid.Resource.Id.action_bar_root = global::MeteoXamarinForms.Droid.Resource.Id.action_bar_root;
+			global::FormsControls.Droid.Resource.Id.action_bar_spinner = global::MeteoXamarinForms.Droid.Resource.Id.action_bar_spinner;
+			global::FormsControls.Droid.Resource.Id.action_bar_subtitle = global::MeteoXamarinForms.Droid.Resource.Id.action_bar_subtitle;
+			global::FormsControls.Droid.Resource.Id.action_bar_title = global::MeteoXamarinForms.Droid.Resource.Id.action_bar_title;
+			global::FormsControls.Droid.Resource.Id.action_container = global::MeteoXamarinForms.Droid.Resource.Id.action_container;
+			global::FormsControls.Droid.Resource.Id.action_context_bar = global::MeteoXamarinForms.Droid.Resource.Id.action_context_bar;
+			global::FormsControls.Droid.Resource.Id.action_divider = global::MeteoXamarinForms.Droid.Resource.Id.action_divider;
+			global::FormsControls.Droid.Resource.Id.action_image = global::MeteoXamarinForms.Droid.Resource.Id.action_image;
+			global::FormsControls.Droid.Resource.Id.action_menu_divider = global::MeteoXamarinForms.Droid.Resource.Id.action_menu_divider;
+			global::FormsControls.Droid.Resource.Id.action_menu_presenter = global::MeteoXamarinForms.Droid.Resource.Id.action_menu_presenter;
+			global::FormsControls.Droid.Resource.Id.action_mode_bar = global::MeteoXamarinForms.Droid.Resource.Id.action_mode_bar;
+			global::FormsControls.Droid.Resource.Id.action_mode_bar_stub = global::MeteoXamarinForms.Droid.Resource.Id.action_mode_bar_stub;
+			global::FormsControls.Droid.Resource.Id.action_mode_close_button = global::MeteoXamarinForms.Droid.Resource.Id.action_mode_close_button;
+			global::FormsControls.Droid.Resource.Id.action_text = global::MeteoXamarinForms.Droid.Resource.Id.action_text;
+			global::FormsControls.Droid.Resource.Id.activity_chooser_view_content = global::MeteoXamarinForms.Droid.Resource.Id.activity_chooser_view_content;
+			global::FormsControls.Droid.Resource.Id.add = global::MeteoXamarinForms.Droid.Resource.Id.add;
+			global::FormsControls.Droid.Resource.Id.alertTitle = global::MeteoXamarinForms.Droid.Resource.Id.alertTitle;
+			global::FormsControls.Droid.Resource.Id.all = global::MeteoXamarinForms.Droid.Resource.Id.all;
+			global::FormsControls.Droid.Resource.Id.ALT = global::MeteoXamarinForms.Droid.Resource.Id.ALT;
+			global::FormsControls.Droid.Resource.Id.always = global::MeteoXamarinForms.Droid.Resource.Id.always;
+			global::FormsControls.Droid.Resource.Id.async = global::MeteoXamarinForms.Droid.Resource.Id.async;
+			global::FormsControls.Droid.Resource.Id.auto = global::MeteoXamarinForms.Droid.Resource.Id.auto;
+			global::FormsControls.Droid.Resource.Id.beginning = global::MeteoXamarinForms.Droid.Resource.Id.beginning;
+			global::FormsControls.Droid.Resource.Id.blocking = global::MeteoXamarinForms.Droid.Resource.Id.blocking;
+			global::FormsControls.Droid.Resource.Id.bottom = global::MeteoXamarinForms.Droid.Resource.Id.bottom;
+			global::FormsControls.Droid.Resource.Id.bottomtab_navarea = global::MeteoXamarinForms.Droid.Resource.Id.bottomtab_navarea;
+			global::FormsControls.Droid.Resource.Id.bottomtab_tabbar = global::MeteoXamarinForms.Droid.Resource.Id.bottomtab_tabbar;
+			global::FormsControls.Droid.Resource.Id.browser_actions_header_text = global::MeteoXamarinForms.Droid.Resource.Id.browser_actions_header_text;
+			global::FormsControls.Droid.Resource.Id.browser_actions_menu_items = global::MeteoXamarinForms.Droid.Resource.Id.browser_actions_menu_items;
+			global::FormsControls.Droid.Resource.Id.browser_actions_menu_item_icon = global::MeteoXamarinForms.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::FormsControls.Droid.Resource.Id.browser_actions_menu_item_text = global::MeteoXamarinForms.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::FormsControls.Droid.Resource.Id.browser_actions_menu_view = global::MeteoXamarinForms.Droid.Resource.Id.browser_actions_menu_view;
+			global::FormsControls.Droid.Resource.Id.buttonPanel = global::MeteoXamarinForms.Droid.Resource.Id.buttonPanel;
+			global::FormsControls.Droid.Resource.Id.cancel_action = global::MeteoXamarinForms.Droid.Resource.Id.cancel_action;
+			global::FormsControls.Droid.Resource.Id.center = global::MeteoXamarinForms.Droid.Resource.Id.center;
+			global::FormsControls.Droid.Resource.Id.center_horizontal = global::MeteoXamarinForms.Droid.Resource.Id.center_horizontal;
+			global::FormsControls.Droid.Resource.Id.center_vertical = global::MeteoXamarinForms.Droid.Resource.Id.center_vertical;
+			global::FormsControls.Droid.Resource.Id.checkbox = global::MeteoXamarinForms.Droid.Resource.Id.checkbox;
+			global::FormsControls.Droid.Resource.Id.chronometer = global::MeteoXamarinForms.Droid.Resource.Id.chronometer;
+			global::FormsControls.Droid.Resource.Id.clip_horizontal = global::MeteoXamarinForms.Droid.Resource.Id.clip_horizontal;
+			global::FormsControls.Droid.Resource.Id.clip_vertical = global::MeteoXamarinForms.Droid.Resource.Id.clip_vertical;
+			global::FormsControls.Droid.Resource.Id.collapseActionView = global::MeteoXamarinForms.Droid.Resource.Id.collapseActionView;
+			global::FormsControls.Droid.Resource.Id.container = global::MeteoXamarinForms.Droid.Resource.Id.container;
+			global::FormsControls.Droid.Resource.Id.content = global::MeteoXamarinForms.Droid.Resource.Id.content;
+			global::FormsControls.Droid.Resource.Id.contentPanel = global::MeteoXamarinForms.Droid.Resource.Id.contentPanel;
+			global::FormsControls.Droid.Resource.Id.coordinator = global::MeteoXamarinForms.Droid.Resource.Id.coordinator;
+			global::FormsControls.Droid.Resource.Id.CTRL = global::MeteoXamarinForms.Droid.Resource.Id.CTRL;
+			global::FormsControls.Droid.Resource.Id.custom = global::MeteoXamarinForms.Droid.Resource.Id.custom;
+			global::FormsControls.Droid.Resource.Id.customPanel = global::MeteoXamarinForms.Droid.Resource.Id.customPanel;
+			global::FormsControls.Droid.Resource.Id.decor_content_parent = global::MeteoXamarinForms.Droid.Resource.Id.decor_content_parent;
+			global::FormsControls.Droid.Resource.Id.default_activity_button = global::MeteoXamarinForms.Droid.Resource.Id.default_activity_button;
+			global::FormsControls.Droid.Resource.Id.design_bottom_sheet = global::MeteoXamarinForms.Droid.Resource.Id.design_bottom_sheet;
+			global::FormsControls.Droid.Resource.Id.design_menu_item_action_area = global::MeteoXamarinForms.Droid.Resource.Id.design_menu_item_action_area;
+			global::FormsControls.Droid.Resource.Id.design_menu_item_action_area_stub = global::MeteoXamarinForms.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::FormsControls.Droid.Resource.Id.design_menu_item_text = global::MeteoXamarinForms.Droid.Resource.Id.design_menu_item_text;
+			global::FormsControls.Droid.Resource.Id.design_navigation_view = global::MeteoXamarinForms.Droid.Resource.Id.design_navigation_view;
+			global::FormsControls.Droid.Resource.Id.disableHome = global::MeteoXamarinForms.Droid.Resource.Id.disableHome;
+			global::FormsControls.Droid.Resource.Id.edit_query = global::MeteoXamarinForms.Droid.Resource.Id.edit_query;
+			global::FormsControls.Droid.Resource.Id.end = global::MeteoXamarinForms.Droid.Resource.Id.end;
+			global::FormsControls.Droid.Resource.Id.end_padder = global::MeteoXamarinForms.Droid.Resource.Id.end_padder;
+			global::FormsControls.Droid.Resource.Id.enterAlways = global::MeteoXamarinForms.Droid.Resource.Id.enterAlways;
+			global::FormsControls.Droid.Resource.Id.enterAlwaysCollapsed = global::MeteoXamarinForms.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::FormsControls.Droid.Resource.Id.exitUntilCollapsed = global::MeteoXamarinForms.Droid.Resource.Id.exitUntilCollapsed;
+			global::FormsControls.Droid.Resource.Id.expanded_menu = global::MeteoXamarinForms.Droid.Resource.Id.expanded_menu;
+			global::FormsControls.Droid.Resource.Id.expand_activities_button = global::MeteoXamarinForms.Droid.Resource.Id.expand_activities_button;
+			global::FormsControls.Droid.Resource.Id.fill = global::MeteoXamarinForms.Droid.Resource.Id.fill;
+			global::FormsControls.Droid.Resource.Id.filled = global::MeteoXamarinForms.Droid.Resource.Id.filled;
+			global::FormsControls.Droid.Resource.Id.fill_horizontal = global::MeteoXamarinForms.Droid.Resource.Id.fill_horizontal;
+			global::FormsControls.Droid.Resource.Id.fill_vertical = global::MeteoXamarinForms.Droid.Resource.Id.fill_vertical;
+			global::FormsControls.Droid.Resource.Id.@fixed = global::MeteoXamarinForms.Droid.Resource.Id.@fixed;
+			global::FormsControls.Droid.Resource.Id.flyoutcontent_appbar = global::MeteoXamarinForms.Droid.Resource.Id.flyoutcontent_appbar;
+			global::FormsControls.Droid.Resource.Id.forever = global::MeteoXamarinForms.Droid.Resource.Id.forever;
+			global::FormsControls.Droid.Resource.Id.FUNCTION = global::MeteoXamarinForms.Droid.Resource.Id.FUNCTION;
+			global::FormsControls.Droid.Resource.Id.ghost_view = global::MeteoXamarinForms.Droid.Resource.Id.ghost_view;
+			global::FormsControls.Droid.Resource.Id.group_divider = global::MeteoXamarinForms.Droid.Resource.Id.group_divider;
+			global::FormsControls.Droid.Resource.Id.home = global::MeteoXamarinForms.Droid.Resource.Id.home;
+			global::FormsControls.Droid.Resource.Id.homeAsUp = global::MeteoXamarinForms.Droid.Resource.Id.homeAsUp;
+			global::FormsControls.Droid.Resource.Id.icon = global::MeteoXamarinForms.Droid.Resource.Id.icon;
+			global::FormsControls.Droid.Resource.Id.icon_group = global::MeteoXamarinForms.Droid.Resource.Id.icon_group;
+			global::FormsControls.Droid.Resource.Id.ifRoom = global::MeteoXamarinForms.Droid.Resource.Id.ifRoom;
+			global::FormsControls.Droid.Resource.Id.image = global::MeteoXamarinForms.Droid.Resource.Id.image;
+			global::FormsControls.Droid.Resource.Id.info = global::MeteoXamarinForms.Droid.Resource.Id.info;
+			global::FormsControls.Droid.Resource.Id.italic = global::MeteoXamarinForms.Droid.Resource.Id.italic;
+			global::FormsControls.Droid.Resource.Id.item_touch_helper_previous_elevation = global::MeteoXamarinForms.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::FormsControls.Droid.Resource.Id.labeled = global::MeteoXamarinForms.Droid.Resource.Id.labeled;
+			global::FormsControls.Droid.Resource.Id.largeLabel = global::MeteoXamarinForms.Droid.Resource.Id.largeLabel;
+			global::FormsControls.Droid.Resource.Id.left = global::MeteoXamarinForms.Droid.Resource.Id.left;
+			global::FormsControls.Droid.Resource.Id.line1 = global::MeteoXamarinForms.Droid.Resource.Id.line1;
+			global::FormsControls.Droid.Resource.Id.line3 = global::MeteoXamarinForms.Droid.Resource.Id.line3;
+			global::FormsControls.Droid.Resource.Id.listMode = global::MeteoXamarinForms.Droid.Resource.Id.listMode;
+			global::FormsControls.Droid.Resource.Id.list_item = global::MeteoXamarinForms.Droid.Resource.Id.list_item;
+			global::FormsControls.Droid.Resource.Id.main_appbar = global::MeteoXamarinForms.Droid.Resource.Id.main_appbar;
+			global::FormsControls.Droid.Resource.Id.main_tablayout = global::MeteoXamarinForms.Droid.Resource.Id.main_tablayout;
+			global::FormsControls.Droid.Resource.Id.main_toolbar = global::MeteoXamarinForms.Droid.Resource.Id.main_toolbar;
+			global::FormsControls.Droid.Resource.Id.main_viewpager = global::MeteoXamarinForms.Droid.Resource.Id.main_viewpager;
+			global::FormsControls.Droid.Resource.Id.masked = global::MeteoXamarinForms.Droid.Resource.Id.masked;
+			global::FormsControls.Droid.Resource.Id.media_actions = global::MeteoXamarinForms.Droid.Resource.Id.media_actions;
+			global::FormsControls.Droid.Resource.Id.message = global::MeteoXamarinForms.Droid.Resource.Id.message;
+			global::FormsControls.Droid.Resource.Id.META = global::MeteoXamarinForms.Droid.Resource.Id.META;
+			global::FormsControls.Droid.Resource.Id.middle = global::MeteoXamarinForms.Droid.Resource.Id.middle;
+			global::FormsControls.Droid.Resource.Id.mini = global::MeteoXamarinForms.Droid.Resource.Id.mini;
+			global::FormsControls.Droid.Resource.Id.mtrl_child_content_container = global::MeteoXamarinForms.Droid.Resource.Id.mtrl_child_content_container;
+			global::FormsControls.Droid.Resource.Id.mtrl_internal_children_alpha_tag = global::MeteoXamarinForms.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::FormsControls.Droid.Resource.Id.multiply = global::MeteoXamarinForms.Droid.Resource.Id.multiply;
+			global::FormsControls.Droid.Resource.Id.navigation_header_container = global::MeteoXamarinForms.Droid.Resource.Id.navigation_header_container;
+			global::FormsControls.Droid.Resource.Id.never = global::MeteoXamarinForms.Droid.Resource.Id.never;
+			global::FormsControls.Droid.Resource.Id.none = global::MeteoXamarinForms.Droid.Resource.Id.none;
+			global::FormsControls.Droid.Resource.Id.normal = global::MeteoXamarinForms.Droid.Resource.Id.normal;
+			global::FormsControls.Droid.Resource.Id.notification_background = global::MeteoXamarinForms.Droid.Resource.Id.notification_background;
+			global::FormsControls.Droid.Resource.Id.notification_main_column = global::MeteoXamarinForms.Droid.Resource.Id.notification_main_column;
+			global::FormsControls.Droid.Resource.Id.notification_main_column_container = global::MeteoXamarinForms.Droid.Resource.Id.notification_main_column_container;
+			global::FormsControls.Droid.Resource.Id.outline = global::MeteoXamarinForms.Droid.Resource.Id.outline;
+			global::FormsControls.Droid.Resource.Id.parallax = global::MeteoXamarinForms.Droid.Resource.Id.parallax;
+			global::FormsControls.Droid.Resource.Id.parentPanel = global::MeteoXamarinForms.Droid.Resource.Id.parentPanel;
+			global::FormsControls.Droid.Resource.Id.parent_matrix = global::MeteoXamarinForms.Droid.Resource.Id.parent_matrix;
+			global::FormsControls.Droid.Resource.Id.pin = global::MeteoXamarinForms.Droid.Resource.Id.pin;
+			global::FormsControls.Droid.Resource.Id.progress_circular = global::MeteoXamarinForms.Droid.Resource.Id.progress_circular;
+			global::FormsControls.Droid.Resource.Id.progress_horizontal = global::MeteoXamarinForms.Droid.Resource.Id.progress_horizontal;
+			global::FormsControls.Droid.Resource.Id.radio = global::MeteoXamarinForms.Droid.Resource.Id.radio;
+			global::FormsControls.Droid.Resource.Id.right = global::MeteoXamarinForms.Droid.Resource.Id.right;
+			global::FormsControls.Droid.Resource.Id.right_icon = global::MeteoXamarinForms.Droid.Resource.Id.right_icon;
+			global::FormsControls.Droid.Resource.Id.right_side = global::MeteoXamarinForms.Droid.Resource.Id.right_side;
+			global::FormsControls.Droid.Resource.Id.save_non_transition_alpha = global::MeteoXamarinForms.Droid.Resource.Id.save_non_transition_alpha;
+			global::FormsControls.Droid.Resource.Id.screen = global::MeteoXamarinForms.Droid.Resource.Id.screen;
+			global::FormsControls.Droid.Resource.Id.scroll = global::MeteoXamarinForms.Droid.Resource.Id.scroll;
+			global::FormsControls.Droid.Resource.Id.scrollable = global::MeteoXamarinForms.Droid.Resource.Id.scrollable;
+			global::FormsControls.Droid.Resource.Id.scrollIndicatorDown = global::MeteoXamarinForms.Droid.Resource.Id.scrollIndicatorDown;
+			global::FormsControls.Droid.Resource.Id.scrollIndicatorUp = global::MeteoXamarinForms.Droid.Resource.Id.scrollIndicatorUp;
+			global::FormsControls.Droid.Resource.Id.scrollView = global::MeteoXamarinForms.Droid.Resource.Id.scrollView;
+			global::FormsControls.Droid.Resource.Id.search_badge = global::MeteoXamarinForms.Droid.Resource.Id.search_badge;
+			global::FormsControls.Droid.Resource.Id.search_bar = global::MeteoXamarinForms.Droid.Resource.Id.search_bar;
+			global::FormsControls.Droid.Resource.Id.search_button = global::MeteoXamarinForms.Droid.Resource.Id.search_button;
+			global::FormsControls.Droid.Resource.Id.search_close_btn = global::MeteoXamarinForms.Droid.Resource.Id.search_close_btn;
+			global::FormsControls.Droid.Resource.Id.search_edit_frame = global::MeteoXamarinForms.Droid.Resource.Id.search_edit_frame;
+			global::FormsControls.Droid.Resource.Id.search_go_btn = global::MeteoXamarinForms.Droid.Resource.Id.search_go_btn;
+			global::FormsControls.Droid.Resource.Id.search_mag_icon = global::MeteoXamarinForms.Droid.Resource.Id.search_mag_icon;
+			global::FormsControls.Droid.Resource.Id.search_plate = global::MeteoXamarinForms.Droid.Resource.Id.search_plate;
+			global::FormsControls.Droid.Resource.Id.search_src_text = global::MeteoXamarinForms.Droid.Resource.Id.search_src_text;
+			global::FormsControls.Droid.Resource.Id.search_voice_btn = global::MeteoXamarinForms.Droid.Resource.Id.search_voice_btn;
+			global::FormsControls.Droid.Resource.Id.selected = global::MeteoXamarinForms.Droid.Resource.Id.selected;
+			global::FormsControls.Droid.Resource.Id.select_dialog_listview = global::MeteoXamarinForms.Droid.Resource.Id.select_dialog_listview;
+			global::FormsControls.Droid.Resource.Id.shellcontent_appbar = global::MeteoXamarinForms.Droid.Resource.Id.shellcontent_appbar;
+			global::FormsControls.Droid.Resource.Id.shellcontent_toolbar = global::MeteoXamarinForms.Droid.Resource.Id.shellcontent_toolbar;
+			global::FormsControls.Droid.Resource.Id.SHIFT = global::MeteoXamarinForms.Droid.Resource.Id.SHIFT;
+			global::FormsControls.Droid.Resource.Id.shortcut = global::MeteoXamarinForms.Droid.Resource.Id.shortcut;
+			global::FormsControls.Droid.Resource.Id.showCustom = global::MeteoXamarinForms.Droid.Resource.Id.showCustom;
+			global::FormsControls.Droid.Resource.Id.showHome = global::MeteoXamarinForms.Droid.Resource.Id.showHome;
+			global::FormsControls.Droid.Resource.Id.showTitle = global::MeteoXamarinForms.Droid.Resource.Id.showTitle;
+			global::FormsControls.Droid.Resource.Id.smallLabel = global::MeteoXamarinForms.Droid.Resource.Id.smallLabel;
+			global::FormsControls.Droid.Resource.Id.snackbar_action = global::MeteoXamarinForms.Droid.Resource.Id.snackbar_action;
+			global::FormsControls.Droid.Resource.Id.snackbar_text = global::MeteoXamarinForms.Droid.Resource.Id.snackbar_text;
+			global::FormsControls.Droid.Resource.Id.snap = global::MeteoXamarinForms.Droid.Resource.Id.snap;
+			global::FormsControls.Droid.Resource.Id.snapMargins = global::MeteoXamarinForms.Droid.Resource.Id.snapMargins;
+			global::FormsControls.Droid.Resource.Id.spacer = global::MeteoXamarinForms.Droid.Resource.Id.spacer;
+			global::FormsControls.Droid.Resource.Id.split_action_bar = global::MeteoXamarinForms.Droid.Resource.Id.split_action_bar;
+			global::FormsControls.Droid.Resource.Id.src_atop = global::MeteoXamarinForms.Droid.Resource.Id.src_atop;
+			global::FormsControls.Droid.Resource.Id.src_in = global::MeteoXamarinForms.Droid.Resource.Id.src_in;
+			global::FormsControls.Droid.Resource.Id.src_over = global::MeteoXamarinForms.Droid.Resource.Id.src_over;
+			global::FormsControls.Droid.Resource.Id.start = global::MeteoXamarinForms.Droid.Resource.Id.start;
+			global::FormsControls.Droid.Resource.Id.status_bar_latest_event_content = global::MeteoXamarinForms.Droid.Resource.Id.status_bar_latest_event_content;
+			global::FormsControls.Droid.Resource.Id.stretch = global::MeteoXamarinForms.Droid.Resource.Id.stretch;
+			global::FormsControls.Droid.Resource.Id.submenuarrow = global::MeteoXamarinForms.Droid.Resource.Id.submenuarrow;
+			global::FormsControls.Droid.Resource.Id.submit_area = global::MeteoXamarinForms.Droid.Resource.Id.submit_area;
+			global::FormsControls.Droid.Resource.Id.SYM = global::MeteoXamarinForms.Droid.Resource.Id.SYM;
+			global::FormsControls.Droid.Resource.Id.tabMode = global::MeteoXamarinForms.Droid.Resource.Id.tabMode;
+			global::FormsControls.Droid.Resource.Id.tag_transition_group = global::MeteoXamarinForms.Droid.Resource.Id.tag_transition_group;
+			global::FormsControls.Droid.Resource.Id.tag_unhandled_key_event_manager = global::MeteoXamarinForms.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::FormsControls.Droid.Resource.Id.tag_unhandled_key_listeners = global::MeteoXamarinForms.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::FormsControls.Droid.Resource.Id.text = global::MeteoXamarinForms.Droid.Resource.Id.text;
+			global::FormsControls.Droid.Resource.Id.text2 = global::MeteoXamarinForms.Droid.Resource.Id.text2;
+			global::FormsControls.Droid.Resource.Id.textinput_counter = global::MeteoXamarinForms.Droid.Resource.Id.textinput_counter;
+			global::FormsControls.Droid.Resource.Id.textinput_error = global::MeteoXamarinForms.Droid.Resource.Id.textinput_error;
+			global::FormsControls.Droid.Resource.Id.textinput_helper_text = global::MeteoXamarinForms.Droid.Resource.Id.textinput_helper_text;
+			global::FormsControls.Droid.Resource.Id.textSpacerNoButtons = global::MeteoXamarinForms.Droid.Resource.Id.textSpacerNoButtons;
+			global::FormsControls.Droid.Resource.Id.textSpacerNoTitle = global::MeteoXamarinForms.Droid.Resource.Id.textSpacerNoTitle;
+			global::FormsControls.Droid.Resource.Id.textStart = global::MeteoXamarinForms.Droid.Resource.Id.textStart;
+			global::FormsControls.Droid.Resource.Id.time = global::MeteoXamarinForms.Droid.Resource.Id.time;
+			global::FormsControls.Droid.Resource.Id.title = global::MeteoXamarinForms.Droid.Resource.Id.title;
+			global::FormsControls.Droid.Resource.Id.titleDividerNoCustom = global::MeteoXamarinForms.Droid.Resource.Id.titleDividerNoCustom;
+			global::FormsControls.Droid.Resource.Id.title_template = global::MeteoXamarinForms.Droid.Resource.Id.title_template;
+			global::FormsControls.Droid.Resource.Id.top = global::MeteoXamarinForms.Droid.Resource.Id.top;
+			global::FormsControls.Droid.Resource.Id.topPanel = global::MeteoXamarinForms.Droid.Resource.Id.topPanel;
+			global::FormsControls.Droid.Resource.Id.touch_outside = global::MeteoXamarinForms.Droid.Resource.Id.touch_outside;
+			global::FormsControls.Droid.Resource.Id.transition_current_scene = global::MeteoXamarinForms.Droid.Resource.Id.transition_current_scene;
+			global::FormsControls.Droid.Resource.Id.transition_layout_save = global::MeteoXamarinForms.Droid.Resource.Id.transition_layout_save;
+			global::FormsControls.Droid.Resource.Id.transition_position = global::MeteoXamarinForms.Droid.Resource.Id.transition_position;
+			global::FormsControls.Droid.Resource.Id.transition_scene_layoutid_cache = global::MeteoXamarinForms.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::FormsControls.Droid.Resource.Id.transition_transform = global::MeteoXamarinForms.Droid.Resource.Id.transition_transform;
+			global::FormsControls.Droid.Resource.Id.uniform = global::MeteoXamarinForms.Droid.Resource.Id.uniform;
+			global::FormsControls.Droid.Resource.Id.unlabeled = global::MeteoXamarinForms.Droid.Resource.Id.unlabeled;
+			global::FormsControls.Droid.Resource.Id.up = global::MeteoXamarinForms.Droid.Resource.Id.up;
+			global::FormsControls.Droid.Resource.Id.useLogo = global::MeteoXamarinForms.Droid.Resource.Id.useLogo;
+			global::FormsControls.Droid.Resource.Id.view_offset_helper = global::MeteoXamarinForms.Droid.Resource.Id.view_offset_helper;
+			global::FormsControls.Droid.Resource.Id.visible = global::MeteoXamarinForms.Droid.Resource.Id.visible;
+			global::FormsControls.Droid.Resource.Id.withText = global::MeteoXamarinForms.Droid.Resource.Id.withText;
+			global::FormsControls.Droid.Resource.Id.wrap_content = global::MeteoXamarinForms.Droid.Resource.Id.wrap_content;
+			global::FormsControls.Droid.Resource.Integer.abc_config_activityDefaultDur = global::MeteoXamarinForms.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::FormsControls.Droid.Resource.Integer.abc_config_activityShortDur = global::MeteoXamarinForms.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::FormsControls.Droid.Resource.Integer.animation_duration = global::MeteoXamarinForms.Droid.Resource.Integer.animation_duration;
+			global::FormsControls.Droid.Resource.Integer.animation_duration_long = global::MeteoXamarinForms.Droid.Resource.Integer.animation_duration_long;
+			global::FormsControls.Droid.Resource.Integer.animation_duration_short = global::MeteoXamarinForms.Droid.Resource.Integer.animation_duration_short;
+			global::FormsControls.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::MeteoXamarinForms.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::FormsControls.Droid.Resource.Integer.bottom_sheet_slide_duration = global::MeteoXamarinForms.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::FormsControls.Droid.Resource.Integer.cancel_button_image_alpha = global::MeteoXamarinForms.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::FormsControls.Droid.Resource.Integer.config_tooltipAnimTime = global::MeteoXamarinForms.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::FormsControls.Droid.Resource.Integer.design_snackbar_text_max_lines = global::MeteoXamarinForms.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::FormsControls.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms = global::MeteoXamarinForms.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.hide_password_duration = global::MeteoXamarinForms.Droid.Resource.Integer.hide_password_duration;
+			global::FormsControls.Droid.Resource.Integer.mtrl_btn_anim_delay_ms = global::MeteoXamarinForms.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::FormsControls.Droid.Resource.Integer.mtrl_btn_anim_duration_ms = global::MeteoXamarinForms.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.mtrl_chip_anim_duration = global::MeteoXamarinForms.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::FormsControls.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::MeteoXamarinForms.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::FormsControls.Droid.Resource.Integer.show_password_duration = global::MeteoXamarinForms.Droid.Resource.Integer.show_password_duration;
+			global::FormsControls.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::MeteoXamarinForms.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::FormsControls.Droid.Resource.Interpolator.mtrl_fast_out_linear_in = global::MeteoXamarinForms.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::FormsControls.Droid.Resource.Interpolator.mtrl_fast_out_slow_in = global::MeteoXamarinForms.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::FormsControls.Droid.Resource.Interpolator.mtrl_linear = global::MeteoXamarinForms.Droid.Resource.Interpolator.mtrl_linear;
+			global::FormsControls.Droid.Resource.Interpolator.mtrl_linear_out_slow_in = global::MeteoXamarinForms.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::FormsControls.Droid.Resource.Layout.abc_action_bar_title_item = global::MeteoXamarinForms.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::FormsControls.Droid.Resource.Layout.abc_action_bar_up_container = global::MeteoXamarinForms.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::FormsControls.Droid.Resource.Layout.abc_action_menu_item_layout = global::MeteoXamarinForms.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_action_menu_layout = global::MeteoXamarinForms.Droid.Resource.Layout.abc_action_menu_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_action_mode_bar = global::MeteoXamarinForms.Droid.Resource.Layout.abc_action_mode_bar;
+			global::FormsControls.Droid.Resource.Layout.abc_action_mode_close_item_material = global::MeteoXamarinForms.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::FormsControls.Droid.Resource.Layout.abc_activity_chooser_view = global::MeteoXamarinForms.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::FormsControls.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::MeteoXamarinForms.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::FormsControls.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::MeteoXamarinForms.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::FormsControls.Droid.Resource.Layout.abc_alert_dialog_material = global::MeteoXamarinForms.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::FormsControls.Droid.Resource.Layout.abc_alert_dialog_title_material = global::MeteoXamarinForms.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::FormsControls.Droid.Resource.Layout.abc_cascading_menu_item_layout = global::MeteoXamarinForms.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_dialog_title_material = global::MeteoXamarinForms.Droid.Resource.Layout.abc_dialog_title_material;
+			global::FormsControls.Droid.Resource.Layout.abc_expanded_menu_layout = global::MeteoXamarinForms.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::MeteoXamarinForms.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::FormsControls.Droid.Resource.Layout.abc_list_menu_item_icon = global::MeteoXamarinForms.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::FormsControls.Droid.Resource.Layout.abc_list_menu_item_layout = global::MeteoXamarinForms.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_list_menu_item_radio = global::MeteoXamarinForms.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::FormsControls.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::MeteoXamarinForms.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_popup_menu_item_layout = global::MeteoXamarinForms.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::FormsControls.Droid.Resource.Layout.abc_screen_content_include = global::MeteoXamarinForms.Droid.Resource.Layout.abc_screen_content_include;
+			global::FormsControls.Droid.Resource.Layout.abc_screen_simple = global::MeteoXamarinForms.Droid.Resource.Layout.abc_screen_simple;
+			global::FormsControls.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::MeteoXamarinForms.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::FormsControls.Droid.Resource.Layout.abc_screen_toolbar = global::MeteoXamarinForms.Droid.Resource.Layout.abc_screen_toolbar;
+			global::FormsControls.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::MeteoXamarinForms.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::FormsControls.Droid.Resource.Layout.abc_search_view = global::MeteoXamarinForms.Droid.Resource.Layout.abc_search_view;
+			global::FormsControls.Droid.Resource.Layout.abc_select_dialog_material = global::MeteoXamarinForms.Droid.Resource.Layout.abc_select_dialog_material;
+			global::FormsControls.Droid.Resource.Layout.abc_tooltip = global::MeteoXamarinForms.Droid.Resource.Layout.abc_tooltip;
+			global::FormsControls.Droid.Resource.Layout.BottomTabLayout = global::MeteoXamarinForms.Droid.Resource.Layout.BottomTabLayout;
+			global::FormsControls.Droid.Resource.Layout.browser_actions_context_menu_page = global::MeteoXamarinForms.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::FormsControls.Droid.Resource.Layout.browser_actions_context_menu_row = global::MeteoXamarinForms.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::FormsControls.Droid.Resource.Layout.design_bottom_navigation_item = global::MeteoXamarinForms.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::FormsControls.Droid.Resource.Layout.design_bottom_sheet_dialog = global::MeteoXamarinForms.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::FormsControls.Droid.Resource.Layout.design_layout_snackbar = global::MeteoXamarinForms.Droid.Resource.Layout.design_layout_snackbar;
+			global::FormsControls.Droid.Resource.Layout.design_layout_snackbar_include = global::MeteoXamarinForms.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::FormsControls.Droid.Resource.Layout.design_layout_tab_icon = global::MeteoXamarinForms.Droid.Resource.Layout.design_layout_tab_icon;
+			global::FormsControls.Droid.Resource.Layout.design_layout_tab_text = global::MeteoXamarinForms.Droid.Resource.Layout.design_layout_tab_text;
+			global::FormsControls.Droid.Resource.Layout.design_menu_item_action_area = global::MeteoXamarinForms.Droid.Resource.Layout.design_menu_item_action_area;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_item = global::MeteoXamarinForms.Droid.Resource.Layout.design_navigation_item;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_item_header = global::MeteoXamarinForms.Droid.Resource.Layout.design_navigation_item_header;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_item_separator = global::MeteoXamarinForms.Droid.Resource.Layout.design_navigation_item_separator;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_item_subheader = global::MeteoXamarinForms.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_menu = global::MeteoXamarinForms.Droid.Resource.Layout.design_navigation_menu;
+			global::FormsControls.Droid.Resource.Layout.design_navigation_menu_item = global::MeteoXamarinForms.Droid.Resource.Layout.design_navigation_menu_item;
+			global::FormsControls.Droid.Resource.Layout.FlyoutContent = global::MeteoXamarinForms.Droid.Resource.Layout.FlyoutContent;
+			global::FormsControls.Droid.Resource.Layout.mtrl_layout_snackbar = global::MeteoXamarinForms.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::FormsControls.Droid.Resource.Layout.mtrl_layout_snackbar_include = global::MeteoXamarinForms.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::FormsControls.Droid.Resource.Layout.notification_action = global::MeteoXamarinForms.Droid.Resource.Layout.notification_action;
+			global::FormsControls.Droid.Resource.Layout.notification_action_tombstone = global::MeteoXamarinForms.Droid.Resource.Layout.notification_action_tombstone;
+			global::FormsControls.Droid.Resource.Layout.notification_media_action = global::MeteoXamarinForms.Droid.Resource.Layout.notification_media_action;
+			global::FormsControls.Droid.Resource.Layout.notification_media_cancel_action = global::MeteoXamarinForms.Droid.Resource.Layout.notification_media_cancel_action;
+			global::FormsControls.Droid.Resource.Layout.notification_template_big_media = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_big_media;
+			global::FormsControls.Droid.Resource.Layout.notification_template_big_media_custom = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::FormsControls.Droid.Resource.Layout.notification_template_big_media_narrow = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::FormsControls.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::FormsControls.Droid.Resource.Layout.notification_template_custom_big = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_custom_big;
+			global::FormsControls.Droid.Resource.Layout.notification_template_icon_group = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_icon_group;
+			global::FormsControls.Droid.Resource.Layout.notification_template_lines_media = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_lines_media;
+			global::FormsControls.Droid.Resource.Layout.notification_template_media = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_media;
+			global::FormsControls.Droid.Resource.Layout.notification_template_media_custom = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_media_custom;
+			global::FormsControls.Droid.Resource.Layout.notification_template_part_chronometer = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::FormsControls.Droid.Resource.Layout.notification_template_part_time = global::MeteoXamarinForms.Droid.Resource.Layout.notification_template_part_time;
+			global::FormsControls.Droid.Resource.Layout.RootLayout = global::MeteoXamarinForms.Droid.Resource.Layout.RootLayout;
+			global::FormsControls.Droid.Resource.Layout.select_dialog_item_material = global::MeteoXamarinForms.Droid.Resource.Layout.select_dialog_item_material;
+			global::FormsControls.Droid.Resource.Layout.select_dialog_multichoice_material = global::MeteoXamarinForms.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::FormsControls.Droid.Resource.Layout.select_dialog_singlechoice_material = global::MeteoXamarinForms.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::FormsControls.Droid.Resource.Layout.ShellContent = global::MeteoXamarinForms.Droid.Resource.Layout.ShellContent;
+			global::FormsControls.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::MeteoXamarinForms.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::FormsControls.Droid.Resource.String.abc_action_bar_home_description = global::MeteoXamarinForms.Droid.Resource.String.abc_action_bar_home_description;
+			global::FormsControls.Droid.Resource.String.abc_action_bar_up_description = global::MeteoXamarinForms.Droid.Resource.String.abc_action_bar_up_description;
+			global::FormsControls.Droid.Resource.String.abc_action_menu_overflow_description = global::MeteoXamarinForms.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::FormsControls.Droid.Resource.String.abc_action_mode_done = global::MeteoXamarinForms.Droid.Resource.String.abc_action_mode_done;
+			global::FormsControls.Droid.Resource.String.abc_activitychooserview_choose_application = global::MeteoXamarinForms.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::FormsControls.Droid.Resource.String.abc_activity_chooser_view_see_all = global::MeteoXamarinForms.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::FormsControls.Droid.Resource.String.abc_capital_off = global::MeteoXamarinForms.Droid.Resource.String.abc_capital_off;
+			global::FormsControls.Droid.Resource.String.abc_capital_on = global::MeteoXamarinForms.Droid.Resource.String.abc_capital_on;
+			global::FormsControls.Droid.Resource.String.abc_menu_alt_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_ctrl_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_delete_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_enter_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_function_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_meta_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_shift_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_space_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_menu_sym_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_prepend_shortcut_label = global::MeteoXamarinForms.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_clear = global::MeteoXamarinForms.Droid.Resource.String.abc_searchview_description_clear;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_query = global::MeteoXamarinForms.Droid.Resource.String.abc_searchview_description_query;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_search = global::MeteoXamarinForms.Droid.Resource.String.abc_searchview_description_search;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_submit = global::MeteoXamarinForms.Droid.Resource.String.abc_searchview_description_submit;
+			global::FormsControls.Droid.Resource.String.abc_searchview_description_voice = global::MeteoXamarinForms.Droid.Resource.String.abc_searchview_description_voice;
+			global::FormsControls.Droid.Resource.String.abc_search_hint = global::MeteoXamarinForms.Droid.Resource.String.abc_search_hint;
+			global::FormsControls.Droid.Resource.String.abc_shareactionprovider_share_with = global::MeteoXamarinForms.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::FormsControls.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::MeteoXamarinForms.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::FormsControls.Droid.Resource.String.abc_toolbar_collapse_description = global::MeteoXamarinForms.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::FormsControls.Droid.Resource.String.appbar_scrolling_view_behavior = global::MeteoXamarinForms.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::FormsControls.Droid.Resource.String.bottom_sheet_behavior = global::MeteoXamarinForms.Droid.Resource.String.bottom_sheet_behavior;
+			global::FormsControls.Droid.Resource.String.character_counter_content_description = global::MeteoXamarinForms.Droid.Resource.String.character_counter_content_description;
+			global::FormsControls.Droid.Resource.String.character_counter_pattern = global::MeteoXamarinForms.Droid.Resource.String.character_counter_pattern;
+			global::FormsControls.Droid.Resource.String.fab_transformation_scrim_behavior = global::MeteoXamarinForms.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::FormsControls.Droid.Resource.String.fab_transformation_sheet_behavior = global::MeteoXamarinForms.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::FormsControls.Droid.Resource.String.hide_bottom_view_on_scroll_behavior = global::MeteoXamarinForms.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::FormsControls.Droid.Resource.String.mtrl_chip_close_icon_content_description = global::MeteoXamarinForms.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::FormsControls.Droid.Resource.String.password_toggle_content_description = global::MeteoXamarinForms.Droid.Resource.String.password_toggle_content_description;
+			global::FormsControls.Droid.Resource.String.path_password_eye = global::MeteoXamarinForms.Droid.Resource.String.path_password_eye;
+			global::FormsControls.Droid.Resource.String.path_password_eye_mask_strike_through = global::MeteoXamarinForms.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::FormsControls.Droid.Resource.String.path_password_eye_mask_visible = global::MeteoXamarinForms.Droid.Resource.String.path_password_eye_mask_visible;
+			global::FormsControls.Droid.Resource.String.path_password_strike_through = global::MeteoXamarinForms.Droid.Resource.String.path_password_strike_through;
+			global::FormsControls.Droid.Resource.String.search_menu_title = global::MeteoXamarinForms.Droid.Resource.String.search_menu_title;
+			global::FormsControls.Droid.Resource.String.status_bar_notification_info_overflow = global::MeteoXamarinForms.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::FormsControls.Droid.Resource.Style.AlertDialog_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::FormsControls.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Animation_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::MeteoXamarinForms.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::FormsControls.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::MeteoXamarinForms.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::FormsControls.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::MeteoXamarinForms.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::MeteoXamarinForms.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::FormsControls.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::MeteoXamarinForms.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::FormsControls.Droid.Resource.Style.Base_CardView = global::MeteoXamarinForms.Droid.Resource.Style.Base_CardView;
+			global::FormsControls.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::FormsControls.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::MeteoXamarinForms.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::FormsControls.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::MeteoXamarinForms.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Base_V28_Theme_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::MeteoXamarinForms.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::MeteoXamarinForms.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::FormsControls.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::MeteoXamarinForms.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::FormsControls.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::MeteoXamarinForms.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::FormsControls.Droid.Resource.Style.CardView = global::MeteoXamarinForms.Droid.Resource.Style.CardView;
+			global::FormsControls.Droid.Resource.Style.CardView_Dark = global::MeteoXamarinForms.Droid.Resource.Style.CardView_Dark;
+			global::FormsControls.Droid.Resource.Style.CardView_Light = global::MeteoXamarinForms.Droid.Resource.Style.CardView_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Platform_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Platform_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_MaterialComponents = global::MeteoXamarinForms.Droid.Resource.Style.Platform_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.Platform_MaterialComponents_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Platform_MaterialComponents_Light = global::MeteoXamarinForms.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::MeteoXamarinForms.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::FormsControls.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_V21_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_V25_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::MeteoXamarinForms.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::FormsControls.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::MeteoXamarinForms.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::FormsControls.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::MeteoXamarinForms.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::FormsControls.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Counter = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Error = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_HelperText = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Hint = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Design_Tab = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Button = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::FormsControls.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::MeteoXamarinForms.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::FormsControls.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::MeteoXamarinForms.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_Design = global::MeteoXamarinForms.Droid.Resource.Style.Theme_Design;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_Light = global::MeteoXamarinForms.Droid.Resource.Style.Theme_Design_Light;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_Design_NoActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::FormsControls.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::MeteoXamarinForms.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_EditText = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_SearchView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Spinner = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::MeteoXamarinForms.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::FormsControls.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::FormsControls.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_AppBarLayout = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_NavigationView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_Snackbar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_TabLayout = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_Design_TextInputLayout = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_CardView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_NavigationView = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Snackbar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TabLayout = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::FormsControls.Droid.Resource.Style.Widget_MaterialComponents_Toolbar = global::MeteoXamarinForms.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::FormsControls.Droid.Resource.Style.Widget_Support_CoordinatorLayout = global::MeteoXamarinForms.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar;
+			global::FormsControls.Droid.Resource.Styleable.ActionBarLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBarLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_background = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_background;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_displayOptions = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_divider = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_divider;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_elevation = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_elevation;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_height = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_height;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_homeLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_icon = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_icon;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_itemPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_logo = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_logo;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_navigationMode = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_popupTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_subtitle = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_title = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_title;
+			global::FormsControls.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionMenuItemView = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMenuItemView;
+			global::FormsControls.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::FormsControls.Droid.Resource.Styleable.ActionMenuView = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMenuView;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMode;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_background = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMode_background;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_height = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMode_height;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.ActivityChooserView = global::MeteoXamarinForms.Droid.Resource.Styleable.ActivityChooserView;
+			global::FormsControls.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::FormsControls.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::MeteoXamarinForms.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_android_layout = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_buttonIconDimen = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_listLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_showTitle = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::FormsControls.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableItem = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::FormsControls.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::MeteoXamarinForms.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_android_background = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_elevation = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_expanded = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_Layout = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::FormsControls.Droid.Resource.Styleable.AppBarLayout_liftOnScroll = global::MeteoXamarinForms.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatImageView;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView_android_src = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView_tint = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_lineHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorError = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::FormsControls.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::MeteoXamarinForms.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomAppBar;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_backgroundTint = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::FormsControls.Droid.Resource.Styleable.BottomAppBar_hideOnScroll = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_elevation = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemIconSize = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::FormsControls.Droid.Resource.Styleable.BottomNavigationView_menu = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::FormsControls.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::MeteoXamarinForms.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::FormsControls.Droid.Resource.Styleable.ButtonBarLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.ButtonBarLayout;
+			global::FormsControls.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::MeteoXamarinForms.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::FormsControls.Droid.Resource.Styleable.CardView = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView;
+			global::FormsControls.Droid.Resource.Styleable.CardView_android_minHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::FormsControls.Droid.Resource.Styleable.CardView_android_minWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardCornerRadius = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardElevation = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_cardElevation;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardMaxElevation = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::FormsControls.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_contentPadding;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPaddingRight = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::FormsControls.Droid.Resource.Styleable.CardView_contentPaddingTop = global::MeteoXamarinForms.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::FormsControls.Droid.Resource.Styleable.Chip = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup = global::MeteoXamarinForms.Droid.Resource.Styleable.ChipGroup;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_checkedChip = global::MeteoXamarinForms.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_chipSpacing = global::MeteoXamarinForms.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::MeteoXamarinForms.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical = global::MeteoXamarinForms.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_singleLine = global::MeteoXamarinForms.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::FormsControls.Droid.Resource.Styleable.ChipGroup_singleSelection = global::MeteoXamarinForms.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_checkable = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_android_checkable;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_ellipsize = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_maxWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_text = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_android_text;
+			global::FormsControls.Droid.Resource.Styleable.Chip_android_textAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::FormsControls.Droid.Resource.Styleable.Chip_checkedIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::FormsControls.Droid.Resource.Styleable.Chip_checkedIconEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::FormsControls.Droid.Resource.Styleable.Chip_checkedIconVisible = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipBackgroundColor = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipCornerRadius = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipEndPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipIcon;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIconEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIconSize = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIconTint = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipIconVisible = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipMinHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipStartPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipStrokeColor = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::FormsControls.Droid.Resource.Styleable.Chip_chipStrokeWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_closeIcon;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconEndPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconSize = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconStartPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconTint = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::FormsControls.Droid.Resource.Styleable.Chip_closeIconVisible = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::FormsControls.Droid.Resource.Styleable.Chip_hideMotionSpec = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::FormsControls.Droid.Resource.Styleable.Chip_iconEndPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_iconStartPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_rippleColor = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_rippleColor;
+			global::FormsControls.Droid.Resource.Styleable.Chip_showMotionSpec = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::FormsControls.Droid.Resource.Styleable.Chip_textEndPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::FormsControls.Droid.Resource.Styleable.Chip_textStartPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::FormsControls.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::MeteoXamarinForms.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::FormsControls.Droid.Resource.Styleable.ColorStateListItem = global::MeteoXamarinForms.Droid.Resource.Styleable.ColorStateListItem;
+			global::FormsControls.Droid.Resource.Styleable.ColorStateListItem_alpha = global::MeteoXamarinForms.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::FormsControls.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::MeteoXamarinForms.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::FormsControls.Droid.Resource.Styleable.ColorStateListItem_android_color = global::MeteoXamarinForms.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::FormsControls.Droid.Resource.Styleable.CompoundButton = global::MeteoXamarinForms.Droid.Resource.Styleable.CompoundButton;
+			global::FormsControls.Droid.Resource.Styleable.CompoundButton_android_button = global::MeteoXamarinForms.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::FormsControls.Droid.Resource.Styleable.CompoundButton_buttonTint = global::MeteoXamarinForms.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::FormsControls.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::FormsControls.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_color = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::FormsControls.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::MeteoXamarinForms.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_elevation = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_maxImageSize = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::FormsControls.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::FormsControls.Droid.Resource.Styleable.FlowLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.FlowLayout;
+			global::FormsControls.Droid.Resource.Styleable.FlowLayout_itemSpacing = global::MeteoXamarinForms.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::FormsControls.Droid.Resource.Styleable.FlowLayout_lineSpacing = global::MeteoXamarinForms.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamily;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_font = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_font = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::FormsControls.Droid.Resource.Styleable.FontFamilyFont_ttcIndex = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::FormsControls.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::MeteoXamarinForms.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::FormsControls.Droid.Resource.Styleable.ForegroundLinearLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::FormsControls.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::MeteoXamarinForms.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::FormsControls.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::MeteoXamarinForms.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::FormsControls.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::MeteoXamarinForms.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor;
+			global::FormsControls.Droid.Resource.Styleable.GradientColorItem = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColorItem;
+			global::FormsControls.Droid.Resource.Styleable.GradientColorItem_android_color = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::FormsControls.Droid.Resource.Styleable.GradientColorItem_android_offset = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_centerColor = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_centerX = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_centerY = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_endColor = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_endX = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_endY = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_gradientRadius = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_startColor = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_startX = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_startY = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_tileMode = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::FormsControls.Droid.Resource.Styleable.GradientColor_android_type = global::MeteoXamarinForms.Droid.Resource.Styleable.GradientColor_android_type;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::FormsControls.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::MeteoXamarinForms.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::FormsControls.Droid.Resource.Styleable.ListPopupWindow = global::MeteoXamarinForms.Droid.Resource.Styleable.ListPopupWindow;
+			global::FormsControls.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::MeteoXamarinForms.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::FormsControls.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::MeteoXamarinForms.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_android_insetBottom = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_android_insetLeft = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_android_insetRight = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_android_insetTop = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_backgroundTint = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_backgroundTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_cornerRadius = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_icon = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_icon;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconGravity = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconSize = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconTint = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_iconTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_rippleColor = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_strokeColor = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::FormsControls.Droid.Resource.Styleable.MaterialButton_strokeWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::FormsControls.Droid.Resource.Styleable.MaterialCardView = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialCardView;
+			global::FormsControls.Droid.Resource.Styleable.MaterialCardView_strokeColor = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::FormsControls.Droid.Resource.Styleable.MaterialCardView_strokeWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuGroup;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_enabled = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_id = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::FormsControls.Droid.Resource.Styleable.MenuGroup_android_visible = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_actionLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_actionViewClass = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_checkable = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_checked = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_enabled = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_icon = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_id = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_id;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_onClick = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_title = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_title;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_android_visible = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_contentDescription = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_iconTint = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_iconTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_numericModifiers = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_showAsAction = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::FormsControls.Droid.Resource.Styleable.MenuItem_tooltipText = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::FormsControls.Droid.Resource.Styleable.MenuView = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_headerBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_itemBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::FormsControls.Droid.Resource.Styleable.MenuView_subMenuArrow = global::MeteoXamarinForms.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_android_background = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_android_background;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_elevation = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_elevation;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_headerLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemIconPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemIconTint = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_itemTextColor = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::FormsControls.Droid.Resource.Styleable.NavigationView_menu = global::MeteoXamarinForms.Droid.Resource.Styleable.NavigationView_menu;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindow = global::MeteoXamarinForms.Droid.Resource.Styleable.PopupWindow;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindowBackgroundState = global::MeteoXamarinForms.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::MeteoXamarinForms.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::FormsControls.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::MeteoXamarinForms.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::FormsControls.Droid.Resource.Styleable.RecycleListView = global::MeteoXamarinForms.Droid.Resource.Styleable.RecycleListView;
+			global::FormsControls.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::MeteoXamarinForms.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::FormsControls.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::MeteoXamarinForms.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_android_orientation = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_layoutManager = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_spanCount = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::FormsControls.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::FormsControls.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::FormsControls.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::MeteoXamarinForms.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::FormsControls.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::MeteoXamarinForms.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::FormsControls.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::MeteoXamarinForms.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::FormsControls.Droid.Resource.Styleable.SearchView = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_android_focusable = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_android_imeOptions = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_android_inputType = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_android_maxWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_closeIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_commitIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_goIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_goIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_layout = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_layout;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_queryBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_queryHint = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_queryHint;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_searchHintIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_searchIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_submitBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::FormsControls.Droid.Resource.Styleable.SearchView_voiceIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::FormsControls.Droid.Resource.Styleable.Snackbar = global::MeteoXamarinForms.Droid.Resource.Styleable.Snackbar;
+			global::FormsControls.Droid.Resource.Styleable.SnackbarLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.SnackbarLayout;
+			global::FormsControls.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::FormsControls.Droid.Resource.Styleable.SnackbarLayout_elevation = global::MeteoXamarinForms.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::FormsControls.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::FormsControls.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::FormsControls.Droid.Resource.Styleable.Snackbar_snackbarStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::FormsControls.Droid.Resource.Styleable.Spinner = global::MeteoXamarinForms.Droid.Resource.Styleable.Spinner;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_android_entries = global::MeteoXamarinForms.Droid.Resource.Styleable.Spinner_android_entries;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_android_popupBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_android_prompt = global::MeteoXamarinForms.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::FormsControls.Droid.Resource.Styleable.Spinner_popupTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawable;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawableItem = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawableItem;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawableItem_android_drawable = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_constantSize = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_dither = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_variablePadding = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::FormsControls.Droid.Resource.Styleable.StateListDrawable_android_visible = global::MeteoXamarinForms.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_showText = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_track = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_track;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_trackTint = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::FormsControls.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::FormsControls.Droid.Resource.Styleable.TabItem = global::MeteoXamarinForms.Droid.Resource.Styleable.TabItem;
+			global::FormsControls.Droid.Resource.Styleable.TabItem_android_icon = global::MeteoXamarinForms.Droid.Resource.Styleable.TabItem_android_icon;
+			global::FormsControls.Droid.Resource.Styleable.TabItem_android_layout = global::MeteoXamarinForms.Droid.Resource.Styleable.TabItem_android_layout;
+			global::FormsControls.Droid.Resource.Styleable.TabItem_android_text = global::MeteoXamarinForms.Droid.Resource.Styleable.TabItem_android_text;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabBackground = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabContentStart = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabGravity = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIconTint = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIconTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicator = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabInlineLabel = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabMode = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPadding = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabRippleColor = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabTextColor = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::FormsControls.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple = global::MeteoXamarinForms.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textColor = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textSize = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_android_typeface = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_fontFamily = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::FormsControls.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::MeteoXamarinForms.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_android_hint = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_helperText = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::FormsControls.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::FormsControls.Droid.Resource.Styleable.ThemeEnforcement = global::MeteoXamarinForms.Droid.Resource.Styleable.ThemeEnforcement;
+			global::FormsControls.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::FormsControls.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::FormsControls.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_android_gravity = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_android_minHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_buttonGravity = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_collapseIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_logo = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_logo;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_logoDescription = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_navigationIcon = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_popupTheme = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_subtitle = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_title = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_title;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMargin = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMargins = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::FormsControls.Droid.Resource.Styleable.Toolbar_titleTextColor = global::MeteoXamarinForms.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::FormsControls.Droid.Resource.Styleable.View = global::MeteoXamarinForms.Droid.Resource.Styleable.View;
+			global::FormsControls.Droid.Resource.Styleable.ViewBackgroundHelper = global::MeteoXamarinForms.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::FormsControls.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::MeteoXamarinForms.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::FormsControls.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::MeteoXamarinForms.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::FormsControls.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::MeteoXamarinForms.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::FormsControls.Droid.Resource.Styleable.ViewStubCompat = global::MeteoXamarinForms.Droid.Resource.Styleable.ViewStubCompat;
+			global::FormsControls.Droid.Resource.Styleable.ViewStubCompat_android_id = global::MeteoXamarinForms.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::FormsControls.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::MeteoXamarinForms.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::FormsControls.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::MeteoXamarinForms.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::FormsControls.Droid.Resource.Styleable.View_android_focusable = global::MeteoXamarinForms.Droid.Resource.Styleable.View_android_focusable;
+			global::FormsControls.Droid.Resource.Styleable.View_android_theme = global::MeteoXamarinForms.Droid.Resource.Styleable.View_android_theme;
+			global::FormsControls.Droid.Resource.Styleable.View_paddingEnd = global::MeteoXamarinForms.Droid.Resource.Styleable.View_paddingEnd;
+			global::FormsControls.Droid.Resource.Styleable.View_paddingStart = global::MeteoXamarinForms.Droid.Resource.Styleable.View_paddingStart;
+			global::FormsControls.Droid.Resource.Styleable.View_theme = global::MeteoXamarinForms.Droid.Resource.Styleable.View_theme;
 			global::Microcharts.Droid.Resource.String.library_name = global::MeteoXamarinForms.Droid.Resource.String.library_name;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_in = global::MeteoXamarinForms.Droid.Resource.Animation.abc_fade_in;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_out = global::MeteoXamarinForms.Droid.Resource.Animation.abc_fade_out;
@@ -18860,40 +21595,706 @@ namespace MeteoXamarinForms.Droid
 			public const int design_fab_show_motion_spec = 2130837506;
 			
 			// aapt resource value: 0x7F020003
-			public const int mtrl_btn_state_list_anim = 2130837507;
+			public const int empty_Animation = 2130837507;
 			
 			// aapt resource value: 0x7F020004
-			public const int mtrl_btn_unelevated_state_list_anim = 2130837508;
+			public const int empty_Animation_long = 2130837508;
 			
 			// aapt resource value: 0x7F020005
-			public const int mtrl_card_state_list_anim = 2130837509;
+			public const int empty_Animation_short = 2130837509;
 			
 			// aapt resource value: 0x7F020006
-			public const int mtrl_chip_state_list_anim = 2130837510;
+			public const int enter_from_bottom = 2130837510;
 			
 			// aapt resource value: 0x7F020007
-			public const int mtrl_extended_fab_change_size_motion_spec = 2130837511;
+			public const int enter_from_bottom_bounce = 2130837511;
 			
 			// aapt resource value: 0x7F020008
-			public const int mtrl_extended_fab_hide_motion_spec = 2130837512;
+			public const int enter_from_bottom_long = 2130837512;
 			
 			// aapt resource value: 0x7F020009
-			public const int mtrl_extended_fab_show_motion_spec = 2130837513;
+			public const int enter_from_bottom_long_bounce = 2130837513;
 			
 			// aapt resource value: 0x7F02000A
-			public const int mtrl_extended_fab_state_list_animator = 2130837514;
+			public const int enter_from_bottom_short = 2130837514;
 			
 			// aapt resource value: 0x7F02000B
-			public const int mtrl_fab_hide_motion_spec = 2130837515;
+			public const int enter_from_bottom_short_bounce = 2130837515;
 			
 			// aapt resource value: 0x7F02000C
-			public const int mtrl_fab_show_motion_spec = 2130837516;
+			public const int enter_from_left = 2130837516;
 			
 			// aapt resource value: 0x7F02000D
-			public const int mtrl_fab_transformation_sheet_collapse_spec = 2130837517;
+			public const int enter_from_left_bounce = 2130837517;
 			
 			// aapt resource value: 0x7F02000E
-			public const int mtrl_fab_transformation_sheet_expand_spec = 2130837518;
+			public const int enter_from_left_long = 2130837518;
+			
+			// aapt resource value: 0x7F02000F
+			public const int enter_from_left_long_bounce = 2130837519;
+			
+			// aapt resource value: 0x7F020010
+			public const int enter_from_left_short = 2130837520;
+			
+			// aapt resource value: 0x7F020011
+			public const int enter_from_left_short_bounce = 2130837521;
+			
+			// aapt resource value: 0x7F020012
+			public const int enter_from_right = 2130837522;
+			
+			// aapt resource value: 0x7F020013
+			public const int enter_from_right_bounce = 2130837523;
+			
+			// aapt resource value: 0x7F020014
+			public const int enter_from_right_long = 2130837524;
+			
+			// aapt resource value: 0x7F020015
+			public const int enter_from_right_long_bounce = 2130837525;
+			
+			// aapt resource value: 0x7F020016
+			public const int enter_from_right_short = 2130837526;
+			
+			// aapt resource value: 0x7F020017
+			public const int enter_from_right_short_bounce = 2130837527;
+			
+			// aapt resource value: 0x7F020018
+			public const int enter_from_top = 2130837528;
+			
+			// aapt resource value: 0x7F020019
+			public const int enter_from_top_bounce = 2130837529;
+			
+			// aapt resource value: 0x7F02001A
+			public const int enter_from_top_long = 2130837530;
+			
+			// aapt resource value: 0x7F02001B
+			public const int enter_from_top_long_bounce = 2130837531;
+			
+			// aapt resource value: 0x7F02001C
+			public const int enter_from_top_short = 2130837532;
+			
+			// aapt resource value: 0x7F02001D
+			public const int enter_from_top_short_bounce = 2130837533;
+			
+			// aapt resource value: 0x7F02001E
+			public const int enter_landing = 2130837534;
+			
+			// aapt resource value: 0x7F02001F
+			public const int enter_landing_bounce = 2130837535;
+			
+			// aapt resource value: 0x7F020020
+			public const int enter_landing_from_bottom = 2130837536;
+			
+			// aapt resource value: 0x7F020021
+			public const int enter_landing_from_bottom_bounce = 2130837537;
+			
+			// aapt resource value: 0x7F020022
+			public const int enter_landing_from_bottom_long = 2130837538;
+			
+			// aapt resource value: 0x7F020023
+			public const int enter_landing_from_bottom_long_bounce = 2130837539;
+			
+			// aapt resource value: 0x7F020024
+			public const int enter_landing_from_bottom_short = 2130837540;
+			
+			// aapt resource value: 0x7F020025
+			public const int enter_landing_from_bottom_short_bounce = 2130837541;
+			
+			// aapt resource value: 0x7F020026
+			public const int enter_landing_from_left = 2130837542;
+			
+			// aapt resource value: 0x7F020027
+			public const int enter_landing_from_left_bounce = 2130837543;
+			
+			// aapt resource value: 0x7F020028
+			public const int enter_landing_from_left_long = 2130837544;
+			
+			// aapt resource value: 0x7F020029
+			public const int enter_landing_from_left_long_bounce = 2130837545;
+			
+			// aapt resource value: 0x7F02002A
+			public const int enter_landing_from_left_short = 2130837546;
+			
+			// aapt resource value: 0x7F02002B
+			public const int enter_landing_from_left_short_bounce = 2130837547;
+			
+			// aapt resource value: 0x7F02002C
+			public const int enter_landing_from_right = 2130837548;
+			
+			// aapt resource value: 0x7F02002D
+			public const int enter_landing_from_right_bounce = 2130837549;
+			
+			// aapt resource value: 0x7F02002E
+			public const int enter_landing_from_right_long = 2130837550;
+			
+			// aapt resource value: 0x7F02002F
+			public const int enter_landing_from_right_long_bounce = 2130837551;
+			
+			// aapt resource value: 0x7F020030
+			public const int enter_landing_from_right_short = 2130837552;
+			
+			// aapt resource value: 0x7F020031
+			public const int enter_landing_from_right_short_bounce = 2130837553;
+			
+			// aapt resource value: 0x7F020032
+			public const int enter_landing_from_top = 2130837554;
+			
+			// aapt resource value: 0x7F020033
+			public const int enter_landing_from_top_bounce = 2130837555;
+			
+			// aapt resource value: 0x7F020034
+			public const int enter_landing_from_top_long = 2130837556;
+			
+			// aapt resource value: 0x7F020035
+			public const int enter_landing_from_top_long_bounce = 2130837557;
+			
+			// aapt resource value: 0x7F020036
+			public const int enter_landing_from_top_short = 2130837558;
+			
+			// aapt resource value: 0x7F020037
+			public const int enter_landing_from_top_short_bounce = 2130837559;
+			
+			// aapt resource value: 0x7F020038
+			public const int enter_landing_long = 2130837560;
+			
+			// aapt resource value: 0x7F020039
+			public const int enter_landing_long_bounce = 2130837561;
+			
+			// aapt resource value: 0x7F02003A
+			public const int enter_landing_short = 2130837562;
+			
+			// aapt resource value: 0x7F02003B
+			public const int enter_landing_short_bounce = 2130837563;
+			
+			// aapt resource value: 0x7F02003C
+			public const int enter_roll_from_bottom = 2130837564;
+			
+			// aapt resource value: 0x7F02003D
+			public const int enter_roll_from_bottom_bounce = 2130837565;
+			
+			// aapt resource value: 0x7F02003E
+			public const int enter_roll_from_bottom_long = 2130837566;
+			
+			// aapt resource value: 0x7F02003F
+			public const int enter_roll_from_bottom_long_bounce = 2130837567;
+			
+			// aapt resource value: 0x7F020040
+			public const int enter_roll_from_bottom_short = 2130837568;
+			
+			// aapt resource value: 0x7F020041
+			public const int enter_roll_from_bottom_short_bounce = 2130837569;
+			
+			// aapt resource value: 0x7F020042
+			public const int enter_roll_from_left = 2130837570;
+			
+			// aapt resource value: 0x7F020043
+			public const int enter_roll_from_left_bounce = 2130837571;
+			
+			// aapt resource value: 0x7F020044
+			public const int enter_roll_from_left_long = 2130837572;
+			
+			// aapt resource value: 0x7F020045
+			public const int enter_roll_from_left_long_bounce = 2130837573;
+			
+			// aapt resource value: 0x7F020046
+			public const int enter_roll_from_left_short = 2130837574;
+			
+			// aapt resource value: 0x7F020047
+			public const int enter_roll_from_left_short_bounce = 2130837575;
+			
+			// aapt resource value: 0x7F020048
+			public const int enter_roll_from_right = 2130837576;
+			
+			// aapt resource value: 0x7F020049
+			public const int enter_roll_from_right_bounce = 2130837577;
+			
+			// aapt resource value: 0x7F02004A
+			public const int enter_roll_from_right_long = 2130837578;
+			
+			// aapt resource value: 0x7F02004B
+			public const int enter_roll_from_right_long_bounce = 2130837579;
+			
+			// aapt resource value: 0x7F02004C
+			public const int enter_roll_from_right_short = 2130837580;
+			
+			// aapt resource value: 0x7F02004D
+			public const int enter_roll_from_right_short_bounce = 2130837581;
+			
+			// aapt resource value: 0x7F02004E
+			public const int enter_roll_from_top = 2130837582;
+			
+			// aapt resource value: 0x7F02004F
+			public const int enter_roll_from_top_bounce = 2130837583;
+			
+			// aapt resource value: 0x7F020050
+			public const int enter_roll_from_top_long = 2130837584;
+			
+			// aapt resource value: 0x7F020051
+			public const int enter_roll_from_top_long_bounce = 2130837585;
+			
+			// aapt resource value: 0x7F020052
+			public const int enter_roll_from_top_short = 2130837586;
+			
+			// aapt resource value: 0x7F020053
+			public const int enter_roll_from_top_short_bounce = 2130837587;
+			
+			// aapt resource value: 0x7F020054
+			public const int enter_rotate = 2130837588;
+			
+			// aapt resource value: 0x7F020055
+			public const int enter_rotate_bounce = 2130837589;
+			
+			// aapt resource value: 0x7F020056
+			public const int enter_rotate_from_bottom = 2130837590;
+			
+			// aapt resource value: 0x7F020057
+			public const int enter_rotate_from_bottom_bounce = 2130837591;
+			
+			// aapt resource value: 0x7F020058
+			public const int enter_rotate_from_bottom_long = 2130837592;
+			
+			// aapt resource value: 0x7F020059
+			public const int enter_rotate_from_bottom_long_bounce = 2130837593;
+			
+			// aapt resource value: 0x7F02005A
+			public const int enter_rotate_from_bottom_short = 2130837594;
+			
+			// aapt resource value: 0x7F02005B
+			public const int enter_rotate_from_bottom_short_bounce = 2130837595;
+			
+			// aapt resource value: 0x7F02005C
+			public const int enter_rotate_from_left = 2130837596;
+			
+			// aapt resource value: 0x7F02005D
+			public const int enter_rotate_from_left_bounce = 2130837597;
+			
+			// aapt resource value: 0x7F02005E
+			public const int enter_rotate_from_left_long = 2130837598;
+			
+			// aapt resource value: 0x7F02005F
+			public const int enter_rotate_from_left_long_bounce = 2130837599;
+			
+			// aapt resource value: 0x7F020060
+			public const int enter_rotate_from_left_short = 2130837600;
+			
+			// aapt resource value: 0x7F020061
+			public const int enter_rotate_from_left_short_bounce = 2130837601;
+			
+			// aapt resource value: 0x7F020062
+			public const int enter_rotate_from_right = 2130837602;
+			
+			// aapt resource value: 0x7F020063
+			public const int enter_rotate_from_right_bounce = 2130837603;
+			
+			// aapt resource value: 0x7F020064
+			public const int enter_rotate_from_right_long = 2130837604;
+			
+			// aapt resource value: 0x7F020065
+			public const int enter_rotate_from_right_long_bounce = 2130837605;
+			
+			// aapt resource value: 0x7F020066
+			public const int enter_rotate_from_right_short = 2130837606;
+			
+			// aapt resource value: 0x7F020067
+			public const int enter_rotate_from_right_short_bounce = 2130837607;
+			
+			// aapt resource value: 0x7F020068
+			public const int enter_rotate_from_top = 2130837608;
+			
+			// aapt resource value: 0x7F020069
+			public const int enter_rotate_from_top_bounce = 2130837609;
+			
+			// aapt resource value: 0x7F02006A
+			public const int enter_rotate_from_top_long = 2130837610;
+			
+			// aapt resource value: 0x7F02006B
+			public const int enter_rotate_from_top_long_bounce = 2130837611;
+			
+			// aapt resource value: 0x7F02006C
+			public const int enter_rotate_from_top_short = 2130837612;
+			
+			// aapt resource value: 0x7F02006D
+			public const int enter_rotate_from_top_short_bounce = 2130837613;
+			
+			// aapt resource value: 0x7F02006E
+			public const int enter_rotate_long = 2130837614;
+			
+			// aapt resource value: 0x7F02006F
+			public const int enter_rotate_long_bounce = 2130837615;
+			
+			// aapt resource value: 0x7F020070
+			public const int enter_rotate_short = 2130837616;
+			
+			// aapt resource value: 0x7F020071
+			public const int enter_rotate_short_bounce = 2130837617;
+			
+			// aapt resource value: 0x7F020072
+			public const int enter_scale = 2130837618;
+			
+			// aapt resource value: 0x7F020073
+			public const int enter_scale_bounce = 2130837619;
+			
+			// aapt resource value: 0x7F020074
+			public const int enter_scale_from_bottom = 2130837620;
+			
+			// aapt resource value: 0x7F020075
+			public const int enter_scale_from_bottom_bounce = 2130837621;
+			
+			// aapt resource value: 0x7F020076
+			public const int enter_scale_from_bottom_long = 2130837622;
+			
+			// aapt resource value: 0x7F020077
+			public const int enter_scale_from_bottom_long_bounce = 2130837623;
+			
+			// aapt resource value: 0x7F020078
+			public const int enter_scale_from_bottom_short = 2130837624;
+			
+			// aapt resource value: 0x7F020079
+			public const int enter_scale_from_bottom_short_bounce = 2130837625;
+			
+			// aapt resource value: 0x7F02007A
+			public const int enter_scale_from_left = 2130837626;
+			
+			// aapt resource value: 0x7F02007B
+			public const int enter_scale_from_left_bounce = 2130837627;
+			
+			// aapt resource value: 0x7F02007C
+			public const int enter_scale_from_left_long = 2130837628;
+			
+			// aapt resource value: 0x7F02007D
+			public const int enter_scale_from_left_long_bounce = 2130837629;
+			
+			// aapt resource value: 0x7F02007E
+			public const int enter_scale_from_left_short = 2130837630;
+			
+			// aapt resource value: 0x7F02007F
+			public const int enter_scale_from_left_short_bounce = 2130837631;
+			
+			// aapt resource value: 0x7F020080
+			public const int enter_scale_from_right = 2130837632;
+			
+			// aapt resource value: 0x7F020081
+			public const int enter_scale_from_right_bounce = 2130837633;
+			
+			// aapt resource value: 0x7F020082
+			public const int enter_scale_from_right_long = 2130837634;
+			
+			// aapt resource value: 0x7F020083
+			public const int enter_scale_from_right_long_bounce = 2130837635;
+			
+			// aapt resource value: 0x7F020084
+			public const int enter_scale_from_right_short = 2130837636;
+			
+			// aapt resource value: 0x7F020085
+			public const int enter_scale_from_right_short_bounce = 2130837637;
+			
+			// aapt resource value: 0x7F020086
+			public const int enter_scale_from_top = 2130837638;
+			
+			// aapt resource value: 0x7F020087
+			public const int enter_scale_from_top_bounce = 2130837639;
+			
+			// aapt resource value: 0x7F020088
+			public const int enter_scale_from_top_long = 2130837640;
+			
+			// aapt resource value: 0x7F020089
+			public const int enter_scale_from_top_long_bounce = 2130837641;
+			
+			// aapt resource value: 0x7F02008A
+			public const int enter_scale_from_top_short = 2130837642;
+			
+			// aapt resource value: 0x7F02008B
+			public const int enter_scale_from_top_short_bounce = 2130837643;
+			
+			// aapt resource value: 0x7F02008C
+			public const int enter_scale_long = 2130837644;
+			
+			// aapt resource value: 0x7F02008D
+			public const int enter_scale_long_bounce = 2130837645;
+			
+			// aapt resource value: 0x7F02008E
+			public const int enter_scale_short = 2130837646;
+			
+			// aapt resource value: 0x7F02008F
+			public const int enter_scale_short_bounce = 2130837647;
+			
+			// aapt resource value: 0x7F020090
+			public const int exit_landing = 2130837648;
+			
+			// aapt resource value: 0x7F020091
+			public const int exit_landing_from_bottom = 2130837649;
+			
+			// aapt resource value: 0x7F020092
+			public const int exit_landing_from_bottom_long = 2130837650;
+			
+			// aapt resource value: 0x7F020093
+			public const int exit_landing_from_bottom_short = 2130837651;
+			
+			// aapt resource value: 0x7F020094
+			public const int exit_landing_from_left = 2130837652;
+			
+			// aapt resource value: 0x7F020095
+			public const int exit_landing_from_left_long = 2130837653;
+			
+			// aapt resource value: 0x7F020096
+			public const int exit_landing_from_left_short = 2130837654;
+			
+			// aapt resource value: 0x7F020097
+			public const int exit_landing_from_right = 2130837655;
+			
+			// aapt resource value: 0x7F020098
+			public const int exit_landing_from_right_long = 2130837656;
+			
+			// aapt resource value: 0x7F020099
+			public const int exit_landing_from_right_short = 2130837657;
+			
+			// aapt resource value: 0x7F02009A
+			public const int exit_landing_from_top = 2130837658;
+			
+			// aapt resource value: 0x7F02009B
+			public const int exit_landing_from_top_long = 2130837659;
+			
+			// aapt resource value: 0x7F02009C
+			public const int exit_landing_from_top_short = 2130837660;
+			
+			// aapt resource value: 0x7F02009D
+			public const int exit_landing_long = 2130837661;
+			
+			// aapt resource value: 0x7F02009E
+			public const int exit_landing_short = 2130837662;
+			
+			// aapt resource value: 0x7F02009F
+			public const int exit_roll_to_bottom = 2130837663;
+			
+			// aapt resource value: 0x7F0200A0
+			public const int exit_roll_to_bottom_long = 2130837664;
+			
+			// aapt resource value: 0x7F0200A1
+			public const int exit_roll_to_bottom_short = 2130837665;
+			
+			// aapt resource value: 0x7F0200A2
+			public const int exit_roll_to_left = 2130837666;
+			
+			// aapt resource value: 0x7F0200A3
+			public const int exit_roll_to_left_long = 2130837667;
+			
+			// aapt resource value: 0x7F0200A4
+			public const int exit_roll_to_left_short = 2130837668;
+			
+			// aapt resource value: 0x7F0200A5
+			public const int exit_roll_to_right = 2130837669;
+			
+			// aapt resource value: 0x7F0200A6
+			public const int exit_roll_to_right_long = 2130837670;
+			
+			// aapt resource value: 0x7F0200A7
+			public const int exit_roll_to_right_short = 2130837671;
+			
+			// aapt resource value: 0x7F0200A8
+			public const int exit_roll_to_top = 2130837672;
+			
+			// aapt resource value: 0x7F0200A9
+			public const int exit_roll_to_top_long = 2130837673;
+			
+			// aapt resource value: 0x7F0200AA
+			public const int exit_roll_to_top_short = 2130837674;
+			
+			// aapt resource value: 0x7F0200AB
+			public const int exit_rotate = 2130837675;
+			
+			// aapt resource value: 0x7F0200AC
+			public const int exit_rotate_long = 2130837676;
+			
+			// aapt resource value: 0x7F0200AD
+			public const int exit_rotate_short = 2130837677;
+			
+			// aapt resource value: 0x7F0200AE
+			public const int exit_rotate_to_bottom = 2130837678;
+			
+			// aapt resource value: 0x7F0200AF
+			public const int exit_rotate_to_bottom_long = 2130837679;
+			
+			// aapt resource value: 0x7F0200B0
+			public const int exit_rotate_to_bottom_short = 2130837680;
+			
+			// aapt resource value: 0x7F0200B1
+			public const int exit_rotate_to_left = 2130837681;
+			
+			// aapt resource value: 0x7F0200B2
+			public const int exit_rotate_to_left_long = 2130837682;
+			
+			// aapt resource value: 0x7F0200B3
+			public const int exit_rotate_to_left_short = 2130837683;
+			
+			// aapt resource value: 0x7F0200B4
+			public const int exit_rotate_to_right = 2130837684;
+			
+			// aapt resource value: 0x7F0200B5
+			public const int exit_rotate_to_right_long = 2130837685;
+			
+			// aapt resource value: 0x7F0200B6
+			public const int exit_rotate_to_right_short = 2130837686;
+			
+			// aapt resource value: 0x7F0200B7
+			public const int exit_rotate_to_top = 2130837687;
+			
+			// aapt resource value: 0x7F0200B8
+			public const int exit_rotate_to_top_long = 2130837688;
+			
+			// aapt resource value: 0x7F0200B9
+			public const int exit_rotate_to_top_short = 2130837689;
+			
+			// aapt resource value: 0x7F0200BA
+			public const int exit_scale = 2130837690;
+			
+			// aapt resource value: 0x7F0200BB
+			public const int exit_scale_from_bottom = 2130837691;
+			
+			// aapt resource value: 0x7F0200BC
+			public const int exit_scale_from_bottom_long = 2130837692;
+			
+			// aapt resource value: 0x7F0200BD
+			public const int exit_scale_from_bottom_short = 2130837693;
+			
+			// aapt resource value: 0x7F0200BE
+			public const int exit_scale_from_left = 2130837694;
+			
+			// aapt resource value: 0x7F0200BF
+			public const int exit_scale_from_left_long = 2130837695;
+			
+			// aapt resource value: 0x7F0200C0
+			public const int exit_scale_from_left_short = 2130837696;
+			
+			// aapt resource value: 0x7F0200C1
+			public const int exit_scale_from_right = 2130837697;
+			
+			// aapt resource value: 0x7F0200C2
+			public const int exit_scale_from_right_long = 2130837698;
+			
+			// aapt resource value: 0x7F0200C3
+			public const int exit_scale_from_right_short = 2130837699;
+			
+			// aapt resource value: 0x7F0200C4
+			public const int exit_scale_from_top = 2130837700;
+			
+			// aapt resource value: 0x7F0200C5
+			public const int exit_scale_from_top_long = 2130837701;
+			
+			// aapt resource value: 0x7F0200C6
+			public const int exit_scale_from_top_short = 2130837702;
+			
+			// aapt resource value: 0x7F0200C7
+			public const int exit_scale_long = 2130837703;
+			
+			// aapt resource value: 0x7F0200C8
+			public const int exit_scale_short = 2130837704;
+			
+			// aapt resource value: 0x7F0200C9
+			public const int exit_to_bottom = 2130837705;
+			
+			// aapt resource value: 0x7F0200CA
+			public const int exit_to_bottom_bounce = 2130837706;
+			
+			// aapt resource value: 0x7F0200CB
+			public const int exit_to_bottom_long = 2130837707;
+			
+			// aapt resource value: 0x7F0200CC
+			public const int exit_to_bottom_long_bounce = 2130837708;
+			
+			// aapt resource value: 0x7F0200CD
+			public const int exit_to_bottom_short = 2130837709;
+			
+			// aapt resource value: 0x7F0200CE
+			public const int exit_to_bottom_short_bounce = 2130837710;
+			
+			// aapt resource value: 0x7F0200CF
+			public const int exit_to_left = 2130837711;
+			
+			// aapt resource value: 0x7F0200D0
+			public const int exit_to_left_bounce = 2130837712;
+			
+			// aapt resource value: 0x7F0200D1
+			public const int exit_to_left_long = 2130837713;
+			
+			// aapt resource value: 0x7F0200D2
+			public const int exit_to_left_long_bounce = 2130837714;
+			
+			// aapt resource value: 0x7F0200D3
+			public const int exit_to_left_short = 2130837715;
+			
+			// aapt resource value: 0x7F0200D4
+			public const int exit_to_left_short_bounce = 2130837716;
+			
+			// aapt resource value: 0x7F0200D5
+			public const int exit_to_right = 2130837717;
+			
+			// aapt resource value: 0x7F0200D6
+			public const int exit_to_right_bounce = 2130837718;
+			
+			// aapt resource value: 0x7F0200D7
+			public const int exit_to_right_long = 2130837719;
+			
+			// aapt resource value: 0x7F0200D8
+			public const int exit_to_right_long_bounce = 2130837720;
+			
+			// aapt resource value: 0x7F0200D9
+			public const int exit_to_right_short = 2130837721;
+			
+			// aapt resource value: 0x7F0200DA
+			public const int exit_to_right_short_bounce = 2130837722;
+			
+			// aapt resource value: 0x7F0200DB
+			public const int exit_to_top = 2130837723;
+			
+			// aapt resource value: 0x7F0200DC
+			public const int exit_to_top_bounce = 2130837724;
+			
+			// aapt resource value: 0x7F0200DD
+			public const int exit_to_top_long = 2130837725;
+			
+			// aapt resource value: 0x7F0200DE
+			public const int exit_to_top_long_bounce = 2130837726;
+			
+			// aapt resource value: 0x7F0200DF
+			public const int exit_to_top_short = 2130837727;
+			
+			// aapt resource value: 0x7F0200E0
+			public const int exit_to_top_short_bounce = 2130837728;
+			
+			// aapt resource value: 0x7F0200E1
+			public const int mtrl_btn_state_list_anim = 2130837729;
+			
+			// aapt resource value: 0x7F0200E2
+			public const int mtrl_btn_unelevated_state_list_anim = 2130837730;
+			
+			// aapt resource value: 0x7F0200E3
+			public const int mtrl_card_state_list_anim = 2130837731;
+			
+			// aapt resource value: 0x7F0200E4
+			public const int mtrl_chip_state_list_anim = 2130837732;
+			
+			// aapt resource value: 0x7F0200E5
+			public const int mtrl_extended_fab_change_size_motion_spec = 2130837733;
+			
+			// aapt resource value: 0x7F0200E6
+			public const int mtrl_extended_fab_hide_motion_spec = 2130837734;
+			
+			// aapt resource value: 0x7F0200E7
+			public const int mtrl_extended_fab_show_motion_spec = 2130837735;
+			
+			// aapt resource value: 0x7F0200E8
+			public const int mtrl_extended_fab_state_list_animator = 2130837736;
+			
+			// aapt resource value: 0x7F0200E9
+			public const int mtrl_fab_hide_motion_spec = 2130837737;
+			
+			// aapt resource value: 0x7F0200EA
+			public const int mtrl_fab_show_motion_spec = 2130837738;
+			
+			// aapt resource value: 0x7F0200EB
+			public const int mtrl_fab_transformation_sheet_collapse_spec = 2130837739;
+			
+			// aapt resource value: 0x7F0200EC
+			public const int mtrl_fab_transformation_sheet_expand_spec = 2130837740;
 			
 			static Animator()
 			{
@@ -24207,61 +27608,70 @@ namespace MeteoXamarinForms.Droid
 			public const int abc_config_activityShortDur = 2131296257;
 			
 			// aapt resource value: 0x7F090002
-			public const int app_bar_elevation_anim_duration = 2131296258;
+			public const int animation_duration = 2131296258;
 			
 			// aapt resource value: 0x7F090003
-			public const int bottom_sheet_slide_duration = 2131296259;
+			public const int animation_duration_long = 2131296259;
 			
 			// aapt resource value: 0x7F090004
-			public const int cancel_button_image_alpha = 2131296260;
+			public const int animation_duration_short = 2131296260;
 			
 			// aapt resource value: 0x7F090005
-			public const int config_tooltipAnimTime = 2131296261;
+			public const int app_bar_elevation_anim_duration = 2131296261;
 			
 			// aapt resource value: 0x7F090006
-			public const int design_snackbar_text_max_lines = 2131296262;
+			public const int bottom_sheet_slide_duration = 2131296262;
 			
 			// aapt resource value: 0x7F090007
-			public const int design_tab_indicator_anim_duration_ms = 2131296263;
+			public const int cancel_button_image_alpha = 2131296263;
 			
 			// aapt resource value: 0x7F090008
-			public const int hide_password_duration = 2131296264;
+			public const int config_tooltipAnimTime = 2131296264;
 			
 			// aapt resource value: 0x7F090009
-			public const int mtrl_badge_max_character_count = 2131296265;
+			public const int design_snackbar_text_max_lines = 2131296265;
 			
 			// aapt resource value: 0x7F09000A
-			public const int mtrl_btn_anim_delay_ms = 2131296266;
+			public const int design_tab_indicator_anim_duration_ms = 2131296266;
 			
 			// aapt resource value: 0x7F09000B
-			public const int mtrl_btn_anim_duration_ms = 2131296267;
+			public const int hide_password_duration = 2131296267;
 			
 			// aapt resource value: 0x7F09000C
-			public const int mtrl_calendar_header_orientation = 2131296268;
+			public const int mtrl_badge_max_character_count = 2131296268;
 			
 			// aapt resource value: 0x7F09000D
-			public const int mtrl_calendar_selection_text_lines = 2131296269;
+			public const int mtrl_btn_anim_delay_ms = 2131296269;
 			
 			// aapt resource value: 0x7F09000E
-			public const int mtrl_calendar_year_selector_span = 2131296270;
+			public const int mtrl_btn_anim_duration_ms = 2131296270;
 			
 			// aapt resource value: 0x7F09000F
-			public const int mtrl_card_anim_delay_ms = 2131296271;
+			public const int mtrl_calendar_header_orientation = 2131296271;
 			
 			// aapt resource value: 0x7F090010
-			public const int mtrl_card_anim_duration_ms = 2131296272;
+			public const int mtrl_calendar_selection_text_lines = 2131296272;
 			
 			// aapt resource value: 0x7F090011
-			public const int mtrl_chip_anim_duration = 2131296273;
+			public const int mtrl_calendar_year_selector_span = 2131296273;
 			
 			// aapt resource value: 0x7F090012
-			public const int mtrl_tab_indicator_anim_duration_ms = 2131296274;
+			public const int mtrl_card_anim_delay_ms = 2131296274;
 			
 			// aapt resource value: 0x7F090013
-			public const int show_password_duration = 2131296275;
+			public const int mtrl_card_anim_duration_ms = 2131296275;
 			
 			// aapt resource value: 0x7F090014
-			public const int status_bar_notification_info_maxnum = 2131296276;
+			public const int mtrl_chip_anim_duration = 2131296276;
+			
+			// aapt resource value: 0x7F090015
+			public const int mtrl_tab_indicator_anim_duration_ms = 2131296277;
+			
+			// aapt resource value: 0x7F090016
+			public const int show_password_duration = 2131296278;
+			
+			// aapt resource value: 0x7F090017
+			public const int status_bar_notification_info_maxnum = 2131296279;
 			
 			static Integer()
 			{
