@@ -49,7 +49,7 @@ namespace MeteoXamarinForms.PageModels
             AddWeatherInformationCommand = new Command(
                 async () =>
                 {
-                    await CoreMethods.PushPageModel<SearchPageModel>(animate:true);
+                    await CoreMethods.PushPageModel<SearchPageModel>();
                 });
 
 
@@ -58,7 +58,7 @@ namespace MeteoXamarinForms.PageModels
                 {
                     var selectedCity = CitiesManagerData.FirstOrDefault(data => data.Timezone.Contains(city.City));
                     Preferences.Set("CurrentTimezone", selectedCity.Timezone);
-                    await CoreMethods.PushPageModel<WeatherPageModel>(data: selectedCity, animate:true);
+                    await CoreMethods.PushPageModel<WeatherPageModel>(data: selectedCity);
                 });
 
             DeleteWeatherInformationCommand = new Command<CityManager>(
@@ -83,7 +83,7 @@ namespace MeteoXamarinForms.PageModels
                     if(CitiesManagerData.Count == 0) 
                     { 
                         CoreMethods.RemoveFromNavigation<WeatherPageModel>();
-                        await CoreMethods.PushPageModel<SearchPageModel>(animate: true);
+                        await CoreMethods.PushPageModel<SearchPageModel>();
                         CoreMethods.RemoveFromNavigation<CityPageModel>();
                     }
                 });
@@ -100,7 +100,7 @@ namespace MeteoXamarinForms.PageModels
 
         public override void Init(object initData)
         {
-            Task.Run(async () => await Initialize()).Wait();
+            Task.Run(async () => await Initialize());
         }
 
         #region Methods

@@ -29,7 +29,7 @@ namespace MeteoXamarinForms.ViewModels
         public WeatherPageModel()
         {
             _weatherService = FreshIOC.Container.Resolve<IWeatherService>();
-
+            IsNavigate = true;
             DailyDetailCommand = new Command<DayPrevision>(
             async (DayPrevision dayPrevision) =>
             {
@@ -46,13 +46,17 @@ namespace MeteoXamarinForms.ViewModels
             OpenCityManagementCommand = new Command(
                 async () =>
                 {
-                    await CoreMethods.PushPageModel<CityPageModel>(data: true, animate: false);
+                    IsNavigate = false;
+                    await CoreMethods.PushPageModel<CityPageModel>(data: true);
+                    IsNavigate = true;
                 });
 
             OpenParameterCommand = new Command(
                 async () =>
                 {
-                    await CoreMethods.PushPageModel<SettingPageModel>(animate: false);
+                    IsNavigate = false;
+                    await CoreMethods.PushPageModel<SettingPageModel>();
+                    IsNavigate = true;
                 });
 
             ActualizeDataCommand = new Command(
@@ -104,6 +108,13 @@ namespace MeteoXamarinForms.ViewModels
         {
             get { return _isRefreshing; }
             set => SetProperty(ref _isRefreshing, value);
+        }
+
+        private bool _isNavigate;
+        public bool IsNavigate
+        {
+            get { return _isNavigate; }
+            set => SetProperty(ref _isNavigate, value);
         }
 
         private bool _isLocalPosition;
@@ -400,15 +411,6 @@ namespace MeteoXamarinForms.ViewModels
             Humidity = current.Humidity;
             UpdateDate = ToolExtension.UnixTimeStampToDateTime(Weather.Current.Dt);
         }
-        private async void BackPressMethod()
-        {
-            var fullFileName = Preferences.Get("FullFileName", String.Empty);
-            if (fullFileName != String.Empty)
-            {
-                var weatherData = ToolExtension.GetDataLocaly(fullFileName);
-                await CoreMethods.PushPageModel<WeatherPageModel>(animate: false, data: weatherData);
-            }
-        }
         #endregion
 
         #region Override Methods
@@ -462,7 +464,6 @@ namespace MeteoXamarinForms.ViewModels
         public ICommand OpenCityManagementCommand { private set; get; }
         public ICommand OpenParameterCommand { private set; get; }
         public ICommand ActualizeDataCommand { private set; get; }
-        public ICommand BackPressCommand => new Command(BackPressMethod);
         #endregion
     }
 }

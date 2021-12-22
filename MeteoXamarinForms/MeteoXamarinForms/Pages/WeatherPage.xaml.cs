@@ -2,12 +2,24 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CoordinatorLayout.XamarinForms;
+using FormsControls.Base;
 
 namespace MeteoXamarinForms.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WeatherPage : ContentPage
+    public partial class WeatherPage : ContentPage, IAnimationPage
     {
+        public IPageAnimation PageAnimation { get; } = new FlipPageAnimation { Duration = AnimationDuration.Medium, Subtype = AnimationSubtype.FromRight, Type = AnimationType.Push };
+
+        public void OnAnimationStarted(bool isPopAnimation)
+        {
+            // Put your code here but leaving empty works just fine
+        }
+
+        public void OnAnimationFinished(bool isPopAnimation)
+        {
+            // Put your code here but leaving empty works just fine
+        }
         private bool _showLocation;
 
         public bool ShowLocation

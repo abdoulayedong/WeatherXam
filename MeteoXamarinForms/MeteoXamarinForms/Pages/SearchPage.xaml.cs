@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormsControls.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +11,18 @@ using Xamarin.Forms.Xaml;
 namespace MeteoXamarinForms.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SearchPage : ContentPage
+    public partial class SearchPage : ContentPage, IAnimationPage
     {
+        public IPageAnimation PageAnimation { get; } = new FlipPageAnimation { Duration = AnimationDuration.Medium, Subtype = AnimationSubtype.FromBottom, Type = AnimationType.Slide };
+
+        public void OnAnimationStarted(bool isPopAnimation)
+        {
+        }
+
+        public void OnAnimationFinished(bool isPopAnimation)
+        {
+        }
+
         public SearchPage()
         {
             InitializeComponent();
