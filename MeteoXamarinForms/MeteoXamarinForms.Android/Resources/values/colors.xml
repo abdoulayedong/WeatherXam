@@ -6,4 +6,6 @@
 	<color name="colorAccent">#FF4081</color>
 	<color name="colorBackground">#010101</color>
 	<drawable name="bg_color">#38c172</drawable>
+	<drawable name="dark_color">#010101</drawable>
+	<drawable name="light_color">#f2f2f2</drawable>
 </resources>

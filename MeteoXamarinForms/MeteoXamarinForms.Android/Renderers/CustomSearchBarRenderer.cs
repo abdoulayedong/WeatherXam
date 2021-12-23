@@ -1,14 +1,5 @@
-﻿using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+﻿using Android.Content;
 using MeteoXamarinForms.Droid.Renderers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -19,14 +10,19 @@ namespace MeteoXamarinForms.Droid.Renderers
     {
         public CustomSearchBarRenderer(Context context) : base(context)
         {
+           
         }
 
         protected override void OnElementChanged(ElementChangedEventArgs<SearchBar> e)
         {
             base.OnElementChanged(e);
 
-            var icon = Control?.FindViewById(Context.Resources.GetIdentifier("android:id/search_mag_icon", null, null));
-            (icon as ImageView)?.SetColorFilter(Color.White.ToAndroid());
+            var plateId = Resources.GetIdentifier("android:id/search_plate", null, null);
+            var plate = Control.FindViewById(plateId);
+            plate.SetBackgroundColor(Android.Graphics.Color.Transparent);
+            //var icon = Control?.FindViewById(Context.Resources.GetIdentifier("android:id/search_mag_icon", null, null));
+            //(icon as ImageView)?.SetColorFilter(Color.White.ToAndroid());
+            //Control?.SetBackgroundColor(Android.Graphics.Color.Transparent);
             //Control?.SetBackgroundColor(Android.Graphics.Color.Transparent);
         }
     }
