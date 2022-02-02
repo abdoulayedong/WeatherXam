@@ -13,7 +13,7 @@ using Android.Content.Res;
 namespace MeteoXamarinForms.Droid
 {
     [Activity(Label = "Meteo", Icon = "@mipmap/cloudy", Theme = "@style/LightTheme", MainLauncher = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class MainActivity : FormsAppCompatActivity
     {
         public static Context GetContext;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -22,7 +22,7 @@ namespace MeteoXamarinForms.Droid
             GetContext = this;
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Forms.Init(this, savedInstanceState);
             FormsControls.Droid.Main.Init(this);
             ConfigurationChanged += MainActivity_ConfigurationChanged;
             UpdateThemeColor();
@@ -70,4 +70,6 @@ namespace MeteoXamarinForms.Droid
         }
 
     }
+
+
 }

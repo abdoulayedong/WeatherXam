@@ -5,7 +5,7 @@ using Xamarin.Forms.Xaml;
 
 namespace MeteoXamarinForms.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class CityPage : ContentPage, IAnimationPage
     {
         public IPageAnimation PageAnimation { get; } = new FlipPageAnimation { Duration = AnimationDuration.Medium, Subtype = AnimationSubtype.FromLeft, Type = AnimationType.Push };

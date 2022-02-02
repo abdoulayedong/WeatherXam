@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using MeteoXamarinForms.Profiles;
 using System.Collections.Generic;
 using System.Globalization;
+using MeteoXamarinForms.Helpers;
 
 namespace MeteoXamarinForms
 {
@@ -43,6 +44,7 @@ namespace MeteoXamarinForms
 
         protected override void OnStart()
         {
+            Theme.SetTheme();
             FreshIOC.Container.Register<IWeatherService, WeatherService>();
             IMapper mapper = App.CreateMapper();
             FreshIOC.Container.Register(mapper);
@@ -75,6 +77,31 @@ namespace MeteoXamarinForms
                 Preferences.Set("Unit", "°C");
                 Preferences.Set("UnitParameter", "metric");
             }
+
+            Application.Current.RequestedThemeChanged += (s, e) =>
+            {
+                Theme.SetTheme();
+            };
+        }
+
+        protected override void OnSleep()
+        {
+            Theme.SetTheme();
+            RequestedThemeChanged -= AppRequestedThemeChanged;
+        }
+
+        protected override void OnResume()
+        {
+            Theme.SetTheme();
+            RequestedThemeChanged += AppRequestedThemeChanged;
+        }
+
+        private void AppRequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
+        {
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                Theme.SetTheme();
+            });
         }
     }
 }

@@ -1,14 +1,12 @@
-﻿using System;
-using System.Threading.Tasks;
-using Rg.Plugins.Popup.Pages;
+﻿using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
-using Xamarin.Forms;
+using System;
+using System.Threading.Tasks;
 
 namespace FreshMvvm.Popups
 {
     public static class PopupExtension
     {
-
         public static IPageModelCoreMethods PageModelCoreMethods { get; }
         public static async Task PushPopupPageModel<T>(this IPageModelCoreMethods pageModelCoreMethods, object data = null, bool animate = true) where T : FreshBasePageModel
         {

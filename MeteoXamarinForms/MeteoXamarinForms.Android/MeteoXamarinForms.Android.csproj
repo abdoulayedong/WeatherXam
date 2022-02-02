@@ -95,6 +95,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DependencyServices\EnvironmentService.cs" />
     <Compile Include="DependencyServices\SQLiteAndroid.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />

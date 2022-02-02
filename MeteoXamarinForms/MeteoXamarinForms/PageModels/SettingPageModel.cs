@@ -8,7 +8,6 @@ using MeteoXamarinForms.ViewModels;
 using MeteoXamarinForms.ViewModels.Base;
 using System;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
@@ -40,21 +39,21 @@ namespace MeteoXamarinForms.PageModels
 
             RefreshFrequencies = new()
             {
-                new() { Name = new(() => AppResources.EveryHour), FrequencyTime = 1},
-                new() { Name = new(() => AppResources.Every2Hours), FrequencyTime = 2},
-                new() { Name = new(() => AppResources.Every6Hours), FrequencyTime = 6},
-                new() { Name = new(() => AppResources.Every12Hours), FrequencyTime = 12},
-                new() { Name = new(() => AppResources.Every24Hours), FrequencyTime = 24}
+                new() { Name = new(() => AppResources.EveryHour), FrequencyTime = 1 },
+                new() { Name = new(() => AppResources.Every2Hours), FrequencyTime = 2 },
+                new() { Name = new(() => AppResources.Every6Hours), FrequencyTime = 6 },
+                new() { Name = new(() => AppResources.Every12Hours), FrequencyTime = 12 },
+                new() { Name = new(() => AppResources.Every24Hours), FrequencyTime = 24 }
             };
 
             SelectedLanguage = SupportedLanguages.FirstOrDefault(lang => lang.CI == Preferences.Get("Language", "en"));
             SelectedUnit = Units.FirstOrDefault(unit => unit.Name == Preferences.Get("Unit", "°C"));
             SelectedFrequency = RefreshFrequencies.FirstOrDefault(frequency => frequency.FrequencyTime == Preferences.Get("FrequencyTime", 1));
-            IsAutoRefresh = Preferences.Get("IsAutoRefresh", false);       
+            IsAutoRefresh = Preferences.Get("IsAutoRefresh", false);
 
 
             ShowAboutPageCommand = new Command(
-                async() =>
+                async () =>
                 {
                     await CoreMethods.PushPageModel<AboutPageModel>();
                 });
@@ -86,11 +85,11 @@ namespace MeteoXamarinForms.PageModels
         public Language SelectedLanguage
         {
             get { return _selectedLanguage; }
-            set 
-            { 
+            set
+            {
                 SetProperty(ref _selectedLanguage, value);
-                var vap = _selectedLanguage?.CI; 
-                if(vap != null)
+                var vap = _selectedLanguage?.CI;
+                if (vap != null)
                 {
                     LocalizationResourceManager.Current.CurrentCulture = CultureInfo.GetCultureInfo(vap);
                     Preferences.Set("Language", vap);
@@ -103,17 +102,17 @@ namespace MeteoXamarinForms.PageModels
         {
             get { return _isDownload; }
             set => SetProperty(ref _isDownload, value);
-        } 
+        }
 
         private bool _isAutoRefresh;
         public bool IsAutoRefresh
         {
             get { return _isAutoRefresh; }
-            set 
-            { 
+            set
+            {
                 SetProperty(ref _isAutoRefresh, value);
                 Preferences.Set("IsAutoRefresh", IsAutoRefresh);
-            } 
+            }
         }
 
         private ObservableCollection<RefreshFrequency> _refreshFrequencies;
@@ -161,7 +160,7 @@ namespace MeteoXamarinForms.PageModels
                     DependencyService.Get<IToastService>().ShortToast(ex.Message);
                 }
             }
-            else 
+            else
             {
                 Preferences.Set("Unit", SelectedUnit?.Name);
                 Preferences.Set("UnitParameter", SelectedUnit?.Parameter);

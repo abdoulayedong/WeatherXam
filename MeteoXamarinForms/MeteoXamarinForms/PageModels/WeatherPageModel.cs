@@ -1,24 +1,24 @@
-﻿using MeteoXamarinForms.Models;
-using MeteoXamarinForms.ViewModels.Base;
-using System;
-using System.Windows.Input;
-using Xamarin.Forms;
+﻿using FreshMvvm;
 using FreshMvvm.Popups;
-using MeteoXamarinForms.PageModels;
-using System.Linq;
 using MeteoXamarinForms.Extensions;
-using Xamarin.CommunityToolkit.Helpers;
-using System.Threading.Tasks;
-using MeteoXamarinForms.Services.Weather;
-using System.Collections.ObjectModel;
-using Xamarin.Essentials;
-using MeteoXamarinForms.Services.Toast;
+using MeteoXamarinForms.Models;
+using MeteoXamarinForms.PageModels;
 using MeteoXamarinForms.Resx;
-using FreshMvvm;
 using MeteoXamarinForms.Services;
+using MeteoXamarinForms.Services.Toast;
+using MeteoXamarinForms.Services.Weather;
+using MeteoXamarinForms.ViewModels.Base;
 using Microcharts;
 using SkiaSharp;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using Xamarin.CommunityToolkit.Helpers;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace MeteoXamarinForms.ViewModels
@@ -83,15 +83,15 @@ namespace MeteoXamarinForms.ViewModels
 
         public int ThemeNumber
         {
-            get => _themeNumber; 
-            set => SetProperty (ref _themeNumber, value); 
+            get => _themeNumber;
+            set => SetProperty(ref _themeNumber, value);
         }
 
         private LineChart lineChart;
-        public LineChart LineChart 
-        { 
-            get => lineChart; 
-            set => SetProperty(ref lineChart, value); 
+        public LineChart LineChart
+        {
+            get => lineChart;
+            set => SetProperty(ref lineChart, value);
         }
 
         private string[] Days = new string[7];
@@ -258,7 +258,7 @@ namespace MeteoXamarinForms.ViewModels
             get => _dayPrevisions;
             set => SetProperty(ref _dayPrevisions, value);
         }
-#endregion
+        #endregion
 
         #region Methods
         private dynamic ThemeEvaluation(dynamic theme)
@@ -282,8 +282,8 @@ namespace MeteoXamarinForms.ViewModels
             Color myValueLabelColor = Color.FromRgba(valueLabelColor.R, valueLabelColor.G, valueLabelColor.B, valueLabelColor.A);
             string hexBackgroundColor = myBackgroundColor.ToHex();
             string hexValueLabelColor = myValueLabelColor.ToHex();
-            return new { hexBackgroundColor,  hexValueLabelColor };
-        } 
+            return new { hexBackgroundColor, hexValueLabelColor };
+        }
 
         private async Task Update()
         {
@@ -306,7 +306,7 @@ namespace MeteoXamarinForms.ViewModels
             Preferences.Set("Lon", Weather.Lon);
 
             // Current day weather
-            IsLocalPosition = Preferences.Get("LocalTimezone", "") == Weather.Timezone ?  true :  false;
+            IsLocalPosition = Preferences.Get("LocalTimezone", "") == Weather.Timezone ? true : false;
             var current = Weather.Current;
             var currentDay = Weather.Daily[0];
             var hourlyForecast = Weather.Hourly;
@@ -345,12 +345,12 @@ namespace MeteoXamarinForms.ViewModels
             }
 
             // Daily weather
-            DayPrevisions = new ();
+            DayPrevisions = new();
             dynamic result = ThemeEvaluation(Application.Current);
             var turnoverEntries = new List<ChartEntry>();
             for (int i = 0; i < 7; i++)
             {
-                DayPrevision dayPrevision = new ();
+                DayPrevision dayPrevision = new();
                 dayPrevision.ProbalilityOfPrecipitation = (int)(dailyForecast[i].Pop * 100);
                 if (dayPrevision.ProbalilityOfPrecipitation >= 0 && dayPrevision.ProbalilityOfPrecipitation <= 20)
                 {
@@ -374,7 +374,7 @@ namespace MeteoXamarinForms.ViewModels
                 turnoverEntries.Add(new ChartEntry(data)
                 {
                     Color = orangeColor,
-                    Label = dayPrevision.DaysOfWeek.Localized.Substring(0,3),
+                    Label = dayPrevision.DaysOfWeek.Localized.Substring(0, 3),
                     ValueLabel = $"{data } mm",
                     ValueLabelColor = SKColor.Parse(result.hexValueLabelColor)
                 });
@@ -382,12 +382,13 @@ namespace MeteoXamarinForms.ViewModels
                 DayPrevisions.Add(dayPrevision);
             }
 
-            LineChart = new LineChart {
+            LineChart = new LineChart
+            {
                 Entries = turnoverEntries,
                 IsAnimated = true,
                 LabelTextSize = 30f,
                 BackgroundColor = SKColor.Parse(result.hexBackgroundColor),
-                LabelOrientation = Orientation.Horizontal, 
+                LabelOrientation = Orientation.Horizontal,
                 ValueLabelOrientation = Orientation.Vertical,
                 LabelColor = SKColor.Parse("#999999"),
                 PointSize = 20,
@@ -401,7 +402,8 @@ namespace MeteoXamarinForms.ViewModels
             if (pref == "imperial")
             {
                 WindSpeed = ToolExtension.MilesHourToKilometerHour(current.Wind_Speed);
-            }else
+            }
+            else
             {
                 WindSpeed = ToolExtension.MetreSecToKilometerHour(current.Wind_Speed);
             }
@@ -431,7 +433,7 @@ namespace MeteoXamarinForms.ViewModels
                 IsRefreshing = true;
                 await Update();
                 IsRefreshing = false;
-            }               
+            }
             else
                 SetUiData();
         }

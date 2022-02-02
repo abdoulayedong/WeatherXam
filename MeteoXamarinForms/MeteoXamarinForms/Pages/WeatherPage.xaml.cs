@@ -6,7 +6,7 @@ using FormsControls.Base;
 
 namespace MeteoXamarinForms.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class WeatherPage : ContentPage, IAnimationPage
     {
         public IPageAnimation PageAnimation { get; } = new FlipPageAnimation { Duration = AnimationDuration.Medium, Subtype = AnimationSubtype.FromRight, Type = AnimationType.Push };

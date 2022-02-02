@@ -1,24 +1,20 @@
-﻿using MeteoXamarinForms.Extensions;
+﻿using AutoMapper;
+using FreshMvvm;
+using MeteoXamarinForms.Extensions;
 using MeteoXamarinForms.Models;
+using MeteoXamarinForms.Resx;
+using MeteoXamarinForms.Services;
+using MeteoXamarinForms.Services.Toast;
+using MeteoXamarinForms.Services.Weather;
+using MeteoXamarinForms.ViewModels;
 using MeteoXamarinForms.ViewModels.Base;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
-using System.Windows.Input;
-using Xamarin.Forms;
-using MeteoXamarinForms.ViewModels;
-using Xamarin.Essentials;
 using System.Threading.Tasks;
-using FreshMvvm;
-using MeteoXamarinForms.Services.Weather;
-using MeteoXamarinForms.Services.Toast;
-using MeteoXamarinForms.Resx;
-using Xamarin.Forms.Internals;
-using MeteoXamarinForms.Services;
-using AutoMapper;
-using System.Diagnostics;
+using System.Windows.Input;
+using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace MeteoXamarinForms.PageModels
 {
@@ -68,11 +64,11 @@ namespace MeteoXamarinForms.PageModels
                     var current = CitiesManagerData.FirstOrDefault(current => current.Timezone.Contains(city.City));
                     CitiesManagerData.Remove(current);
                     await SQLiteDataContext.Instance.DeleteAsync(current.Timezone);
-                    if(current.Timezone == Preferences.Get("LocalTimezone", ""))
+                    if (current.Timezone == Preferences.Get("LocalTimezone", ""))
                     {
                         Preferences.Set("LocalTimezone", "");
                     }
-                    if(current.Timezone == Preferences.Get("CurrentTimezone", ""))
+                    if (current.Timezone == Preferences.Get("CurrentTimezone", ""))
                     {
                         Preferences.Set("CurrentTimezone", "");
                     }
@@ -80,8 +76,8 @@ namespace MeteoXamarinForms.PageModels
                     {
                         Preferences.Set("CurrentTimezone", CitiesManagerData.FirstOrDefault().Timezone);
                     }
-                    if(CitiesManagerData.Count == 0) 
-                    { 
+                    if (CitiesManagerData.Count == 0)
+                    {
                         CoreMethods.RemoveFromNavigation<WeatherPageModel>();
                         await CoreMethods.PushPageModel<SearchPageModel>();
                         CoreMethods.RemoveFromNavigation<CityPageModel>();
@@ -141,7 +137,7 @@ namespace MeteoXamarinForms.PageModels
         #region Properties
         private readonly IWeatherService _weatherService;
         private IMapper _mapper;
-        public readonly string CurrentTimezone;        
+        public readonly string CurrentTimezone;
         private string _addCityButtonWidth;
         public string AddCityButtonWidth
         {
@@ -177,10 +173,11 @@ namespace MeteoXamarinForms.PageModels
         #region Methods
         private async void BackPressMethod()
         {
-            if(Preferences.Get("CurrentTimezone", "") == CurrentTimezone)
+            if (Preferences.Get("CurrentTimezone", "") == CurrentTimezone)
             {
                 await CoreMethods.PopPageModel(animate: true);
-            }else if(Preferences.Get("CurrentTimezone", "") != CurrentTimezone)
+            }
+            else if (Preferences.Get("CurrentTimezone", "") != CurrentTimezone)
             {
                 string currentTimezone = Preferences.Get("CurrentTimezone", "");
                 Root data = Task.Run(async () => await SQLiteDataContext.Instance.GetRootAsync(currentTimezone)).Result;
