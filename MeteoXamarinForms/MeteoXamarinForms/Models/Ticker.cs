@@ -19,7 +19,11 @@ namespace MeteoXamarinForms.Models
 
         public DateTime Now
         {
-            get { return DateTime.UtcNow.AddSeconds(Preferences.Get("TimezoneOffset",0)); }
+            get 
+            {
+
+                return DateTime.UtcNow.AddSeconds(Preferences.Get("TimezoneOffset",0)); 
+            }
         }
 
         void Timer_Elapsed(object sender, ElapsedEventArgs e)

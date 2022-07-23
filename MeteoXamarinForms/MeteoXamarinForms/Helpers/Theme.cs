@@ -31,8 +31,7 @@ namespace MeteoXamarinForms.Helpers
             else
             {
                 string color = ((Color)Application.Current.Resources["MainBackgroundColor"]).ToHex();
-
-                e?.SetStatusBarColor(Color.White.ToHex(), true);
+                e?.SetStatusBarColor(color, true);
             }
         }
     }
