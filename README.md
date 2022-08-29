@@ -21,7 +21,6 @@ Features include:
 * Graph of expected amount of water
 * Dynamic theme according to the theme of the system
 
-
 <img src="/MeteoXamarinForms/MeteoXamarinForms.Android/Resources/mipmap-xxxhdpi/cloudy.png" width="10%" />
 
 ## Demo
@@ -29,23 +28,30 @@ Features include:
 <img src="/Images/Weather.gif" width="30%" /> 
 </p>
 
-## Home Screen
+## Light Screens
 <p align="center">
-  <img src="/Images/Dark.jpg" width="60%" />
-  <img src="/Images/Light.jpg" width="60%" />
+  <img src="/Images/SearchPageLight.jpg" width="30%" />
+  <img src="/Images/HomePageLight1.jpg" width="30%" />
+  <img src="/Images/HomePageLight2.jpg" width="30%" />
+</p>
+<p align="center">
+  <img src="/Images/ManageCityPageLight.jpg" width="30%" />
+  <img src="/Images/DeleteCityLight.jpg" width="30%" />
+  <img src="/Images/SettingsLight.jpg" width="30%" />
 </p>
 
-## Manage cities
-
+## Dark Screens
 <p align="center">
-    <img src="/Images/managecity.jpg" width="30%"/>
+  <img src="/Images/SearchPageDark.jpg" width="30%" />
+  <img src="/Images/HomePageDark1.jpg" width="30%" />
+  <img src="/Images/HomePageDark2.jpg" width="30%" />
+</p>
+<p align="center">
+  <img src="/Images/ManageCityPageDark.jpg" width="30%" />
+  <img src="/Images/DeleteCityDark.jpg" width="30%" />
+  <img src="/Images/SettingsDark.jpg" width="30%" />
 </p>
 
-## Settings
-
-<p align="center">
-    <img src="/Images/setting.jpg" width="30%"/>
-</p>
 
 ## Useful links
 * https://dev.to/mariusmuntean/coordinator-layout-with-xamarin-forms-5elc

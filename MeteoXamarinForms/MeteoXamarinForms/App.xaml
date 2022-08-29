@@ -6,7 +6,13 @@
 
         <Color x:Key="MainBackgroundColor">#f2f2f2</Color>
         <Color x:Key="MainBackgroundColorDark">#010101</Color>
-        
+
+        <Color x:Key="UnselectedSearchBackgroundColor">#ffff</Color>
+        <Color x:Key="SelectedSearchBackgroundColor">#ffffff</Color>
+
+        <Color x:Key="UnselectedSearchBackgroundColorDark">#222222</Color>
+        <Color x:Key="SelectedSearchBackgroundColorDark">#222222</Color>
+
         <Color x:Key="MainFrameColorDark">#171717</Color>
         <Color x:Key="MainFrameColor">#fafafa</Color>        
 

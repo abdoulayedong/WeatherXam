@@ -8,6 +8,7 @@ namespace MeteoXamarinForms.Droid.DependencyServices
 {
     public class Environment : IEnvironment
     {
+        [System.Obsolete]
         public void SetStatusBarColor(string color, bool lightStatusBar)
         {
             if (Build.VERSION.SdkInt < Android.OS.BuildVersionCodes.Lollipop)

@@ -9,7 +9,7 @@ namespace MeteoXamarinForms.Pages
     
     public partial class WeatherPage : ContentPage, IAnimationPage
     {
-        public IPageAnimation PageAnimation { get; } = new FlipPageAnimation { Duration = AnimationDuration.Medium, Subtype = AnimationSubtype.FromRight, Type = AnimationType.Push };
+        public IPageAnimation PageAnimation { get; } = new FlipPageAnimation { Duration = AnimationDuration.Short, Subtype = AnimationSubtype.FromRight, Type = AnimationType.Push };
 
         public void OnAnimationStarted(bool isPopAnimation)
         {

@@ -62,7 +62,7 @@ namespace MeteoXamarinForms.ViewModels
                 {
                     IsActivatedSearch = true;
                     IsNotFoundLocation = false;
-                    SearchInProgress = true;
+                    SearchInProgress = false;
                     var location = await GetLocation(query);
                     if(location is null)
                     {
@@ -94,7 +94,7 @@ namespace MeteoXamarinForms.ViewModels
                             DependencyService.Get<IToastService>().ShortToast(ex.Message);
                             Debug.WriteLine(ex.Message);
                         }
-                        SearchInProgress = false;
+                        SearchInProgress = true;
                         IsActivatedSearch = false;
                     }
                 });

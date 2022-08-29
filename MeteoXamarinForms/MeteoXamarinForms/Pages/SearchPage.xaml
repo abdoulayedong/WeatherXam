@@ -2,19 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeteoXamarinForms.Pages.SearchPage"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="{AppThemeBinding Light={StaticResource MainBackgroundColor}, Dark={StaticResource MainBackgroundColorDark}}"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.Content>
         <Grid RowDefinitions="auto, auto, *">
-            <SearchBar x:Name="searchBar"
-                       Placeholder="{xct:Translate Search}" HorizontalOptions="FillAndExpand" 
-                       FontSize="20" 
-                       TextColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}"
-                       CancelButtonColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}" 
-                       HorizontalTextAlignment="Start" Margin="10"
-                       SearchCommand="{Binding PerformSearch}"
-                       SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
+            <yummy:PancakeView CornerRadius="30"
+                               Padding="5"
+                               Margin="20,10"
+                               BackgroundColor="{AppThemeBinding Default={StaticResource MainBackgroundColor},
+                                                                 Light={StaticResource MainBackgroundColor},
+                                                                 Dark={StaticResource MainBackgroundColorDark}}">
+                <SearchBar x:Name="searchBar"
+                           Placeholder="{xct:Translate Search}" 
+                           HorizontalOptions="FillAndExpand" 
+                           PlaceholderColor="{AppThemeBinding Default={StaticResource MainBackgroundColor},
+                                                                 Light={StaticResource MainBackgroundColorDark},
+                                                                 Dark={StaticResource MainBackgroundColor}}"
+                           FontSize="20" 
+                           BackgroundColor="{AppThemeBinding Default={StaticResource MainBackgroundColor},
+                                                                 Light={StaticResource MainBackgroundColor},
+                                                                 Dark={StaticResource MainBackgroundColorDark}}"
+                           TextColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}"
+                           CancelButtonColor="{AppThemeBinding Dark={StaticResource MainTextColorDark}, Light={StaticResource MainTextColor}}" 
+                           HorizontalTextAlignment="Start" 
+                           Margin="0"
+                           SearchCommand="{Binding PerformSearch}"
+                           SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}">
+
+                </SearchBar>
+            </yummy:PancakeView>
 
             <Frame Grid.Row="1" Grid.RowSpan="2" IsVisible="false"
                    CornerRadius="30" Margin="5" >

@@ -63,7 +63,15 @@ namespace MeteoXamarinForms.ViewModels
                 async () =>
                 {
                     IsRefreshing = true;
-                    await Update();
+                    var current = Connectivity.NetworkAccess;
+                    if (current == NetworkAccess.Internet)
+                    {
+                        await Update();
+                    }
+                    else
+                    {
+                        DependencyService.Get<IToastService>().ShortToast(AppResources.NoInternet);
+                    }
                     IsRefreshing = false;
                 });
 
@@ -375,7 +383,7 @@ namespace MeteoXamarinForms.ViewModels
                 {
                     Color = orangeColor,
                     Label = dayPrevision.DaysOfWeek.Localized.Substring(0, 3),
-                    ValueLabel = $"{data } mm",
+                    ValueLabel = $"{data} mm",
                     ValueLabelColor = SKColor.Parse(result.hexValueLabelColor)
                 });
 

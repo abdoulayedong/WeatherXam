@@ -88,7 +88,15 @@ namespace MeteoXamarinForms.PageModels
                 async () =>
                 {
                     IsRefreshing = true;
-                    await Update();
+                    var current = Connectivity.NetworkAccess;
+                    if(current == NetworkAccess.Internet)
+                    {
+                        await Update();
+                    }
+                    else
+                    {
+                        DependencyService.Get<IToastService>().ShortToast(AppResources.NoInternet);
+                    }
                     IsRefreshing = false;
                 });
             #endregion

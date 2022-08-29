@@ -1,4 +1,5 @@
 ﻿using FormsControls.Base;
+using System;
 using Xamarin.Forms;
 
 namespace MeteoXamarinForms.Pages
@@ -19,6 +20,21 @@ namespace MeteoXamarinForms.Pages
         public SearchPage()
         {
             InitializeComponent();
+
+            searchBar.Focused += OnFocused;
+            searchBar.Unfocused += OnUnfocused;
+        }
+
+        void OnUnfocused(object sender, FocusEventArgs e)
+        {
+            SearchBar searchBar = (SearchBar)sender;
+            searchBar.SetAppThemeColor(SearchBar.BackgroundColorProperty, Color.Transparent, Color.Transparent); 
+        }
+
+        void OnFocused(object sender, FocusEventArgs e)
+        {
+            SearchBar searchBar = (SearchBar)sender;
+            searchBar.SetAppThemeColor(SearchBar.BackgroundColorProperty,Color.Transparent, Color.Transparent);
         }
     }
 }
