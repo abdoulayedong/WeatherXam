@@ -37,7 +37,6 @@ namespace MeteoXamarinForms.ViewModels
                     }
                     else
                     {
-                        IsNotFoundLocation = false;
                         Root weatherData;
                         try
                         {

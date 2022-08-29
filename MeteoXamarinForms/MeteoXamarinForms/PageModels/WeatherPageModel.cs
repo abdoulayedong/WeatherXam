@@ -1,5 +1,6 @@
 ﻿using FreshMvvm;
 using FreshMvvm.Popups;
+using MeteoXamarinForms.Data;
 using MeteoXamarinForms.Extensions;
 using MeteoXamarinForms.Models;
 using MeteoXamarinForms.PageModels;
@@ -13,6 +14,7 @@ using SkiaSharp;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -437,13 +439,29 @@ namespace MeteoXamarinForms.ViewModels
             //#endif
             if (time.TotalMinutes > 30)
             {
-                SetUiData();
-                IsRefreshing = true;
-                await Update();
-                IsRefreshing = false;
+                try
+                {
+                    SetUiData();
+                    IsRefreshing = true;
+                    await Update();
+                    IsRefreshing = false;
+                }
+                catch (Exception ex)
+                {
+                    DependencyService.Get<IToastService>().ShortToast(ex.Message);
+                    Debug.WriteLine(ex.Message);
+                }
             }
             else
-                SetUiData();
+                try
+                {
+                    SetUiData();
+                }
+                catch (Exception ex)
+                {
+                    DependencyService.Get<IToastService>().ShortToast(ex.Message);
+                    Debug.WriteLine(ex.Message);
+                }
         }
         public async override void ReverseInit(object returnedData)
         {

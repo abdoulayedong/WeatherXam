@@ -56,8 +56,14 @@
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
-    <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\Users\Abdou\AppData\Local\Xamarin\Mono for Android\Keystore\Abdoulaye\Abdoulaye.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>Zizoupop89.</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>abdoulaye</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>Zizoupop89.</AndroidSigningKeyPass>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
